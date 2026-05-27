@@ -123,7 +123,6 @@ pnpm tsx scripts/grab-archive -m <mode> -u <url>
 
 - 代码部分采用 [MIT License](LICENSE)。
 - 项目中的图片、视频及原始设计版权归 [Bilibili][bilibili] 所有。
-- 本项目仅用于技术研究与历史归档，不得用于商业用途。
 
 [bilibili]: https://www.bilibili.com
 [Wayback-Machine]: https://web.archive.org/
