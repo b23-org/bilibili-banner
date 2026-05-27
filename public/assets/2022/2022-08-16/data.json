@@ -1,0 +1,27 @@
+{
+  "type": "official_2021",
+  "layers": [
+    {
+      "resources": [
+        {
+          "src": "assets/2022/2022-08-16/6692ed7ff6cbc15dcd73aedae9c6222cc5dbdfa0.mp4",
+          "id": 0
+        }
+      ],
+      "scale": {
+        "initial": 0.4306
+      },
+      "rotate": {},
+      "translate": {},
+      "blur": {},
+      "opacity": {
+        "wrap": "clamp"
+      },
+      "id": 0,
+      "name": "图层0"
+    }
+  ],
+  "logo": {
+    "src": "assets/2022/2022-08-16-preview/a3e2abf2e1d527cb739d3e1620e48f32f6fdbf3e.png"
+  }
+}

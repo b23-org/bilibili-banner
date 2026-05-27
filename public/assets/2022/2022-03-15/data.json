@@ -1,0 +1,29 @@
+{
+  "type": "official_2021",
+  "layers": [
+    {
+      "resources": [
+        {
+          "src": "assets/2022/2022-03-15/ZlmaPe9AZv.mp4",
+          "id": 0
+        }
+      ],
+      "scale": {
+        "initial": 0.865
+      },
+      "rotate": {},
+      "translate": {
+        "initial": [0, -18]
+      },
+      "blur": {},
+      "opacity": {
+        "wrap": "clamp"
+      },
+      "id": 0,
+      "name": "图层0"
+    }
+  ],
+  "logo": {
+    "src": "assets/2022/2022-03-15-preview/ca375eb31fa90b8e23b88ed3433c2f60de1c2e6e.png"
+  }
+}

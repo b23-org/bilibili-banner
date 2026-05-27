@@ -1,0 +1,1482 @@
+[
+  {
+    "date": "2022-01-01",
+    "refs": [
+      {
+        "name": "2021最美的夜",
+        "path": "2022-01-01",
+        "type": "simple-image"
+      }
+    ]
+  },
+  {
+    "date": "2022-01-02",
+    "refs": [
+      {
+        "name": "2021年度报告",
+        "path": "2022-01-02",
+        "type": "simple-image"
+      }
+    ]
+  },
+  {
+    "date": "2022-01-08",
+    "refs": [
+      {
+        "name": "守护解放西3",
+        "path": "2022-01-08",
+        "type": "simple-image"
+      }
+    ]
+  },
+  {
+    "date": "2022-01-10",
+    "refs": [
+      {
+        "name": "BLS",
+        "path": "2022-01-10",
+        "type": "simple-image"
+      }
+    ]
+  },
+  {
+    "date": "2022-01-12",
+    "refs": [
+      {
+        "name": "百大UP预热",
+        "path": "2022-01-12",
+        "type": "official_2021"
+      },
+      {
+        "name": "百大UP预热 (预览)",
+        "path": "2022-01-12-preview",
+        "type": "simple-image"
+      }
+    ]
+  },
+  {
+    "date": "2022-01-13",
+    "refs": [
+      {
+        "name": "百大UP预热",
+        "path": "2022-01-13",
+        "type": "official_2021"
+      },
+      {
+        "name": "百大UP预热 (预览)",
+        "path": "2022-01-13-preview",
+        "type": "simple-image"
+      }
+    ]
+  },
+  {
+    "date": "2022-01-18",
+    "refs": [
+      {
+        "name": "百大名场面",
+        "path": "2022-01-18",
+        "type": "simple-image"
+      }
+    ]
+  },
+  {
+    "date": "2022-01-19",
+    "refs": [
+      {
+        "name": "百大UP预热",
+        "path": "2022-01-19",
+        "type": "official_2021"
+      },
+      {
+        "name": "百大UP预热 (预览)",
+        "path": "2022-01-19-preview",
+        "type": "simple-image"
+      }
+    ]
+  },
+  {
+    "date": "2022-01-20",
+    "refs": [
+      {
+        "name": "哔哩哔哩公益平台上线",
+        "path": "2022-01-20",
+        "type": "simple-image"
+      }
+    ]
+  },
+  {
+    "date": "2022-01-21",
+    "refs": [
+      {
+        "name": "百大UP颁奖直播",
+        "path": "2022-01-21",
+        "type": "official_2021"
+      },
+      {
+        "name": "百大UP颁奖直播 (预览)",
+        "path": "2022-01-21-preview",
+        "type": "simple-image"
+      }
+    ]
+  },
+  {
+    "date": "2022-01-22",
+    "refs": [
+      {
+        "name": "哔哩哔哩漫画",
+        "path": "2022-01-22",
+        "type": "official_2021"
+      },
+      {
+        "name": "哔哩哔哩漫画 (预览)",
+        "path": "2022-01-22-preview",
+        "type": "simple-image"
+      }
+    ]
+  },
+  {
+    "date": "2022-01-24",
+    "refs": [
+      {
+        "name": "百大UP盛典",
+        "path": "2022-01-24",
+        "type": "official_2021"
+      },
+      {
+        "name": "百大UP盛典 (预览)",
+        "path": "2022-01-24-preview",
+        "type": "simple-image"
+      }
+    ]
+  },
+  {
+    "date": "2022-01-25",
+    "refs": [
+      {
+        "name": "小年夜",
+        "path": "2022-01-25",
+        "type": "simple-image"
+      }
+    ]
+  },
+  {
+    "date": "2022-01-28",
+    "refs": [
+      {
+        "name": "2021 BILIBILI",
+        "path": "2022-01-28",
+        "type": "simple-image"
+      }
+    ]
+  },
+  {
+    "date": "2022-01-31",
+    "refs": [
+      {
+        "name": "除夕夜",
+        "path": "2022-01-31",
+        "type": "official_2021"
+      },
+      {
+        "name": "除夕夜 (预览)",
+        "path": "2022-01-31-preview",
+        "type": "simple-image"
+      }
+    ]
+  },
+  {
+    "date": "2022-02-01",
+    "refs": [
+      {
+        "name": "春节",
+        "path": "2022-02-01",
+        "type": "official_2021"
+      },
+      {
+        "name": "春节 (预览)",
+        "path": "2022-02-01-preview",
+        "type": "simple-image"
+      }
+    ]
+  },
+  {
+    "date": "2022-02-04",
+    "refs": [
+      {
+        "name": "北京冬奥会",
+        "path": "2022-02-04",
+        "type": "simple-image"
+      }
+    ]
+  },
+  {
+    "date": "2022-02-07",
+    "refs": [
+      {
+        "name": "元宵节预热",
+        "path": "2022-02-07",
+        "type": "official_2021"
+      },
+      {
+        "name": "元宵节预热 (预览)",
+        "path": "2022-02-07-preview",
+        "type": "simple-image"
+      }
+    ]
+  },
+  {
+    "date": "2022-02-09",
+    "refs": [
+      {
+        "name": "上元千灯会",
+        "path": "2022-02-09",
+        "type": "official_2021"
+      },
+      {
+        "name": "上元千灯会 (预览)",
+        "path": "2022-02-09-preview",
+        "type": "simple-image"
+      }
+    ]
+  },
+  {
+    "date": "2022-02-11",
+    "refs": [
+      {
+        "name": "上元千灯会",
+        "path": "2022-02-11",
+        "type": "official_2021"
+      },
+      {
+        "name": "上元千灯会 (预览)",
+        "path": "2022-02-11-preview",
+        "type": "simple-image"
+      }
+    ]
+  },
+  {
+    "date": "2022-02-12",
+    "refs": [
+      {
+        "name": "哔哩哔哩漫画",
+        "path": "2022-02-12",
+        "type": "simple-image"
+      }
+    ]
+  },
+  {
+    "date": "2022-02-14",
+    "refs": [
+      {
+        "name": "元宵晚会倒计时1天",
+        "path": "2022-02-14",
+        "type": "official_2021"
+      },
+      {
+        "name": "元宵晚会倒计时1天 (预览)",
+        "path": "2022-02-14-preview",
+        "type": "simple-image"
+      }
+    ]
+  },
+  {
+    "date": "2022-02-15",
+    "refs": [
+      {
+        "name": "上元千灯会",
+        "path": "2022-02-15",
+        "type": "official_2021"
+      },
+      {
+        "name": "上元千灯会 (预览)",
+        "path": "2022-02-15-preview",
+        "type": "simple-image"
+      }
+    ]
+  },
+  {
+    "date": "2022-02-16",
+    "refs": [
+      {
+        "name": "上元千灯会 回放",
+        "path": "2022-02-16",
+        "type": "simple-image"
+      }
+    ]
+  },
+  {
+    "date": "2022-02-19",
+    "refs": [
+      {
+        "name": "守护解放西3",
+        "path": "2022-02-19",
+        "type": "simple-image"
+      }
+    ]
+  },
+  {
+    "date": "2022-03-15",
+    "refs": [
+      {
+        "name": "风叶穿行",
+        "path": "2022-03-15",
+        "type": "official_2021"
+      },
+      {
+        "name": "风叶穿行 (预览)",
+        "path": "2022-03-15-preview",
+        "type": "simple-image"
+      }
+    ]
+  },
+  {
+    "date": "2022-04-01",
+    "refs": [
+      {
+        "name": "愚人节",
+        "path": "2022-04-01",
+        "type": "simple-image"
+      }
+    ]
+  },
+  {
+    "date": "2022-04-08",
+    "refs": [
+      {
+        "name": "激活春天",
+        "path": "2022-04-08",
+        "type": "simple-image"
+      }
+    ]
+  },
+  {
+    "date": "2022-04-16",
+    "refs": [
+      {
+        "name": "非正式会谈",
+        "path": "2022-04-16",
+        "type": "simple-image"
+      }
+    ]
+  },
+  {
+    "date": "2022-04-17",
+    "refs": [
+      {
+        "name": "公主连结2周年",
+        "path": "2022-04-17",
+        "type": "official_2021"
+      },
+      {
+        "name": "公主连结2周年 (预览)",
+        "path": "2022-04-17-preview",
+        "type": "simple-image"
+      }
+    ]
+  },
+  {
+    "date": "2022-04-21",
+    "refs": [
+      {
+        "name": "世界读书日",
+        "path": "2022-04-21",
+        "type": "simple-image"
+      }
+    ]
+  },
+  {
+    "date": "2022-04-23",
+    "refs": [
+      {
+        "name": "漫画节",
+        "path": "2022-04-23",
+        "type": "simple-image"
+      }
+    ]
+  },
+  {
+    "date": "2022-04-28",
+    "refs": [
+      {
+        "name": "坎公骑冠剑生日",
+        "path": "2022-04-28",
+        "type": "official_2021"
+      },
+      {
+        "name": "坎公骑冠剑生日 (预览)",
+        "path": "2022-04-28-preview",
+        "type": "simple-image"
+      }
+    ]
+  },
+  {
+    "date": "2022-05-02",
+    "refs": [
+      {
+        "name": "纪录片开放周",
+        "path": "2022-05-02",
+        "type": "simple-image"
+      }
+    ]
+  },
+  {
+    "date": "2022-05-03",
+    "refs": [
+      {
+        "name": "五四",
+        "path": "2022-05-03",
+        "type": "simple-image"
+      }
+    ]
+  },
+  {
+    "date": "2022-05-06",
+    "refs": [
+      {
+        "name": "纪录片开放周",
+        "path": "2022-05-06",
+        "type": "simple-image"
+      }
+    ]
+  },
+  {
+    "date": "2022-05-07",
+    "refs": [
+      {
+        "name": "纪录片开放周",
+        "path": "2022-05-07",
+        "type": "simple-image"
+      }
+    ]
+  },
+  {
+    "date": "2022-05-14",
+    "refs": [
+      {
+        "name": "B站看足球",
+        "path": "2022-05-14",
+        "type": "simple-image"
+      }
+    ]
+  },
+  {
+    "date": "2022-05-16",
+    "refs": [
+      {
+        "name": "万籁之声",
+        "path": "2022-05-16",
+        "type": "simple-image"
+      }
+    ]
+  },
+  {
+    "date": "2022-05-21",
+    "refs": [
+      {
+        "name": "公众科学日",
+        "path": "2022-05-21",
+        "type": "simple-image"
+      }
+    ]
+  },
+  {
+    "date": "2022-05-27",
+    "refs": [
+      {
+        "name": "90婚介所",
+        "path": "2022-05-27",
+        "type": "simple-image"
+      }
+    ]
+  },
+  {
+    "date": "2022-06-01",
+    "refs": [
+      {
+        "name": "儿童节",
+        "path": "2022-06-01",
+        "type": "simple-image"
+      }
+    ]
+  },
+  {
+    "date": "2022-06-02",
+    "refs": [
+      {
+        "name": "碧蓝航线5周年",
+        "path": "2022-06-02",
+        "type": "official_2021"
+      },
+      {
+        "name": "碧蓝航线5周年 (预览)",
+        "path": "2022-06-02-preview",
+        "type": "simple-image"
+      }
+    ]
+  },
+  {
+    "date": "2022-06-07",
+    "refs": [
+      {
+        "name": "高考",
+        "path": "2022-06-07",
+        "type": "simple-image"
+      }
+    ]
+  },
+  {
+    "date": "2022-06-10",
+    "refs": [
+      {
+        "name": "夏日毕业歌会",
+        "path": "2022-06-10",
+        "type": "simple-image"
+      }
+    ]
+  },
+  {
+    "date": "2022-06-11",
+    "refs": [
+      {
+        "name": "夏日毕业歌会",
+        "path": "2022-06-11",
+        "type": "simple-image"
+      }
+    ]
+  },
+  {
+    "date": "2022-06-12",
+    "refs": [
+      {
+        "name": "夏日毕业歌会",
+        "path": "2022-06-12",
+        "type": "simple-image"
+      }
+    ]
+  },
+  {
+    "date": "2022-06-13",
+    "refs": [
+      {
+        "name": "夏日毕业歌会",
+        "path": "2022-06-13",
+        "type": "simple-image"
+      }
+    ]
+  },
+  {
+    "date": "2022-06-14",
+    "refs": [
+      {
+        "name": "夏日毕业歌会",
+        "path": "2022-06-14",
+        "type": "simple-image"
+      }
+    ]
+  },
+  {
+    "date": "2022-06-15",
+    "refs": [
+      {
+        "name": "夏日毕业歌会",
+        "path": "2022-06-15",
+        "type": "simple-image"
+      }
+    ]
+  },
+  {
+    "date": "2022-06-16",
+    "refs": [
+      {
+        "name": "夏日毕业歌会",
+        "path": "2022-06-16",
+        "type": "simple-image"
+      }
+    ]
+  },
+  {
+    "date": "2022-06-17",
+    "refs": [
+      {
+        "name": "正义的算法",
+        "path": "2022-06-17",
+        "type": "simple-image"
+      }
+    ]
+  },
+  {
+    "date": "2022-06-21",
+    "refs": [
+      {
+        "name": "BILIBILI 13周年",
+        "path": "2022-06-21",
+        "type": "simple-image"
+      }
+    ]
+  },
+  {
+    "date": "2022-06-23",
+    "refs": [
+      {
+        "name": "BILIBILI 13周年",
+        "path": "2022-06-23",
+        "type": "simple-image"
+      }
+    ]
+  },
+  {
+    "date": "2022-06-24",
+    "refs": [
+      {
+        "name": "BILIBILI 13周年",
+        "path": "2022-06-24",
+        "type": "simple-image"
+      }
+    ]
+  },
+  {
+    "date": "2022-06-25",
+    "refs": [
+      {
+        "name": "BILIBILI 13周年",
+        "path": "2022-06-25",
+        "type": "official_2021"
+      },
+      {
+        "name": "BILIBILI 13周年 (预览)",
+        "path": "2022-06-25-preview",
+        "type": "simple-image"
+      }
+    ]
+  },
+  {
+    "date": "2022-06-27",
+    "refs": [
+      {
+        "name": "BILIBILI 13周年",
+        "path": "2022-06-27",
+        "type": "official_2021"
+      },
+      {
+        "name": "BILIBILI 13周年 (预览)",
+        "path": "2022-06-27-preview",
+        "type": "simple-image"
+      }
+    ]
+  },
+  {
+    "date": "2022-06-29",
+    "refs": [
+      {
+        "name": "时空猎人 公测",
+        "path": "2022-06-29",
+        "type": "official_2021"
+      },
+      {
+        "name": "时空猎人 公测 (预览)",
+        "path": "2022-06-29-preview",
+        "type": "simple-image"
+      }
+    ]
+  },
+  {
+    "date": "2022-06-30",
+    "refs": [
+      {
+        "name": "美院毕业联展",
+        "path": "2022-06-30",
+        "type": "official_2021"
+      },
+      {
+        "name": "美院毕业联展 (预览)",
+        "path": "2022-06-30-preview",
+        "type": "simple-image"
+      }
+    ]
+  },
+  {
+    "date": "2022-07-02",
+    "refs": [
+      {
+        "name": "BILIBILI&杰威尔",
+        "path": "2022-07-02",
+        "type": "simple-image"
+      }
+    ]
+  },
+  {
+    "date": "2022-07-05",
+    "refs": [
+      {
+        "name": "洛天依十周年",
+        "path": "2022-07-05",
+        "type": "simple-image"
+      }
+    ]
+  },
+  {
+    "date": "2022-07-08",
+    "refs": [
+      {
+        "name": "直播嘉年华",
+        "path": "2022-07-08",
+        "type": "simple-image"
+      }
+    ]
+  },
+  {
+    "date": "2022-07-09",
+    "refs": [
+      {
+        "name": "BLS",
+        "path": "2022-07-09",
+        "type": "simple-image"
+      }
+    ]
+  },
+  {
+    "date": "2022-07-10",
+    "refs": [
+      {
+        "name": "哔哩哔哩漫画",
+        "path": "2022-07-10",
+        "type": "simple-image"
+      }
+    ]
+  },
+  {
+    "date": "2022-07-11",
+    "refs": [
+      {
+        "name": "众神之地",
+        "path": "2022-07-11",
+        "type": "simple-image"
+      }
+    ]
+  },
+  {
+    "date": "2022-07-15",
+    "refs": [
+      {
+        "name": "非正式会谈",
+        "path": "2022-07-15",
+        "type": "simple-image"
+      }
+    ]
+  },
+  {
+    "date": "2022-07-18",
+    "refs": [
+      {
+        "name": "直播嘉年华",
+        "path": "2022-07-18",
+        "type": "simple-image"
+      }
+    ]
+  },
+  {
+    "date": "2022-07-20",
+    "refs": [
+      {
+        "name": "抵制网络暴力",
+        "path": "2022-07-20",
+        "type": "simple-image"
+      }
+    ]
+  },
+  {
+    "date": "2022-07-22",
+    "refs": [
+      {
+        "name": "确实该聊聊2",
+        "path": "2022-07-22",
+        "type": "simple-image"
+      }
+    ]
+  },
+  {
+    "date": "2022-07-25",
+    "refs": [
+      {
+        "name": "校园十佳歌手大赛",
+        "path": "2022-07-25",
+        "type": "official_2021"
+      },
+      {
+        "name": "校园十佳歌手大赛 (预览)",
+        "path": "2022-07-25-preview",
+        "type": "simple-image"
+      }
+    ]
+  },
+  {
+    "date": "2022-07-27",
+    "refs": [
+      {
+        "name": "FGO 6周年",
+        "path": "2022-07-27",
+        "type": "simple-image"
+      }
+    ]
+  },
+  {
+    "date": "2022-07-28",
+    "refs": [
+      {
+        "name": "校园十佳歌手大赛",
+        "path": "2022-07-28",
+        "type": "official_2021"
+      },
+      {
+        "name": "校园十佳歌手大赛 (预览)",
+        "path": "2022-07-28-preview",
+        "type": "simple-image"
+      }
+    ]
+  },
+  {
+    "date": "2022-07-29",
+    "refs": [
+      {
+        "name": "校园十佳歌手大赛",
+        "path": "2022-07-29",
+        "type": "official_2021"
+      },
+      {
+        "name": "校园十佳歌手大赛 (预览)",
+        "path": "2022-07-29-preview",
+        "type": "simple-image"
+      }
+    ]
+  },
+  {
+    "date": "2022-07-31",
+    "refs": [
+      {
+        "name": "校园十佳歌手大赛",
+        "path": "2022-07-31",
+        "type": "simple-image"
+      }
+    ]
+  },
+  {
+    "date": "2022-08-01",
+    "refs": [
+      {
+        "name": "建军95周年",
+        "path": "2022-08-01",
+        "type": "simple-image"
+      }
+    ]
+  },
+  {
+    "date": "2022-08-02",
+    "refs": [
+      {
+        "name": "宝珀理想国文学奖",
+        "path": "2022-08-02",
+        "type": "simple-image"
+      }
+    ]
+  },
+  {
+    "date": "2022-08-04",
+    "refs": [
+      {
+        "name": "七夕相亲",
+        "path": "2022-08-04",
+        "type": "simple-image"
+      }
+    ]
+  },
+  {
+    "date": "2022-08-05",
+    "refs": [
+      {
+        "name": "90婚介所",
+        "path": "2022-08-05",
+        "type": "simple-image"
+      }
+    ]
+  },
+  {
+    "date": "2022-08-06",
+    "refs": [
+      {
+        "name": "长夏忘忧",
+        "path": "2022-08-06",
+        "type": "official_2021"
+      },
+      {
+        "name": "长夏忘忧 (预览)",
+        "path": "2022-08-06-preview",
+        "type": "simple-image"
+      }
+    ]
+  },
+  {
+    "date": "2022-08-08",
+    "refs": [
+      {
+        "name": "直播嘉年华",
+        "path": "2022-08-08",
+        "type": "simple-image"
+      }
+    ]
+  },
+  {
+    "date": "2022-08-16",
+    "refs": [
+      {
+        "name": "2233十二周岁生日",
+        "path": "2022-08-16",
+        "type": "official_2021"
+      },
+      {
+        "name": "2233十二周岁生日 (预览)",
+        "path": "2022-08-16-preview",
+        "type": "simple-image"
+      }
+    ]
+  },
+  {
+    "date": "2022-08-18",
+    "refs": [
+      {
+        "name": "国漫星计划",
+        "path": "2022-08-18",
+        "type": "official_2021"
+      },
+      {
+        "name": "国漫星计划 (预览)",
+        "path": "2022-08-18-preview",
+        "type": "simple-image"
+      }
+    ]
+  },
+  {
+    "date": "2022-08-22",
+    "refs": [
+      {
+        "name": "哔哩哔哩漫画",
+        "path": "2022-08-22",
+        "type": "official_2021"
+      },
+      {
+        "name": "哔哩哔哩漫画 (预览)",
+        "path": "2022-08-22-preview",
+        "type": "simple-image"
+      }
+    ]
+  },
+  {
+    "date": "2022-08-25",
+    "refs": [
+      {
+        "name": "去你家吃饭好吗",
+        "path": "2022-08-25",
+        "type": "simple-image"
+      }
+    ]
+  },
+  {
+    "date": "2022-09-02",
+    "refs": [
+      {
+        "name": "盛夏报告",
+        "path": "2022-09-02",
+        "type": "simple-image"
+      }
+    ]
+  },
+  {
+    "date": "2022-09-04",
+    "refs": [
+      {
+        "name": "你我皆是黑马",
+        "path": "2022-09-04",
+        "type": "simple-image"
+      }
+    ]
+  },
+  {
+    "date": "2022-09-07",
+    "refs": [
+      {
+        "name": "BLS 地区赛",
+        "path": "2022-09-07",
+        "type": "simple-image"
+      }
+    ]
+  },
+  {
+    "date": "2022-09-10",
+    "refs": [
+      {
+        "name": "送月亮的人",
+        "path": "2022-09-10",
+        "type": "simple-image"
+      }
+    ]
+  },
+  {
+    "date": "2022-09-12",
+    "refs": [
+      {
+        "name": "花好月圆",
+        "path": "2022-09-12",
+        "type": "simple-image"
+      }
+    ]
+  },
+  {
+    "date": "2022-09-14",
+    "refs": [
+      {
+        "name": "三悦有了新工作",
+        "path": "2022-09-14",
+        "type": "simple-image"
+      }
+    ]
+  },
+  {
+    "date": "2022-09-15",
+    "refs": [
+      {
+        "name": "BLS 总选赛",
+        "path": "2022-09-15",
+        "type": "simple-image"
+      }
+    ]
+  },
+  {
+    "date": "2022-09-24",
+    "refs": [
+      {
+        "name": "秋",
+        "path": "2022-09-24",
+        "type": "official_2021"
+      },
+      {
+        "name": "秋 (预览)",
+        "path": "2022-09-24-preview",
+        "type": "simple-image"
+      }
+    ]
+  },
+  {
+    "date": "2022-09-29",
+    "refs": [
+      {
+        "name": "去你家吃饭好吗",
+        "path": "2022-09-29",
+        "type": "simple-image"
+      }
+    ]
+  },
+  {
+    "date": "2022-10-01",
+    "refs": [
+      {
+        "name": "我是特优声",
+        "path": "2022-10-01",
+        "type": "simple-image"
+      }
+    ]
+  },
+  {
+    "date": "2022-10-03",
+    "refs": [
+      {
+        "name": "2022诺奖",
+        "path": "2022-10-03",
+        "type": "simple-image"
+      }
+    ]
+  },
+  {
+    "date": "2022-10-04",
+    "refs": [
+      {
+        "name": "2022诺奖",
+        "path": "2022-10-04",
+        "type": "simple-image"
+      }
+    ]
+  },
+  {
+    "date": "2022-10-05",
+    "refs": [
+      {
+        "name": "2022诺奖",
+        "path": "2022-10-05",
+        "type": "simple-image"
+      }
+    ]
+  },
+  {
+    "date": "2022-10-09",
+    "refs": [
+      {
+        "name": "二十大",
+        "path": "2022-10-09",
+        "type": "simple-image"
+      }
+    ]
+  },
+  {
+    "date": "2022-10-16",
+    "refs": [
+      {
+        "name": "二十大召开",
+        "path": "2022-10-16",
+        "type": "simple-image"
+      }
+    ]
+  },
+  {
+    "date": "2022-10-23",
+    "refs": [
+      {
+        "name": "二十大闭幕",
+        "path": "2022-10-23",
+        "type": "simple-image"
+      }
+    ]
+  },
+  {
+    "date": "2022-11-01",
+    "refs": [
+      {
+        "name": "双十一",
+        "path": "2022-11-01",
+        "type": "simple-image"
+      }
+    ]
+  },
+  {
+    "date": "2022-11-03",
+    "refs": [
+      {
+        "name": "切磋亿下",
+        "path": "2022-11-03",
+        "type": "simple-image"
+      }
+    ]
+  },
+  {
+    "date": "2022-11-05",
+    "refs": [
+      {
+        "name": "我是特优声",
+        "path": "2022-11-05",
+        "type": "simple-image"
+      }
+    ]
+  },
+  {
+    "date": "2022-11-06",
+    "refs": [
+      {
+        "name": "LOL 总决赛",
+        "path": "2022-11-06",
+        "type": "simple-image"
+      }
+    ]
+  },
+  {
+    "date": "2022-11-08",
+    "refs": [
+      {
+        "name": "给UP投票",
+        "path": "2022-11-08",
+        "type": "simple-image"
+      }
+    ]
+  },
+  {
+    "date": "2022-11-09",
+    "refs": [
+      {
+        "name": "哔哩哔哩漫画4周年",
+        "path": "2022-11-09",
+        "type": "official_2021"
+      },
+      {
+        "name": "哔哩哔哩漫画4周年 (预览)",
+        "path": "2022-11-09-preview",
+        "type": "simple-image"
+      }
+    ]
+  },
+  {
+    "date": "2022-11-10",
+    "refs": [
+      {
+        "name": "宝珀理想国文学奖",
+        "path": "2022-11-10",
+        "type": "simple-image"
+      }
+    ]
+  },
+  {
+    "date": "2022-11-12",
+    "refs": [
+      {
+        "name": "我是特优声",
+        "path": "2022-11-12",
+        "type": "simple-image"
+      }
+    ]
+  },
+  {
+    "date": "2022-11-13",
+    "refs": [
+      {
+        "name": "哔哩哔哩漫画4周年",
+        "path": "2022-11-13",
+        "type": "official_2021"
+      },
+      {
+        "name": "哔哩哔哩漫画4周年 (预览)",
+        "path": "2022-11-13-preview",
+        "type": "simple-image"
+      }
+    ]
+  },
+  {
+    "date": "2022-11-16",
+    "refs": [
+      {
+        "name": "未来漫游指南",
+        "path": "2022-11-16",
+        "type": "simple-image"
+      }
+    ]
+  },
+  {
+    "date": "2022-11-21",
+    "refs": [
+      {
+        "name": "足球派对",
+        "path": "2022-11-21",
+        "type": "simple-image"
+      }
+    ]
+  },
+  {
+    "date": "2022-11-22",
+    "refs": [
+      {
+        "name": "我是艺术声",
+        "path": "2022-11-22",
+        "type": "simple-image"
+      }
+    ]
+  },
+  {
+    "date": "2022-11-25",
+    "refs": [
+      {
+        "name": "非匿名指令 公测",
+        "path": "2022-11-25",
+        "type": "official_2021"
+      },
+      {
+        "name": "非匿名指令 公测 (预览)",
+        "path": "2022-11-25-preview",
+        "type": "simple-image"
+      }
+    ]
+  },
+  {
+    "date": "2022-11-26",
+    "refs": [
+      {
+        "name": "年度科普UP评选",
+        "path": "2022-11-26",
+        "type": "simple-image"
+      }
+    ]
+  },
+  {
+    "date": "2022-11-30",
+    "refs": [
+      {
+        "name": "未来漫游指南",
+        "path": "2022-11-30",
+        "type": "simple-image"
+      }
+    ]
+  },
+  {
+    "date": "2022-12-01",
+    "refs": [
+      {
+        "name": "沉痛哀悼江泽民同志",
+        "path": "2022-12-01",
+        "type": "simple-image"
+      }
+    ]
+  },
+  {
+    "date": "2022-12-02",
+    "refs": [
+      {
+        "name": "必剪",
+        "path": "2022-12-02",
+        "type": "simple-image"
+      }
+    ]
+  },
+  {
+    "date": "2022-12-08",
+    "refs": [
+      {
+        "name": "年度知识分享官评选",
+        "path": "2022-12-08",
+        "type": "simple-image"
+      }
+    ]
+  },
+  {
+    "date": "2022-12-10",
+    "refs": [
+      {
+        "name": "聊聊考研",
+        "path": "2022-12-10",
+        "type": "simple-image"
+      }
+    ]
+  },
+  {
+    "date": "2022-12-11",
+    "refs": [
+      {
+        "name": "三体",
+        "path": "2022-12-11",
+        "type": "simple-image"
+      }
+    ]
+  },
+  {
+    "date": "2022-12-12",
+    "refs": [
+      {
+        "name": "聊聊考研",
+        "path": "2022-12-12",
+        "type": "simple-image"
+      }
+    ]
+  },
+  {
+    "date": "2022-12-14",
+    "refs": [
+      {
+        "name": "决胜荒野",
+        "path": "2022-12-14",
+        "type": "simple-image"
+      }
+    ]
+  },
+  {
+    "date": "2022-12-15",
+    "refs": [
+      {
+        "name": "记录你的高光时刻",
+        "path": "2022-12-15",
+        "type": "simple-image"
+      }
+    ]
+  },
+  {
+    "date": "2022-12-18",
+    "refs": [
+      {
+        "name": "三体",
+        "path": "2022-12-18",
+        "type": "simple-image"
+      }
+    ]
+  },
+  {
+    "date": "2022-12-19",
+    "refs": [
+      {
+        "name": "UP主足球大乱斗",
+        "path": "2022-12-19",
+        "type": "simple-image"
+      }
+    ]
+  },
+  {
+    "date": "2022-12-21",
+    "refs": [
+      {
+        "name": "2022最美的夜",
+        "path": "2022-12-21",
+        "type": "simple-image"
+      }
+    ]
+  },
+  {
+    "date": "2022-12-23",
+    "refs": [
+      {
+        "name": "2022年终动画盛典",
+        "path": "2022-12-23",
+        "type": "official_2021"
+      },
+      {
+        "name": "2022年终动画盛典 (预览)",
+        "path": "2022-12-23-preview",
+        "type": "simple-image"
+      }
+    ]
+  },
+  {
+    "date": "2022-12-24",
+    "refs": [
+      {
+        "name": "2022最美的夜",
+        "path": "2022-12-24",
+        "type": "simple-image"
+      }
+    ]
+  },
+  {
+    "date": "2022-12-27",
+    "refs": [
+      {
+        "name": "年度书单",
+        "path": "2022-12-27",
+        "type": "simple-image"
+      }
+    ]
+  },
+  {
+    "date": "2022-12-30",
+    "refs": [
+      {
+        "name": "2022关键词",
+        "path": "2022-12-30",
+        "type": "simple-image"
+      }
+    ]
+  },
+  {
+    "date": "2022-12-31",
+    "refs": [
+      {
+        "name": "B站年度报告",
+        "path": "2022-12-31",
+        "type": "official_2021"
+      },
+      {
+        "name": "B站年度报告 (预览)",
+        "path": "2022-12-31-preview",
+        "type": "simple-image"
+      }
+    ]
+  }
+]

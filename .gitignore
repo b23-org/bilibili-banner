@@ -1,0 +1,39 @@
+# AI
+CLAUDE.md
+AGENTS.md
+.agent*/
+.claude
+
+# Dependencies
+node_modules/
+
+# Build and Distribution
+dist/
+build/
+out/
+.next/
+.nuxt/
+
+# Environment and Secrets
+.env*
+!.env.example
+*.env.local
+
+# OS and IDE
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# Caches and Temp
+.cache/
+.eslintcache
+.stylelintcache
+.parcel-cache
+.turbo/
+.worktrees/

@@ -1,0 +1,22 @@
+https://:project.pages.dev/*
+  X-Robots-Tag: noindex
+
+https://:version.:project.pages.dev/*
+  X-Robots-Tag: noindex
+
+/assets/*.png
+  Cache-Control: public, max-age=31536000, immutable
+/assets/*.jpg
+  Cache-Control: public, max-age=31536000, immutable
+/assets/*.webm
+  Cache-Control: public, max-age=31536000, immutable
+/assets/*.mp4
+  Cache-Control: public, max-age=31536000, immutable
+/assets/*.ico
+  Cache-Control: public, max-age=31536000, immutable
+/assets/*.js
+  Cache-Control: public, max-age=864000, immutable
+/assets/*.css
+  Cache-Control: public, max-age=864000, immutable
+/assets/*.json
+  Cache-Control: public, max-age=14400

@@ -1,0 +1,11 @@
+{
+  "type": "simple-image",
+  "logo": {
+    "src": "assets/2015/2015-06-05/banner20150604_logo.png",
+    "width": "220px",
+    "height": "110px"
+  },
+  "layer": {
+    "src": "assets/2015/2015-06-05/banner20150604.jpg"
+  }
+}

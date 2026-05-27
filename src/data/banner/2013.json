@@ -1,0 +1,32 @@
+[
+  {
+    "date": "2013-09-07",
+    "refs": [
+      {
+        "name": "秋",
+        "path": "2013-09-07",
+        "type": "simple-image"
+      }
+    ]
+  },
+  {
+    "date": "2013-11-07",
+    "refs": [
+      {
+        "name": "冬",
+        "path": "2013-11-07",
+        "type": "simple-image"
+      }
+    ]
+  },
+  {
+    "date": "2013-12-25",
+    "refs": [
+      {
+        "name": "圣诞快乐",
+        "path": "2013-12-25",
+        "type": "simple-image"
+      }
+    ]
+  }
+]

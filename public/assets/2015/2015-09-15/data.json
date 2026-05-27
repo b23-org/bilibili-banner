@@ -1,0 +1,11 @@
+{
+  "type": "simple-image",
+  "logo": {
+    "src": "assets/2015/2015-09-15/2015_autumn_logo.png",
+    "width": "220px",
+    "height": "110px"
+  },
+  "layer": {
+    "src": "assets/2015/2015-09-15/2015_autumn.jpg"
+  }
+}

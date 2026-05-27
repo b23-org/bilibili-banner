@@ -1,0 +1,473 @@
+/* Modern CSS Reset - 仅保留本项目需要的部分 */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  background-color: #f6f7f8;
+  font-family:
+    -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial,
+    sans-serif;
+}
+img,
+video {
+  display: block;
+}
+
+:root {
+  --primary-color: #00aeec;
+}
+
+/* Banner 容器 */
+#banner-container {
+  flex-shrink: 0;
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  min-height: 155px;
+  height: 9.375vw;
+  max-height: 240px;
+  background-color: #fff;
+  contain: paint layout;
+}
+
+/* 动画渲染层（原 #app 逻辑） */
+.animated-banner {
+  width: 100%;
+  height: 100%;
+}
+
+/* 状态受控显示逻辑 */
+.loading-banner,
+.failed-banner {
+  display: none;
+  width: 100%;
+  height: 100%;
+}
+
+#banner-container.is-loading .loading-banner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+#banner-container.is-failed .failed-banner {
+  display: flex;
+}
+
+/* 加载中提示 */
+.loading-banner {
+  background: #fff;
+  color: #999;
+}
+
+.loading-banner p {
+  margin: 0;
+  text-align: center;
+}
+
+/* GitHub 风格 Loading Spinner */
+.loading-spinner {
+  width: 32px;
+  height: 32px;
+  border: 3px solid rgb(199, 200, 201);
+  border-top-color: rgb(37, 41, 46);
+  border-radius: 50%;
+  animation: loading-spin 0.8s linear infinite;
+  margin-bottom: 10px;
+}
+
+@keyframes loading-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* 交互控制区 */
+#control-panel {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+}
+
+.layer {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+img,
+video {
+  user-select: none;
+  pointer-events: none;
+  -webkit-user-drag: none; /* Prevent Native Drag Ghosting */
+}
+
+/* 一级：年份选择器 */
+#year-selector {
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: safe center;
+  gap: 36px;
+  padding: 14px 0 10px;
+  background: #fff;
+  overflow-x: auto;
+  scrollbar-width: none; /* Firefox */
+}
+
+#year-selector::-webkit-scrollbar {
+  display: none; /* Chrome/Safari */
+}
+
+.year-item {
+  font-size: 22px;
+  font-weight: bold;
+  color: #999;
+  cursor: pointer;
+  transition:
+    color 0.3s ease,
+    border-bottom-color 0.3s ease; /* Precision Transition */
+  padding-bottom: 5px;
+  border-bottom: 2px solid transparent;
+}
+
+.year-item:hover {
+  color: var(--primary-color);
+}
+
+.year-item.active {
+  color: var(--primary-color);
+  border-bottom-color: var(--primary-color);
+}
+
+/* 变体弹出菜单（position: fixed，通过 JS .visible 类控制，脱离 overflow 容器） */
+.popover-content {
+  position: fixed;
+  margin: 0;
+  border: none;
+  transform: translateX(-50%);
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  padding: 4px;
+  gap: 4px;
+  display: flex;
+  flex-direction: column;
+  min-width: 80px;
+  opacity: 0;
+  visibility: hidden;
+  transition:
+    opacity 0.2s ease,
+    visibility 0.2s ease,
+    transform 0.2s ease;
+  z-index: 1000;
+  pointer-events: none;
+}
+
+/* JS 控制显示 */
+.popover-content.visible {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+  transform: translateX(-50%) translateY(-8px);
+}
+
+.popover-item {
+  color: #666;
+  font-size: 13px;
+  padding: 6px 16px;
+  border-radius: 4px;
+  text-align: center;
+  cursor: pointer;
+  transition: color 0.2s;
+  white-space: nowrap;
+}
+
+.popover-item:hover {
+  background: #f4f5f7;
+  color: var(--primary-color);
+}
+
+.popover-item.active {
+  color: var(--primary-color);
+  font-weight: bold;
+  background: #e7f6fd;
+}
+
+/* 二级：Banner 详情轴 */
+#timeline-selector {
+  flex-shrink: 0;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: safe center;
+  gap: 0;
+  width: 100%;
+  overflow-x: auto;
+  padding: 16px 50px 40px;
+  background-color: #fff;
+  background-image: linear-gradient(#eee, #eee);
+  background-repeat: no-repeat;
+  background-position: 0 64px;
+  background-size: 100% 1px;
+  box-sizing: border-box;
+}
+
+/* 详情项 */
+.timeline-item {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 30px;
+  cursor: pointer;
+  min-width: 110px;
+  flex-shrink: 0;
+}
+
+.timeline-item::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 44px; /* 重新对齐轨道线 (16 + 44 + 4 = 64px) */
+  transform: translateX(-50%);
+  width: 8px;
+  height: 8px;
+  background: #fff;
+  border: 2px solid #ddd;
+  border-radius: 50%;
+  transition:
+    background-color 0.3s ease,
+    border-color 0.3s ease,
+    box-shadow 0.3s ease;
+  z-index: 5;
+}
+
+.timeline-item.active::before {
+  background: var(--primary-color);
+  border-color: var(--primary-color);
+  box-shadow: 0 0 8px rgba(0, 174, 236, 0.4);
+}
+
+.item-content {
+  position: relative; /* 为下拉菜单提供定位基准 */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 12px; /* 撑开文字与轨道线的间距 */
+  opacity: 0.6;
+  transition: opacity 0.3s ease; /* Precision Transition */
+}
+
+.item-date {
+  font-size: 11px;
+  color: #aaa;
+}
+
+.item-name {
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  color: #444;
+  margin-top: 4px;
+  white-space: nowrap;
+  transition:
+    color 0.3s ease,
+    font-weight 0.3s ease;
+}
+
+.timeline-item:hover .item-content,
+.timeline-item.active .item-content {
+  opacity: 1;
+}
+
+.timeline-item:hover .item-name {
+  color: var(--primary-color);
+}
+
+.timeline-item.active .item-name {
+  color: var(--primary-color);
+  font-weight: 600;
+}
+
+/* 多变体指示箭头（SVG 注入） */
+.variant-arrow {
+  display: inline-block;
+  margin-left: 6px;
+  width: 14px;
+  height: 14px;
+  opacity: 0.7;
+  color: #333;
+  transition:
+    color 0.2s,
+    opacity 0.2s;
+}
+
+.has-popover:hover .variant-arrow,
+.has-popover.active .variant-arrow {
+  color: var(--primary-color);
+  opacity: 1;
+}
+
+/* 单图/单视频 模式容器 */
+.simple-image-banner {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden; /* 宽度不足时截断，不缩小 */
+}
+
+.simple-image-banner img {
+  flex-shrink: 0; /* 禁止缩小 */
+  width: 100%; /* 撑满容器宽度 */
+  height: 100%;
+  object-fit: cover; /* 等比缩放铺满，超出部分由容器 overflow:hidden 截断 */
+}
+
+/* 加载失败占位界面 */
+.failed-banner {
+  position: absolute;
+  inset: 0;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  color: #c0392b;
+  background: #fff8f8;
+  user-select: none;
+}
+
+.failed-banner svg {
+  opacity: 0.7;
+}
+
+.load-failed-title {
+  margin: 0;
+  font-size: 15px;
+  font-weight: 600;
+  color: #c0392b;
+}
+
+/* 布局填充：撑满 banner + year + timeline 以下的剩余视口 */
+#spacer {
+  flex: 1;
+  background: #fff;
+}
+
+.particle-canvas {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+#logo {
+  z-index: 1;
+  display: none;
+  position: absolute;
+  left: 56px; /* 同官方 <1367px 断点的 padding 值 */
+  top: 50%;
+  transform: translateY(-50%);
+  width: 180px;
+  min-height: 60px;
+  height: 50%;
+  pointer-events: none;
+}
+
+@media (min-width: 1367px) and (max-width: 1700.9px) {
+  #logo {
+    left: 64px;
+  }
+}
+
+@media (min-width: 1701px) and (max-width: 2199.9px) {
+  #logo {
+    left: 96px;
+  }
+}
+
+@media (min-width: 2200px) {
+  #logo {
+    left: 0;
+  }
+}
+
+.logo-img {
+  display: block;
+  object-fit: contain;
+  max-width: 100%;
+  max-height: 100%;
+  pointer-events: none;
+  user-select: none;
+  -webkit-user-drag: none;
+}
+
+/* 页脚容器 */
+#footer {
+  flex-shrink: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 32px 0 40px;
+  background-color: #fff;
+}
+
+.footer-content {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.github-link {
+  color: #24292f;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0.8;
+  transition: opacity 0.2s ease;
+}
+
+.github-link:hover {
+  opacity: 1;
+}
+
+.github-link svg {
+  fill: currentColor;
+}
+
+.copyright {
+  font-size: 13px;
+  color: #6e7781;
+  line-height: 1.5;
+  text-align: left;
+}
+
+.copyright a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.copyright a:hover {
+  text-decoration: underline;
+  color: #24292f;
+}

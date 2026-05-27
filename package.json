@@ -1,0 +1,37 @@
+{
+  "name": "bilibili-banner",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "typecheck": "tsc --noEmit",
+    "lint": "biome check --write src/* scripts/* index.html public/*",
+    "data": "tsx scripts/manage-data.ts",
+    "grab": "tsx scripts/grab/index.ts"
+  },
+  "dependencies": {
+    "three": "^0.184.0"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "2.4.14",
+    "@types/node": "^25.6.0",
+    "@types/three": "^0.184.0",
+    "ajv": "^8.20.0",
+    "impit": "^0.13.1",
+    "ts-json-schema-generator": "^2.9.0",
+    "tsx": "^4.21.0",
+    "typescript": "^6.0.3",
+    "vite": "^8.0.10"
+  },
+  "type": "module",
+  "keywords": [
+    "bilibili",
+    "banner"
+  ],
+  "author": "Bilibili (Unofficial)",
+  "license": "MIT",
+  "packageManager": "pnpm@11.3.0+sha512.2c403d6594527287672b1f7056343a1f7c3634036a67ffabfcc2b3d7595d843768f8787148d1b57cf7956c90606bbd192857c363af19e96d2d0ec9ec5741d215"
+}

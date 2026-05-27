@@ -1,0 +1,11 @@
+{
+  "type": "simple-image",
+  "logo": {
+    "src": "assets/2016/2016-04-07/097979745cb366fb95072af11352e480.png",
+    "width": "220px",
+    "height": "110px"
+  },
+  "layer": {
+    "src": "assets/2016/2016-04-07/82df683ce9d524d11517df03413bb17e.png"
+  }
+}

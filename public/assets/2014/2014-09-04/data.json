@@ -1,0 +1,9 @@
+{
+  "type": "simple-image",
+  "logo": {
+    "src": "assets/2014/2014-09-04/20140904_logo.png"
+  },
+  "layer": {
+    "src": "assets/2014/2014-09-04/20140904_banner.jpg"
+  }
+}

@@ -1,0 +1,57 @@
+{
+  "type": "official_2020",
+  "logo": {
+    "src": "assets/2020/2020-12-20-preview/2b0fdd3bc687354f3c5eec2d893909b3c8e39fcc.png"
+  },
+  "layers": [
+    {
+      "images": [
+        {
+          "src": "assets/2020/2020-12-20/0cd3980123f12f3374d859d4e8abb5fca97cc9eb.png"
+        }
+      ],
+      "initial": {
+        "scale": 0.86
+      },
+      "offset": {},
+      "offsetCurve": {}
+    },
+    {
+      "images": [
+        {
+          "src": "assets/2020/2020-12-20/60fce4fe2eebd23296a42575995b94619cf951bc.png"
+        }
+      ],
+      "initial": {
+        "scale": 0.86
+      },
+      "offset": {
+        "translate": [20, 0]
+      },
+      "offsetCurve": {}
+    },
+    {
+      "images": [
+        {
+          "src": "assets/2020/2020-12-20/fc51f3d7f4b39fa96c1a4ca9cf61001c12e1dc5d.png",
+          "duration": 240
+        },
+        {
+          "src": "assets/2020/2020-12-20/f3d70d818fb9bcb0dca8385470b8489d3d8627c4.png",
+          "duration": 240
+        },
+        {
+          "src": "assets/2020/2020-12-20/42ce9f7e280fcd0cdf1e88e81424a15e84536b2c.png",
+          "duration": 240
+        }
+      ],
+      "initial": {
+        "scale": 0.86
+      },
+      "offset": {
+        "translate": [40, 0]
+      },
+      "offsetCurve": {}
+    }
+  ]
+}

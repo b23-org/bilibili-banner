@@ -1,0 +1,25 @@
+{
+  "type": "official_2021",
+  "layers": [
+    {
+      "resources": [
+        {
+          "src": "assets/2021/2021-05-26-4/1258aab563f4de23b2d2ad1962a13d19f8e5589d.webm",
+          "id": 0
+        }
+      ],
+      "scale": {
+        "initial": 0.88
+      },
+      "translate": {
+        "initial": [50, 0],
+        "offset": [20, 0]
+      },
+      "id": 0,
+      "name": "图层0"
+    }
+  ],
+  "logo": {
+    "src": "assets/2021/2021-05-26-preview/10641bbc5189591221c00958f3458f33798c7caa.png"
+  }
+}
