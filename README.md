@@ -56,10 +56,8 @@ pnpm preview
 
 抓取后的数据和资源会自动归档到 `public/assets/{YYYY}/{YYYY-MM-DD}[-*]` 目录中。
 
-> [!IMPORTANT] 重要注意事项
->
-> 抓取脚本在自动运行完毕后，生成的 Banner 标题（`banner-title`）可能不符合期望（通常为网页的日期）。
-> 因此在完成抓取后，**请务必手动编辑** [src/data/banner/](src/data/banner/) 目录下对应年份的配置文件（例如 [2026.json](src/data/banner/2026.json)），修改对应记录中 `refs` 下的 `name` 属性为你期望的 Banner 名称。
+> [!IMPORTANT]
+> 抓取脚本在自动运行完毕后，生成的 Banner 标题（`banner-title`）通常为网页的日期。因此在完成抓取后，**请务必手动编辑** [src/data/banner/](src/data/banner/) 目录下对应记录所在年份的配置文件（例如 [2026.json](src/data/banner/2026.json)），修改对应记录的 `name` 属性。
 
 ### 1. 抓取当前最新 Banner
 
