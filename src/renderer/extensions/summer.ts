@@ -10,33 +10,33 @@ import {
 const BASE = "assets/extensions/summer/";
 
 const VIDEO_FILES = [
-  "SKE8wd45QU.webm", // 0: p  - looping bg video
-  "0niZsL8MB2.webm", // 1: m  - environment bg video
-  "d6e21ea6c0a43f5d04c46d6d3bf8c2be1f68fa52.webm", // 2: f  - foreground person video
-  "jldzj4Xjg6.webm", // 3: g  - TV default loop video
-  "wVMuVaizdV.webm", // 4: v  - hang-up return video
-  "Mkq24Q07yp.webm", // 5: _  - incoming call dial video
-  "Dxra9kefPp.webm", // 6: x  - random branch video 1
-  "eyVg5JzCuv.webm", // 7: y  - random branch video 2
-  "YGFpy87q1A.webm", // 8: M  - periodic cat video
-  "ea6faf4797a9a366c6ea84f99034b6621589ff1d.webm", // 9: b  - periodic decoration video 2
+  "SKE8wd45QU.webm", // 0: 空背景视频 (无内容)
+  "0niZsL8MB2.webm", // 1: 22玩游戏视频
+  "d6e21ea6c0a43f5d04c46d6d3bf8c2be1f68fa52.webm", // 2: 22玩游戏画面
+  "jldzj4Xjg6.webm", // 3: 33在桌子前看书动画一 (默认循环)
+  "wVMuVaizdV.webm", // 4: 33放下手机视频
+  "Mkq24Q07yp.webm", // 5: 33拿起手机视频
+  "Dxra9kefPp.webm", // 6: 33在桌子前看书动画二 (分支一)
+  "eyVg5JzCuv.webm", // 7: 33在桌子前看书动画三 (分支二)
+  "YGFpy87q1A.webm", // 8: 雨滴落在窗户上聚拢下落动画一
+  "ea6faf4797a9a366c6ea84f99034b6621589ff1d.webm", // 9: 雨滴落在窗户上聚拢下落动画二
 ];
 
 const IMAGE_FILES = [
-  "VQj06ftSDE.png", // 0: T_bg    - static bg
-  "NnTy0DIi2R.png", // 1: E_neon  - static neon decoration
-  "Xm1kA7GtjO.png", // 2: A_blink - blinking neon texture
+  "VQj06ftSDE.png", // 0: 主场景的背景装饰图
+  "NnTy0DIi2R.png", // 1: 主场景背景图
+  "Xm1kA7GtjO.png", // 2: 33桌前电脑屏幕闪烁贴图
   "CwEe1GliH5.png", // 3: phone_bg - phone panel bg
   "JSI0DJmtSC.png", // 4: vol_active - volume on icon
-  "1WZCKslZAM.png", // 5: vol_mute - mute icon
+  "1WZCKslZAM.png", // 5: vol_mute - volume mute icon
 ];
 
 const AUDIO_FILES = [
-  "5hXxHHvjtF.mp3", // 0: D - looping bg music
-  "CGa9nSkKhg.mp3", // 1: I - x accompanying audio
-  "v1oD0nZzBH.mp3", // 2: N - y accompanying audio
-  "5gPxskknWD.mp3", // 3: z - dial audio
-  "QJWxOXQtfA.mp3", // 4: O - hang-up audio
+  "5hXxHHvjtF.mp3", // 0: 主背景音效
+  "CGa9nSkKhg.mp3", // 1: 33翻书音效 (伴随看书动画二触发)
+  "v1oD0nZzBH.mp3", // 2: 33擦眼动作音效 (伴随看书动画三触发)
+  "5gPxskknWD.mp3", // 3: 拿起手机音效
+  "QJWxOXQtfA.mp3", // 4: 放下手机音效
 ];
 
 // ── Type-safe navigator extension ──
@@ -79,8 +79,8 @@ export default class SummerExtension implements BannerExtension {
   private isMutedLocally = false;
 
   // ── Interactive state machine ──
-  private stateJ = 0;
-  private randomCounterZ = 5;
+  private phoneCallState = 0;
+  private readingLoopCount = 5;
   private currentTVVid: HTMLVideoElement | null = null;
   private audioMap: Map<HTMLVideoElement, THREE.Audio> = new Map();
 
@@ -229,12 +229,30 @@ export default class SummerExtension implements BannerExtension {
 
     this.originalHeight = context.bannerEl.clientHeight;
 
-    const [p, m, f, g, v, _, x, y, M, b] = this.videos;
-    const [T_bg, E_neon, A_blink] = this.imageTextures;
-    this.currentTVVid = g;
+    const [
+      videoEmptyBg,
+      videoBili22Gaming,
+      videoGameScreen,
+      videoBili33Reading1,
+      videoBili33PutDownPhone,
+      videoBili33PickupPhone,
+      videoBili33Reading2,
+      videoBili33Reading3,
+      videoRaindrops1,
+      videoRaindrops2,
+    ] = this.videos;
+    const [texDecoBg, texSceneBg, texScreenBlink] = this.imageTextures;
+    this.currentTVVid = videoBili33Reading1;
 
     // Group by role: videos that auto-play vs. state-machine-driven
-    this.backgroundVideos = [p, m, f, g, M, b];
+    this.backgroundVideos = [
+      videoEmptyBg,
+      videoBili22Gaming,
+      videoGameScreen,
+      videoBili33Reading1,
+      videoRaindrops1,
+      videoRaindrops2,
+    ];
     for (const vid of this.backgroundVideos) {
       vid.autoplay = true;
     }
@@ -326,15 +344,21 @@ export default class SummerExtension implements BannerExtension {
       return audio;
     });
 
-    const [bgMusic, audioX, audioY, audioDial, audioHangup] = this.audios;
+    const [
+      bgMusic,
+      audioBili33FlipBook,
+      audioRubEyes,
+      audioPickupPhone,
+      audioPutDownPhone,
+    ] = this.audios;
     this.bgMusic = bgMusic;
     this.bgMusic.setLoop(true);
 
     this.audioMap = new Map([
-      [x, audioX],
-      [y, audioY],
-      [_, audioDial],
-      [v, audioHangup],
+      [videoBili33Reading2, audioBili33FlipBook],
+      [videoBili33Reading3, audioRubEyes],
+      [videoBili33PickupPhone, audioPickupPhone],
+      [videoBili33PutDownPhone, audioPutDownPhone],
     ]);
 
     // E. Build video textures
@@ -360,7 +384,7 @@ export default class SummerExtension implements BannerExtension {
     };
 
     // Try to start background videos — may fail without user gesture, retried on click
-    [p, m, f].forEach((vid) => {
+    [videoEmptyBg, videoBili22Gaming, videoGameScreen].forEach((vid) => {
       vid.loop = true;
     });
     this.safePlayAll(this.backgroundVideos);
@@ -402,30 +426,54 @@ export default class SummerExtension implements BannerExtension {
       };
     };
 
-    const updateCatH = setupPeriodicVideo(M, 3600, 50, 240, 160, 20, 2);
-    const updateDecoG = setupPeriodicVideo(b, 2000, 30, 220, 30, 70, 2);
+    const updateRaindrops1 = setupPeriodicVideo(
+      videoRaindrops1,
+      3600,
+      50,
+      240,
+      160,
+      20,
+      2,
+    );
+    const updateRaindrops2 = setupPeriodicVideo(
+      videoRaindrops2,
+      2000,
+      30,
+      220,
+      30,
+      70,
+      2,
+    );
 
     // G. Main scene meshes (on top of periodic meshes)
-    const meshBg = helperCreateMesh(T_bg);
+    const meshBg = helperCreateMesh(texDecoBg);
     meshBg.position.set(0, 0, 0);
 
-    const meshVidBg = helperCreateMesh(this.videoTextures.get(p)!);
+    const meshVidBg = helperCreateMesh(this.videoTextures.get(videoEmptyBg)!);
     meshVidBg.position.set(0, 0, 1);
 
-    const meshFgPerson = helperCreateMesh(this.videoTextures.get(f)!, 96, 48);
+    const meshFgPerson = helperCreateMesh(
+      this.videoTextures.get(videoGameScreen)!,
+      96,
+      48,
+    );
     meshFgPerson.position.set(735, 60, 3);
 
-    const meshNeon = helperCreateMesh(E_neon);
+    const meshNeon = helperCreateMesh(texSceneBg);
     meshNeon.position.set(0, 0, 4);
 
     const meshPersonMain = helperCreateMesh(
-      this.videoTextures.get(m)!,
+      this.videoTextures.get(videoBili22Gaming)!,
       200,
       265,
     );
     meshPersonMain.position.set(-960 + 1410 + 100, 180 - 50 - 132.5, 5);
 
-    this.meshTV = helperCreateMesh(this.videoTextures.get(g)!, 520, 360);
+    this.meshTV = helperCreateMesh(
+      this.videoTextures.get(videoBili33Reading1)!,
+      520,
+      360,
+    );
     this.meshTV.position.set(-960 + 560 + 260, 180 - 0 - 180, 6);
 
     this.scene.add(meshBg);
@@ -436,7 +484,7 @@ export default class SummerExtension implements BannerExtension {
     this.scene.add(this.meshTV);
 
     // H. Blink mesh (A_blink, topmost layer — toggled by blink sequence)
-    this.meshBlink = helperCreateMesh(A_blink);
+    this.meshBlink = helperCreateMesh(texScreenBlink);
     this.meshBlink.position.set(0, 0, 7);
     this.scene.add(this.meshBlink);
 
@@ -466,8 +514,8 @@ export default class SummerExtension implements BannerExtension {
       }
       blinkLastTime = time;
 
-      updateCatH(time);
-      updateDecoG(time);
+      updateRaindrops1(time);
+      updateRaindrops2(time);
 
       if (this.renderer && this.scene && this.camera) {
         this.renderer.render(this.scene, this.camera);
@@ -652,24 +700,24 @@ export default class SummerExtension implements BannerExtension {
     // K. Phone state machine interaction logic
     const handleTVEnded = async () => {
       const prevVid = this.currentTVVid!;
-      if (this.currentTVVid === g) {
-        this.randomCounterZ = Math.max(0, this.randomCounterZ - 1);
+      if (this.currentTVVid === videoBili33Reading1) {
+        this.readingLoopCount = Math.max(0, this.readingLoopCount - 1);
       } else {
-        this.stateJ = 0;
-        this.currentTVVid = g;
+        this.phoneCallState = 0;
+        this.currentTVVid = videoBili33Reading1;
       }
 
-      if (this.randomCounterZ === 0) {
+      if (this.readingLoopCount === 0) {
         const rand = Math.random();
         if (rand < 0.5) {
           this.currentTVVid!.pause();
           this.currentTVVid!.currentTime = 0;
           if (rand < 0.3) {
-            this.randomCounterZ = 3;
-            this.currentTVVid = x;
+            this.readingLoopCount = 3;
+            this.currentTVVid = videoBili33Reading2;
           } else {
-            this.randomCounterZ = 5;
-            this.currentTVVid = y;
+            this.readingLoopCount = 5;
+            this.currentTVVid = videoBili33Reading3;
           }
         }
       }
@@ -700,19 +748,24 @@ export default class SummerExtension implements BannerExtension {
           }
         }
 
-        if (prevVid !== g) {
+        if (prevVid !== videoBili33Reading1) {
           prevVid.currentTime = 0;
           prevVid.pause();
         }
       }
     };
 
-    [g, x, y, v].forEach((vid) => {
+    [
+      videoBili33Reading1,
+      videoBili33Reading2,
+      videoBili33Reading3,
+      videoBili33PutDownPhone,
+    ].forEach((vid) => {
       vid.addEventListener("ended", handleTVEnded);
     });
 
-    _.addEventListener("ended", () => {
-      this.stateJ = 2;
+    videoBili33PickupPhone.addEventListener("ended", () => {
+      this.phoneCallState = 2;
       this.phonePanel?.style.removeProperty("display");
       // Force reflow so Firefox registers the initial bottom:-100% before transition
       void this.phonePanel?.offsetHeight;
@@ -722,8 +775,8 @@ export default class SummerExtension implements BannerExtension {
     });
 
     this.phoneArea.addEventListener("click", async () => {
-      if (this.isExtendMode && this.stateJ === 0) {
-        this.stateJ = 1;
+      if (this.isExtendMode && this.phoneCallState === 0) {
+        this.phoneCallState = 1;
         this.currentTVVid?.pause();
         if (this.currentTVVid) this.currentTVVid.currentTime = 0;
 
@@ -735,14 +788,14 @@ export default class SummerExtension implements BannerExtension {
           /* Audio may not have started */
         }
 
-        this.currentTVVid = _;
+        this.currentTVVid = videoBili33PickupPhone;
         this.currentTVVid.currentTime = 0;
         await this.currentTVVid.play().catch(() => {});
         await new Promise((r) => requestAnimationFrame(r));
 
         if (this.isExtendMode) {
           try {
-            audioDial.play();
+            audioPickupPhone.play();
           } catch (_) {}
         }
         this.meshTV!.material.map = this.videoTextures.get(this.currentTVVid)!;
@@ -750,8 +803,8 @@ export default class SummerExtension implements BannerExtension {
     });
 
     this.boundPutDown = async () => {
-      if (this.stateJ !== 2) return;
-      this.stateJ = 1;
+      if (this.phoneCallState !== 2) return;
+      this.phoneCallState = 1;
 
       phoneBody.style.setProperty("bottom", "-100%");
       phoneBody.ontransitionend = () => {
@@ -760,17 +813,17 @@ export default class SummerExtension implements BannerExtension {
       };
 
       const prevVid = this.currentTVVid!;
-      await v.play().catch(() => {});
+      await videoBili33PutDownPhone.play().catch(() => {});
       await new Promise((r) => requestAnimationFrame(r));
-      v.currentTime = 0;
-      this.currentTVVid = v;
+      videoBili33PutDownPhone.currentTime = 0;
+      this.currentTVVid = videoBili33PutDownPhone;
 
       prevVid.pause();
       prevVid.currentTime = 0;
 
       if (this.isExtendMode) {
         try {
-          audioHangup.play();
+          audioPutDownPhone.play();
         } catch (_) {}
       }
       this.meshTV!.material.map = this.videoTextures.get(this.currentTVVid)!;
@@ -778,7 +831,7 @@ export default class SummerExtension implements BannerExtension {
 
     // L. Exit trigger handlers
     const triggerExit = () => {
-      if (this.stateJ === 2) {
+      if (this.phoneCallState === 2) {
         this.boundPutDown?.();
       }
       this.collapseBanner();
