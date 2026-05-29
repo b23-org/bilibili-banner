@@ -1,0 +1,48 @@
+export const BASE_PATH = "assets/extensions/autumn/";
+
+export const ASSETS = {
+  videos: {
+    bgVideo: "main/2xv.mp4",
+  },
+  models: {
+    mainScene: "main/main.glb",
+    char22Left: "main/22_left.glb",
+    char22Right: "main/22_right.glb",
+    char33Left: "main/33_left.glb",
+    char33Right: "main/33_right.glb",
+    subSceneLeft: "left/sub_scene_left.glb",
+    seagull: "left/seagull.glb",
+    subSceneRight: "right/sub_scene_right.glb",
+    bell2: "right/bell2.glb",
+  },
+  textures: {
+    leaf1: "main/leaf01.png",
+    leaf2: "main/leaf02.png",
+    leaf3: "main/leaf03.png",
+    butterflyImg: "main/butterfly.png",
+    butterflyJson: "main/butterfly.json",
+    peoplesImg: "left/peoples.png",
+    peoplesJson: "left/peoples.json",
+    seaImg: "left/sea.png",
+    seaJson: "left/sea.json",
+    whaleImg: "left/whale.png",
+    whaleJson: "left/whale.json",
+    seagullImg: "left/seagull.png",
+    seagullJson: "left/seagull.json",
+    waterfallImg: "right/waterfall.png",
+    waterfallJson: "right/waterfall.json",
+  },
+  audios: {
+    mainBg: "main/bg.mp3",
+    mainRecording: "main/recording.mp3",
+    mainWalk: "main/walk.mp3",
+    leftBg: "left/bg.mp3",
+    leftPeoples: "left/peoples.mp3",
+    leftBell: "left/bell.mp3",
+    leftWhale: "left/whale.mp3",
+    rightBg: "right/bg.mp3",
+    rightRainbow: "right/rainbow.mp3",
+    rightBell: "right/bell.mp3",
+    rightLeaves: "right/leaves.mp3",
+  },
+} as const;

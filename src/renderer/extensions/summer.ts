@@ -948,20 +948,20 @@ export default class SummerExtension implements BannerExtension {
     }
 
     // ── Phase 2: synchronously restore banner UI (no animation) ──
+    if (this.context) {
+      const { innerEl, logoEl } = queryBannerUiElements(this.context.bannerEl);
+      if (innerEl) innerEl.style.removeProperty("display");
+      if (logoEl) {
+        logoEl.style.setProperty("display", "inline-block");
+        logoEl.style.removeProperty("z-index");
+      }
+    }
+
     if (this.isExpanded) {
       this.isExpanded = false;
       this.toggleExtend(false);
 
       if (this.context) {
-        const { innerEl, logoEl } = queryBannerUiElements(
-          this.context.bannerEl,
-        );
-        if (innerEl) innerEl.style.removeProperty("display");
-        if (logoEl) {
-          logoEl.style.setProperty("display", "inline-block");
-          logoEl.style.removeProperty("z-index");
-        }
-
         this.context.bannerEl.style.removeProperty("height");
         this.context.bannerEl.style.removeProperty("maxHeight");
         this.context.bannerEl.style.removeProperty("overflow");
