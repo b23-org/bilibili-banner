@@ -2,6 +2,8 @@ import * as THREE from "three";
 import {
   type BannerExtension,
   type BannerExtensionContext,
+  type BannerLogoController,
+  createLogoController,
   queryBannerUiElements,
 } from "./core";
 
@@ -51,6 +53,7 @@ interface NavigatorWithMemory extends Navigator {
 export default class SummerExtension implements BannerExtension {
   // ── Lifecycle state ──
   private context: BannerExtensionContext | null = null;
+  private logoController: BannerLogoController | null = null;
   private isExpanded = false;
   private isExtendMode = false;
   private originalHeight = 0;
@@ -272,10 +275,9 @@ export default class SummerExtension implements BannerExtension {
     });
     this.summerBannerContainer = summerBanner;
 
-    const { innerEl, logoEl } = queryBannerUiElements(context.bannerEl);
-    if (logoEl) {
-      logoEl.style.setProperty("z-index", "3");
-    }
+    this.logoController = createLogoController(context.bannerEl);
+    this.logoController.init();
+    const { innerEl } = queryBannerUiElements(context.bannerEl);
     if (innerEl) {
       context.bannerEl.insertBefore(summerBanner, innerEl);
     } else {
@@ -905,9 +907,9 @@ export default class SummerExtension implements BannerExtension {
     );
 
     // Hide default banner UI
-    const { innerEl, logoEl } = queryBannerUiElements(this.context.bannerEl);
+    const { innerEl } = queryBannerUiElements(this.context.bannerEl);
     if (innerEl) innerEl.style.setProperty("display", "none");
-    if (logoEl) logoEl.style.setProperty("display", "none");
+    this.logoController?.hide();
     this.clickHotspot.style.setProperty("display", "none");
 
     // Animate header height + WebGL position
@@ -951,12 +953,9 @@ export default class SummerExtension implements BannerExtension {
     // Restore hidden UI after CSS transition (600ms)
     this.clearExtendTimer();
     this.extendTimer = setTimeout(() => {
-      const { innerEl, logoEl } = queryBannerUiElements(this.context!.bannerEl);
+      const { innerEl } = queryBannerUiElements(this.context!.bannerEl);
       if (innerEl) innerEl.style.removeProperty("display");
-      if (logoEl) {
-        logoEl.style.setProperty("display", "inline-block");
-        logoEl.style.setProperty("z-index", "3");
-      }
+      this.logoController?.show();
       this.clickHotspot?.style.removeProperty("display");
       this.context!.bannerEl.style.maxHeight = "240px";
     }, 600);
@@ -1002,12 +1001,9 @@ export default class SummerExtension implements BannerExtension {
 
     // ── Phase 2: synchronously restore banner UI (no animation) ──
     if (this.context) {
-      const { innerEl, logoEl } = queryBannerUiElements(this.context.bannerEl);
+      const { innerEl } = queryBannerUiElements(this.context.bannerEl);
       if (innerEl) innerEl.style.removeProperty("display");
-      if (logoEl) {
-        logoEl.style.setProperty("display", "inline-block");
-        logoEl.style.removeProperty("z-index");
-      }
+      this.logoController?.reset();
     }
 
     if (this.isExpanded) {

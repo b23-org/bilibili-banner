@@ -1,6 +1,8 @@
 import {
   type BannerExtension,
   type BannerExtensionContext,
+  type BannerLogoController,
+  createLogoController,
   queryBannerUiElements,
 } from "../core";
 import { ASSETS, BASE_PATH } from "./constants";
@@ -24,6 +26,7 @@ interface SceneManagerHandle {
 
 export default class AutumnExtension implements BannerExtension {
   private context: BannerExtensionContext | null = null;
+  private logoController: BannerLogoController | null = null;
   private container3D: HTMLDivElement | null = null;
   private clickArea: HTMLDivElement | null = null;
   private videoEl: HTMLVideoElement | null = null;
@@ -145,10 +148,9 @@ export default class AutumnExtension implements BannerExtension {
       transition: "transform 0.6s linear",
     });
 
-    const { innerEl, logoEl } = queryBannerUiElements(context.bannerEl);
-    if (logoEl) {
-      logoEl.style.setProperty("z-index", "3");
-    }
+    this.logoController = createLogoController(context.bannerEl);
+    this.logoController.init();
+    const { innerEl } = queryBannerUiElements(context.bannerEl);
     if (innerEl) {
       context.bannerEl.insertBefore(videoEl, innerEl);
     } else {
@@ -241,9 +243,9 @@ export default class AutumnExtension implements BannerExtension {
 
     this.clickArea.style.display = "none";
 
-    const { innerEl, logoEl } = queryBannerUiElements(this.context.bannerEl);
+    const { innerEl } = queryBannerUiElements(this.context.bannerEl);
     if (innerEl) innerEl.style.display = "none";
-    if (logoEl) logoEl.style.display = "none";
+    this.logoController?.hide();
 
     const taperLine =
       this.context.bannerEl.querySelector<HTMLElement>(".taper-line");
@@ -303,12 +305,9 @@ export default class AutumnExtension implements BannerExtension {
 
       this.clickArea?.style.removeProperty("display");
 
-      const { innerEl, logoEl } = queryBannerUiElements(this.context.bannerEl);
+      const { innerEl } = queryBannerUiElements(this.context.bannerEl);
       if (innerEl) innerEl.style.removeProperty("display");
-      if (logoEl) {
-        logoEl.style.setProperty("display", "inline-block");
-        logoEl.style.setProperty("z-index", "3");
-      }
+      this.logoController?.show();
 
       const taperLine =
         this.context.bannerEl.querySelector<HTMLElement>(".taper-line");
@@ -334,12 +333,9 @@ export default class AutumnExtension implements BannerExtension {
     }
 
     if (this.context) {
-      const { innerEl, logoEl } = queryBannerUiElements(this.context.bannerEl);
+      const { innerEl } = queryBannerUiElements(this.context.bannerEl);
       if (innerEl) innerEl.style.removeProperty("display");
-      if (logoEl) {
-        logoEl.style.setProperty("display", "inline-block");
-        logoEl.style.removeProperty("z-index");
-      }
+      this.logoController?.reset();
     }
 
     if (this.isExpanded) {

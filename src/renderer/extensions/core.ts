@@ -19,6 +19,50 @@ export function queryBannerUiElements(bannerEl: HTMLElement) {
   };
 }
 
+/**
+ * Logo 控制器接口，用于统一管理 Banner 中 Logo 的显示和隐藏逻辑
+ */
+export interface BannerLogoController {
+  init(): void;
+  hide(): void;
+  show(): void;
+  reset(): void;
+}
+
+/**
+ * 创建一个 BannerLogoController 实例
+ * @param bannerEl Banner 的 HTML 根元素
+ */
+export function createLogoController(
+  bannerEl: HTMLElement,
+): BannerLogoController {
+  const { logoEl } = queryBannerUiElements(bannerEl);
+  return {
+    init() {
+      if (logoEl) {
+        logoEl.style.setProperty("z-index", "3");
+      }
+    },
+    hide() {
+      if (logoEl) {
+        logoEl.style.setProperty("display", "none");
+      }
+    },
+    show() {
+      if (logoEl) {
+        logoEl.style.setProperty("display", "inline-block");
+        logoEl.style.setProperty("z-index", "3");
+      }
+    },
+    reset() {
+      if (logoEl) {
+        logoEl.style.setProperty("display", "inline-block");
+        logoEl.style.removeProperty("z-index");
+      }
+    },
+  };
+}
+
 export interface BannerExtension {
   prepare(context: BannerExtensionContext): Promise<boolean>;
   mount(context: BannerExtensionContext): Promise<void> | void;
