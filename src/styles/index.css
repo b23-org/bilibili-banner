@@ -468,27 +468,68 @@ video {
   -webkit-user-drag: none;
 }
 
-/* 页脚容器 */
+/* 页脚容器 - 三段式绝对对称布局 */
 #footer {
   flex-shrink: 0;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
-  padding: 32px 0 40px;
+  padding: 32px 48px 40px;
   background-color: #fff;
+  border-top: 1px solid #f1f2f3;
 }
 
-.footer-content {
+.footer-left {
+  flex: 1;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.footer-center {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.footer-right {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 18px;
+}
+
+/* 帮助按钮 */
+.help-btn {
   display: flex;
   align-items: center;
-  gap: 16px;
+  justify-content: center;
+  border: none;
+  background: transparent;
+  color: #6c757d;
+  cursor: pointer;
+  outline: none;
+  padding: 0;
+  transition: color 0.25s ease;
+}
+
+.help-btn:hover {
+  color: var(--primary-color);
+}
+
+/* GitHub 链接与 Bilibili 链接 */
+.github-link,
+.bilibili-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .github-link {
   color: #24292f;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   opacity: 0.8;
   transition: opacity 0.2s ease;
 }
@@ -497,23 +538,208 @@ video {
   opacity: 1;
 }
 
-.github-link svg {
+.bilibili-link {
+  color: #9499a0;
+  transition: color 0.2s ease;
+}
+
+.bilibili-link:hover {
+  color: rgb(251, 114, 153);
+}
+
+.help-icon-svg,
+.github-link svg,
+.bilibili-icon-svg {
+  width: 38px;
+  height: 38px;
+  display: block;
+}
+
+.github-link svg,
+.bilibili-icon-svg {
   fill: currentColor;
 }
 
 .copyright {
   font-size: 13px;
-  color: #6e7781;
-  line-height: 1.5;
-  text-align: left;
+  color: #9499a0;
+  line-height: 1.6;
 }
 
 .copyright a {
   color: inherit;
   text-decoration: none;
+  transition: color 0.2s;
 }
 
 .copyright a:hover {
   text-decoration: underline;
-  color: #24292f;
+  color: var(--primary-color);
+}
+
+/* Bilibili 风格帮助弹窗 */
+.modal-backdrop {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.65);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2000;
+  opacity: 0;
+  visibility: hidden;
+  transition:
+    opacity 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+    visibility 0.3s;
+}
+
+.modal-backdrop.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+.modal-content {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 32px 36px;
+  width: 90%;
+  max-width: 520px;
+  box-shadow: 0 16px 48px rgba(0, 0, 0, 0.15);
+  position: relative;
+  transform: translateY(30px) scale(0.98);
+  transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+  border: 1px solid #f1f2f3;
+}
+
+.modal-backdrop.show .modal-content {
+  transform: translateY(0) scale(1);
+}
+
+/* 关闭按钮 */
+.modal-close-btn {
+  position: absolute;
+  top: 18px;
+  right: 20px;
+  background: none;
+  border: none;
+  color: #9499a0;
+  cursor: pointer;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transition: all 0.2s ease;
+}
+
+.close-icon-svg {
+  width: 16px;
+  height: 16px;
+  display: block;
+}
+
+.modal-close-btn:hover {
+  color: #18191c;
+  background-color: #f1f2f3;
+}
+
+.modal-close-btn:active {
+  transform: scale(0.9);
+}
+
+.modal-title {
+  margin: 0 0 24px;
+  font-size: 20px;
+  font-weight: 600;
+  color: #18191c;
+  text-align: center;
+  letter-spacing: 0.5px;
+}
+
+.modal-body {
+  max-height: 70vh;
+  overflow-y: auto;
+  padding-right: 8px;
+}
+
+.modal-body::-webkit-scrollbar {
+  width: 5px;
+}
+.modal-body::-webkit-scrollbar-track {
+  background: transparent;
+}
+.modal-body::-webkit-scrollbar-thumb {
+  background: #e3e5e7;
+  border-radius: 99px;
+}
+.modal-body::-webkit-scrollbar-thumb:hover {
+  background: #c9ccd0;
+}
+
+.help-section {
+  background-color: rgb(244, 245, 247);
+  border-radius: 12px;
+  padding: 16px 20px;
+  margin-bottom: 16px;
+  text-align: left;
+}
+
+.help-section:last-child {
+  margin-bottom: 0;
+}
+
+.section-title {
+  font-size: 16px;
+  font-weight: 600;
+  color: #18191c;
+  margin: 0 0 12px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  line-height: 1.2;
+}
+
+.section-text {
+  font-size: 13px;
+  color: #6c757d;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.copyright-notice {
+  font-size: 12.5px;
+  color: #9499a0;
+}
+
+.help-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.help-item {
+  display: flex;
+  align-items: flex-start;
+}
+
+.help-text {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.help-label {
+  font-size: 14px;
+  font-weight: 600;
+  color: #18191c;
+}
+
+.help-desc {
+  font-size: 13.5px;
+  color: #6c757d;
+  line-height: 1.5;
 }

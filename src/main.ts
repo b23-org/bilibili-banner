@@ -3,6 +3,7 @@ import BannerEngine from "./core/BannerEngine";
 import BANNER_MANIFEST_JSON from "./data/banner";
 import type { BannerRef, BannerTag, DailyBannerGroup } from "./types";
 import BannerNavigation from "./ui/BannerNavigation";
+import HelpModal from "./ui/HelpModal";
 import TagFilter from "./ui/TagFilter";
 
 const BANNER_MANIFEST = BANNER_MANIFEST_JSON as DailyBannerGroup[];
@@ -87,6 +88,9 @@ function main() {
       nav = buildNavigation(applyTagFilter(BANNER_MANIFEST, null), engine);
     }
   });
+
+  // 初始化帮助说明弹窗
+  new HelpModal();
 }
 
 try {
