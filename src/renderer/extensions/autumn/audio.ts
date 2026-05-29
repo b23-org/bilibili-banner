@@ -75,6 +75,15 @@ export function initAudioManager(
     isMuted = muted;
     if (muted) {
       currentBg?.pause();
+      for (const audio of audioCache.values()) {
+        try {
+          if (audio.isPlaying) {
+            audio.pause();
+          }
+        } catch {
+          /* ignore */
+        }
+      }
     } else {
       try {
         currentBg?.play();
@@ -102,7 +111,8 @@ export function initAudioManager(
         currentBg = null;
       }
 
-      for (const audio of effectAudios.values()) {
+      for (const [name, audio] of effectAudios.entries()) {
+        if (name === "recording") continue;
         try {
           if (audio.isPlaying) {
             audio.stop();
@@ -111,7 +121,11 @@ export function initAudioManager(
           /* already stopped */
         }
       }
-      effectAudios.clear();
+      for (const key of Array.from(effectAudios.keys())) {
+        if (key !== "recording") {
+          effectAudios.delete(key);
+        }
+      }
 
       const bgAudio = await loadAudio(config.bg);
       bgAudio.setVolume(0.3);
@@ -140,7 +154,7 @@ export function initAudioManager(
       const audio = effectAudios.get(name);
       if (audio) {
         try {
-          if (audio.isPlaying) audio.stop();
+          audio.stop();
           audio.play();
         } catch {
           /* AudioContext may be suspended */
