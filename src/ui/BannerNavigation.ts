@@ -99,6 +99,10 @@ export default class BannerNavigation {
     this.onSwitch(targetRef);
   }
 
+  public getActivePath(): string {
+    return this.activeBannerPath;
+  }
+
   public destroy(): void {
     this.timelineSelector.destroy();
     this.yearSelector.destroy();

@@ -17,7 +17,11 @@ import {
   prepareEmptyDir,
   removeDir,
 } from "../grab-shared/fs-utils";
-import { publishDir, updateManifest } from "../grab-shared/manifest";
+import {
+  generateTags,
+  publishDir,
+  updateManifest,
+} from "../grab-shared/manifest";
 import { toOriginalCdnUrl } from "../grab-shared/url";
 import type { SplitBannerData2021 } from "./types";
 
@@ -108,13 +112,9 @@ async function handleSimpleImageBanner(
     );
   }
 
+  let dataConfig: SimpleBannerConfig | undefined;
   if (previewUrl) {
-    const dataConfig = buildSimpleImageData(
-      previewUrl,
-      logoUrl,
-      year,
-      finalDirPath,
-    );
+    dataConfig = buildSimpleImageData(previewUrl, logoUrl, year, finalDirPath);
     writeDataJson(stagedDir, dataConfig);
   }
 
@@ -124,6 +124,7 @@ async function handleSimpleImageBanner(
       name: date,
       path: finalDirPath,
       type: "simple-image",
+      tags: dataConfig ? generateTags(dataConfig) : ["img"],
     },
   };
 }
@@ -169,6 +170,7 @@ async function handleSplitLayers(
       name: date,
       path: finalDirPath,
       type: "official_2021",
+      tags: generateTags(dataConfig),
     },
   };
 }

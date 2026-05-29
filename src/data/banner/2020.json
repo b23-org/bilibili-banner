@@ -5,7 +5,8 @@
       {
         "name": "BILIBILI 跨年晚会",
         "path": "2020-01-01",
-        "type": "simple-image"
+        "type": "simple-image",
+        "tags": ["img"]
       }
     ]
   },
@@ -15,7 +16,8 @@
       {
         "name": "2019年度报告",
         "path": "2020-01-03",
-        "type": "simple-image"
+        "type": "simple-image",
+        "tags": ["img"]
       }
     ]
   },
@@ -25,7 +27,8 @@
       {
         "name": "2019百大UP主",
         "path": "2020-01-07",
-        "type": "simple-image"
+        "type": "simple-image",
+        "tags": ["img"]
       }
     ]
   },
@@ -35,7 +38,8 @@
       {
         "name": "大王不高兴 公测",
         "path": "2020-01-09",
-        "type": "simple-image"
+        "type": "simple-image",
+        "tags": ["img"]
       }
     ]
   },
@@ -45,7 +49,8 @@
       {
         "name": "2019年度流行梗大赏",
         "path": "2020-01-10",
-        "type": "simple-image"
+        "type": "simple-image",
+        "tags": ["img"]
       }
     ]
   },
@@ -55,7 +60,8 @@
       {
         "name": "2019百大UP主颁奖",
         "path": "2020-01-18",
-        "type": "simple-image"
+        "type": "simple-image",
+        "tags": ["img"]
       }
     ]
   },
@@ -65,7 +71,8 @@
       {
         "name": "夜的第七章-离拜年祭还有6天",
         "path": "2020-01-19",
-        "type": "simple-image"
+        "type": "simple-image",
+        "tags": ["img"]
       }
     ]
   },
@@ -75,7 +82,8 @@
       {
         "name": "冰原竞速战-离拜年祭还有4天",
         "path": "2020-01-21",
-        "type": "simple-image"
+        "type": "simple-image",
+        "tags": ["img"]
       }
     ]
   },
@@ -85,7 +93,8 @@
       {
         "name": "横竖撇点折-离拜年祭还有3天",
         "path": "2020-01-22",
-        "type": "simple-image"
+        "type": "simple-image",
+        "tags": ["img"]
       }
     ]
   },
@@ -95,7 +104,8 @@
       {
         "name": "再见我去三次元了-离拜年祭还有2天",
         "path": "2020-01-23",
-        "type": "simple-image"
+        "type": "simple-image",
+        "tags": ["img"]
       }
     ]
   },
@@ -105,7 +115,8 @@
       {
         "name": "2020拜年祭",
         "path": "2020-01-24",
-        "type": "simple-image"
+        "type": "simple-image",
+        "tags": ["img"]
       }
     ]
   },
@@ -115,7 +126,8 @@
       {
         "name": "2020拜年祭",
         "path": "2020-01-25",
-        "type": "simple-image"
+        "type": "simple-image",
+        "tags": ["img"]
       }
     ]
   },
@@ -125,7 +137,8 @@
       {
         "name": "上海空中课堂",
         "path": "2020-03-04",
-        "type": "simple-image"
+        "type": "simple-image",
+        "tags": ["img"]
       }
     ]
   },
@@ -135,7 +148,8 @@
       {
         "name": "抗击疫情哀悼活动",
         "path": "2020-04-04",
-        "type": "simple-image"
+        "type": "simple-image",
+        "tags": ["img"]
       }
     ]
   },
@@ -145,7 +159,8 @@
       {
         "name": "瑶圃清和",
         "path": "2020-04-06",
-        "type": "simple-image"
+        "type": "simple-image",
+        "tags": ["img"]
       }
     ]
   },
@@ -155,7 +170,8 @@
       {
         "name": "公主连结 公测",
         "path": "2020-04-17",
-        "type": "simple-image"
+        "type": "simple-image",
+        "tags": ["img"]
       }
     ]
   },
@@ -165,7 +181,8 @@
       {
         "name": "公主连结 公测",
         "path": "2020-04-18",
-        "type": "simple-image"
+        "type": "simple-image",
+        "tags": ["img"]
       }
     ]
   },
@@ -175,7 +192,8 @@
       {
         "name": "读书·在B站",
         "path": "2020-04-21",
-        "type": "simple-image"
+        "type": "simple-image",
+        "tags": ["img"]
       }
     ]
   },
@@ -185,7 +203,8 @@
       {
         "name": "《后浪》",
         "path": "2020-05-04",
-        "type": "simple-image"
+        "type": "simple-image",
+        "tags": ["img"]
       }
     ]
   },
@@ -195,7 +214,8 @@
       {
         "name": "《入海》毛不易",
         "path": "2020-05-22",
-        "type": "simple-image"
+        "type": "simple-image",
+        "tags": ["img"]
       }
     ]
   },
@@ -205,7 +225,8 @@
       {
         "name": "碧蓝航线3周年",
         "path": "2020-06-02",
-        "type": "simple-image"
+        "type": "simple-image",
+        "tags": ["img"]
       }
     ]
   },
@@ -215,7 +236,8 @@
       {
         "name": "把世界拍给你看",
         "path": "2020-06-03",
-        "type": "simple-image"
+        "type": "simple-image",
+        "tags": ["img"]
       }
     ]
   },
@@ -225,7 +247,8 @@
       {
         "name": "来这里，看知识多有趣",
         "path": "2020-06-06",
-        "type": "simple-image"
+        "type": "simple-image",
+        "tags": ["img"]
       }
     ]
   },
@@ -235,7 +258,8 @@
       {
         "name": "荷塘沁夏",
         "path": "2020-06-07",
-        "type": "simple-image"
+        "type": "simple-image",
+        "tags": ["img"]
       }
     ]
   },
@@ -245,7 +269,8 @@
       {
         "name": "BILIBILI  十一周年",
         "path": "2020-06-22",
-        "type": "simple-image"
+        "type": "simple-image",
+        "tags": ["img"]
       }
     ]
   },
@@ -255,7 +280,8 @@
       {
         "name": "BILIBILI  十一周年",
         "path": "2020-06-25",
-        "type": "simple-image"
+        "type": "simple-image",
+        "tags": ["img"]
       }
     ]
   },
@@ -265,7 +291,8 @@
       {
         "name": "喜相逢 B站11周年特映",
         "path": "2020-06-27",
-        "type": "simple-image"
+        "type": "simple-image",
+        "tags": ["img"]
       }
     ]
   },
@@ -275,7 +302,8 @@
       {
         "name": "BILIBILI 十一周年演讲",
         "path": "2020-07-01",
-        "type": "simple-image"
+        "type": "simple-image",
+        "tags": ["img"]
       }
     ]
   },
@@ -285,7 +313,8 @@
       {
         "name": "夏日毕业歌会",
         "path": "2020-07-03",
-        "type": "simple-image"
+        "type": "simple-image",
+        "tags": ["img"]
       }
     ]
   },
@@ -295,7 +324,8 @@
       {
         "name": "高考加油",
         "path": "2020-07-07",
-        "type": "simple-image"
+        "type": "simple-image",
+        "tags": ["img"]
       }
     ]
   },
@@ -305,7 +335,8 @@
       {
         "name": "夏日毕业歌会",
         "path": "2020-07-11",
-        "type": "simple-image"
+        "type": "simple-image",
+        "tags": ["img"]
       }
     ]
   },
@@ -315,7 +346,8 @@
       {
         "name": "夏日毕业歌会",
         "path": "2020-07-12",
-        "type": "simple-image"
+        "type": "simple-image",
+        "tags": ["img"]
       }
     ]
   },
@@ -325,7 +357,8 @@
       {
         "name": "天问一号 向火星出发",
         "path": "2020-07-23",
-        "type": "simple-image"
+        "type": "simple-image",
+        "tags": ["img"]
       }
     ]
   },
@@ -335,7 +368,8 @@
       {
         "name": "BLS",
         "path": "2020-07-25",
-        "type": "simple-image"
+        "type": "simple-image",
+        "tags": ["img"]
       }
     ]
   },
@@ -345,7 +379,8 @@
       {
         "name": "BILIBILI 游戏新品发布会",
         "path": "2020-07-31",
-        "type": "simple-image"
+        "type": "simple-image",
+        "tags": ["img"]
       }
     ]
   },
@@ -355,7 +390,8 @@
       {
         "name": "BILIBILI WORLD",
         "path": "2020-08-07",
-        "type": "simple-image"
+        "type": "simple-image",
+        "tags": ["img"]
       }
     ]
   },
@@ -365,7 +401,8 @@
       {
         "name": "2233生日快乐",
         "path": "2020-08-16",
-        "type": "simple-image"
+        "type": "simple-image",
+        "tags": ["img"]
       }
     ]
   },
@@ -375,7 +412,8 @@
       {
         "name": "FGO 四周年",
         "path": "2020-08-21",
-        "type": "simple-image"
+        "type": "simple-image",
+        "tags": ["img"]
       }
     ]
   },
@@ -385,7 +423,8 @@
       {
         "name": "说唱新世代",
         "path": "2020-08-25",
-        "type": "simple-image"
+        "type": "simple-image",
+        "tags": ["img"]
       }
     ]
   },
@@ -395,7 +434,8 @@
       {
         "name": "哔哩哔哩视频卫星发射成功",
         "path": "2020-09-15",
-        "type": "simple-image"
+        "type": "simple-image",
+        "tags": ["img"]
       }
     ]
   },
@@ -405,7 +445,8 @@
       {
         "name": "风犬少年的天空",
         "path": "2020-09-16",
-        "type": "simple-image"
+        "type": "simple-image",
+        "tags": ["img"]
       }
     ]
   },
@@ -415,7 +456,8 @@
       {
         "name": "我和我的家乡",
         "path": "2020-09-19",
-        "type": "simple-image"
+        "type": "simple-image",
+        "tags": ["img"]
       }
     ]
   },
@@ -425,7 +467,8 @@
       {
         "name": "欢度国庆",
         "path": "2020-10-01",
-        "type": "simple-image"
+        "type": "simple-image",
+        "tags": ["img"]
       }
     ]
   },
@@ -435,7 +478,8 @@
       {
         "name": "《夺冠》幕后纪实",
         "path": "2020-10-08",
-        "type": "simple-image"
+        "type": "simple-image",
+        "tags": ["img"]
       }
     ]
   },
@@ -445,12 +489,14 @@
       {
         "name": "仲秋流金",
         "path": "2020-10-10",
-        "type": "official_2020"
+        "type": "official_2020",
+        "tags": ["split-layer"]
       },
       {
         "name": "仲秋流金 (预览)",
         "path": "2020-10-10-preview",
-        "type": "simple-image"
+        "type": "simple-image",
+        "tags": ["img"]
       }
     ]
   },
@@ -460,7 +506,8 @@
       {
         "name": "魔法记录 公测",
         "path": "2020-10-13",
-        "type": "simple-image"
+        "type": "simple-image",
+        "tags": ["img"]
       }
     ]
   },
@@ -470,7 +517,8 @@
       {
         "name": "国货开箱节",
         "path": "2020-10-15",
-        "type": "simple-image"
+        "type": "simple-image",
+        "tags": ["img"]
       }
     ]
   },
@@ -480,7 +528,8 @@
       {
         "name": "公主连结 桥本环奈登场",
         "path": "2020-10-16",
-        "type": "simple-image"
+        "type": "simple-image",
+        "tags": ["img"]
       }
     ]
   },
@@ -490,7 +539,8 @@
       {
         "name": "非正常说唱",
         "path": "2020-10-19",
-        "type": "simple-image"
+        "type": "simple-image",
+        "tags": ["img"]
       }
     ]
   },
@@ -500,7 +550,8 @@
       {
         "name": "《风犬少年的天空》",
         "path": "2020-10-22",
-        "type": "simple-image"
+        "type": "simple-image",
+        "tags": ["img"]
       }
     ]
   },
@@ -510,7 +561,8 @@
       {
         "name": "程序员节",
         "path": "2020-10-24",
-        "type": "simple-image"
+        "type": "simple-image",
+        "tags": ["img"]
       }
     ]
   },
@@ -520,7 +572,8 @@
       {
         "name": "《未来的未来》上映",
         "path": "2020-11-06",
-        "type": "simple-image"
+        "type": "simple-image",
+        "tags": ["img"]
       }
     ]
   },
@@ -530,7 +583,8 @@
       {
         "name": "B站国创发布会",
         "path": "2020-11-20",
-        "type": "simple-image"
+        "type": "simple-image",
+        "tags": ["img"]
       }
     ]
   },
@@ -540,7 +594,8 @@
       {
         "name": "《夺冠》",
         "path": "2020-11-24",
-        "type": "simple-image"
+        "type": "simple-image",
+        "tags": ["img"]
       }
     ]
   },
@@ -550,7 +605,8 @@
       {
         "name": "《夺冠》",
         "path": "2020-11-27",
-        "type": "simple-image"
+        "type": "simple-image",
+        "tags": ["img"]
       }
     ]
   },
@@ -560,7 +616,8 @@
       {
         "name": "2020年度弹幕",
         "path": "2020-12-01",
-        "type": "simple-image"
+        "type": "simple-image",
+        "tags": ["img"]
       }
     ]
   },
@@ -570,7 +627,8 @@
       {
         "name": "2020年度动画评选",
         "path": "2020-12-06",
-        "type": "simple-image"
+        "type": "simple-image",
+        "tags": ["img"]
       }
     ]
   },
@@ -580,7 +638,8 @@
       {
         "name": "赛博朋克2077 发售",
         "path": "2020-12-10",
-        "type": "simple-image"
+        "type": "simple-image",
+        "tags": ["img"]
       }
     ]
   },
@@ -590,7 +649,8 @@
       {
         "name": "嫦娥五号",
         "path": "2020-12-17",
-        "type": "simple-image"
+        "type": "simple-image",
+        "tags": ["img"]
       }
     ]
   },
@@ -600,12 +660,14 @@
       {
         "name": "黄绿合战",
         "path": "2020-12-20",
-        "type": "official_2020"
+        "type": "official_2020",
+        "tags": ["split-layer"]
       },
       {
         "name": "黄绿合战 (预览)",
         "path": "2020-12-20-preview",
-        "type": "simple-image"
+        "type": "simple-image",
+        "tags": ["img"]
       }
     ]
   },
@@ -615,7 +677,8 @@
       {
         "name": "BILIBILI WORLD",
         "path": "2020-12-26",
-        "type": "simple-image"
+        "type": "simple-image",
+        "tags": ["img"]
       }
     ]
   },
@@ -625,7 +688,8 @@
       {
         "name": "2020最美的夜",
         "path": "2020-12-28",
-        "type": "simple-image"
+        "type": "simple-image",
+        "tags": ["img"]
       }
     ]
   },
@@ -635,7 +699,8 @@
       {
         "name": "距B站跨年晚会还有2天",
         "path": "2020-12-29",
-        "type": "simple-image"
+        "type": "simple-image",
+        "tags": ["img"]
       }
     ]
   },
@@ -645,7 +710,8 @@
       {
         "name": "距B站跨年晚会还有1天",
         "path": "2020-12-30",
-        "type": "simple-image"
+        "type": "simple-image",
+        "tags": ["img"]
       }
     ]
   },
@@ -655,7 +721,8 @@
       {
         "name": "2020最美的夜",
         "path": "2020-12-31",
-        "type": "simple-image"
+        "type": "simple-image",
+        "tags": ["img"]
       }
     ]
   }

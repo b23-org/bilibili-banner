@@ -15,6 +15,9 @@ import type {
   BannerConfig,
   BannerConfigOfficial2020,
   BannerConfigOfficial2021,
+  BannerRef,
+  BannerTag,
+  DailyBannerGroup,
   SimpleBannerConfig,
 } from "../src/types";
 
@@ -386,6 +389,77 @@ async function checkAssets() {
     process.exit(-1);
   }
 }
+
+/**
+ * 命令：检查 src/data/banner 中每条 BannerRef 的 tags 完整性
+ */
+async function checkTags() {
+  logger.step("[Tags] 正在检查 Banner 元数据 tags 完整性...");
+
+  const BANNER_DIR = resolve("src/data/banner");
+  const VALID_TAGS: BannerTag[] = [
+    "img",
+    "video",
+    "split-layer",
+    "interactive",
+  ];
+
+  if (!existsSync(BANNER_DIR)) {
+    logger.error(`Banner 数据目录未找到: ${BANNER_DIR}`);
+    process.exit(-1);
+  }
+
+  const files = readdirSync(BANNER_DIR)
+    .filter((f) => f.endsWith(".json"))
+    .sort();
+
+  let errorCount = 0;
+  let totalRefs = 0;
+
+  for (const file of files) {
+    const filePath = resolve(BANNER_DIR, file);
+    let groups: DailyBannerGroup[];
+    try {
+      groups = JSON.parse(
+        readFileSync(filePath, "utf-8"),
+      ) as DailyBannerGroup[];
+    } catch (_e) {
+      logger.error(`无法解析文件: ${file}`);
+      continue;
+    }
+
+    for (const group of groups) {
+      for (const ref of group.refs as BannerRef[]) {
+        totalRefs++;
+        const tags = ref.tags;
+        const hasValidTag =
+          Array.isArray(tags) &&
+          tags.length > 0 &&
+          tags.every((t) => VALID_TAGS.includes(t));
+
+        if (!hasValidTag) {
+          logger.info(`文件：src/data/banner/${file}`);
+          logger.error(
+            `  路径：${ref.path}  tags：${JSON.stringify(tags ?? null)}`,
+          );
+          logger.divider();
+          errorCount++;
+        }
+      }
+    }
+  }
+
+  logger.info("");
+  if (errorCount > 0) {
+    logger.error(
+      `检查完毕，共 ${totalRefs} 条，发现 ${errorCount} 条 tags 缺失或非法。`,
+    );
+    process.exit(-1);
+  } else {
+    logger.success(`检查完毕，共 ${totalRefs} 条，所有 tags 均合法。`);
+  }
+}
+
 async function main() {
   const command = process.argv[2];
 
@@ -399,6 +473,9 @@ async function main() {
     case "check":
       await checkAssets();
       break;
+    case "check-tags":
+      await checkTags();
+      break;
     case "clean":
       await cleanEmptyDirs();
       break;
@@ -409,6 +486,9 @@ async function main() {
       console.log("  generate    生成 JSON Schemas (基于 src/types.ts)");
       console.log("  validate    校验 public/assets 下的 data.json 数据规范");
       console.log("  check       检查资源文件的引用完整性 (缺失/多余)");
+      console.log(
+        "  check-tags  检查 src/data/banner 中每条 BannerRef 的 tags 合法性",
+      );
       console.log("  clean       清理 public/assets 下的空目录");
       break;
   }

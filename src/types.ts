@@ -124,10 +124,13 @@ export type BannerConfig =
 // Banner Data (运行时内部使用)
 // ===============================================
 
+export type BannerTag = "img" | "video" | "split-layer" | "interactive";
+
 export interface BannerRef {
   name: string;
   path: string;
   type: BannerType;
+  tags: BannerTag[];
 }
 
 /** 带 Ref 的官方 2020 多图层配置（运行时内部使用） */

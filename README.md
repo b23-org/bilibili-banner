@@ -4,11 +4,7 @@
 
 项目收集并整理了 2013 年至今的大部分首页 Banner，结合公开页面、历史快照与逆向分析结果，尽可能复现不同阶段的视觉表现与交互逻辑。
 
-## 🚀 在线预览
-
-[![完整预览](https://img.shields.io/badge/在线预览-完整模式-00a1d6?style=flat-square&logo=bilibili&logoColor=white)](https://bilibili-banner.dankt.in/) —— 浏览全部 Banner。
-
-[![动态预览](https://img.shields.io/badge/在线预览-仅动态模式-fb7299?style=flat-square&logo=bilibili&logoColor=white)](https://bilibili-banner.dankt.in/?dynamic=true) —— 只浏览动态 Banner（可手动在完整模式 URL 后追加 `?dynamic=true`）。
+## 🚀 [在线预览](https://bilibili-banner.dankt.in/)
 
 <div align="center">
 
@@ -113,6 +109,7 @@ pnpm tsx scripts/grab-archive -m <mode> -u <url>
 | `pnpm data validate` | 校验 `public/assets` 中所有 Banner 的 `data.json` 配置是否符合 Schema 规范 |
 | `pnpm data check`    | 检查 `public/assets` 下资源引用的完整性（检查是否存在缺失或冗余资源）      |
 | `pnpm data clean`    | 自动清理 `public/assets` 目录下的空目录                                    |
+| `pnpm data check-tags`| 检查 `src/data/banner/` 中的 `tags` 配置是否合法 |
 
 ## ❤️ 鸣谢
 

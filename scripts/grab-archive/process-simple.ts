@@ -12,7 +12,11 @@ import {
   extractFileName,
   prepareEmptyDir,
 } from "../grab-shared/fs-utils";
-import { publishDir, updateManifest } from "../grab-shared/manifest";
+import {
+  generateTags,
+  publishDir,
+  updateManifest,
+} from "../grab-shared/manifest";
 import { buildHeaders, waybackFetch } from "./network";
 import type { SimpleBannerData2016 } from "./types";
 
@@ -79,6 +83,7 @@ export async function processSimpleImage(
         name: assets.name || dateStr,
         path: dateStr,
         type: "simple-image" as const,
+        tags: generateTags(dataConfig),
       },
     ];
     publishDir(stagedDir, dateStr);

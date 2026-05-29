@@ -1,7 +1,12 @@
 import fs from "node:fs";
 import path, { dirname } from "node:path";
 import { fileURLToPath } from "node:url";
-import type { BannerRef, DailyBannerGroup } from "../../src/types";
+import type {
+  BannerConfig,
+  BannerRef,
+  BannerTag,
+  DailyBannerGroup,
+} from "../../src/types";
 import { removeDir } from "./fs-utils";
 
 const __filename = fileURLToPath(import.meta.url);
@@ -74,4 +79,42 @@ export function updateManifest(date: string, refs: BannerRef[]): void {
   banners.sort((a, b) => a.date.localeCompare(b.date));
   fs.writeFileSync(configFilePath, JSON.stringify(banners, null, 2), "utf8");
   console.log(`已更新 ${year}.json 配置文件`);
+}
+
+export function generateTags(config: BannerConfig): BannerTag[] {
+  if (config.type === "simple-image") {
+    return ["img"];
+  }
+
+  if (config.type === "official_2020") {
+    const layers = config.layers || [];
+    if (layers.length > 1) {
+      return ["split-layer"];
+    }
+    if (layers.length === 1) {
+      const images = layers[0].images || [];
+      const hasVideo = images.some(
+        (img) => img.src.endsWith(".webm") || img.src.endsWith(".mp4"),
+      );
+      return hasVideo ? ["video"] : ["img"];
+    }
+    return ["img"];
+  }
+
+  if (config.type === "official_2021") {
+    const layers = config.layers || [];
+    if (layers.length > 1) {
+      return ["split-layer"];
+    }
+    if (layers.length === 1) {
+      const resources = layers[0].resources || [];
+      const hasVideo = resources.some(
+        (res) => res.src.endsWith(".webm") || res.src.endsWith(".mp4"),
+      );
+      return hasVideo ? ["video"] : ["img"];
+    }
+    return ["img"];
+  }
+
+  return ["img"];
 }

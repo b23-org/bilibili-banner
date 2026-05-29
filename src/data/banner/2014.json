@@ -5,7 +5,8 @@
       {
         "name": "新年快乐",
         "path": "2014-02-08",
-        "type": "simple-image"
+        "type": "simple-image",
+        "tags": ["img"]
       }
     ]
   },
@@ -15,7 +16,8 @@
       {
         "name": "夏",
         "path": "2014-06-17",
-        "type": "simple-image"
+        "type": "simple-image",
+        "tags": ["img"]
       }
     ]
   },
@@ -25,7 +27,8 @@
       {
         "name": "萌",
         "path": "2014-09-04",
-        "type": "simple-image"
+        "type": "simple-image",
+        "tags": ["img"]
       }
     ]
   },
@@ -35,7 +38,8 @@
       {
         "name": "建国65周年",
         "path": "2014-10-06",
-        "type": "simple-image"
+        "type": "simple-image",
+        "tags": ["img"]
       }
     ]
   },
@@ -45,7 +49,8 @@
       {
         "name": "万圣节",
         "path": "2014-11-05",
-        "type": "simple-image"
+        "type": "simple-image",
+        "tags": ["img"]
       }
     ]
   },
@@ -55,7 +60,8 @@
       {
         "name": "冬",
         "path": "2014-12-20",
-        "type": "simple-image"
+        "type": "simple-image",
+        "tags": ["img"]
       }
     ]
   },
@@ -65,7 +71,8 @@
       {
         "name": "圣诞快乐",
         "path": "2014-12-25",
-        "type": "simple-image"
+        "type": "simple-image",
+        "tags": ["img"]
       }
     ]
   }

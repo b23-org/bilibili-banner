@@ -5,7 +5,8 @@
       {
         "name": "我不做小电视啦！",
         "path": "2019-01-02",
-        "type": "simple-image"
+        "type": "simple-image",
+        "tags": ["img"]
       }
     ]
   },
@@ -15,7 +16,8 @@
       {
         "name": "2018年度UP颁奖",
         "path": "2019-01-27",
-        "type": "simple-image"
+        "type": "simple-image",
+        "tags": ["img"]
       }
     ]
   },
@@ -25,7 +27,8 @@
       {
         "name": "距离拜年祭还有7天",
         "path": "2019-01-29",
-        "type": "simple-image"
+        "type": "simple-image",
+        "tags": ["img"]
       }
     ]
   },
@@ -35,7 +38,8 @@
       {
         "name": "距离拜年祭还有5天",
         "path": "2019-01-30",
-        "type": "simple-image"
+        "type": "simple-image",
+        "tags": ["img"]
       }
     ]
   },
@@ -45,7 +49,8 @@
       {
         "name": "距离拜年祭还有2天",
         "path": "2019-02-02",
-        "type": "simple-image"
+        "type": "simple-image",
+        "tags": ["img"]
       }
     ]
   },
@@ -55,7 +60,8 @@
       {
         "name": "2019·拜年祭",
         "path": "2019-02-05",
-        "type": "simple-image"
+        "type": "simple-image",
+        "tags": ["img"]
       }
     ]
   },
@@ -65,7 +71,8 @@
       {
         "name": "Snow MIKU LIVE! 2019",
         "path": "2019-02-10",
-        "type": "simple-image"
+        "type": "simple-image",
+        "tags": ["img"]
       }
     ]
   },
@@ -75,7 +82,8 @@
       {
         "name": "在B站，用 Vlog 记录不平凡",
         "path": "2019-02-16",
-        "type": "simple-image"
+        "type": "simple-image",
+        "tags": ["img"]
       }
     ]
   },
@@ -85,7 +93,8 @@
       {
         "name": "春暖花开",
         "path": "2019-02-25",
-        "type": "simple-image"
+        "type": "simple-image",
+        "tags": ["img"]
       }
     ]
   },
@@ -95,7 +104,8 @@
       {
         "name": "BLS",
         "path": "2019-04-05",
-        "type": "simple-image"
+        "type": "simple-image",
+        "tags": ["img"]
       }
     ]
   },
@@ -105,7 +115,8 @@
       {
         "name": "BLS",
         "path": "2019-04-12",
-        "type": "simple-image"
+        "type": "simple-image",
+        "tags": ["img"]
       }
     ]
   },
@@ -115,7 +126,8 @@
       {
         "name": "BLS",
         "path": "2019-04-19",
-        "type": "simple-image"
+        "type": "simple-image",
+        "tags": ["img"]
       }
     ]
   },
@@ -125,7 +137,8 @@
       {
         "name": "FGO 兽国的皇女",
         "path": "2019-05-07",
-        "type": "simple-image"
+        "type": "simple-image",
+        "tags": ["img"]
       }
     ]
   },
@@ -135,7 +148,8 @@
       {
         "name": "2019 LOL 季中冠军赛",
         "path": "2019-05-09",
-        "type": "simple-image"
+        "type": "simple-image",
+        "tags": ["img"]
       }
     ]
   },
@@ -145,7 +159,8 @@
       {
         "name": "BLS",
         "path": "2019-05-11",
-        "type": "simple-image"
+        "type": "simple-image",
+        "tags": ["img"]
       }
     ]
   },
@@ -155,7 +170,8 @@
       {
         "name": "海上列车",
         "path": "2019-05-21",
-        "type": "simple-image"
+        "type": "simple-image",
+        "tags": ["img"]
       }
     ]
   },
@@ -165,7 +181,8 @@
       {
         "name": "BanG Dream！公测",
         "path": "2019-06-05",
-        "type": "simple-image"
+        "type": "simple-image",
+        "tags": ["img"]
       }
     ]
   },
@@ -175,7 +192,8 @@
       {
         "name": "B站十周年",
         "path": "2019-06-21",
-        "type": "simple-image"
+        "type": "simple-image",
+        "tags": ["img"]
       }
     ]
   },
@@ -185,7 +203,8 @@
       {
         "name": "BILIBILI 十周年 ( ゜- ゜)つロ 干杯~",
         "path": "2019-06-26",
-        "type": "simple-image"
+        "type": "simple-image",
+        "tags": ["img"]
       }
     ]
   },
@@ -195,7 +214,8 @@
       {
         "name": "星之轨迹 公测",
         "path": "2019-07-05",
-        "type": "simple-image"
+        "type": "simple-image",
+        "tags": ["img"]
       }
     ]
   },
@@ -205,7 +225,8 @@
       {
         "name": "BILIBILI 十周年",
         "path": "2019-07-10",
-        "type": "simple-image"
+        "type": "simple-image",
+        "tags": ["img"]
       }
     ]
   },
@@ -215,7 +236,8 @@
       {
         "name": "重装战姬 公测",
         "path": "2019-07-18",
-        "type": "simple-image"
+        "type": "simple-image",
+        "tags": ["img"]
       }
     ]
   },
@@ -225,7 +247,8 @@
       {
         "name": "BLS VR 现场直播",
         "path": "2019-07-19",
-        "type": "simple-image"
+        "type": "simple-image",
+        "tags": ["img"]
       }
     ]
   },
@@ -235,7 +258,8 @@
       {
         "name": "BLS",
         "path": "2019-07-20",
-        "type": "simple-image"
+        "type": "simple-image",
+        "tags": ["img"]
       }
     ]
   },
@@ -245,7 +269,8 @@
       {
         "name": "BILIBILI 十周年纪念影片",
         "path": "2019-07-22",
-        "type": "simple-image"
+        "type": "simple-image",
+        "tags": ["img"]
       }
     ]
   },
@@ -255,7 +280,8 @@
       {
         "name": "无法触碰掌心 公测",
         "path": "2019-08-07",
-        "type": "simple-image"
+        "type": "simple-image",
+        "tags": ["img"]
       }
     ]
   },
@@ -265,7 +291,8 @@
       {
         "name": "哔哩哔哩漫画网页版上线",
         "path": "2019-08-10",
-        "type": "simple-image"
+        "type": "simple-image",
+        "tags": ["img"]
       }
     ]
   },
@@ -275,7 +302,8 @@
       {
         "name": "哔哩哔哩漫画网页版上线",
         "path": "2019-08-11",
-        "type": "simple-image"
+        "type": "simple-image",
+        "tags": ["img"]
       }
     ]
   },
@@ -285,7 +313,8 @@
       {
         "name": "哔哩哔哩漫画网页版上线",
         "path": "2019-08-12",
-        "type": "simple-image"
+        "type": "simple-image",
+        "tags": ["img"]
       }
     ]
   },
@@ -295,7 +324,8 @@
       {
         "name": "BILIBILI WORLD 上海",
         "path": "2019-08-24",
-        "type": "simple-image"
+        "type": "simple-image",
+        "tags": ["img"]
       }
     ]
   },
@@ -305,7 +335,8 @@
       {
         "name": "FGO FES 2019",
         "path": "2019-08-31",
-        "type": "simple-image"
+        "type": "simple-image",
+        "tags": ["img"]
       }
     ]
   },
@@ -315,7 +346,8 @@
       {
         "name": "金秋送爽",
         "path": "2019-09-09",
-        "type": "simple-image"
+        "type": "simple-image",
+        "tags": ["img"]
       }
     ]
   },
@@ -325,7 +357,8 @@
       {
         "name": "一起开火车 Steam 版 发售",
         "path": "2019-09-10",
-        "type": "simple-image"
+        "type": "simple-image",
+        "tags": ["img"]
       }
     ]
   },
@@ -335,7 +368,8 @@
       {
         "name": "我和我的祖国",
         "path": "2019-09-25",
-        "type": "simple-image"
+        "type": "simple-image",
+        "tags": ["img"]
       }
     ]
   },
@@ -345,7 +379,8 @@
       {
         "name": "与国同行·我们都是追梦者",
         "path": "2019-09-26",
-        "type": "simple-image"
+        "type": "simple-image",
+        "tags": ["img"]
       }
     ]
   },
@@ -355,7 +390,8 @@
       {
         "name": "哪吒·魔童降世",
         "path": "2019-10-12",
-        "type": "simple-image"
+        "type": "simple-image",
+        "tags": ["img"]
       }
     ]
   },
@@ -365,7 +401,8 @@
       {
         "name": "哔哩哔哩漫画1周年庆",
         "path": "2019-11-13",
-        "type": "simple-image"
+        "type": "simple-image",
+        "tags": ["img"]
       }
     ]
   },
@@ -375,7 +412,8 @@
       {
         "name": "哔哩哔哩漫画1周年庆",
         "path": "2019-11-14",
-        "type": "simple-image"
+        "type": "simple-image",
+        "tags": ["img"]
       }
     ]
   },
@@ -385,7 +423,8 @@
       {
         "name": "哔哩哔哩漫画1周年庆",
         "path": "2019-11-15",
-        "type": "simple-image"
+        "type": "simple-image",
+        "tags": ["img"]
       }
     ]
   },
@@ -395,7 +434,8 @@
       {
         "name": "妄想破绽 发售",
         "path": "2019-11-28",
-        "type": "simple-image"
+        "type": "simple-image",
+        "tags": ["img"]
       }
     ]
   },
@@ -405,7 +445,8 @@
       {
         "name": "2019年度弹幕",
         "path": "2019-12-05",
-        "type": "simple-image"
+        "type": "simple-image",
+        "tags": ["img"]
       }
     ]
   },
@@ -415,7 +456,8 @@
       {
         "name": "2020年度动画评选",
         "path": "2019-12-08",
-        "type": "simple-image"
+        "type": "simple-image",
+        "tags": ["img"]
       }
     ]
   },
@@ -425,7 +467,8 @@
       {
         "name": "2019最后的夜",
         "path": "2019-12-09",
-        "type": "simple-image"
+        "type": "simple-image",
+        "tags": ["img"]
       }
     ]
   },
@@ -435,7 +478,8 @@
       {
         "name": "国家公祭日",
         "path": "2019-12-13",
-        "type": "simple-image"
+        "type": "simple-image",
+        "tags": ["img"]
       }
     ]
   },
@@ -445,7 +489,8 @@
       {
         "name": "二零一九最后的夜",
         "path": "2019-12-18",
-        "type": "simple-image"
+        "type": "simple-image",
+        "tags": ["img"]
       }
     ]
   },
@@ -455,7 +500,8 @@
       {
         "name": "BILIBILI WORLD 成都",
         "path": "2019-12-21",
-        "type": "simple-image"
+        "type": "simple-image",
+        "tags": ["img"]
       }
     ]
   },
@@ -465,7 +511,8 @@
       {
         "name": "2019圣诞",
         "path": "2019-12-25",
-        "type": "simple-image"
+        "type": "simple-image",
+        "tags": ["img"]
       }
     ]
   },
@@ -475,7 +522,8 @@
       {
         "name": "极地流光",
         "path": "2019-12-27",
-        "type": "simple-image"
+        "type": "simple-image",
+        "tags": ["img"]
       }
     ]
   },
@@ -485,7 +533,8 @@
       {
         "name": "BILIBILI 跨年晚会",
         "path": "2019-12-30",
-        "type": "simple-image"
+        "type": "simple-image",
+        "tags": ["img"]
       }
     ]
   },
@@ -495,7 +544,8 @@
       {
         "name": "BILIBILI 跨年晚会",
         "path": "2019-12-31",
-        "type": "simple-image"
+        "type": "simple-image",
+        "tags": ["img"]
       }
     ]
   }
