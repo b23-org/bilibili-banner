@@ -10,6 +10,17 @@ on:
       - "scripts/**"
       - "index.html"
       - "package.json"
+      - "pnpm-lock.yaml"
+  pull_request:
+    branches:
+      - main
+    paths:
+      - "public/**"
+      - "src/**"
+      - "scripts/**"
+      - "index.html"
+      - "package.json"
+      - "pnpm-lock.yaml"
 
 jobs:
   lint:
