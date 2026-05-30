@@ -100,7 +100,8 @@ export abstract class BaseOfficialRenderer implements BaseRenderer {
   protected pointerAnchorClientX = 0;
   protected bannerHeightScale = 1;
   protected lastRenderedDisplacementX = NaN;
-  protected animationFrameId = 0;
+  protected renderAnimationFrameId = 0;
+  protected resetAnimationFrameId = 0;
   protected isPointerActiveInBanner = false;
 
   // ── 绑定的事件处理器 ──
@@ -250,11 +251,11 @@ export abstract class BaseOfficialRenderer implements BaseRenderer {
   }
 
   protected _scheduleRender(force = false): void {
-    cancelAnimationFrame(this.animationFrameId);
+    cancelAnimationFrame(this.renderAnimationFrameId);
     if (force) {
       this.lastRenderedDisplacementX = NaN;
     }
-    this.animationFrameId = requestAnimationFrame(this._frameCallback);
+    this.renderAnimationFrameId = requestAnimationFrame(this._frameCallback);
   }
 
   protected _renderFrame(): void {
@@ -328,7 +329,8 @@ export abstract class BaseOfficialRenderer implements BaseRenderer {
   private _handleMouseEnter(e: MouseEvent): void {
     this.isPointerActiveInBanner = true;
     this.pointerAnchorClientX = e.clientX;
-    cancelAnimationFrame(this.animationFrameId);
+    cancelAnimationFrame(this.resetAnimationFrameId);
+    cancelAnimationFrame(this.renderAnimationFrameId);
   }
 
   private _handleMouseMove(e: MouseEvent): void {
@@ -355,7 +357,8 @@ export abstract class BaseOfficialRenderer implements BaseRenderer {
   private _startResetAnimation(): void {
     this.isPointerActiveInBanner = false;
     this.pointerAnchorClientX = 0;
-    cancelAnimationFrame(this.animationFrameId);
+    cancelAnimationFrame(this.resetAnimationFrameId);
+    cancelAnimationFrame(this.renderAnimationFrameId);
 
     const startDisplacementX = this.normalizedDisplacementX;
     if (Math.abs(startDisplacementX) < 0.0001) {
@@ -373,16 +376,16 @@ export abstract class BaseOfficialRenderer implements BaseRenderer {
         this.normalizedDisplacementX =
           startDisplacementX * (1 - elapsed / RESET_ANIMATION_MS);
         this._renderFrame();
-        this.animationFrameId = requestAnimationFrame(animate);
+        this.resetAnimationFrameId = requestAnimationFrame(animate);
       } else {
         this.normalizedDisplacementX = 0;
         this.lastRenderedDisplacementX = NaN;
         this._renderFrame();
-        this.animationFrameId = 0;
+        this.resetAnimationFrameId = 0;
       }
     };
 
-    this.animationFrameId = requestAnimationFrame(animate);
+    this.resetAnimationFrameId = requestAnimationFrame(animate);
   }
 
   private _handleResize(): void {
@@ -443,7 +446,8 @@ export abstract class BaseOfficialRenderer implements BaseRenderer {
     }
     window.removeEventListener("resize", this._boundResize);
     window.removeEventListener("blur", this._boundBlur);
-    cancelAnimationFrame(this.animationFrameId);
+    cancelAnimationFrame(this.renderAnimationFrameId);
+    cancelAnimationFrame(this.resetAnimationFrameId);
 
     if (this.preloadedResources) {
       for (const layerResources of this.preloadedResources) {
@@ -469,7 +473,8 @@ export abstract class BaseOfficialRenderer implements BaseRenderer {
     this.pointerAnchorClientX = 0;
     this.bannerHeightScale = 1;
     this.lastRenderedDisplacementX = NaN;
-    this.animationFrameId = 0;
+    this.renderAnimationFrameId = 0;
+    this.resetAnimationFrameId = 0;
     this.isPointerActiveInBanner = false;
     this.preloadedResources = null;
   }
