@@ -4,7 +4,7 @@ const TAGS: Array<{ value: BannerTag | null; label: string }> = [
   { value: null, label: "全部" },
   { value: "img", label: "单图" },
   { value: "video", label: "视频" },
-  { value: "split-layer", label: "多层视差" },
+  { value: "split-layer", label: "动态" },
   { value: "interactive", label: "场景互动" },
 ];
 

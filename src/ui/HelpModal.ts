@@ -44,19 +44,19 @@ export default class HelpModal {
               <li class="help-item">
                 <div class="help-text">
                   <span class="help-label">场景互动</span>
-                  <span class="help-desc">在“场景互动”类型的 Banner 中，您可以通过直接点击画面进行趣味性的交互。</span>
+                  <span class="help-desc">点击画面中的特定区域，就能触发一些动画或特殊响应效果。</span>
                 </div>
               </li>
               <li class="help-item">
                 <div class="help-text">
-                  <span class="help-label">多层视差</span>
-                  <span class="help-desc">在“多层视差”类型的 Banner 中，画面图层会跟随您的鼠标左右移动而产生立体的深度变化。</span>
+                  <span class="help-label">动态 Banner</span>
+                  <span class="help-desc">鼠标在画面内移动时，各个图层会随之旋转、缩放、位移或渐隐渐现，呈现出动态效果。</span>
                 </div>
               </li>
               <li class="help-item">
                 <div class="help-text">
                   <span class="help-label">横向翻页</span>
-                  <span class="help-desc">鼠标悬停在下方时间轴上时，您可以使用鼠标滚轮、或拖动滚动条来快速横向翻页查找 Banner。</span>
+                  <span class="help-desc">鼠标放在下方时间轴上时，转动滚轮或拖动滚动条，就能快速浏览该年份所有 Banner。</span>
                 </div>
               </li>
             </ul>
@@ -64,9 +64,9 @@ export default class HelpModal {
 
           <div class="help-section">
             <h4 class="section-title">⚖️ 协议与声明</h4>
-            <p class="section-text copyright-notice">
-              · 本项目代码部分采用 MIT License 协议开源。<br />
-              · 项目中所使用的图片、视频、设计及原始素材版权均归 Bilibili 所有。
+            <p class="help-desc">
+              本项目代码部分采用 MIT License 协议开源。<br />
+              项目中所使用的图片、视频、设计及原始素材版权均归 Bilibili 所有。
             </p>
           </div>
         </div>
