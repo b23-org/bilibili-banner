@@ -38,15 +38,9 @@ export class LogoRenderer {
           : config.height;
     }
 
-    if (!this.imgEl) {
-      // 降级逻辑：如果未经过 preload 直接调用 render
-      this.imgEl = document.createElement("img");
-      this.imgEl.className = "logo-img";
-      this.imgEl.src = import.meta.env.BASE_URL + config.src.replace(/^\//, "");
-      this.imgEl.alt = "";
+    if (this.imgEl) {
+      this.container.appendChild(this.imgEl);
     }
-
-    this.container.appendChild(this.imgEl);
   }
 
   public dispose(): void {
