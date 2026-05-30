@@ -34,7 +34,7 @@ export default class HelpModal {
           <div class="help-section">
             <h4 class="section-title">🏛️ 项目简介</h4>
             <p class="section-text">
-              本项目是一个围绕 Bilibili 首页 Banner 的历史档案与还原项目。收录并整理了自 2013 年至今的大部分首页 Banner，结合公开页面、历史快照与逆向分析结果，尽可能复现不同阶段的视觉表现与交互逻辑。
+              本项目是一个围绕 Bilibili 首页 Banner 的历史档案与还原项目。收录并整理了自 2013 年至今的大部分 Banner，结合页面快照与逆向分析结果，尽可能复现出不同时期 Banner 的视觉表现与交互逻辑。
             </p>
           </div>
 
@@ -44,19 +44,19 @@ export default class HelpModal {
               <li class="help-item">
                 <div class="help-text">
                   <span class="help-label">场景互动</span>
-                  <span class="help-desc">点击画面中的特定区域，就能触发一些动画或特殊响应效果。</span>
+                  <span class="help-desc">在“场景互动”类型的 Banner 中，可与画面中的特定区域交互，会触发一些动画或特殊响应效果。</span>
                 </div>
               </li>
               <li class="help-item">
                 <div class="help-text">
                   <span class="help-label">动态 Banner</span>
-                  <span class="help-desc">鼠标在画面内移动时，各个图层会随之旋转、缩放、位移或渐隐渐现，呈现出动态效果。</span>
+                  <span class="help-desc">在“动态”类型的 Banner 中，鼠标在 banner 区域内移动时，各个图层会随之旋转、缩放、位移或渐隐渐现，呈现出动态效果。</span>
                 </div>
               </li>
               <li class="help-item">
                 <div class="help-text">
                   <span class="help-label">横向翻页</span>
-                  <span class="help-desc">鼠标放在下方时间轴上时，转动滚轮或拖动滚动条，就能快速浏览该年份所有 Banner。</span>
+                  <span class="help-desc">鼠标位于下方时间轴上时，滚动滚轮或拖动滚动条，就能快速浏览该年份所有 Banner。</span>
                 </div>
               </li>
             </ul>
