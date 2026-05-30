@@ -2,23 +2,13 @@ name: Deploy to Cloudflare Pages
 
 on:
   workflow_dispatch:
-  push:
-    branches:
-      - main
-    paths:
-      - "public/**"
-      - "src/**"
-      - "index.html"
 
 jobs:
-  lint:
-    uses: ./.github/workflows/lint.yml
-
   deploy:
-    needs: lint
     runs-on: ubuntu-latest
     permissions:
       contents: read
+      pull-requests: write
 
     steps:
       - uses: actions/checkout@v6
@@ -45,8 +35,17 @@ jobs:
       # 需要手动批准 cloudflare/wrangler-action 的 sharp 和 workerd 安装脚本
       - name: Approve build scripts for Wrangler
         run: |
-          echo "  sharp: true" >> pnpm-workspace.yaml
-          echo "  workerd: true" >> pnpm-workspace.yaml
+          if ! grep -q "sharp: true" pnpm-workspace.yaml; then
+            while IFS= read -r line || [ -n "$line" ]; do
+              echo "$line"
+              if [[ "$line" =~ allowBuilds: ]]; then
+                echo "  sharp: true"
+                echo "  workerd: true"
+                cat
+                break
+              fi
+            done < pnpm-workspace.yaml > tmp.yaml && mv tmp.yaml pnpm-workspace.yaml
+          fi
 
       - name: Deploy to Cloudflare Pages
         uses: cloudflare/wrangler-action@v4
@@ -55,3 +54,32 @@ jobs:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
           command: pages deploy dist --project-name=${{ secrets.CLOUDFLARE_PROJECT_NAME }} --branch=${{ github.ref_name }}
+
+      - name: Find current PR
+        id: findPr
+        uses: jwalton/gh-find-current-pr@v1
+
+      - name: Comment PR with Preview Link
+        if: steps.findPr.outputs.number != ''
+        uses: actions/github-script@v9
+        with:
+          script: |
+            const shortSha = context.sha.substring(0, 7);
+            const repoName = context.repo.repo;
+            const repoOwner = context.repo.owner;
+            const runId = context.runId;
+            const aliasUrl = '${{ steps.wrangler_deploy.outputs.deployment-alias-url }}';
+            const body = `### ✅ Deploy Preview Ready !
+
+            | Name | Link |
+            | :--- | :--- |
+            | 🌿 **Latest Commit** | [${shortSha}](https://github.com/${repoOwner}/${repoName}/commit/${context.sha}) |
+            | ⚙️ **Deploy log** | [GitHub Actions Log](https://github.com/${repoOwner}/${repoName}/actions/runs/${runId}) |
+            | 🚀 **Preview** | [${aliasUrl}](${aliasUrl}) |`;
+
+            await github.rest.issues.createComment({
+              owner: repoOwner,
+              repo: repoName,
+              issue_number: Number('${{ steps.findPr.outputs.number }}'),
+              body
+            });

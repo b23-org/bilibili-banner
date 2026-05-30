@@ -10,7 +10,6 @@ on:
       - "scripts/**"
       - "index.html"
       - "package.json"
-  workflow_call:
 
 jobs:
   lint:
