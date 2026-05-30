@@ -1,4 +1,5 @@
 import type { BannerConfig, BannerData, BannerRef } from "../types";
+import { BANNER_TYPES_ARR } from "../types";
 
 export class BannerLoader {
   private bannerCache: Map<string, BannerData> = new Map();
@@ -19,7 +20,6 @@ export class BannerLoader {
     return banner;
   }
 }
-const VALID_BANNER_TYPES = ["simple-image", "official_2020", "official_2021"];
 
 async function parseBannerData(ref: BannerRef): Promise<BannerData> {
   const year = ref.path.substring(0, 4);
@@ -30,7 +30,7 @@ async function parseBannerData(ref: BannerRef): Promise<BannerData> {
   }
   const rawData = (await res.json()) as BannerConfig;
 
-  if (!rawData.type || !VALID_BANNER_TYPES.includes(rawData.type)) {
+  if (!rawData.type || !BANNER_TYPES_ARR.includes(rawData.type)) {
     throw new Error(
       `[BannerDataLoader] 数据格式错误，发现未知 Banner 类型: ${rawData.type}`,
     );

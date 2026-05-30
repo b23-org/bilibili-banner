@@ -5,7 +5,6 @@
       {
         "name": "BILIBILI ( ゜- ゜)つロ 干杯~",
         "path": "2018-01-01",
-        "type": "simple-image",
         "tags": ["img"]
       }
     ]
@@ -16,7 +15,6 @@
       {
         "name": "冬",
         "path": "2018-12-01",
-        "type": "simple-image",
         "tags": ["img"]
       }
     ]
@@ -27,7 +25,6 @@
       {
         "name": "故事王9强",
         "path": "2018-12-09",
-        "type": "simple-image",
         "tags": ["img"]
       }
     ]
@@ -38,7 +35,6 @@
       {
         "name": "LOL",
         "path": "2018-12-12",
-        "type": "simple-image",
         "tags": ["img"]
       }
     ]
@@ -49,7 +45,6 @@
       {
         "name": "国创动画发布会",
         "path": "2018-12-15",
-        "type": "simple-image",
         "tags": ["img"]
       }
     ]
@@ -60,7 +55,6 @@
       {
         "name": "故事王半决赛一",
         "path": "2018-12-16",
-        "type": "simple-image",
         "tags": ["img"]
       }
     ]
@@ -71,7 +65,6 @@
       {
         "name": "国创动画导视",
         "path": "2018-12-19",
-        "type": "simple-image",
         "tags": ["img"]
       }
     ]
@@ -82,7 +75,6 @@
       {
         "name": "2018年度弹幕",
         "path": "2018-12-27",
-        "type": "simple-image",
         "tags": ["img"]
       }
     ]
@@ -93,7 +85,6 @@
       {
         "name": "故事王半决赛三",
         "path": "2018-12-30",
-        "type": "simple-image",
         "tags": ["img"]
       }
     ]

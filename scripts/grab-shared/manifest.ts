@@ -64,7 +64,7 @@ export function updateManifest(date: string, refs: BannerRef[]): void {
       );
       if (existingRefIndex !== -1) {
         const existing = existingRefs[existingRefIndex];
-        if (existing.type !== ref.type || existing.path !== ref.path) {
+        if (existing.path !== ref.path) {
           existingRefs[existingRefIndex] = ref;
         }
       } else {

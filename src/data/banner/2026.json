@@ -5,13 +5,11 @@
       {
         "name": "雪林候车",
         "path": "2026-01-09",
-        "type": "official_2021",
         "tags": ["split-layer"]
       },
       {
         "name": "雪林候车  (预览)",
         "path": "2026-01-09-preview",
-        "type": "simple-image",
         "tags": ["img"]
       }
     ]
@@ -22,7 +20,6 @@
       {
         "name": "一起看春晚",
         "path": "2026-02-10",
-        "type": "simple-image",
         "tags": ["img"]
       }
     ]
@@ -33,7 +30,6 @@
       {
         "name": "一起看春晚",
         "path": "2026-02-17",
-        "type": "simple-image",
         "tags": ["img"]
       }
     ]
@@ -44,7 +40,6 @@
       {
         "name": "两会",
         "path": "2026-03-03",
-        "type": "simple-image",
         "tags": ["img"]
       }
     ]
@@ -55,13 +50,11 @@
       {
         "name": "春原驰踪",
         "path": "2026-04-25",
-        "type": "official_2021",
         "tags": ["split-layer"]
       },
       {
         "name": "春原驰踪 (预览)",
         "path": "2026-04-25-preview",
-        "type": "simple-image",
         "tags": ["img"]
       }
     ]
@@ -72,7 +65,6 @@
       {
         "name": "《闪耀！优俊少女》二周年",
         "path": "2026-05-07",
-        "type": "simple-image",
         "tags": ["img"]
       }
     ]
@@ -83,13 +75,11 @@
       {
         "name": "BanG Dream！7周年",
         "path": "2026-05-26",
-        "type": "official_2021",
         "tags": ["video"]
       },
       {
         "name": "BanG Dream！7周年 (预览)",
         "path": "2026-05-26-preview",
-        "type": "simple-image",
         "tags": ["img"]
       }
     ]

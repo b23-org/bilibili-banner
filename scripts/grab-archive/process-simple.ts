@@ -82,7 +82,6 @@ export async function processSimpleImage(
       {
         name: assets.name || dateStr,
         path: dateStr,
-        type: "simple-image" as const,
         tags: generateTags(dataConfig),
       },
     ];

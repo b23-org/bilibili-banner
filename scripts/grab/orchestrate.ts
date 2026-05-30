@@ -175,7 +175,6 @@ async function handleSimpleImageBanner(
     ref: {
       name: date, // 默认名，外部可覆盖
       path: finalDirPath,
-      type: "simple-image",
       tags: dataConfig ? generateTags(dataConfig) : ["img"],
     },
   };
@@ -221,7 +220,6 @@ async function handleSplitLayers(
     ref: {
       name: date,
       path: finalDirPath,
-      type: "official_2021",
       tags: generateTags(dataConfig),
     },
   };

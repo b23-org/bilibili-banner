@@ -5,7 +5,6 @@
       {
         "name": "春节找乐子",
         "path": "2025-01-21",
-        "type": "simple-image",
         "tags": ["img"]
       }
     ]
@@ -16,7 +15,6 @@
       {
         "name": "看直播玩答题",
         "path": "2025-01-26",
-        "type": "simple-image",
         "tags": ["img"]
       }
     ]
@@ -27,7 +25,6 @@
       {
         "name": "看直播玩答题",
         "path": "2025-01-27",
-        "type": "simple-image",
         "tags": ["img"]
       }
     ]
@@ -38,7 +35,6 @@
       {
         "name": "看直播玩答题",
         "path": "2025-01-28",
-        "type": "simple-image",
         "tags": ["img"]
       }
     ]
@@ -49,7 +45,6 @@
       {
         "name": "看直播玩答题",
         "path": "2025-01-29",
-        "type": "simple-image",
         "tags": ["img"]
       }
     ]
@@ -60,7 +55,6 @@
       {
         "name": "看直播玩答题",
         "path": "2025-01-30",
-        "type": "simple-image",
         "tags": ["img"]
       }
     ]
@@ -71,7 +65,6 @@
       {
         "name": "看直播玩答题",
         "path": "2025-01-31",
-        "type": "simple-image",
         "tags": ["img"]
       }
     ]
@@ -82,7 +75,6 @@
       {
         "name": "全程回顾：2025年总台春晚",
         "path": "2025-02-01",
-        "type": "simple-image",
         "tags": ["img"]
       }
     ]
@@ -93,13 +85,11 @@
       {
         "name": "蒲英絮舞",
         "path": "2025-03-31",
-        "type": "official_2021",
         "tags": ["split-layer"]
       },
       {
         "name": "蒲英絮舞 (预览)",
         "path": "2025-03-31-preview",
-        "type": "simple-image",
         "tags": ["img"]
       }
     ]
@@ -110,13 +100,11 @@
       {
         "name": "BanG Dream！6周年",
         "path": "2025-05-26",
-        "type": "official_2021",
         "tags": ["video"]
       },
       {
         "name": "BanG Dream！6周年 (预览)",
         "path": "2025-05-26-preview",
-        "type": "simple-image",
         "tags": ["img"]
       }
     ]
@@ -127,7 +115,6 @@
       {
         "name": "《闪耀！优俊少女》",
         "path": "2025-05-29",
-        "type": "simple-image",
         "tags": ["img"]
       }
     ]
@@ -138,13 +125,11 @@
       {
         "name": "碧蓝航线8周年",
         "path": "2025-06-02",
-        "type": "official_2021",
         "tags": ["video"]
       },
       {
         "name": "碧蓝航线8周年 (预览)",
         "path": "2025-06-02-preview",
-        "type": "simple-image",
         "tags": ["img"]
       }
     ]
@@ -155,13 +140,11 @@
       {
         "name": "水漫街头",
         "path": "2025-06-12",
-        "type": "official_2021",
         "tags": ["split-layer"]
       },
       {
         "name": "水漫街头 (预览)",
         "path": "2025-06-12-preview",
-        "type": "simple-image",
         "tags": ["img"]
       }
     ]
@@ -172,7 +155,6 @@
       {
         "name": "洛天依喊你看全息巡演",
         "path": "2025-06-13",
-        "type": "simple-image",
         "tags": ["img"]
       }
     ]
@@ -183,7 +165,6 @@
       {
         "name": "三国谋定天下",
         "path": "2025-06-14",
-        "type": "simple-image",
         "tags": ["img"]
       }
     ]
@@ -194,7 +175,6 @@
       {
         "name": "B站16周年庆",
         "path": "2025-06-21",
-        "type": "simple-image",
         "tags": ["img"]
       }
     ]
@@ -205,7 +185,6 @@
       {
         "name": "【全程回顾】B站16周年庆",
         "path": "2025-06-27",
-        "type": "simple-image",
         "tags": ["img"]
       }
     ]
@@ -216,7 +195,6 @@
       {
         "name": "BILIBILI MOE",
         "path": "2025-07-16",
-        "type": "simple-image",
         "tags": ["img"]
       }
     ]
@@ -227,13 +205,11 @@
       {
         "name": "FGO 9周年",
         "path": "2025-07-28",
-        "type": "official_2021",
         "tags": ["video"]
       },
       {
         "name": "FGO 9周年 (预览)",
         "path": "2025-07-28-preview",
-        "type": "simple-image",
         "tags": ["img"]
       }
     ]
@@ -244,13 +220,11 @@
       {
         "name": "黄绿合战~(｡ゝ∀・)b",
         "path": "2025-08-02",
-        "type": "official_2021",
         "tags": ["video"]
       },
       {
         "name": "黄绿合战~(｡ゝ∀・)b (预览)",
         "path": "2025-08-02-preview",
-        "type": "simple-image",
         "tags": ["img"]
       }
     ]
@@ -261,7 +235,6 @@
       {
         "name": "BILIBILI MOE",
         "path": "2025-08-07",
-        "type": "simple-image",
         "tags": ["img"]
       }
     ]
@@ -272,7 +245,6 @@
       {
         "name": "BILIBILI MOE",
         "path": "2025-08-08",
-        "type": "simple-image",
         "tags": ["img"]
       }
     ]
@@ -283,7 +255,6 @@
       {
         "name": "BILIBILI MOE",
         "path": "2025-08-10",
-        "type": "simple-image",
         "tags": ["img"]
       }
     ]
@@ -294,7 +265,6 @@
       {
         "name": "BILIBILI MOE",
         "path": "2025-08-11",
-        "type": "simple-image",
         "tags": ["img"]
       }
     ]
@@ -305,7 +275,6 @@
       {
         "name": "九三阅兵",
         "path": "2025-09-01",
-        "type": "simple-image",
         "tags": ["img"]
       }
     ]
@@ -316,13 +285,11 @@
       {
         "name": "海汐拾遗",
         "path": "2025-09-04",
-        "type": "official_2021",
         "tags": ["split-layer"]
       },
       {
         "name": "海汐拾遗 (预览)",
         "path": "2025-09-04-preview",
-        "type": "simple-image",
         "tags": ["img"]
       }
     ]
@@ -333,7 +300,6 @@
       {
         "name": "《闪耀！优俊少女》一周年",
         "path": "2025-09-05",
-        "type": "simple-image",
         "tags": ["img"]
       }
     ]

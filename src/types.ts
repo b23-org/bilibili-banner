@@ -85,7 +85,13 @@ interface SimpleLayer {
 // Banner Config (纯配置，对应 JSON 文件格式)
 // ===============================================
 
-export type BannerType = "simple-image" | "official_2020" | "official_2021";
+export const BANNER_TYPES_ARR = [
+  "simple-image",
+  "official_2020",
+  "official_2021",
+] as const;
+
+export type BannerType = (typeof BANNER_TYPES_ARR)[number];
 
 export interface LogoConfig {
   logo?: {
@@ -129,7 +135,6 @@ export type BannerTag = "img" | "video" | "split-layer" | "interactive";
 export interface BannerRef {
   name: string;
   path: string;
-  type: BannerType;
   tags: BannerTag[];
 }
 

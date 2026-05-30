@@ -5,7 +5,6 @@
       {
         "name": "课间小憩",
         "path": "2023-01-01",
-        "type": "simple-image",
         "tags": ["img"]
       }
     ]
@@ -16,7 +15,6 @@
       {
         "name": "2022最美的夜",
         "path": "2023-01-04",
-        "type": "simple-image",
         "tags": ["img"]
       }
     ]
@@ -27,13 +25,11 @@
       {
         "name": "2022百大UP盛典",
         "path": "2023-01-07",
-        "type": "official_2021",
         "tags": ["video"]
       },
       {
         "name": "2022百大UP盛典 (预览)",
         "path": "2023-01-07-preview",
-        "type": "simple-image",
         "tags": ["img"]
       }
     ]
@@ -44,7 +40,6 @@
       {
         "name": "2022百大UP",
         "path": "2023-01-09",
-        "type": "simple-image",
         "tags": ["img"]
       }
     ]
@@ -55,7 +50,6 @@
       {
         "name": "2022最美的夜",
         "path": "2023-01-10",
-        "type": "simple-image",
         "tags": ["img"]
       }
     ]
@@ -66,7 +60,6 @@
       {
         "name": "2022百大UP",
         "path": "2023-01-11",
-        "type": "simple-image",
         "tags": ["img"]
       }
     ]
@@ -77,7 +70,6 @@
       {
         "name": "游戏新春会",
         "path": "2023-01-12",
-        "type": "simple-image",
         "tags": ["img"]
       }
     ]
@@ -88,7 +80,6 @@
       {
         "name": "2022百大UP",
         "path": "2023-01-13",
-        "type": "simple-image",
         "tags": ["img"]
       }
     ]
@@ -99,7 +90,6 @@
       {
         "name": "动画嘉年华",
         "path": "2023-01-14",
-        "type": "simple-image",
         "tags": ["img"]
       }
     ]
@@ -110,7 +100,6 @@
       {
         "name": "BILIBILI 新春纪",
         "path": "2023-01-15",
-        "type": "simple-image",
         "tags": ["img"]
       }
     ]
@@ -121,7 +110,6 @@
       {
         "name": "2022百大UP",
         "path": "2023-01-16",
-        "type": "simple-image",
         "tags": ["img"]
       }
     ]
@@ -132,7 +120,6 @@
       {
         "name": "BLS 年度之夜",
         "path": "2023-01-19",
-        "type": "simple-image",
         "tags": ["img"]
       }
     ]
@@ -143,7 +130,6 @@
       {
         "name": "家乡味",
         "path": "2023-01-20",
-        "type": "simple-image",
         "tags": ["img"]
       }
     ]
@@ -154,7 +140,6 @@
       {
         "name": "除夕",
         "path": "2023-01-21",
-        "type": "simple-image",
         "tags": ["img"]
       }
     ]
@@ -165,7 +150,6 @@
       {
         "name": "新年快乐",
         "path": "2023-01-23",
-        "type": "simple-image",
         "tags": ["img"]
       }
     ]
@@ -176,7 +160,6 @@
       {
         "name": "新年快乐",
         "path": "2023-01-26",
-        "type": "simple-image",
         "tags": ["img"]
       }
     ]
@@ -187,7 +170,6 @@
       {
         "name": "哔哩哔哩漫画",
         "path": "2023-01-27",
-        "type": "simple-image",
         "tags": ["img"]
       }
     ]
@@ -198,7 +180,6 @@
       {
         "name": "三体",
         "path": "2023-01-28",
-        "type": "simple-image",
         "tags": ["img"]
       }
     ]
@@ -209,7 +190,6 @@
       {
         "name": "哔哩哔哩漫画",
         "path": "2023-01-29",
-        "type": "simple-image",
         "tags": ["img"]
       }
     ]
@@ -220,7 +200,6 @@
       {
         "name": "哔哩哔哩漫画",
         "path": "2023-01-30",
-        "type": "simple-image",
         "tags": ["img"]
       }
     ]
@@ -231,7 +210,6 @@
       {
         "name": "凡人修仙传",
         "path": "2023-02-05",
-        "type": "simple-image",
         "tags": ["img"]
       }
     ]
@@ -242,7 +220,6 @@
       {
         "name": "中国奇谭",
         "path": "2023-02-06",
-        "type": "simple-image",
         "tags": ["img"]
       }
     ]
@@ -253,7 +230,6 @@
       {
         "name": "时间之外的往事",
         "path": "2023-02-07",
-        "type": "simple-image",
         "tags": ["img"]
       }
     ]
@@ -264,7 +240,6 @@
       {
         "name": "刺客伍六七",
         "path": "2023-02-08",
-        "type": "simple-image",
         "tags": ["img"]
       }
     ]
@@ -275,7 +250,6 @@
       {
         "name": "中国奇谭",
         "path": "2023-02-20",
-        "type": "simple-image",
         "tags": ["img"]
       }
     ]
@@ -286,7 +260,6 @@
       {
         "name": "拒绝网曝倡议",
         "path": "2023-03-15",
-        "type": "simple-image",
         "tags": ["img"]
       }
     ]
@@ -297,7 +270,6 @@
       {
         "name": "春日列车",
         "path": "2023-03-17",
-        "type": "simple-image",
         "tags": ["img"]
       }
     ]
@@ -308,7 +280,6 @@
       {
         "name": "三体",
         "path": "2023-03-18",
-        "type": "simple-image",
         "tags": ["img"]
       }
     ]
@@ -319,7 +290,6 @@
       {
         "name": "转角遇到春天",
         "path": "2023-03-23",
-        "type": "simple-image",
         "tags": ["img"]
       }
     ]
@@ -330,7 +300,6 @@
       {
         "name": "新功能：聊天室",
         "path": "2023-03-24",
-        "type": "simple-image",
         "tags": ["img"]
       }
     ]
@@ -341,7 +310,6 @@
       {
         "name": "三体",
         "path": "2023-03-25",
-        "type": "simple-image",
         "tags": ["img"]
       }
     ]
@@ -352,13 +320,11 @@
       {
         "name": "草木营建工记",
         "path": "2023-03-27",
-        "type": "official_2021",
         "tags": ["split-layer"]
       },
       {
         "name": "草木营建工记 (预览)",
         "path": "2023-03-27-preview",
-        "type": "simple-image",
         "tags": ["img"]
       }
     ]
@@ -369,13 +335,11 @@
       {
         "name": "劳作清余",
         "path": "2023-04-15",
-        "type": "official_2021",
         "tags": ["split-layer"]
       },
       {
         "name": "劳作清余 (预览)",
         "path": "2023-04-15-preview",
-        "type": "simple-image",
         "tags": ["img"]
       }
     ]
@@ -386,13 +350,11 @@
       {
         "name": "晚风炙味",
         "path": "2023-05-11",
-        "type": "official_2021",
         "tags": ["split-layer"]
       },
       {
         "name": "晚风炙味 (预览)",
         "path": "2023-05-11-preview",
-        "type": "simple-image",
         "tags": ["img"]
       }
     ]
@@ -403,13 +365,11 @@
       {
         "name": "幻彩宵宴",
         "path": "2023-05-31",
-        "type": "official_2021",
         "tags": ["split-layer"]
       },
       {
         "name": "幻彩宵宴 (预览)",
         "path": "2023-05-31-preview",
-        "type": "simple-image",
         "tags": ["img"]
       }
     ]
@@ -420,13 +380,11 @@
       {
         "name": "幽涧萤光会",
         "path": "2023-06-16",
-        "type": "official_2021",
         "tags": ["split-layer"]
       },
       {
         "name": "幽涧萤光会 (预览)",
         "path": "2023-06-16-preview",
-        "type": "simple-image",
         "tags": ["img"]
       }
     ]
@@ -437,7 +395,6 @@
       {
         "name": "BILIBILI 14周年",
         "path": "2023-06-21",
-        "type": "simple-image",
         "tags": ["img"]
       }
     ]
@@ -448,7 +405,6 @@
       {
         "name": "BILIBILI 14周年",
         "path": "2023-06-27",
-        "type": "simple-image",
         "tags": ["img"]
       }
     ]
@@ -459,13 +415,11 @@
       {
         "name": "碧海潜游",
         "path": "2023-07-21",
-        "type": "official_2021",
         "tags": ["split-layer"]
       },
       {
         "name": "碧海潜游 (预览)",
         "path": "2023-07-21-preview",
-        "type": "simple-image",
         "tags": ["img"]
       }
     ]
@@ -476,13 +430,11 @@
       {
         "name": "FGO 7周年",
         "path": "2023-08-02",
-        "type": "official_2021",
         "tags": ["video"]
       },
       {
         "name": "FGO 7周年 (预览)",
         "path": "2023-08-02-preview",
-        "type": "simple-image",
         "tags": ["img"]
       }
     ]
@@ -493,13 +445,11 @@
       {
         "name": "碧波逐浪",
         "path": "2023-08-19",
-        "type": "official_2021",
         "tags": ["split-layer"]
       },
       {
         "name": "碧波逐浪 (预览)",
         "path": "2023-08-19-preview",
-        "type": "simple-image",
         "tags": ["img"]
       }
     ]
@@ -510,13 +460,11 @@
       {
         "name": "碧波逐浪",
         "path": "2023-09-06",
-        "type": "official_2021",
         "tags": ["split-layer"]
       },
       {
         "name": "碧波逐浪 (预览)",
         "path": "2023-09-06-preview",
-        "type": "simple-image",
         "tags": ["img"]
       }
     ]
@@ -527,13 +475,11 @@
       {
         "name": "叶舟游江",
         "path": "2023-09-26",
-        "type": "official_2021",
         "tags": ["split-layer"]
       },
       {
         "name": "叶舟游江 (预览)",
         "path": "2023-09-26-preview",
-        "type": "simple-image",
         "tags": ["img"]
       }
     ]
@@ -544,13 +490,11 @@
       {
         "name": "林间秋藏",
         "path": "2023-10-21",
-        "type": "official_2021",
         "tags": ["split-layer"]
       },
       {
         "name": "林间秋藏 (预览)",
         "path": "2023-10-21-preview",
-        "type": "simple-image",
         "tags": ["img"]
       }
     ]
@@ -561,13 +505,11 @@
       {
         "name": "田野牧风",
         "path": "2023-11-16",
-        "type": "official_2021",
         "tags": ["split-layer"]
       },
       {
         "name": "田野牧风 (预览)",
         "path": "2023-11-16-preview",
-        "type": "simple-image",
         "tags": ["img"]
       }
     ]
@@ -578,13 +520,11 @@
       {
         "name": "冬湖嬉冰",
         "path": "2023-12-08",
-        "type": "official_2021",
         "tags": ["split-layer"]
       },
       {
         "name": "冬湖嬉冰 (预览)",
         "path": "2023-12-08-preview",
-        "type": "simple-image",
         "tags": ["img"]
       }
     ]
@@ -595,7 +535,6 @@
       {
         "name": "元梦之星",
         "path": "2023-12-15",
-        "type": "simple-image",
         "tags": ["img"]
       }
     ]
@@ -606,13 +545,11 @@
       {
         "name": "黄绿合战",
         "path": "2023-12-29",
-        "type": "official_2021",
         "tags": ["video"]
       },
       {
         "name": "黄绿合战 (预览)",
         "path": "2023-12-29-preview",
-        "type": "simple-image",
         "tags": ["img"]
       }
     ]

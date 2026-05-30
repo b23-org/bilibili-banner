@@ -123,7 +123,6 @@ async function handleSimpleImageBanner(
     ref: {
       name: date,
       path: finalDirPath,
-      type: "simple-image",
       tags: dataConfig ? generateTags(dataConfig) : ["img"],
     },
   };
@@ -169,7 +168,6 @@ async function handleSplitLayers(
     ref: {
       name: date,
       path: finalDirPath,
-      type: "official_2021",
       tags: generateTags(dataConfig),
     },
   };

@@ -5,7 +5,6 @@
       {
         "name": "秋",
         "path": "2013-09-07",
-        "type": "simple-image",
         "tags": ["img"]
       }
     ]
@@ -16,7 +15,6 @@
       {
         "name": "冬",
         "path": "2013-11-07",
-        "type": "simple-image",
         "tags": ["img"]
       }
     ]
@@ -27,7 +25,6 @@
       {
         "name": "圣诞快乐",
         "path": "2013-12-25",
-        "type": "simple-image",
         "tags": ["img"]
       }
     ]
