@@ -79,7 +79,7 @@ export const bannerExtensionRegistry: Record<
 > = {
   snow: () => import("./snow"),
   petals: () => import("./petals"),
-  spring: () => import("./spring"),
+  spring: () => import("./spring/index"),
   summer: () => import("./summer"),
   autumn: () => import("./autumn"),
 };

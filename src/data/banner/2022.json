@@ -323,6 +323,11 @@
         "tags": ["video"]
       },
       {
+        "name": "风叶穿行 (游戏)",
+        "path": "2022-03-15-game",
+        "tags": ["interactive"]
+      },
+      {
         "name": "风叶穿行 (预览)",
         "path": "2022-03-15-preview",
         "tags": ["img"]
