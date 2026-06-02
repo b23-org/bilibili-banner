@@ -32,7 +32,7 @@ jobs:
         run: pnpm build
 
       - name: Deploy to Cloudflare Pages
-        uses: cloudflare/wrangler-action@latest
+        uses: cloudflare/wrangler-action@v4
         id: wrangler_deploy
         with:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
