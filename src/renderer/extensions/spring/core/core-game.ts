@@ -44,7 +44,6 @@ const syncLeafPlatformMask = ({
   return ~(5 | ~currentMask);
 };
 
-
 type ListenerRef = Record<string, () => void>;
 
 export class BannerGameSpring2022 {
