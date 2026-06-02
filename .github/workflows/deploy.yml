@@ -31,29 +31,13 @@ jobs:
       - name: Build
         run: pnpm build
 
-      # 由于 pnpm 新版本(>=10)默认不信任任何脚本
-      # 需要手动批准 cloudflare/wrangler-action 的 sharp 和 workerd 安装脚本
-      - name: Approve build scripts for Wrangler
-        run: |
-          if ! grep -q "sharp: true" pnpm-workspace.yaml; then
-            while IFS= read -r line || [ -n "$line" ]; do
-              echo "$line"
-              if [[ "$line" =~ allowBuilds: ]]; then
-                echo "  sharp: true"
-                echo "  workerd: true"
-                cat
-                break
-              fi
-            done < pnpm-workspace.yaml > tmp.yaml && mv tmp.yaml pnpm-workspace.yaml
-          fi
-
       - name: Deploy to Cloudflare Pages
-        uses: cloudflare/wrangler-action@v4
+        uses: cloudflare/wrangler-action@latest
         id: wrangler_deploy
         with:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
-          command: pages deploy dist --project-name=${{ secrets.CLOUDFLARE_PROJECT_NAME }} --branch=${{ github.ref_name }}
+          command: pages deploy dist --project-name=${{ secrets.CLOUDFLARE_PROJECT_NAME }} --branch=${{ github.ref_name }} --commit-dirty=true
 
       - name: Find current PR
         id: findPr

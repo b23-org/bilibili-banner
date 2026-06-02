@@ -1,3 +1,6 @@
 allowBuilds:
   esbuild: true
   impit: true
+  # for wrangler install scripts
+  sharp: true
+  workerd: true
