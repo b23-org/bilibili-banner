@@ -108,6 +108,9 @@ export class SceneNode {
   }
 
   clear(): void {
+    this.children.forEach((child) => {
+      child.destroy();
+    });
     this.children.length = 0;
   }
 

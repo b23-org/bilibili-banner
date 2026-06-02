@@ -22,6 +22,29 @@ import { GameConfig, physicsConfig } from "./game-config";
 import { KeyboardInput, StateMachine, TimeManager } from "./game-runtime";
 import { renderShareCard } from "./share-card";
 
+interface SyncLeafPlatformMaskOptions {
+  currentMask: number;
+  playerVelocityY: number;
+  playerBodyY: number;
+  playerHeight: number;
+  leafBodyY: number;
+}
+
+const syncLeafPlatformMask = ({
+  currentMask,
+  playerVelocityY,
+  playerBodyY,
+  playerHeight,
+  leafBodyY,
+}: SyncLeafPlatformMaskOptions): number => {
+  if (playerVelocityY < 0.5 && playerBodyY - playerHeight / 2 > leafBodyY + 8) {
+    return 5 | currentMask;
+  }
+
+  return ~(5 | ~currentMask);
+};
+
+
 type ListenerRef = Record<string, () => void>;
 
 export class BannerGameSpring2022 {
@@ -57,6 +80,27 @@ export class BannerGameSpring2022 {
   onExitRequested?: () => void;
 
   private cleanups: (() => void)[] = [];
+
+  private syncLeafCollisionMasks(): void {
+    if (!this.player || !this.shamrocks) return;
+
+    const player = this.player;
+    const shamrocks = this.shamrocks;
+
+    shamrocks.all.forEach((leaf) => {
+      const nl = leaf as NormalLeaf;
+      const body = nl.leafBody;
+      if (nl.leafDisableLock) return;
+
+      body.collisionFilter.mask = syncLeafPlatformMask({
+        currentMask: body.collisionFilter.mask ?? 0,
+        playerVelocityY: player.body.velocity.y,
+        playerBodyY: player.body.position.y,
+        playerHeight: player.size.h,
+        leafBodyY: body.position.y,
+      });
+    });
+  }
 
   constructor(host: HTMLElement) {
     this.banner = host;
@@ -435,23 +479,7 @@ export class BannerGameSpring2022 {
         }
       }
 
-      this.shamrocks.all.forEach((leaf) => {
-        const nl = leaf as NormalLeaf;
-        const body = nl.leafBody;
-        if (!nl.leafDisableLock) {
-          if (
-            this.player!.body.velocity.y < 0.5 &&
-            this.player!.body.position.y - this.player!.size.h / 2 >
-              body.position.y + 8
-          ) {
-            body.collisionFilter.mask = 5 | (body.collisionFilter.mask ?? 0);
-          } else {
-            body.collisionFilter.mask = ~(
-              5 | ~(body.collisionFilter.mask ?? 0)
-            );
-          }
-        }
-      });
+      this.syncLeafCollisionMasks();
 
       Matter.Composite.translate(physicsConfig.engine!.world, {
         x: -0.18 * TimeManager.deltaT,
