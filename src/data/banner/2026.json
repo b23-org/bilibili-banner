@@ -5,12 +5,14 @@
       {
         "name": "雪林候车",
         "path": "2026-01-09",
-        "tags": ["split-layer"]
+        "tags": ["split-layer"],
+        "tid": [0]
       },
       {
-        "name": "雪林候车  (预览)",
+        "name": "雪林候车 (预览)",
         "path": "2026-01-09-preview",
-        "tags": ["img"]
+        "tags": ["img"],
+        "tid": [0]
       }
     ]
   },
@@ -20,7 +22,8 @@
       {
         "name": "一起看春晚",
         "path": "2026-02-10",
-        "tags": ["img"]
+        "tags": ["img"],
+        "tid": [0]
       }
     ]
   },
@@ -30,7 +33,8 @@
       {
         "name": "一起看春晚",
         "path": "2026-02-17",
-        "tags": ["img"]
+        "tags": ["img"],
+        "tid": [0]
       }
     ]
   },
@@ -40,7 +44,8 @@
       {
         "name": "两会",
         "path": "2026-03-03",
-        "tags": ["img"]
+        "tags": ["img"],
+        "tid": [0]
       }
     ]
   },
@@ -50,12 +55,14 @@
       {
         "name": "春原驰踪",
         "path": "2026-04-25",
-        "tags": ["split-layer"]
+        "tags": ["split-layer"],
+        "tid": [0]
       },
       {
         "name": "春原驰踪 (预览)",
         "path": "2026-04-25-preview",
-        "tags": ["img"]
+        "tags": ["img"],
+        "tid": [0]
       }
     ]
   },
@@ -63,9 +70,10 @@
     "date": "2026-05-07",
     "refs": [
       {
-        "name": "《闪耀！优俊少女》二周年",
+        "name": "「闪耀！优俊少女」二周年",
         "path": "2026-05-07",
-        "tags": ["img"]
+        "tags": ["img"],
+        "tid": [0]
       }
     ]
   },
@@ -75,12 +83,14 @@
       {
         "name": "BanG Dream！7周年",
         "path": "2026-05-26",
-        "tags": ["video"]
+        "tags": ["video"],
+        "tid": [0]
       },
       {
         "name": "BanG Dream！7周年 (预览)",
         "path": "2026-05-26-preview",
-        "tags": ["img"]
+        "tags": ["img"],
+        "tid": [0]
       }
     ]
   },
@@ -88,13 +98,25 @@
     "date": "2026-06-02",
     "refs": [
       {
-        "name": "碧蓝航线9周年生日快乐！",
+        "name": "[碧蓝航线]9周年生日快乐",
         "path": "2026-06-02",
-        "tags": ["video"]
+        "tags": ["video"],
+        "tid": [0]
       },
       {
-        "name": "碧蓝航线9周年生日快乐！ (预览)",
+        "name": "[碧蓝航线]9周年生日快乐 (预览)",
         "path": "2026-06-02-preview",
+        "tags": ["img"],
+        "tid": [0]
+      }
+    ]
+  },
+  {
+    "date": "2026-06-13",
+    "refs": [
+      {
+        "name": "三谋二周年 SLG世界杯开打",
+        "path": "2026-06-13",
         "tags": ["img"]
       }
     ]

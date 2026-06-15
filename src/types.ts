@@ -105,6 +105,7 @@ export interface LogoConfig {
 export interface BannerConfigOfficial2020 extends LogoConfig {
   type: "official_2020";
   layers: LayerConfig2020[];
+  link?: string;
 }
 
 /** 官方 2021 多图层配置（配置文件格式） */
@@ -112,12 +113,14 @@ export interface BannerConfigOfficial2021 extends LogoConfig {
   type: "official_2021";
   layers: LayersOfficial2021[];
   extensions?: BannerExtensionMap;
+  link?: string;
 }
 
 /** 单图层配置（配置文件格式） */
 export interface SimpleBannerConfig extends LogoConfig {
   type: "simple-image";
   layer: SimpleLayer;
+  link?: string;
 }
 
 /** Banner 配置联合类型（配置文件格式） */
@@ -136,6 +139,8 @@ export interface BannerRef {
   name: string;
   path: string;
   tags: BannerTag[];
+  /** 分区 ID */
+  tid?: number[];
 }
 
 /** 带 Ref 的官方 2020 多图层配置（运行时内部使用） */

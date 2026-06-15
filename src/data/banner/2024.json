@@ -5,12 +5,14 @@
       {
         "name": "雪夜围炉 - 共包新岁",
         "path": "2024-01-31",
-        "tags": ["split-layer"]
+        "tags": ["split-layer"],
+        "tid": [0]
       },
       {
         "name": "雪夜围炉 - 共包新岁 (预览)",
         "path": "2024-01-31-preview",
-        "tags": ["img"]
+        "tags": ["img"],
+        "tid": [0]
       }
     ]
   },
@@ -20,12 +22,14 @@
       {
         "name": "雪夜围炉 - 元宵团圆",
         "path": "2024-02-24",
-        "tags": ["split-layer"]
+        "tags": ["split-layer"],
+        "tid": [0]
       },
       {
         "name": "雪夜围炉 - 元宵团圆 (预览)",
         "path": "2024-02-24-preview",
-        "tags": ["img"]
+        "tags": ["img"],
+        "tid": [0]
       }
     ]
   },
@@ -35,12 +39,14 @@
       {
         "name": "春野骑行 - 橘影薰风",
         "path": "2024-05-07",
-        "tags": ["split-layer"]
+        "tags": ["split-layer"],
+        "tid": [0]
       },
       {
         "name": "春野骑行 - 橘影薰风 (预览)",
         "path": "2024-05-07-preview",
-        "tags": ["img"]
+        "tags": ["img"],
+        "tid": [0]
       }
     ]
   },
@@ -48,14 +54,16 @@
     "date": "2024-06-02",
     "refs": [
       {
-        "name": "碧蓝航线7周年",
+        "name": "[碧蓝航线]7周年",
         "path": "2024-06-02",
-        "tags": ["video"]
+        "tags": ["video"],
+        "tid": [0]
       },
       {
-        "name": "碧蓝航线7周年 (预览)",
+        "name": "[碧蓝航线]7周年 (预览)",
         "path": "2024-06-02-preview",
-        "tags": ["img"]
+        "tags": ["img"],
+        "tid": [0]
       }
     ]
   },
@@ -65,7 +73,8 @@
       {
         "name": "三国谋定天下",
         "path": "2024-06-13",
-        "tags": ["img"]
+        "tags": ["img"],
+        "tid": [0]
       }
     ]
   },
@@ -75,12 +84,14 @@
       {
         "name": "幻海空港 - 鲲游琼宇",
         "path": "2024-06-26",
-        "tags": ["split-layer"]
+        "tags": ["split-layer"],
+        "tid": [0]
       },
       {
         "name": "幻海空港 - 鲲游琼宇 (预览)",
         "path": "2024-06-26-preview",
-        "tags": ["img"]
+        "tags": ["img"],
+        "tid": [0]
       }
     ]
   },
@@ -90,7 +101,8 @@
       {
         "name": "BILIBILI 15周年",
         "path": "2024-06-27",
-        "tags": ["img"]
+        "tags": ["img"],
+        "tid": [0]
       }
     ]
   },
@@ -98,14 +110,16 @@
     "date": "2024-07-25",
     "refs": [
       {
-        "name": "FGO 8周年",
+        "name": "[FGO]8周年",
         "path": "2024-07-25",
-        "tags": ["video"]
+        "tags": ["video"],
+        "tid": [0]
       },
       {
-        "name": "FGO 8周年 (预览)",
+        "name": "[FGO]8周年 (预览)",
         "path": "2024-07-25-preview",
-        "tags": ["img"]
+        "tags": ["img"],
+        "tid": [0]
       }
     ]
   },
@@ -115,12 +129,14 @@
       {
         "name": "幻海空港 - 鲲游琼宇",
         "path": "2024-08-16",
-        "tags": ["split-layer"]
+        "tags": ["split-layer"],
+        "tid": [0]
       },
       {
         "name": "幻海空港 - 鲲游琼宇 (预览)",
         "path": "2024-08-16-preview",
-        "tags": ["img"]
+        "tags": ["img"],
+        "tid": [0]
       }
     ]
   },
@@ -130,12 +146,14 @@
       {
         "name": "廊桥逐影 - 惊鸿掠空",
         "path": "2024-09-27",
-        "tags": ["split-layer"]
+        "tags": ["split-layer"],
+        "tid": [0]
       },
       {
         "name": "廊桥逐影 - 惊鸿掠空 (预览)",
         "path": "2024-09-27-preview",
-        "tags": ["img"]
+        "tags": ["img"],
+        "tid": [0]
       }
     ]
   },
@@ -145,7 +163,8 @@
       {
         "name": "建国75周年",
         "path": "2024-10-01",
-        "tags": ["img"]
+        "tags": ["img"],
+        "tid": [0]
       }
     ]
   },
@@ -153,9 +172,10 @@
     "date": "2024-11-07",
     "refs": [
       {
-        "name": "《宝可梦大集结》上线",
+        "name": "「宝可梦大集结」上线",
         "path": "2024-11-07",
-        "tags": ["img"]
+        "tags": ["img"],
+        "tid": [0]
       }
     ]
   },
@@ -165,12 +185,14 @@
       {
         "name": "龙吟雪岭 - 缆车飞驰",
         "path": "2024-12-25",
-        "tags": ["split-layer"]
+        "tags": ["split-layer"],
+        "tid": [0]
       },
       {
         "name": "龙吟雪岭 - 缆车飞驰 (预览)",
         "path": "2024-12-25-preview",
-        "tags": ["img"]
+        "tags": ["img"],
+        "tid": [0]
       }
     ]
   }

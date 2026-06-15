@@ -1,0 +1,10 @@
+{
+  "type": "simple-image",
+  "layer": {
+    "src": "assets/2019/2019-11-21-01-0/cb32825fbb67a5763f4a718230051daaf1e5c129.png"
+  },
+  "link": "https://ad-bili-data.biligame.com/api/pc/clickBili?ad_plan_id=57007&mid=__MID__&ip=__IP__&request_id=__REQUESTID__&ts=__TS__&ua=__UA__",
+  "logo": {
+    "src": "assets/2019/2019-11-21-01-0/e99c314f3f1c016b91d17c830bb6653b7c8d07bd.png"
+  }
+}
