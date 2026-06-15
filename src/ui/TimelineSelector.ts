@@ -195,12 +195,20 @@ export default class TimelineSelector {
     }
   }
 
+  private _updateDropdownPosition(
+    itemEl: HTMLElement,
+    dropdown: HTMLDivElement,
+  ): void {
+    const rect = itemEl.getBoundingClientRect();
+    dropdown.style.top = `${rect.bottom + 8}px`;
+    dropdown.style.left = `${rect.left + rect.width / 2}px`;
+  }
+
   private _showDropdownFor(itemEl: HTMLElement): void {
     window.clearTimeout(this._activeDropdownTimer);
 
     this.container.querySelectorAll(".popover-content").forEach((el) => {
       el.classList.remove("visible");
-      // Popover API hide
       try {
         (el as HTMLElement & { hidePopover: () => void }).hidePopover();
       } catch (_e) {}
@@ -209,11 +217,8 @@ export default class TimelineSelector {
     const dropdown = itemEl.querySelector(".popover-content") as HTMLDivElement;
     if (!dropdown) return;
 
-    const rect = itemEl.getBoundingClientRect();
-    dropdown.style.top = `${rect.bottom + 8}px`;
-    dropdown.style.left = `${rect.left + rect.width / 2}px`;
+    this._updateDropdownPosition(itemEl, dropdown);
 
-    // Popover API show
     try {
       (dropdown as HTMLDivElement & { showPopover: () => void }).showPopover();
     } catch (_e) {}
@@ -229,7 +234,6 @@ export default class TimelineSelector {
       this.container.querySelectorAll(".popover-content").forEach((el) => {
         el.classList.remove("visible");
 
-        // Wait for transition to complete before hiding popover
         setTimeout(() => {
           try {
             if (!el.classList.contains("visible")) {
@@ -349,5 +353,18 @@ export default class TimelineSelector {
         );
       });
     });
+
+    // 检查是否有处于 visible 状态的弹出菜单，若有则根据最新的宽度重新计算位置，防止错开
+    const visibleDropdown = this.container.querySelector(
+      ".popover-content.visible",
+    ) as HTMLDivElement | null;
+    if (visibleDropdown) {
+      const parentItem = visibleDropdown.closest(
+        ".timeline-item",
+      ) as HTMLElement | null;
+      if (parentItem) {
+        this._updateDropdownPosition(parentItem, visibleDropdown);
+      }
+    }
   }
 }
