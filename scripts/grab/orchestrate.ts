@@ -17,6 +17,7 @@ import {
   removeDir,
 } from "../grab-shared/fs-utils";
 import {
+  buildBannerPath,
   generateTags,
   publishDir,
   updateManifest,
@@ -243,7 +244,12 @@ export async function runGrabSplit2021(): Promise<boolean> {
     handleExtensions(extensions);
 
     const hasLayers = layers.length > 0;
-    const simpleImageDir = hasLayers ? `${date}-preview` : date;
+    const d = new Date();
+    const hour = String(d.getHours()).padStart(2, "0");
+    const baseDir = buildBannerPath(date, hour, "0");
+    const simpleImageDir = hasLayers
+      ? buildBannerPath(date, hour, "0", "preview")
+      : baseDir;
 
     // 1. 处理 SimpleImage (包含预览图和 Logo 下载)
     const simpleResult = await handleSimpleImageBanner(
@@ -264,7 +270,7 @@ export async function runGrabSplit2021(): Promise<boolean> {
       const layersResult = await handleSplitLayers(
         layers,
         date,
-        date,
+        baseDir,
         logo,
         simpleImageDir,
       );

@@ -13,6 +13,7 @@ import {
   prepareEmptyDir,
 } from "../grab-shared/fs-utils";
 import {
+  buildBannerPath,
   generateTags,
   publishDir,
   updateManifest,
@@ -39,7 +40,10 @@ export function getSimpleImageFileNames(
 export async function processSimpleImage(
   assets: SimpleBannerData2016,
   dateStr: string,
+  timestamp: string,
 ): Promise<string[]> {
+  const hour = timestamp.slice(8, 10) || "00";
+  const newPath = buildBannerPath(dateStr, hour, "0");
   const stagedDir = createStagedDir(dateStr, "grab-archive");
   try {
     prepareEmptyDir(stagedDir);
@@ -63,11 +67,11 @@ export async function processSimpleImage(
     const year = dateStr.substring(0, 4);
     const dataConfig: SimpleBannerConfig = {
       type: "simple-image",
-      layer: { src: `assets/${year}/${dateStr}/${layerFileName}` },
+      layer: { src: `assets/${year}/${newPath}/${layerFileName}` },
     };
     if (logoFileName) {
       dataConfig.logo = {
-        src: `assets/${year}/${dateStr}/${logoFileName}`,
+        src: `assets/${year}/${newPath}/${logoFileName}`,
       };
     }
 
@@ -81,11 +85,11 @@ export async function processSimpleImage(
     const refs: BannerRef[] = [
       {
         name: assets.name || dateStr,
-        path: dateStr,
+        path: newPath,
         tags: generateTags(dataConfig),
       },
     ];
-    publishDir(stagedDir, dateStr);
+    publishDir(stagedDir, newPath);
     updateManifest(dateStr, refs);
 
     return getSimpleImageFileNames(assets);

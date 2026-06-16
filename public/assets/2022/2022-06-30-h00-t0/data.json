@@ -1,0 +1,21 @@
+{
+  "type": "official_2021",
+  "layers": [
+    {
+      "id": 0,
+      "name": "图层0",
+      "resources": [
+        {
+          "src": "assets/2022/2022-06-30-h00-t0/3a37f1b927a7d8ea60e082e5f00415ba944d24c5.webm",
+          "id": 0
+        }
+      ],
+      "scale": {
+        "initial": 0.4306
+      }
+    }
+  ],
+  "logo": {
+    "src": "assets/2022/2022-06-30-h00-t0-preview/3e69e6cec3436ac52cd2c00d2ff7ee99328959d3.png"
+  }
+}

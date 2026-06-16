@@ -118,3 +118,13 @@ export function generateTags(config: BannerConfig): BannerTag[] {
 
   return ["img"];
 }
+
+export function buildBannerPath(
+  date: string,
+  hour: string,
+  tid = "0",
+  suffix?: string,
+): string {
+  const base = `${date}-h${hour}-t${tid}`;
+  return suffix ? `${base}-${suffix}` : base;
+}

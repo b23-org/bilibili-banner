@@ -18,6 +18,7 @@ import {
   removeDir,
 } from "../grab-shared/fs-utils";
 import {
+  buildBannerPath,
   generateTags,
   publishDir,
   updateManifest,
@@ -188,6 +189,7 @@ export function getSplitLayerFileNames(data: SplitBannerData2021): string[] {
 export async function processSplitLayer(
   data: SplitBannerData2021,
   dateStr: string,
+  timestamp: string,
 ): Promise<string[]> {
   const hasLayers = data.layers.length > 0;
   console.log(`📦 [处理资源]`);
@@ -198,7 +200,11 @@ export async function processSplitLayer(
   if (data.preview) console.log(`  预览图 URL: ${data.preview}`);
   if (data.logo) console.log(`  Logo URL: ${data.logo}`);
 
-  const simpleImageDir = hasLayers ? `${dateStr}-preview` : dateStr;
+  const hour = timestamp.slice(8, 10) || "00";
+  const baseDir = buildBannerPath(dateStr, hour, "0");
+  const simpleImageDir = hasLayers
+    ? buildBannerPath(dateStr, hour, "0", "preview")
+    : baseDir;
   const results: HandlerResult[] = [];
 
   if (data.extensions && Object.keys(data.extensions).length > 0) {
@@ -228,7 +234,7 @@ export async function processSplitLayer(
       const layersResult = await handleSplitLayers(
         data.layers,
         dateStr,
-        dateStr,
+        baseDir,
         data.logo,
         simpleImageDir,
       );

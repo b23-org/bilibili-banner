@@ -1,0 +1,14 @@
+{
+  "type": "official_2021",
+  "layers": [
+    {
+      "resources": []
+    }
+  ],
+  "extensions": {
+    "spring": {}
+  },
+  "logo": {
+    "src": "assets/2022/2022-03-15-h00-t0-preview/ca375eb31fa90b8e23b88ed3433c2f60de1c2e6e.png"
+  }
+}

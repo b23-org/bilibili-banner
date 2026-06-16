@@ -1,0 +1,11 @@
+{
+  "type": "simple-image",
+  "logo": {
+    "src": "assets/2015/2015-03-30-h00-t0/2015_spring2_logo.png",
+    "width": "220px",
+    "height": "110px"
+  },
+  "layer": {
+    "src": "assets/2015/2015-03-30-h00-t0/2015_spring2.jpg"
+  }
+}

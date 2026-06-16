@@ -86,10 +86,10 @@ export async function runSimple(args: ArchiveArgs): Promise<void> {
 
   if (isSplitLayerMode(args.mode)) {
     const data = result as SplitBannerData2021;
-    await processSplitLayer(data, dateStr);
+    await processSplitLayer(data, dateStr, info.timestamp);
   } else {
     const data = result as SimpleBannerData2016;
-    await processSimpleImage(data, dateStr);
+    await processSimpleImage(data, dateStr, info.timestamp);
   }
 
   console.log(`🎉 ${dateStr} 抓取成功`);

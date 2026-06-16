@@ -1,0 +1,14 @@
+{
+  "type": "official_2021",
+  "layers": [
+    {
+      "resources": []
+    }
+  ],
+  "extensions": {
+    "autumn": {}
+  },
+  "logo": {
+    "src": "assets/2022/2022-09-24-h00-t0-preview/622017dd4b0140432962d3ce0c6db99d77d2e937.png"
+  }
+}
