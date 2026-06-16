@@ -1,3 +1,4 @@
+import vm from "node:vm";
 import type { LayersOfficial2021 } from "../../src/types";
 import { stripBilibiliSuffix } from "../grab-shared/url";
 
@@ -12,17 +13,83 @@ interface BannerData {
   logo?: string;
   preview?: string;
   name?: string;
+  link?: string;
   extensions?: Record<string, unknown>;
 }
 
 export function parseBannerData(html: string): BannerData {
-  const anchorIndex = findAnchorIndex(html);
-  const { layers, extensions } = extractLayers(html, anchorIndex);
-  const { logo, preview, name } = extractBannerInfo(html, anchorIndex);
-
-  return { layers, logo, preview, name, extensions };
+  const sandboxData = parseBannerDataSandbox(html);
+  if (sandboxData) {
+    return sandboxData;
+  }
+  return parseBannerDataRegExp(html);
 }
 
+function parseBannerDataSandbox(html: string): BannerData | null {
+  // 匹配 window.__pinia = (function(...){...})(...) 这样的自执行函数定义与调用
+  const scriptMatch = html.match(/window\.__pinia\s*=\s*\((?:function|[\s\S]*?)\)\s*\([\s\S]*?\)\s*;/);
+  if (!scriptMatch) {
+    return null;
+  }
+
+  const codeToRun = scriptMatch[0];
+  const sandbox = { window: {} as any };
+
+  try {
+    vm.createContext(sandbox);
+    vm.runInContext(codeToRun, sandbox);
+
+    const headerBannerData = sandbox.window.__pinia?.index?.headerBannerData;
+    if (!headerBannerData) {
+      return null;
+    }
+
+    const logo = stripBilibiliSuffix(headerBannerData.litpic || "");
+    const preview = stripBilibiliSuffix(headerBannerData.pic || "");
+    const name = headerBannerData.name || "";
+    const rawUrl = headerBannerData.url || "";
+    const link = rawUrl.trim() !== "" ? rawUrl : undefined;
+
+    let layers: LayersOfficial2021[] = [];
+    let extensions: Record<string, unknown> | undefined = undefined;
+
+    if (headerBannerData.split_layer) {
+      const splitLayerObj = typeof headerBannerData.split_layer === "string"
+        ? JSON.parse(headerBannerData.split_layer)
+        : headerBannerData.split_layer;
+
+      layers = Array.isArray(splitLayerObj.layers) ? splitLayerObj.layers : [];
+      extensions = splitLayerObj.extensions;
+    }
+
+    return {
+      layers,
+      logo,
+      preview,
+      name,
+      ...(link ? { link } : {}),
+      extensions,
+    };
+  } catch (error) {
+    console.warn("[Parse] vm sandbox execution failed:", error);
+    return null;
+  }
+}
+
+function parseBannerDataRegExp(html: string): BannerData {
+  const anchorIndex = findAnchorIndex(html);
+  const { layers, extensions } = extractLayers(html, anchorIndex);
+  const { logo, preview, name, url } = extractBannerInfo(html, anchorIndex);
+
+  return {
+    layers,
+    logo,
+    preview,
+    name,
+    ...(url ? { link: url } : {}),
+    extensions,
+  };
+}
 function extractLayers(
   html: string,
   anchorIndex?: number,
@@ -53,6 +120,7 @@ function extractBannerInfo(
   logo?: string;
   preview?: string;
   name?: string;
+  url?: string;
 } {
   const contextStart = Math.max(0, anchorIndex - 1500);
   const contextStr = html.substring(contextStart, anchorIndex);
@@ -71,11 +139,14 @@ function extractBannerInfo(
   const logoUrl = stripBilibiliSuffix(extractValue("litpic") || "");
   const previewUrl = stripBilibiliSuffix(extractValue("pic") || "");
   const name = extractValue("name");
+  const rawUrl = extractValue("url") || "";
+  const url = rawUrl.trim() !== "" ? rawUrl : undefined;
 
   return {
     logo: logoUrl,
     preview: previewUrl,
     name,
+    url,
   };
 }
 

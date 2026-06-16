@@ -239,7 +239,11 @@ export default class BannerEngine {
     }
 
     if (this.logoRenderer && bannerData.logo?.src) {
-      this.logoRenderer.render(bannerData.logo);
+      this.logoRenderer.render(
+        bannerData.logo,
+        bannerData.link,
+        bannerData.name,
+      );
     }
   }
 }

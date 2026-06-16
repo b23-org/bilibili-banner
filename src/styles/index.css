@@ -739,3 +739,31 @@ video {
   line-height: 1.5;
   margin: 0;
 }
+
+/* B站官方悬浮标题链接组件 */
+.head-title {
+  position: absolute;
+  bottom: 25px;
+  left: 380px;
+  padding: 6px 10px;
+  max-width: 350px;
+  border-radius: 4px;
+  background-color: rgba(47, 50, 56, 0.9);
+  color: #fff;
+  font-size: 14px;
+  line-height: 20px;
+  opacity: 0;
+  pointer-events: none; /* 默认隐藏时不可交互，避免遮挡底层图层 */
+  transition: opacity 0.3s;
+  text-decoration: none;
+  z-index: 99;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* 当 Hover 到 Banner 容器时，标题渐显并恢复交互 */
+#banner-container:hover .head-title {
+  opacity: 1;
+  pointer-events: auto;
+}

@@ -87,6 +87,7 @@ function buildSplitLayerData(
   year: string,
   date: string,
   logoDir?: string,
+  link?: string,
 ): BannerConfigOfficial2021 {
   const basePath = `assets/${year}/${date}`;
   const logoPath = `assets/${year}/${logoDir || date}`;
@@ -107,6 +108,10 @@ function buildSplitLayerData(
     output.logo = { src: `${logoPath}/${extractFileName(logoUrl)}` };
   }
 
+  if (link && link.trim() !== "") {
+    output.link = link;
+  }
+
   return output;
 }
 
@@ -115,6 +120,7 @@ function buildSimpleImageData(
   logoUrl: string | undefined,
   year: string,
   dirPath: string,
+  link?: string,
 ): SimpleBannerConfig {
   const output: SimpleBannerConfig = {
     type: "simple-image",
@@ -125,6 +131,10 @@ function buildSimpleImageData(
     output.logo = {
       src: `assets/${year}/${dirPath}/${extractFileName(logoUrl)}`,
     };
+  }
+
+  if (link && link.trim() !== "") {
+    output.link = link;
   }
 
   return output;
@@ -148,6 +158,7 @@ async function handleSimpleImageBanner(
   logoUrl: string | undefined,
   date: string,
   finalDirPath: string,
+  link?: string,
 ): Promise<HandlerResult> {
   const year = date.split("-")[0];
   const stagedDir = createStagedDir(date, "simple");
@@ -167,7 +178,7 @@ async function handleSimpleImageBanner(
 
   let dataConfig: SimpleBannerConfig | undefined;
   if (previewUrl) {
-    dataConfig = buildSimpleImageData(previewUrl, logoUrl, year, finalDirPath);
+    dataConfig = buildSimpleImageData(previewUrl, logoUrl, year, finalDirPath, link);
     writeDataJson(stagedDir, dataConfig);
   }
 
@@ -187,6 +198,7 @@ async function handleSplitLayers(
   finalDirPath: string,
   logoUrl: string | undefined,
   logoDirName: string,
+  link?: string,
 ): Promise<HandlerResult> {
   const year = date.split("-")[0];
   const stagedDir = createStagedDir(date, "layers");
@@ -213,6 +225,7 @@ async function handleSplitLayers(
     year,
     finalDirPath,
     logoDirName,
+    link,
   );
   writeDataJson(stagedDir, dataConfig);
 
@@ -239,7 +252,7 @@ export async function runGrabSplit2021(): Promise<boolean> {
     console.log(`正在请求页面源码: ${TARGET_URL}`);
     const html = await fetchHtml(TARGET_URL);
 
-    const { layers, logo, preview, name, extensions } = parseBannerData(html);
+    const { layers, logo, preview, name, link, extensions } = parseBannerData(html);
 
     handleExtensions(extensions);
 
@@ -257,6 +270,7 @@ export async function runGrabSplit2021(): Promise<boolean> {
       logo,
       date,
       simpleImageDir,
+      link,
     );
     if (hasLayers) {
       simpleResult.ref.name = name ? `${name} (预览)` : `${date} (预览)`;
@@ -273,6 +287,7 @@ export async function runGrabSplit2021(): Promise<boolean> {
         baseDir,
         logo,
         simpleImageDir,
+        link,
       );
       layersResult.ref.name = name || date;
       results.push(layersResult);

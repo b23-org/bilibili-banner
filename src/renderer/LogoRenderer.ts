@@ -4,6 +4,7 @@ import { waitForMedia } from "./helper";
 export class LogoRenderer {
   private imgEl: HTMLImageElement | null = null;
   private container: HTMLElement | null;
+  private linkEl: HTMLAnchorElement | null = null;
 
   constructor() {
     this.container = document.getElementById("logo");
@@ -22,7 +23,11 @@ export class LogoRenderer {
     this.imgEl = img;
   }
 
-  public render(config: NonNullable<LogoConfig["logo"]>): void {
+  public render(
+    config: NonNullable<LogoConfig["logo"]>,
+    link?: string,
+    name?: string,
+  ): void {
     if (!this.container) return;
 
     this.container.style.display = "inline-block";
@@ -41,9 +46,27 @@ export class LogoRenderer {
     if (this.imgEl) {
       this.container.appendChild(this.imgEl);
     }
+
+    if (link && link.trim() !== "") {
+      this.linkEl = document.createElement("a");
+      this.linkEl.href = link;
+      this.linkEl.target = "_blank";
+      this.linkEl.className = "head-title";
+      this.linkEl.textContent = name || "";
+
+      const bannerContainer = document.getElementById("banner-container");
+      if (bannerContainer) {
+        bannerContainer.appendChild(this.linkEl);
+      }
+    }
   }
 
   public dispose(): void {
+    if (this.linkEl) {
+      this.linkEl.remove();
+      this.linkEl = null;
+    }
+
     if (this.container) {
       this.container.style.display = "none";
       this.container.style.removeProperty("width");
