@@ -178,7 +178,13 @@ async function handleSimpleImageBanner(
 
   let dataConfig: SimpleBannerConfig | undefined;
   if (previewUrl) {
-    dataConfig = buildSimpleImageData(previewUrl, logoUrl, year, finalDirPath, link);
+    dataConfig = buildSimpleImageData(
+      previewUrl,
+      logoUrl,
+      year,
+      finalDirPath,
+      link,
+    );
     writeDataJson(stagedDir, dataConfig);
   }
 
@@ -252,7 +258,8 @@ export async function runGrabSplit2021(): Promise<boolean> {
     console.log(`正在请求页面源码: ${TARGET_URL}`);
     const html = await fetchHtml(TARGET_URL);
 
-    const { layers, logo, preview, name, link, extensions } = parseBannerData(html);
+    const { layers, logo, preview, name, link, extensions } =
+      parseBannerData(html);
 
     handleExtensions(extensions);
 

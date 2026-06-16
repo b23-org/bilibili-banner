@@ -17,6 +17,25 @@ interface BannerData {
   extensions?: Record<string, unknown>;
 }
 
+interface SandboxWindow {
+  __pinia?: {
+    index?: {
+      headerBannerData?: {
+        litpic?: string;
+        pic?: string;
+        name?: string;
+        url?: string;
+        split_layer?:
+          | string
+          | {
+              layers?: LayersOfficial2021[];
+              extensions?: Record<string, unknown>;
+            };
+      };
+    };
+  };
+}
+
 export function parseBannerData(html: string): BannerData {
   const sandboxData = parseBannerDataSandbox(html);
   if (sandboxData) {
@@ -27,13 +46,15 @@ export function parseBannerData(html: string): BannerData {
 
 function parseBannerDataSandbox(html: string): BannerData | null {
   // 匹配 window.__pinia = (function(...){...})(...) 这样的自执行函数定义与调用
-  const scriptMatch = html.match(/window\.__pinia\s*=\s*\((?:function|[\s\S]*?)\)\s*\([\s\S]*?\)\s*;/);
+  const scriptMatch = html.match(
+    /window\.__pinia\s*=\s*\((?:function|[\s\S]*?)\)\s*\([\s\S]*?\)\s*;/,
+  );
   if (!scriptMatch) {
     return null;
   }
 
   const codeToRun = scriptMatch[0];
-  const sandbox = { window: {} as any };
+  const sandbox = { window: {} as SandboxWindow };
 
   try {
     vm.createContext(sandbox);
@@ -51,12 +72,13 @@ function parseBannerDataSandbox(html: string): BannerData | null {
     const link = rawUrl.trim() !== "" ? rawUrl : undefined;
 
     let layers: LayersOfficial2021[] = [];
-    let extensions: Record<string, unknown> | undefined = undefined;
+    let extensions: Record<string, unknown> | undefined;
 
     if (headerBannerData.split_layer) {
-      const splitLayerObj = typeof headerBannerData.split_layer === "string"
-        ? JSON.parse(headerBannerData.split_layer)
-        : headerBannerData.split_layer;
+      const splitLayerObj =
+        typeof headerBannerData.split_layer === "string"
+          ? JSON.parse(headerBannerData.split_layer)
+          : headerBannerData.split_layer;
 
       layers = Array.isArray(splitLayerObj.layers) ? splitLayerObj.layers : [];
       extensions = splitLayerObj.extensions;

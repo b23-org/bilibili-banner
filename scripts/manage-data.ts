@@ -638,9 +638,13 @@ async function main() {
       console.log("用法: tsx scripts/manage-data.ts <command>");
       console.log("\n可用命令:");
       console.log("  generate        生成 JSON Schemas (基于 src/types.ts)");
-      console.log("  validate        校验 public/assets 下的 data.json 配置文件数据规范");
+      console.log(
+        "  validate        校验 public/assets 下的 data.json 配置文件数据规范",
+      );
       console.log("  check-assets    检查资源文件的引用完整性 (缺失/多余)");
-      console.log("  check-manifest  检查 Banner 配置的合法性及与实际物理目录一致性");
+      console.log(
+        "  check-manifest  检查 Banner 配置的合法性及与实际物理目录一致性",
+      );
       console.log("  clean           清理 public/assets 下的空目录");
       break;
   }
