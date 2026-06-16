@@ -4,16 +4,16 @@
 
 ## 一、B站 Banner 演变与脚本抓取模式概览
 
-| 时间区间    | Banner 类型                 | 加载方式                                                            |
-| :---------- | :-------------------------- | :------------------------------------------------------------------ |
-| 2013 - 2014 | 静态单图                    | 内嵌在 `new_z.css` 文件中通过 background 属性加载                   |
-| 2015        | 静态单图                    | 内嵌在 `new_z2.css` 文件中通过 background 属性加载                  |
-| 2015 - 2016 | 静态单图                    | 通过 `widget/getHeader` 接口下发的脚本加载                          |
-| 2016 - 2018 | 静态单图                    | 通过 `/x/web-show/res/loc` 接口下发                                 |
-| 2018 - 2019 | 静态单图                    | 内嵌在 HTML 中                                                      |
-| 2019 - 2020 | 静态单图、动态多图层        | 内嵌在 HTML 中                                                      |
-| 2020 - 2021 | 动态多图层 + Canvas、视频 | 通过 js 内嵌或 `x/web-show/res/frontpage` 接口下发                  |
-| 2022 - 至今 | 静态单图、视频、动态多图层  | 内嵌在 HTML 中或 `/x/web-show/page/header?resource_id=142` 接口下发 |
+| 时间区间    | Banner 类型                | 加载方式                                                            |
+| :---------- | :------------------------- | :------------------------------------------------------------------ |
+| 2013 - 2014 | 静态单图                   | 内嵌在 `new_z.css` 文件中通过 background 属性加载                   |
+| 2015        | 静态单图                   | 内嵌在 `new_z2.css` 文件中通过 background 属性加载                  |
+| 2015 - 2016 | 静态单图                   | 通过 `widget/getHeader` 接口下发的脚本加载                          |
+| 2016 - 2018 | 静态单图                   | 通过 `/x/web-show/res/loc` 接口下发                                 |
+| 2018 - 2019 | 静态单图                   | 内嵌在 HTML 中                                                      |
+| 2019 - 2020 | 静态单图、动态多图层       | 内嵌在 HTML 中                                                      |
+| 2020 - 2021 | 动态多图层 + Canvas、视频  | 通过 js 内嵌或 `x/web-show/res/frontpage` 接口下发                  |
+| 2022 - 至今 | 静态单图、视频、动态多图层 | 内嵌在 HTML 中或 `/x/web-show/page/header?resource_id=142` 接口下发 |
 
 ## 二、静态单图的资源加载方式
 
@@ -201,7 +201,6 @@ B站早期只有单张背景图和 Logo 的简单 Banner，其资源 url 大多�
   </div>
   ```
 
-
 ### 2022 - 至今
 
 此时期的banner资源下发配置方式比较混杂，多种方式并存，**这里仅介绍 HTML 内嵌方式**，其他方式包括但不限于`/x/web-show/page/header?resource_id=142` 接口下发、内嵌在 HTML 中等。
@@ -273,18 +272,18 @@ $$
 
 由于 [Wayback Machine][Wayback-Machine] 的采集机制限制，B站快照质量参差不齐，这里仅收录经测试可还原完整动态 Banner 交互体验的快照链接。
 
-| 快照链接 | 主题内容 |
-| :--- | :--- |
-| [2020-10-01](https://web.archive.org/web/20201010160645/https://www.bilibili.com/) | 2020 秋|
-| [2020-12-20](https://web.archive.org/web/20201220013540/https://www.bilibili.com/) | 黄绿合战|
-| [2021-02-17](https://web.archive.org/web/20210217142039/https://www.bilibili.com/) | 2021 冬-雪战|
-| [2021-04-12](https://web.archive.org/web/20210412120844/https://www.bilibili.com/) | 2021 春-春游|
-| [2023-03-31](https://web.archive.org/web/20230331001110/https://www.bilibili.com/) | 2023 春|
-| [2023-05-08](https://web.archive.org/web/20230508113754/https://www.bilibili.com/) | 海边篝火 |
-| [2023-06-12](https://web.archive.org/web/20230612101044/https://www.bilibili.com/) | 洞穴演唱会 |
-| [2023-07-18](https://web.archive.org/web/20230718015206/https://www.bilibili.com/) | 2023 夏-潜水|
-| [2023-08-13](https://web.archive.org/web/20230805200401/https://www.bilibili.com/) | 2023 夏-旅游|
-| [2023-08-21](https://web.archive.org/web/20230905184625/https://www.bilibili.com/) | 2023 夏-旅游|
-| [2024-12-26](https://web.archive.org/web/20241226082416/https://www.bilibili.com/) | 2024 冬-滑雪|
+| 快照链接                                                                           | 主题内容     |
+| :--------------------------------------------------------------------------------- | :----------- |
+| [2020-10-01](https://web.archive.org/web/20201010160645/https://www.bilibili.com/) | 2020 秋      |
+| [2020-12-20](https://web.archive.org/web/20201220013540/https://www.bilibili.com/) | 黄绿合战     |
+| [2021-02-17](https://web.archive.org/web/20210217142039/https://www.bilibili.com/) | 2021 冬-雪战 |
+| [2021-04-12](https://web.archive.org/web/20210412120844/https://www.bilibili.com/) | 2021 春-春游 |
+| [2023-03-31](https://web.archive.org/web/20230331001110/https://www.bilibili.com/) | 2023 春      |
+| [2023-05-08](https://web.archive.org/web/20230508113754/https://www.bilibili.com/) | 海边篝火     |
+| [2023-06-12](https://web.archive.org/web/20230612101044/https://www.bilibili.com/) | 洞穴演唱会   |
+| [2023-07-18](https://web.archive.org/web/20230718015206/https://www.bilibili.com/) | 2023 夏-潜水 |
+| [2023-08-13](https://web.archive.org/web/20230805200401/https://www.bilibili.com/) | 2023 夏-旅游 |
+| [2023-08-21](https://web.archive.org/web/20230905184625/https://www.bilibili.com/) | 2023 夏-旅游 |
+| [2024-12-26](https://web.archive.org/web/20241226082416/https://www.bilibili.com/) | 2024 冬-滑雪 |
 
 [Wayback-Machine]: https://web.archive.org/

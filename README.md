@@ -98,18 +98,17 @@ pnpm tsx scripts/grab-archive -m <mode> -u <url>
   - `split-2022-api`
 - `-u, --url`: Wayback Machine 上的 B 站快照 URL，例如：`https://web.archive.org/web/20220101000000/https://www.bilibili.com/`
 
-
 ### 3. 数据管理与辅助校验
 
 数据抓取完成后，可以使用以下命令对数据进行规范校验和清理：
 
-| 命令                 | 说明                                                                       |
-| -------------------- | -------------------------------------------------------------------------- |
-| `pnpm data generate` | 基于 TypeScript 类型定义自动生成对应的 JSON Schemas                        |
-| `pnpm data validate` | 校验 `public/assets` 中所有 Banner 的 `data.json` 配置是否符合 Schema 规范 |
-| `pnpm data check`    | 检查 `public/assets` 下资源引用的完整性（检查是否存在缺失或冗余资源）      |
-| `pnpm data clean`    | 自动清理 `public/assets` 目录下的空目录                                    |
-| `pnpm data check-tags`| 检查 `src/data/banner/` 中的 `tags` 配置是否合法 |
+| 命令                   | 说明                                                                       |
+| ---------------------- | -------------------------------------------------------------------------- |
+| `pnpm data generate`   | 基于 TypeScript 类型定义自动生成对应的 JSON Schemas                        |
+| `pnpm data validate`   | 校验 `public/assets` 中所有 Banner 的 `data.json` 配置是否符合 Schema 规范 |
+| `pnpm data check`      | 检查 `public/assets` 下资源引用的完整性（检查是否存在缺失或冗余资源）      |
+| `pnpm data clean`      | 自动清理 `public/assets` 目录下的空目录                                    |
+| `pnpm data check-tags` | 检查 `src/data/banner/` 中的 `tags` 配置是否合法                           |
 
 ## ❤️ 鸣谢
 
