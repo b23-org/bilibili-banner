@@ -249,6 +249,68 @@ export default class TimelineSelector {
     this.container.addEventListener("wheel", this._boundHandleWheel);
   }
 
+  public page(direction: "left" | "right"): void {
+    if (this._isPaging) return;
+
+    const box = this.container;
+    const items = Array.from(
+      box.querySelectorAll(".timeline-item"),
+    ) as HTMLElement[];
+    const boxRect = box.getBoundingClientRect();
+
+    const visibleItems = items.filter((item) => {
+      const rect = item.getBoundingClientRect();
+      return rect.left >= boxRect.left && rect.right <= boxRect.right;
+    });
+
+    if (visibleItems.length < 3) {
+      const scrollStep = 100;
+      box.scrollBy({
+        left: direction === "right" ? scrollStep : -scrollStep,
+        behavior: "smooth",
+      });
+      return;
+    }
+
+    let offset = 0;
+    const padding = 50; // #selectBox horizontal padding
+
+    if (direction === "right") {
+      // 滚动到右边：使用最右侧可见项对齐到可视区最左侧（保留一个作为过渡）
+      const anchorItem = visibleItems[visibleItems.length - 1];
+      if (anchorItem) {
+        offset =
+          anchorItem.getBoundingClientRect().left - boxRect.left - padding;
+      }
+    } else {
+      // 滚动到左边：使用最左侧可见项对齐到可视区最右侧（保留一个作为过渡）
+      const anchorItem = visibleItems[0];
+      if (anchorItem) {
+        offset =
+          anchorItem.getBoundingClientRect().right - (boxRect.right - padding);
+      }
+    }
+
+    if (offset !== 0 && Math.abs(offset) > 10) {
+      this._isPaging = true;
+      box.scrollTo({
+        left: box.scrollLeft + offset,
+        behavior: "smooth",
+      });
+
+      window.clearTimeout(this._pagingTimer);
+      this._pagingTimer = window.setTimeout(() => {
+        this._isPaging = false;
+      }, 400);
+    } else {
+      const scrollStep = 100;
+      box.scrollBy({
+        left: direction === "right" ? scrollStep : -scrollStep,
+        behavior: "smooth",
+      });
+    }
+  }
+
   private _handleWheel(e: WheelEvent): void {
     const box = this.container;
     if (!box || e.deltaY === 0) return;
@@ -266,56 +328,7 @@ export default class TimelineSelector {
       return;
     }
 
-    if (this._isPaging) return;
-
-    const items = Array.from(
-      box.querySelectorAll(".timeline-item"),
-    ) as HTMLElement[];
-    const boxRect = box.getBoundingClientRect();
-
-    const visibleItems = items.filter((item) => {
-      const rect = item.getBoundingClientRect();
-      return rect.left >= boxRect.left && rect.right <= boxRect.right;
-    });
-
-    if (visibleItems.length < 3) {
-      box.scrollLeft += e.deltaY * (e.deltaMode === 1 ? 40 : 1);
-      return;
-    }
-
-    let offset = 0;
-    const padding = 50; // #selectBox horizontal padding
-
-    if (e.deltaY > 0) {
-      // Scroll right: Use 2nd from last visible item as the new left anchor
-      const anchorItem = visibleItems[visibleItems.length - 2];
-      if (anchorItem) {
-        offset =
-          anchorItem.getBoundingClientRect().left - boxRect.left - padding;
-      }
-    } else {
-      // Scroll left: Use 2nd visible item as the new right anchor
-      const anchorItem = visibleItems[1];
-      if (anchorItem) {
-        offset =
-          anchorItem.getBoundingClientRect().right - (boxRect.right - padding);
-      }
-    }
-
-    if (offset !== 0 && Math.abs(offset) > 10) {
-      this._isPaging = true;
-      box.scrollTo({
-        left: box.scrollLeft + offset,
-        behavior: "smooth",
-      });
-
-      window.clearTimeout(this._pagingTimer);
-      this._pagingTimer = window.setTimeout(() => {
-        this._isPaging = false;
-      }, 400); // Wait for smooth scroll to mostly finish
-    } else {
-      box.scrollLeft += e.deltaY * (e.deltaMode === 1 ? 40 : 1);
-    }
+    this.page(e.deltaY > 0 ? "right" : "left");
   }
 
   private _syncRenderedState(activePath: string): void {
@@ -334,6 +347,36 @@ export default class TimelineSelector {
       const isActive = activeBanner.path === activePath;
 
       itemEl.classList.toggle("active", isActive);
+
+      if (isActive) {
+        const itemRect = itemEl.getBoundingClientRect();
+        const boxRect = this.container.getBoundingClientRect();
+        const farThreshold = 180;
+
+        if (itemRect.right > boxRect.right) {
+          const overshoot = itemRect.right - boxRect.right;
+          if (overshoot > farThreshold) {
+            itemEl.scrollIntoView({
+              behavior: "smooth",
+              block: "nearest",
+              inline: "center",
+            });
+          } else {
+            this.page("right");
+          }
+        } else if (itemRect.left < boxRect.left) {
+          const overshoot = boxRect.left - itemRect.left;
+          if (overshoot > farThreshold) {
+            itemEl.scrollIntoView({
+              behavior: "smooth",
+              block: "nearest",
+              inline: "center",
+            });
+          } else {
+            this.page("left");
+          }
+        }
+      }
 
       const nameText = itemEl.querySelector(
         ".item-name > span",

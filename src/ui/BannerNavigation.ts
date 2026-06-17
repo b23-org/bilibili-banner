@@ -51,6 +51,8 @@ export default class BannerNavigation {
   private readonly yearToLastVisitedPath: Map<string, string> = new Map();
   private activeBannerPath = "";
   private readonly onSwitch: (ref: BannerRef) => void;
+  private readonly allRefsOrder: BannerRef[];
+  private _boundKeyDown?: (e: KeyboardEvent) => void;
 
   constructor(groups: DailyBannerGroup[], onSwitch: (ref: BannerRef) => void) {
     const indexes = buildIndexes(groups);
@@ -58,6 +60,7 @@ export default class BannerNavigation {
     this.pathToBannerRef = indexes.pathToBannerRef;
     this.pathToYear = indexes.pathToYear;
     this.yearToGroups = indexes.yearToGroups;
+    this.allRefsOrder = groups.flatMap((group) => group.refs);
 
     this.yearSelector = new YearSelector(indexes.years, (year) => {
       const targetPath = this._resolvePathForYear(year);
@@ -69,6 +72,8 @@ export default class BannerNavigation {
     this.timelineSelector = new TimelineSelector((variant) => {
       this.switch(variant.path);
     });
+
+    this._setupInteractionListeners();
   }
 
   public switch(path: string): void {
@@ -103,9 +108,65 @@ export default class BannerNavigation {
     return this.activeBannerPath;
   }
 
+  public next(): void {
+    if (this.allRefsOrder.length <= 1) {
+      return;
+    }
+    const currentIndex = this.allRefsOrder.findIndex(
+      (r) => r.path === this.activeBannerPath,
+    );
+    if (currentIndex === -1) {
+      return;
+    }
+
+    const nextIndex = (currentIndex + 1) % this.allRefsOrder.length;
+    this.switch(this.allRefsOrder[nextIndex].path);
+  }
+
+  public previous(): void {
+    if (this.allRefsOrder.length <= 1) {
+      return;
+    }
+    const currentIndex = this.allRefsOrder.findIndex(
+      (r) => r.path === this.activeBannerPath,
+    );
+    if (currentIndex === -1) {
+      return;
+    }
+
+    const prevIndex =
+      (currentIndex - 1 + this.allRefsOrder.length) % this.allRefsOrder.length;
+    this.switch(this.allRefsOrder[prevIndex].path);
+  }
+
+  private _setupInteractionListeners(): void {
+    this._boundKeyDown = (e: KeyboardEvent) => {
+      if (
+        e.target instanceof HTMLInputElement ||
+        e.target instanceof HTMLTextAreaElement
+      ) {
+        return;
+      }
+
+      const key = e.key.toLowerCase();
+      if (key === "arrowleft") {
+        e.preventDefault();
+        this.previous();
+      } else if (key === "arrowright") {
+        e.preventDefault();
+        this.next();
+      }
+    };
+    window.addEventListener("keydown", this._boundKeyDown);
+  }
+
   public destroy(): void {
     this.timelineSelector.destroy();
     this.yearSelector.destroy();
+
+    if (this._boundKeyDown) {
+      window.removeEventListener("keydown", this._boundKeyDown);
+    }
   }
 
   private _resolvePathForYear(year: string): string | undefined {

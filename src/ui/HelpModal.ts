@@ -43,20 +43,24 @@ export default class HelpModal {
             <ul class="help-list">
               <li class="help-item">
                 <div class="help-text">
-                  <span class="help-label">场景互动</span>
-                  <span class="help-desc">在“场景互动”类型的 Banner 中，可与画面中的特定区域交互，会触发一些动画或特殊响应效果。</span>
-                </div>
-              </li>
-              <li class="help-item">
-                <div class="help-text">
-                  <span class="help-label">动态 Banner</span>
-                  <span class="help-desc">在“动态”类型的 Banner 中，鼠标在 banner 区域内移动时，各个图层会随之旋转、缩放、位移或渐隐渐现，呈现出动态效果。</span>
+                  <span class="help-label">分类筛选</span>
+                  <span class="help-desc">
+                    点击分类标签可以过滤不同类型的 Banner。
+                    <br />• <strong>场景互动</strong>：可与画面特定区域交互，触发动画或特殊效果。
+                    <br />• <strong>动态</strong>：图层随鼠标移动产生旋转、缩放和位移等视差效果。
+                  </span>
                 </div>
               </li>
               <li class="help-item">
                 <div class="help-text">
                   <span class="help-label">横向翻页</span>
                   <span class="help-desc">鼠标位于下方时间轴上时，滚动滚轮或拖动滚动条，就能快速浏览该年份所有 Banner。</span>
+                </div>
+              </li>
+              <li class="help-item">
+                <div class="help-text">
+                  <span class="help-label">按键切换</span>
+                  <span class="help-desc">按下键盘的左右方向键（← / →），即可快速按顺序切换上一个或下一个 Banner。</span>
                 </div>
               </li>
             </ul>
