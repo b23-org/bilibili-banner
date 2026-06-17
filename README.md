@@ -53,14 +53,15 @@ pnpm preview
 抓取后的数据和资源会自动归档到 `public/assets/{YYYY}/{YYYY-MM-DD}[-*]` 目录中。
 
 > [!IMPORTANT]
-> 抓取脚本在自动运行完毕后，生成的 Banner 标题（`banner-title`）通常为网页的日期。因此在完成抓取后，**请务必手动编辑** [src/data/banner/](src/data/banner/) 目录下对应记录所在年份的配置文件（例如 [2026.json](src/data/banner/2026.json)），修改对应记录的 `name` 属性。
+> 抓取脚本在自动运行完毕后，生成的 Banner 标题（`banner-title`）通常为网页的日期。因此在完成抓取后，**请手动编辑** [src/data/banner/](src/data/banner/) 目录下对应记录所在年份的配置文件（例如 [2026.json](src/data/banner/2026.json)），修改对应记录的 `name` 属性。
+> 
 > ```diff
 >   {
 >     "date": "2026-01-09",
 >     "refs": [
 >       {
-> +       "name": "雪林候车",
 > -       "name": "2026-01-09",
+> +       "name": "雪林候车",
 >         "path": "2026-01-09-h00-t0",
 >         "tags": ["split-layer"],
 >         "tid": [0]
