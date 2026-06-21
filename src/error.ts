@@ -42,7 +42,8 @@ const SOURCE_IDS = ["design", "default", "29ERAmwloghvx7600"]; // 预置的本�
 
 class MangaController {
   private mangaList: string[] = [];
-  private currentSrc = "";
+  private shuffledList: string[] = [];
+  private currentIndex = 0;
   private isCooldown = false;
   private cooldownTimer: number | undefined;
   private clickCount = 0;
@@ -82,21 +83,40 @@ class MangaController {
   }
 
   /**
-   * 无重复随机算法：随机挑选一张与当前不同的漫画路径
+   * 洗牌算法：将漫画列表随机打乱
    */
-  private getRandomMangaSrc(): string {
-    const available = this.mangaList.filter((src) => {
-      return this.currentSrc === "" || !this.currentSrc.endsWith(src);
-    });
+  private shuffleList() {
+    const list = [...this.mangaList];
+    for (let i = list.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [list[i], list[j]] = [list[j], list[i]];
+    }
+    this.shuffledList = list;
+    this.currentIndex = 0;
+  }
 
-    const pool = available.length > 0 ? available : this.mangaList;
-    const randomIndex = Math.floor(Math.random() * pool.length);
-    return `/${pool[randomIndex]}`;
+  /**
+   * 获取下一张漫画路径，保证在列表长度大于 1 时，跨轮次也不会连续重复
+   */
+  private getNextMangaSrc(): string {
+    if (this.shuffledList.length === 0) {
+      this.shuffleList();
+    }
+
+    if (this.currentIndex >= this.shuffledList.length) {
+      const lastSrc = this.shuffledList[this.shuffledList.length - 1];
+      do {
+        this.shuffleList();
+      } while (this.mangaList.length > 1 && this.shuffledList[0] === lastSrc);
+    }
+
+    const nextSrc = `/${this.shuffledList[this.currentIndex]}`;
+    this.currentIndex++;
+    return nextSrc;
   }
 
   private renderInitialManga() {
-    const firstSrc = this.getRandomMangaSrc();
-    this.currentSrc = firstSrc;
+    const firstSrc = this.getNextMangaSrc();
 
     this.mangaImg.onload = () => {
       this.mangaImg.style.display = "inline";
@@ -112,8 +132,7 @@ class MangaController {
     this.changeBtn.disabled = true;
     this.changeBtn.classList.add("off");
 
-    const newSrc = this.getRandomMangaSrc();
-    this.currentSrc = newSrc;
+    const newSrc = this.getNextMangaSrc();
 
     this.clickCount++;
     if (this.clickCount === 100) {
