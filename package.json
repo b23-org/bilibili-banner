@@ -8,7 +8,7 @@
     "build": "vite build",
     "preview": "vite preview",
     "typecheck": "tsc --noEmit",
-    "lint": "biome check --write src/ scripts/ index.html public/",
+    "lint": "biome check --write src/ scripts/ public/ index.html 404.html",
     "data": "tsx scripts/manage-data.ts",
     "grab": "tsx scripts/grab/index.ts"
   },

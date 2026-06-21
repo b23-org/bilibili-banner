@@ -54,6 +54,16 @@ function buildNavigation(
 }
 
 function main() {
+  const pathname = window.location.pathname;
+  if (
+    pathname !== "/" &&
+    pathname !== "/index.html" &&
+    pathname !== "/404.html"
+  ) {
+    window.location.replace("/404.html");
+    return;
+  }
+
   const urlParams = new URLSearchParams(window.location.search);
   const requestedPath = urlParams.get("path") ?? undefined;
 
