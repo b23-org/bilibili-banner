@@ -1,3 +1,5 @@
+import path from "node:path";
+
 /**
  * 清洗 B站图片 URL，去除处理后缀（如 @560w_240h.webp），获取原图链接
  */
@@ -29,4 +31,12 @@ export function toOriginalCdnUrl(url: string): string {
   }
 
   return rawUrl;
+}
+
+/**
+ * 从完整 CDN URL 提取文件名（不含 query string）
+ * 使用 URL.pathname 解析，比 split 方式更可靠
+ */
+export function extractFileNameFromUrl(url: string): string {
+  return path.posix.basename(new URL(url).pathname);
 }

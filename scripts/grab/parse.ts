@@ -8,7 +8,7 @@ interface SplitLayerPayload {
   extensions?: Record<string, unknown>;
 }
 
-interface BannerData {
+export interface BannerData {
   layers: LayersOfficial2021[];
   logo?: string;
   preview?: string;
@@ -17,21 +17,25 @@ interface BannerData {
   extensions?: Record<string, unknown>;
 }
 
+export interface RawHeaderBannerData {
+  litpic?: string;
+  pic?: string;
+  name?: string;
+  url?: string;
+  is_split_layer?: number | boolean;
+  split_layer?:
+    | string
+    | {
+        layers?: LayersOfficial2021[];
+        extensions?: Record<string, unknown>;
+      }
+    | Record<string, unknown>;
+}
+
 interface SandboxWindow {
   __pinia?: {
     index?: {
-      headerBannerData?: {
-        litpic?: string;
-        pic?: string;
-        name?: string;
-        url?: string;
-        split_layer?:
-          | string
-          | {
-              layers?: LayersOfficial2021[];
-              extensions?: Record<string, unknown>;
-            };
-      };
+      headerBannerData?: RawHeaderBannerData;
     };
   };
 }
@@ -65,37 +69,41 @@ function parseBannerDataSandbox(html: string): BannerData | null {
       return null;
     }
 
-    const logo = stripBilibiliSuffix(headerBannerData.litpic || "");
-    const preview = stripBilibiliSuffix(headerBannerData.pic || "");
-    const name = headerBannerData.name || "";
-    const rawUrl = headerBannerData.url || "";
-    const link = rawUrl.trim() !== "" ? rawUrl : undefined;
-
-    let layers: LayersOfficial2021[] = [];
-    let extensions: Record<string, unknown> | undefined;
-
-    if (headerBannerData.split_layer) {
-      const splitLayerObj =
-        typeof headerBannerData.split_layer === "string"
-          ? JSON.parse(headerBannerData.split_layer)
-          : headerBannerData.split_layer;
-
-      layers = Array.isArray(splitLayerObj.layers) ? splitLayerObj.layers : [];
-      extensions = splitLayerObj.extensions;
-    }
-
-    return {
-      layers,
-      logo,
-      preview,
-      name,
-      ...(link ? { link } : {}),
-      extensions,
-    };
+    return parseBannerDataFromJson(headerBannerData);
   } catch (error) {
     console.warn("[Parse] vm sandbox execution failed:", error);
     return null;
   }
+}
+
+export function parseBannerDataFromJson(data: RawHeaderBannerData): BannerData {
+  const logo = stripBilibiliSuffix(data.litpic || "");
+  const preview = stripBilibiliSuffix(data.pic || "");
+  const name = data.name || "";
+  const rawUrl = data.url || "";
+  const link = rawUrl.trim() !== "" ? rawUrl : undefined;
+
+  let layers: LayersOfficial2021[] = [];
+  let extensions: Record<string, unknown> | undefined;
+
+  if (data.split_layer) {
+    const splitLayerObj =
+      typeof data.split_layer === "string"
+        ? JSON.parse(data.split_layer)
+        : data.split_layer;
+
+    layers = Array.isArray(splitLayerObj.layers) ? splitLayerObj.layers : [];
+    extensions = splitLayerObj.extensions;
+  }
+
+  return {
+    layers,
+    logo,
+    preview,
+    name,
+    ...(link ? { link } : {}),
+    extensions,
+  };
 }
 
 function parseBannerDataRegExp(html: string): BannerData {
