@@ -11,10 +11,9 @@ export interface HelpModalProps {
 }
 
 /**
- * HelpModal 帮助说明弹窗 (Task 5.2)
+ * HelpModal 帮助说明弹窗
  * - 使用 createPortal 挂载到 document.body
- * - 纯自含模态逻辑（半透明遮罩、页面滚动锁定）
- * - 完整呈现历史档案库操作指南与开源许可信息
+ * - 呈现本站介绍、横幅类型说明、交互指南与版权声明
  */
 export function HelpModal({
   open,
@@ -62,65 +61,94 @@ export function HelpModal({
 
         {/* 内容区 */}
         <div className="help-modal-body">
-          {/* 项目简介 */}
+          {/* 1. 关于本站 */}
           <section className="help-section">
-            <h4 className="section-title">🏛️ 项目简介</h4>
+            <h4 className="section-title">🏛️ 关于本站</h4>
             <p className="section-text">
-              本项目是一个围绕 Bilibili 首页 Banner
-              的历史档案与还原项目。收录并整理了自 2013 年至今的大部分
-              Banner，结合页面快照与逆向分析结果，尽可能复现出不同时期 Banner
-              的视觉表现与交互逻辑。
+              本项目是一个围绕 Bilibili 首页顶栏 Banner
+              的历史还原与归档项目。收录并系统整理了自 2013
+              年至今的大部分Banner数据，结合页面快照与逆向分析结果，尽可能精确地还原不同时期
+              B 站Banner的视觉表现与交互体验。
             </p>
           </section>
 
-          {/* 基础操作指南 */}
+          {/* 2. 横幅类型介绍 */}
           <section className="help-section">
-            <h4 className="section-title">🕹️ 操作指南</h4>
+            <h4 className="section-title">🎨 横幅类型</h4>
+            <ul className="help-list">
+              <li className="help-item">
+                <span className="help-desc">
+                  <strong>静态</strong>：只有单张图片的 banner
+                </span>
+              </li>
+              <li className="help-item">
+                <span className="help-desc">
+                  <strong>视频</strong>：以视频为主体的 banner
+                </span>
+              </li>
+              <li className="help-item">
+                <span className="help-desc">
+                  <strong>动态</strong>
+                  ：多个图片组成的，可跟随鼠标移动产生位移、变化，或带有粒子效果
+                </span>
+              </li>
+              <li className="help-item">
+                <span className="help-desc">
+                  <strong>场景互动</strong>：包含深度交互机制的
+                  banner，画面特定区域可点击触发独立动画、音效、全屏展开或内置小游戏
+                </span>
+              </li>
+            </ul>
+          </section>
+
+          {/* 3. 交互指南（仅动态和场景互动类型） */}
+          <section className="help-section">
+            <h4 className="section-title">🕹️ 交互指南</h4>
             <ul className="help-list">
               <li className="help-item">
                 <div className="help-text">
-                  <span className="help-label">横幅切换与舞台</span>
+                  <span className="help-label">动态Banner</span>
                   <span className="help-desc">
-                    点击下方档案流中的任意横幅卡片，上方常驻舞台即可无缝切换并运行对应的
-                    Banner 特效。
+                    <strong>交互方式：</strong>
+                    将鼠标移入上方横幅舞台，并在画面内左右移动光标。
+                    <br />
+                    <strong>动效反馈：</strong>
+                    各图层随鼠标位置产生视差位移、旋转、缩放与景深虚化；光标移出横幅后自动平滑复位。
                   </span>
                 </div>
               </li>
               <li className="help-item">
                 <div className="help-text">
-                  <span className="help-label">多版本切换</span>
+                  <span className="help-label">场景互动Banner</span>
                   <span className="help-desc">
-                    部分 Banner
-                    收录了多个时期或动效版本。在卡片或舞台信息栏右侧悬停版本胶囊，即可选择不同版本。
-                  </span>
-                </div>
-              </li>
-              <li className="help-item">
-                <div className="help-text">
-                  <span className="help-label">分类与年份检索</span>
-                  <span className="help-desc">
-                    通过筛选栏可快速过滤不同年份及特性的 Banner：
-                    <br />• <strong>场景互动</strong>
-                    ：可与画面特定区域鼠标交互，触发独特音画动效。
-                    <br />• <strong>动态</strong>
-                    ：图层随鼠标移动产生旋转、缩放与视差位移。
-                    <br />• <strong>视频</strong>
-                    ：包含高清视频循环背景与媒体剪辑。
-                    <br />• <strong>静态</strong>：经典纯平面画作横幅。
+                    <strong>交互方式：</strong>
+                    注意并点击画面中特定的可交互热区（如发光物件、角色手持道具、场景开关等）。
+                    <br />
+                    <strong>动效反馈：</strong>
+                    点击可触发专属的分支动画、全景展开视角、音效/音乐播放或内置小游戏。
                   </span>
                 </div>
               </li>
             </ul>
           </section>
 
-          {/* 协议与声明 */}
+          {/* 4. 协议与声明 */}
           <section className="help-section">
             <h4 className="section-title">⚖️ 协议与声明</h4>
-            <p className="help-desc">
-              本项目代码部分采用 MIT License 协议开源。
-              <br />
-              项目中所使用的图片、视频、设计及原始素材版权均归 Bilibili 所有。
-            </p>
+            <div className="help-desc help-desc--license">
+              <p>
+                <strong>开源协议：</strong>本项目核心复现代码及界面实现采用 MIT
+                License 协议开源。
+              </p>
+              <p>
+                <strong>版权归属：</strong>项目中所使用的图片、音视频、3D
+                模型、设计素材及相关商业标识，其版权与知识产权均归上海宽娱数码科技有限公司（Bilibili）所有。
+              </p>
+              <p>
+                <strong>非商业免责：</strong>
+                本站仅作为技术交流、动效复原学习与历史设计归档之非营利性开源项目，不用于任何商业用途。
+              </p>
+            </div>
           </section>
         </div>
 
@@ -131,7 +159,7 @@ export function HelpModal({
             className="help-modal-primary-btn"
             onClick={onClose}
           >
-            我知道了
+            知道了
           </button>
         </div>
       </div>

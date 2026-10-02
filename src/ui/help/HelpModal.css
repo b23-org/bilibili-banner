@@ -152,6 +152,22 @@
   margin: 0;
 }
 
+.help-desc strong {
+  color: #18191c;
+  font-weight: 600;
+}
+
+.help-desc--license {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.help-desc--license p {
+  margin: 0;
+  line-height: 1.6;
+}
+
 /* 底部操作区 */
 .help-modal-footer {
   padding: 16px 24px;
