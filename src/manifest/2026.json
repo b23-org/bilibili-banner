@@ -3850,6 +3850,27 @@
     "refs": [
       {
         "name": "2026无畏契约上海冠军赛",
+        "id": "2026-09-24-h14-t1008",
+        "tags": ["img"],
+        "tid": [1008],
+        "config": {
+          "type": "simple-image",
+          "layer": {
+            "src": "assets/2026/09/2026-09-24-h14-t1008/f2b8c468a17aab478ce54e9aa0da49d5c12db709.png"
+          },
+          "logo": {
+            "src": "assets/2026/09/2026-09-24-h14-t1008/3f7798d1f210a6ce2c99a4bdaf5093723e5c9bb0.png"
+          },
+          "link": "https://www.bilibili.com/blackboard/era/X1Wcn7ARKZFdpnoV.html"
+        }
+      }
+    ]
+  },
+  {
+    "date": "2026-09-24",
+    "refs": [
+      {
+        "name": "2026无畏契约上海冠军赛",
         "id": "2026-09-24-h22-t1008",
         "tags": ["img"],
         "tid": [1008],

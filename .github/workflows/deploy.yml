@@ -24,9 +24,7 @@ jobs:
 
       - name: Data validation
         run: |
-          pnpm data validate
-          pnpm data check-assets
-          pnpm data check-manifest
+          pnpm check-data
 
       - name: Cloudflare pre-deploy
         run: pnpm exec tsx cloudflare/build.ts

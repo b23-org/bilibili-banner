@@ -41,7 +41,7 @@ jobs:
         run: pnpm install
 
       - name: Run Biome Lint Check
-        run: pnpm exec biome check src/ scripts/ index.html public/
+        run: pnpm lint
 
       - name: Run Type Check
         run: pnpm typecheck

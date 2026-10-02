@@ -9,8 +9,8 @@
     "preview": "vite preview",
     "typecheck": "tsc --noEmit",
     "lint": "biome check --write src/ scripts/ public/ index.html 404.html",
-    "data": "tsx scripts/data/index.ts",
-    "grab": "tsx scripts/grab/index.ts"
+    "grab": "tsx scripts/grab/index.ts",
+    "check-data": "tsx scripts/data/index.ts"
   },
   "dependencies": {
     "@preact/signals": "^2.11.2",
