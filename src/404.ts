@@ -64,7 +64,7 @@ class MangaController {
 
     const chosenSourceId =
       SOURCE_IDS[Math.floor(Math.random() * SOURCE_IDS.length)];
-    const listUrl = `/assets/error/${chosenSourceId}/list.json`;
+    const listUrl = `/assets/404/${chosenSourceId}/list.json`;
 
     try {
       const response = await fetch(listUrl);

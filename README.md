@@ -20,40 +20,61 @@
 
 - 🕰️ **跨越十年的记录**：收录自 2013 年至今的大部分首页 Banner，覆盖从静态单图到多图层动态 Banner 的演变过程。
 - 🎯 **动态交互还原**：基于逆向分析复现官方动态 Banner 的交互逻辑，包括视差、位移、模糊、转场等核心效果。
-- 🕹️ **重现季节主题扩展**：重现 2022 年出现的春、夏、秋三个季性节主题网页互动小游戏和扩展。
+- 🕹️ **重现季节互动主题扩展**：重现 2022 年出现的春、夏、秋三个季性节主题网页互动小游戏和扩展。
 - ⚙️ **工程化数据维护**：提供抓取、解析、校验和资源归档工具，方便新增数据并维护现有存档。
 
 ## 🛠️ 快速开始
 
-### 1. 安装依赖
-
 ```bash
+# 1. 安装依赖
 pnpm install
-```
 
-### 2. 本地开发
-
-```bash
+# 2. 本地开发
 pnpm dev
-```
 
-### 3. 构建与预览
-
-```bash
+# 3. 构建与预览
 pnpm build
 pnpm preview
 ```
 
+
 ## 📥 数据抓取指南
 
-本项目提供了用于抓取当前最新 Banner 以及从 [Wayback Machine][Wayback-Machine] 抓取历史快照 Banner 的工具脚本。
+本项目当前维护了一个 Banner 抓取脚本，使用命令 `pnpm grab` 可自动抓取资源并生成配置。脚本会从 B 站当前首页和各个分区提取 Banner 的图层数据、预览图、Logo 等资源，下载到本地后同步更新 manifest 配置。抓取产物会保存到 `public/assets/{YYYY}/{MM}/{YYYY-MM-DD}-h{HH}-t{tid}[-preview]`，重复 banner 资源默认会跳过。
 
-抓取脚本会自动提取 Banner 的图层数据、预览图、Logo 等数据，并将图片等资源下载到本地，同时自动生成 `data.json` 并将其注册到项目 `manifest` 中。
+### 1. 运行抓取
 
-抓取后的数据和资源会自动归档到 `public/assets/{YYYY}/{YYYY-MM-DD}[-*]` 目录中。
+默认命令会依次抓取首页和所有已配置分区：
+
+```bash
+pnpm grab
+```
+
+支持的参数：
+
+| 参数                     | 说明                                                                     |
+| ------------------------ | ------------------------------------------------------------------------ |
+| 不传                     | 抓取首页和所有分区，并去重跳过已存在的 Banner                            |
+| `--tid <id>` / `-t <id>` | 只抓取指定分区，多个分区用逗号分隔（例如 `-t 0,1005`）。0 代表主站首页。 |
+| `--force`                | 强制重新抓取对应来源（忽略去重步骤）                                     |
+|  `--rescan`| 强制全量重新扫描 public/assets 目录以重建去重索引缓存 |
+| `-h, --help`             | 显示帮助信息和支持的 tid 列表                                            |
+
+当前支持的分区 id：
+
+| id     | 分区     | id     | 分区     | id     | 分区     | id     | 分区     |
+| ------ | -------- | ------ | -------- | ------ | -------- | ------ | -------- |
+| `0`    | 主站     | `1001` | 影视     | `1002` | 娱乐     | `1003` | 音乐     |
+| `1004` | 舞蹈     | `1005` | 动画     | `1006` | 绘画     | `1007` | 鬼畜     |
+| `1008` | 游戏     | `1009` | 资讯     | `1010` | 知识     | `1011` | 人工智能 |
+| `1012` | 科技数码 | `1013` | 汽车     | `1014` | 时尚美妆 | `1015` | 家装房产 |
+| `1016` | 户外潮流 | `1017` | 健身     | `1018` | 体育运动 | `1019` | 手工     |
+| `1020` | 美食     | `1021` | 小剧场   | `1022` | 旅游出行 | `1023` | 三农     |
+| `1024` | 动物     | `1025` | 亲子     | `1026` | 健康     | `1027` | 情感     |
+| `1028` | 神秘学   | `1029` | vlog     | `1030` | 生活兴趣 | `1031` | 生活经验 |
 
 > [!IMPORTANT]
-> 抓取脚本在自动运行完毕后，生成的 Banner 标题（`banner-title`）通常为网页的日期。因此在完成抓取后，**请手动编辑** [src/data/banner/](src/data/banner/) 目录下对应记录所在年份的配置文件（例如 [2026.json](src/data/banner/2026.json)），修改对应记录的 `name` 属性。
+> 抓取脚本在自动运行完毕后，生成的 Banner 标题（`banner-title`）通常为网页的日期或分区名。在完成抓取后，可**手动编辑** [src/manifest/](src/manifest/) 目录下当前年份的配置文件（例如 [2026.json](src/manifest/2026.json)），修改对应记录的 `name` 属性即可。
 > 
 > ```diff
 >   {
@@ -70,60 +91,10 @@ pnpm preview
 >   }
 > ```
 
-### 1. 抓取当前最新 Banner
 
-用于抓取当前 B 站主页的最新 Banner 资源和配置。
+### 2. 数据管理与辅助校验
 
-**运行命令**：
-
-```bash
-pnpm grab
-```
-
-### 2. 抓取历史 Banner 快照
-
-用于从 [Wayback Machine][Wayback-Machine] 抓取特定历史时期的 B 站 Banner。由于 Wayback Machine 的防爬机制，运行此脚本前必须配置 Cookie 以缓解反爬限制。
-
-#### 前置准备
-
-1. 在项目根目录下手动创建一个 `.env` 文件。
-2. 使用浏览器访问 Wayback Machine 上的 B 站历史快照（例如：`https://web.archive.org/web/20211116120000/https://www.bilibili.com/`）。
-3. 按 `F12` 打开浏览器开发者工具，从“网络 (Network)”面板中复制任意发往 `web.archive.org` 的请求头中的 `Cookie` 字段。
-4. 将复制的 Cookie 写入 `.env` 文件，配置为环境变量 `WAYBACK_COOKIE`，格式如下：
-   ```env
-   WAYBACK_COOKIE="donation-identifier==xxxx; <其他cookie内容>"
-   ```
-
-#### 运行命令
-
-在项目根目录下运行脚本，并传入对应的解析模式与快照 URL：
-
-```bash
-pnpm tsx scripts/grab-archive -m <mode> -u <url>
-```
-
-#### 参数说明
-
-- `-m, --mode`: 指定解析模式。必须为以下支持的模式之一：
-  - `pic-2013-css-v1`
-  - `pic-2015-css-v2`
-  - `pic-2016-js`
-  - `pic-2019-html`
-  - `split-2022-html`
-  - `split-2022-api`
-- `-u, --url`: Wayback Machine 上的 B 站快照 URL，例如：`https://web.archive.org/web/20220101000000/https://www.bilibili.com/`
-
-### 3. 数据管理与辅助校验
-
-数据抓取完成后，可以使用以下命令对数据进行规范校验和清理：
-
-| 命令                       | 说明                                                                       |
-| -------------------------- | -------------------------------------------------------------------------- |
-| `pnpm data generate`       | 基于 TypeScript 类型定义自动生成对应的 JSON Schemas                        |
-| `pnpm data validate`       | 校验 `public/assets` 中所有 Banner 的 `data.json` 配置是否符合 Schema 规范 |
-| `pnpm data check-assets`   | 检查 `public/assets` 下资源引用的完整性（检查是否存在缺失或冗余资源）      |
-| `pnpm data check-manifest` | 检查 Banner 配置的 tags 合法性以及配置与实际物理目录一致性                 |
-| `pnpm data clean`          | 自动清理 `public/assets` 目录下的空目录                                    |
+数据抓取完成后，可以使用 `pnpm check-data --clean` 命令对数据进行规范校验和清理
 
 ## ❤️ 鸣谢
 
@@ -136,5 +107,3 @@ pnpm tsx scripts/grab-archive -m <mode> -u <url>
 - 项目中的图片、视频及原始设计版权归 [Bilibili][bilibili] 所有。
 
 [bilibili]: https://www.bilibili.com
-[Wayback-Machine]: https://web.archive.org/
-

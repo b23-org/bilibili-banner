@@ -1,7 +1,9 @@
 import { resolve } from "node:path";
+import preact from "@preact/preset-vite";
 import { defineConfig } from "vite";
 
 export default defineConfig({
+  plugins: [preact()],
   base: "/",
   server: {
     watch: {
@@ -11,8 +13,8 @@ export default defineConfig({
   build: {
     rollupOptions: {
       input: {
-        main: resolve(__dirname, "index.html"),
-        error: resolve(__dirname, "404.html"),
+        main: resolve(import.meta.dirname, "index.html"),
+        error: resolve(import.meta.dirname, "404.html"),
       },
     },
   },

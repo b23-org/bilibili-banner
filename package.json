@@ -9,25 +9,28 @@
     "preview": "vite preview",
     "typecheck": "tsc --noEmit",
     "lint": "biome check --write src/ scripts/ public/ index.html 404.html",
-    "data": "tsx scripts/manage-data.ts",
-    "grab": "tsx scripts/grab/index.ts"
+    "grab": "tsx scripts/grab/index.ts",
+    "grab-sync-tid": "tsx scripts/grab/sync-tid.ts",
+    "check-data": "tsx scripts/data/index.ts"
   },
   "dependencies": {
+    "@preact/signals": "^2.11.2",
     "gsap": "^3.15.0",
     "matter-js": "^0.20.0",
+    "preact": "^10.29.8",
     "three": "^0.184.0"
   },
   "devDependencies": {
-    "@biomejs/biome": "2.4.14",
+    "@biomejs/biome": "2.5.6",
+    "@preact/preset-vite": "^2.10.6",
     "@types/matter-js": "^0.20.2",
-    "@types/node": "^25.9.0",
+    "@types/node": "^26.6.2",
     "@types/three": "^0.184.0",
     "ajv": "^8.20.0",
-    "impit": "^0.14.0",
     "ts-json-schema-generator": "^2.9.0",
-    "tsx": "^4.21.0",
-    "typescript": "^6.0.3",
-    "vite": "^8.0.10"
+    "tsx": "^4.23.15",
+    "typescript": "^7.0.2",
+    "vite": "^8.3.0"
   },
-  "packageManager": "pnpm@11.5.0+sha512.dbfcc4f81cf48597afd4bc391ffdf12c11f1a9fb83a395bfa6b0a2d9cc2fd8ffebafdb1ccbd529632153f793904c2615b7f09fe1a345473fd1c35845172a8eb1"
+  "packageManager": "pnpm@12.5.1+sha512.e3f305bc784a2bc89f5ad3b6138889470fae8d2af5f36b61216ec91c2c3d64089775f9de38aac331044ea40f245cb0d5666392dfdf65824e1907ef6a2c62de5f"
 }

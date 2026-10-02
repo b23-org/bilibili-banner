@@ -1,0 +1,431 @@
+/* ==========================================================================
+   全局样式与设计令牌规范 (Task 6.1)
+   架构设计 §10.1、§10.2
+   ========================================================================== */
+
+/* ── 全局 CSS 变量声明 ── */
+:root {
+  --primary-color: #00aeec; /* B 站品牌蓝 */
+  --bg-page: #f6f7f8; /* 页面浅灰背景 */
+  --bg-card: #ffffff; /* 卡片白底 */
+  --border-light: #f1f2f3; /* 浅色边框 */
+  --border-regular: #e3e5e7; /* 常规边框 */
+  --text-primary: #18191c; /* 主文字 */
+  --text-secondary: #61666d; /* 次级文字 */
+  --bg-hover: #e3e5e7; /* 悬停背景 */
+  --brand-blue-thin: #dff6fd; /* 激活浅蓝背景 */
+}
+
+/* ── Modern CSS Reset ── */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: var(--bg-page);
+  font-family:
+    -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial,
+    sans-serif;
+  color: var(--text-primary);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+img,
+video {
+  display: block;
+  user-select: none;
+  pointer-events: none;
+  -webkit-user-drag: none;
+}
+
+/* ==========================================================================
+   Renderer 全局样式与图层规则
+   完整迁移自旧版 index.css，支持官方 2D/3D 与扩展特效渲染体系
+   ========================================================================== */
+
+/* 动画渲染容器（官方 2D/3D 横幅） */
+.animated-banner {
+  width: 100%;
+  height: 100%;
+}
+
+/* 通用绝对定位图层 */
+.layer {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* 单图 / 单视频模式容器 */
+.simple-image-banner {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.simple-image-banner img {
+  flex-shrink: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* 特效粒子与 Canvas 扩展图层（如雪花/花瓣/秋/夏等特效） */
+.particle-canvas,
+#canvas {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+/* 官方 Logo 挂载容器与响应式规格 */
+#logo {
+  z-index: 1;
+  display: none;
+  position: absolute;
+  left: 56px; /* 对齐官方 <1367px 断点内边距 */
+  top: 50%;
+  transform: translateY(-50%);
+  width: 180px;
+  min-height: 60px;
+  height: 50%;
+  pointer-events: none;
+}
+
+@media (min-width: 1367px) and (max-width: 1700.9px) {
+  #logo {
+    left: 64px;
+  }
+}
+
+@media (min-width: 1701px) and (max-width: 2199.9px) {
+  #logo {
+    left: 96px;
+  }
+}
+
+@media (min-width: 2200px) {
+  #logo {
+    left: 0;
+  }
+}
+
+.logo-img,
+#logo-svg {
+  display: block;
+  object-fit: contain;
+  max-width: 100%;
+  max-height: 100%;
+  pointer-events: none;
+  user-select: none;
+  -webkit-user-drag: none;
+}
+
+/* B站官方悬浮标题链接组件 (来自 LogoRenderer) */
+.head-title {
+  position: absolute;
+  bottom: 25px;
+  left: 380px;
+  padding: 6px 10px;
+  max-width: 350px;
+  border-radius: 4px;
+  background-color: rgba(47, 50, 56, 0.9);
+  color: #fff;
+  font-size: 14px;
+  line-height: 20px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s;
+  text-decoration: none;
+  z-index: 99;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+#banner-container:hover .head-title {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* ==========================================================================
+   容器状态类控制与加载/失败反馈
+   ========================================================================== */
+
+.loading-banner,
+.failed-banner {
+  display: none;
+  width: 100%;
+  height: 100%;
+}
+
+.is-loading .loading-banner,
+#banner-container.is-loading .loading-banner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.is-failed .failed-banner,
+#banner-container.is-failed .failed-banner {
+  display: flex;
+}
+
+.loading-banner {
+  background-color: #ffffff;
+  color: var(--text-secondary);
+}
+
+.loading-banner p {
+  margin: 0;
+  text-align: center;
+  font-size: 14px;
+}
+
+/* GitHub 风格 Loading Spinner */
+.loading-spinner {
+  width: 32px;
+  height: 32px;
+  border: 3px solid rgb(199, 200, 201);
+  border-top-color: rgb(37, 41, 46);
+  border-radius: 50%;
+  animation: loading-spin 0.8s linear infinite;
+  margin-bottom: 10px;
+}
+
+@keyframes loading-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* 加载失败界面样式 */
+.failed-banner {
+  position: absolute;
+  inset: 0;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  color: #c0392b;
+  background-color: #fff8f8;
+  user-select: none;
+}
+
+.failed-banner svg {
+  opacity: 0.7;
+}
+
+.load-failed-title {
+  margin: 0;
+  font-size: 15px;
+  font-weight: 600;
+  color: #c0392b;
+}
+
+/* ==========================================================================
+   胶囊按钮样式规范 (.b-capsule)
+   供 FilterBar 筛选栏、BannerInfoBar 版本切换等复用
+   ========================================================================== */
+
+.b-capsule,
+.channel-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 32px;
+  border-radius: 6px;
+  padding: 0 10px;
+  box-sizing: border-box;
+  color: var(--text-secondary);
+  border: 1px solid var(--border-light);
+  background-color: var(--bg-page);
+  text-decoration: none;
+  font-family: inherit;
+  font-size: 13px;
+  cursor: pointer;
+  user-select: none;
+  outline: none;
+  transition:
+    border-color 0.3s cubic-bezier(0.2, 0, 0, 1),
+    background-color 0.3s cubic-bezier(0.2, 0, 0, 1),
+    color 0.3s cubic-bezier(0.2, 0, 0, 1);
+}
+
+/* 响应式胶囊高度：<=1700.9px 为 28px，>=1701px 为 32px */
+@media (max-width: 1700.9px) {
+  .b-capsule,
+  .channel-link {
+    height: 28px;
+  }
+}
+
+@media (min-width: 1701px) {
+  .b-capsule,
+  .channel-link {
+    height: 32px;
+  }
+}
+
+.b-capsule:hover,
+.channel-link:hover {
+  background-color: var(--bg-hover);
+  color: var(--text-primary);
+}
+
+/* 激活态（展开或当前选中） */
+.b-capsule.b-capsule--current,
+.b-capsule.is-active,
+.b-capsule.is-open,
+.v-popover-trigger-wrap.is-open .b-capsule,
+.channel-link.channel-link--current,
+.channel-link.is-active,
+.channel-link.is-open,
+.v-popover-trigger-wrap.is-open .channel-link {
+  color: var(--primary-color);
+}
+
+.b-capsule.b-capsule--current:hover,
+.b-capsule.is-active:hover,
+.b-capsule.is-open:hover,
+.v-popover-trigger-wrap.is-open .b-capsule:hover,
+.channel-link.channel-link--current:hover,
+.channel-link.is-active:hover,
+.channel-link.is-open:hover,
+.v-popover-trigger-wrap.is-open .channel-link:hover {
+  color: var(--primary-color);
+  border-color: var(--primary-color);
+  background-color: var(--brand-blue-thin);
+}
+
+.b-capsule .b-capsule__text,
+.channel-link .channel-link__more__text {
+  margin-right: 4px;
+  line-height: 1;
+  white-space: nowrap;
+}
+
+/* 胶囊内部展开箭头与旋转动效 */
+.b-capsule .b-capsule__arrow,
+.channel-link .channel-link__more__arrow {
+  flex-shrink: 0;
+  transition: transform 0.3s cubic-bezier(0.2, 0, 0, 1);
+  transform: rotate(0deg);
+}
+
+.b-capsule .b-capsule__arrow.arrow-down,
+.b-capsule.is-open .b-capsule__arrow,
+.v-popover-trigger-wrap.is-open .b-capsule__arrow,
+.channel-link .channel-link__more__arrow.arrow-down,
+.channel-link.is-open .channel-link__more__arrow,
+.v-popover-trigger-wrap.is-open .channel-link__more__arrow {
+  transform: rotate(180deg);
+}
+
+/* 辅助入口/文字链接样式 (.b-capsule-action) */
+.b-capsule-action,
+.channel-link__right {
+  display: inline-flex;
+  align-items: center;
+  color: var(--text-secondary);
+  font-size: 13px;
+  height: 28px;
+  text-decoration: none;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0 4px;
+  user-select: none;
+  outline: none;
+  transition: color 0.3s cubic-bezier(0.2, 0, 0, 1);
+}
+
+@media (min-width: 1701px) {
+  .b-capsule-action,
+  .channel-link__right {
+    height: 32px;
+  }
+}
+
+.b-capsule-action:hover,
+.channel-link__right:hover {
+  color: var(--primary-color);
+}
+
+/* B站 Popover 菜单与选项规范 (.more-channel-popover / .name) */
+.more-channel-popover {
+  width: max-content;
+  box-sizing: border-box;
+}
+
+.more-channel-popover.is-zh {
+  padding: 8px 16px;
+}
+
+.more-channel-popover .name {
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 12px;
+  border-radius: 4px;
+  border: none;
+  background: transparent;
+  color: var(--text-primary);
+  font-size: 13px;
+  font-family: inherit;
+  white-space: nowrap;
+  height: 32px;
+  line-height: 32px;
+  min-width: 64px;
+  text-decoration: none;
+  user-select: none;
+  outline: none;
+  transition:
+    background-color 0.2s cubic-bezier(0.2, 0, 0, 1),
+    color 0.2s cubic-bezier(0.2, 0, 0, 1);
+}
+
+.more-channel-popover .name:hover {
+  background-color: var(--bg-hover);
+  color: var(--text-primary);
+}
+
+.more-channel-popover .name.is-active {
+  color: var(--primary-color);
+  background-color: var(--brand-blue-thin);
+  font-weight: 500;
+}
+
+/* 屏幕阅读器无障碍隐藏类 */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}

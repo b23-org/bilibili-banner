@@ -1,5 +1,5 @@
 import type {
-  BannerData,
+  BannerConfig,
   LayerConfig2020,
   LayersOfficial2021,
 } from "../../types";
@@ -21,10 +21,10 @@ export class OfficialRenderer2020 extends BaseOfficialRenderer {
   private _globalRafId = 0;
 
   public async preload(
-    bannerConfig: BannerData,
+    bannerConfig: BannerConfig,
     signal?: AbortSignal,
   ): Promise<void> {
-    if (!bannerConfig || bannerConfig.type !== "official_2020") {
+    if (bannerConfig?.type !== "official_2020") {
       return;
     }
     await super.preload(bannerConfig, signal);

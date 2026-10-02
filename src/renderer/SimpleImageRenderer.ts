@@ -1,4 +1,4 @@
-import type { BannerData } from "../types";
+import type { BannerConfig } from "../types";
 import type { BaseRenderer } from "./BaseRenderer";
 import { waitForMedia } from "./helper";
 
@@ -7,7 +7,7 @@ export class SimpleImageRenderer implements BaseRenderer {
   private img: HTMLImageElement | null = null;
 
   public async preload(
-    bannerConfig: BannerData,
+    bannerConfig: BannerConfig,
     signal?: AbortSignal,
   ): Promise<void> {
     if (bannerConfig.type !== "simple-image") return;

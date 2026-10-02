@@ -102,14 +102,14 @@ export interface LogoConfig {
 }
 
 /** 官方 2020 多图层配置（配置文件格式） */
-export interface BannerConfigOfficial2020 extends LogoConfig {
+export interface Official2020BannerConfig extends LogoConfig {
   type: "official_2020";
   layers: LayerConfig2020[];
   link?: string;
 }
 
 /** 官方 2021 多图层配置（配置文件格式） */
-export interface BannerConfigOfficial2021 extends LogoConfig {
+export interface Official2021BannerConfig extends LogoConfig {
   type: "official_2021";
   layers: LayersOfficial2021[];
   extensions?: BannerExtensionMap;
@@ -125,44 +125,30 @@ export interface SimpleBannerConfig extends LogoConfig {
 
 /** Banner 配置联合类型（配置文件格式） */
 export type BannerConfig =
-  | BannerConfigOfficial2020
-  | BannerConfigOfficial2021
+  | Official2020BannerConfig
+  | Official2021BannerConfig
   | SimpleBannerConfig;
 
 // ===============================================
-// Banner Data (运行时内部使用)
+// Banner Data
 // ===============================================
 
 export type BannerTag = "img" | "video" | "split-layer" | "interactive";
 
-export interface BannerRef {
+export interface BannerRef<T extends BannerConfig = BannerConfig> {
+  id: string;
   name: string;
-  path: string;
   tags: BannerTag[];
   /** 分区 ID */
-  tid?: number[];
+  tid: number[];
+  config: T;
 }
 
-/** 带 Ref 的官方 2020 多图层配置（运行时内部使用） */
-export type BannerDataOfficial2020 = BannerConfigOfficial2020 & BannerRef;
-
-/** 带 Ref 的官方 2021 多图层配置（运行时内部使用） */
-export type BannerDataOfficial2021 = BannerConfigOfficial2021 & BannerRef;
-
-/** 带 Ref 的单图层配置（运行时内部使用） */
-export type SimpleBannerData = SimpleBannerConfig & BannerRef;
-
-/** Banner 数据联合类型（运行时内部使用） */
-export type BannerData =
-  | BannerDataOfficial2020
-  | BannerDataOfficial2021
-  | SimpleBannerData;
-
 // ===============================================
-// Loader Types
+// Group Types
 // ===============================================
 
-export interface DailyBannerGroup {
+export interface BannerEntry {
   date: string;
   refs: BannerRef[];
 }

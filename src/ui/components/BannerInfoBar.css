@@ -1,0 +1,229 @@
+/* ==========================================================================
+   BannerInfoBar 样式规范 (stage / card 双模式)
+   ========================================================================== */
+
+.banner-info-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+/* ──────────────── stage 舞台模式 ──────────────── */
+.banner-info-bar--stage {
+  padding: 12px 20px;
+}
+
+.banner-info-bar--stage .banner-info-bar__title {
+  font-size: 16px;
+  font-weight: 600;
+  color: #18191c;
+  line-height: 1.4;
+}
+
+.banner-info-bar--stage .banner-info-bar__date {
+  font-size: 13px;
+  color: #61666d;
+  font-variant-numeric: tabular-nums;
+}
+
+/* ──────────────── card 卡片模式 ──────────────── */
+.banner-info-bar--card {
+  padding: 8px 12px;
+}
+
+.banner-info-bar--card .banner-info-bar__title {
+  font-size: 13px;
+  font-weight: 500;
+  color: #18191c;
+  line-height: 1.3;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  max-width: 50%;
+}
+
+.banner-info-bar--card .banner-info-bar__date {
+  font-size: 12px;
+  color: #9499a0;
+  font-variant-numeric: tabular-nums;
+}
+
+.banner-info-bar--card .banner-info-bar__capsule {
+  height: 28px;
+  font-size: 12px;
+  padding: 0 8px;
+}
+
+/* ──────────────── 左侧主体信息排版 ──────────────── */
+.banner-info-bar__left {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  min-width: 0;
+  flex: 1;
+}
+
+.banner-info-bar__title-row {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  min-width: 0;
+}
+
+.banner-info-bar__meta-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.banner-info-bar__tags {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  flex-wrap: wrap;
+}
+
+/* 外链跳转图标按钮 */
+.banner-info-bar__link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: #9499a0;
+  line-height: 1;
+  text-decoration: none;
+  transition: color 0.2s cubic-bezier(0.2, 0, 0, 1);
+  padding: 2px;
+  border-radius: 4px;
+}
+
+.banner-info-bar__link:hover {
+  color: #00aeec;
+}
+
+.banner-info-bar__link-icon {
+  flex-shrink: 0;
+  display: block;
+}
+
+/* 图标尺寸与对应模式的 title 字号严密等大 */
+.banner-info-bar--stage .banner-info-bar__link-icon {
+  width: 16px;
+  height: 16px;
+}
+
+.banner-info-bar--card .banner-info-bar__link-icon {
+  width: 13px;
+  height: 13px;
+}
+
+/* ──────────────── 右侧多版本入口 ──────────────── */
+.banner-info-bar__right {
+  display: inline-flex;
+  align-items: center;
+  flex-shrink: 0;
+  margin-left: 12px;
+}
+
+/* ==========================================================================
+   B站官方胶囊样式规范 (.channel-link)
+   ========================================================================== */
+
+.b-capsule,
+.channel-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 32px;
+  border-radius: 6px;
+  padding: 0 10px;
+  box-sizing: border-box;
+  color: #61666d;
+  border: 1px solid #f1f2f3;
+  background-color: #f6f7f8;
+  text-decoration: none;
+  font-family: inherit;
+  font-size: 13px;
+  cursor: pointer;
+  user-select: none;
+  outline: none;
+  transition:
+    border-color 0.3s cubic-bezier(0.2, 0, 0, 1),
+    background-color 0.3s cubic-bezier(0.2, 0, 0, 1),
+    color 0.3s cubic-bezier(0.2, 0, 0, 1);
+}
+
+.b-capsule:hover,
+.channel-link:hover {
+  background-color: #e3e5e7;
+  color: #18191c;
+}
+
+/* 激活态（展开或当前选中） */
+.b-capsule.b-capsule--current,
+.b-capsule.is-active,
+.b-capsule.is-open,
+.v-popover-trigger-wrap.is-open .b-capsule,
+.channel-link.channel-link--current,
+.channel-link.is-active,
+.channel-link.is-open,
+.v-popover-trigger-wrap.is-open .channel-link {
+  color: #00aeec;
+}
+
+.b-capsule.b-capsule--current:hover,
+.b-capsule.is-active:hover,
+.b-capsule.is-open:hover,
+.v-popover-trigger-wrap.is-open .b-capsule:hover,
+.channel-link.channel-link--current:hover,
+.channel-link.is-active:hover,
+.channel-link.is-open:hover,
+.v-popover-trigger-wrap.is-open .channel-link:hover {
+  color: #00aeec;
+  border-color: #00aeec;
+  background-color: #dff6fd;
+}
+
+.b-capsule .b-capsule__text,
+.channel-link .channel-link__more__text {
+  margin-right: 4px;
+  line-height: 1;
+  white-space: nowrap;
+}
+
+/* 胶囊内部展开箭头与旋转动效 */
+.b-capsule .b-capsule__arrow,
+.channel-link .channel-link__more__arrow {
+  flex-shrink: 0;
+  transition: transform 0.3s cubic-bezier(0.2, 0, 0, 1);
+  transform: rotate(0deg);
+}
+
+.b-capsule .b-capsule__arrow.arrow-down,
+.b-capsule.is-open .b-capsule__arrow,
+.v-popover-trigger-wrap.is-open .b-capsule__arrow,
+.channel-link .channel-link__more__arrow.arrow-down,
+.channel-link.is-open .channel-link__more__arrow,
+.v-popover-trigger-wrap.is-open .channel-link__more__arrow {
+  transform: rotate(180deg);
+}
+
+/* ==========================================================================
+   版本列表 Popover 浮层内容规范
+   ========================================================================== */
+
+.banner-info-bar__version-name {
+  flex: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.banner-info-bar__version-tags {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  flex-shrink: 0;
+}

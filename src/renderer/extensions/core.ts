@@ -1,10 +1,10 @@
-import type { BannerDataOfficial2021, BannerExtensionKey } from "../../types";
+import type { BannerExtensionKey, Official2021BannerConfig } from "../../types";
 
 export type { BannerExtensionKey };
 
 export interface BannerExtensionContext {
   readonly bannerEl: HTMLElement;
-  readonly bannerData: BannerDataOfficial2021;
+  readonly config: Official2021BannerConfig;
   readonly signal: AbortSignal;
 }
 
@@ -93,14 +93,14 @@ export class ExtensionHost {
 
   constructor(private readonly context: BannerExtensionContext) {
     this.enabledKeys = Object.keys(
-      context.bannerData.extensions ?? {},
+      context.config.extensions ?? {},
     ) as BannerExtensionKey[];
   }
 
-  public static fromBannerData(
+  public static fromConfig(
     context: BannerExtensionContext,
   ): ExtensionHost | null {
-    const extensions = context.bannerData.extensions;
+    const extensions = context.config.extensions;
     if (!extensions || Object.keys(extensions).length === 0) {
       console.log("[ExtensionHost] No extensions configured");
       return null;
@@ -110,6 +110,13 @@ export class ExtensionHost {
       Object.keys(extensions),
     );
     return new ExtensionHost(context);
+  }
+
+  /** @deprecated 推荐使用 fromConfig */
+  public static fromBannerData(
+    context: BannerExtensionContext,
+  ): ExtensionHost | null {
+    return ExtensionHost.fromConfig(context);
   }
 
   public async prepare(): Promise<void> {

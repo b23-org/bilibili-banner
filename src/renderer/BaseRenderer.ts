@@ -1,7 +1,7 @@
-import type { BannerData } from "../types";
+import type { BannerConfig } from "../types";
 
 export interface BaseRenderer {
-  preload(bannerConfig: BannerData, signal?: AbortSignal): Promise<void>;
+  preload(bannerConfig: BannerConfig, signal?: AbortSignal): Promise<void>;
   render(container: HTMLElement): void;
   dispose(): void;
 }

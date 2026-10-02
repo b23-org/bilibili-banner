@@ -1,0 +1,1738 @@
+[
+  {
+    "date": "2017-01-01",
+    "refs": [
+      {
+        "name": "BILIBILI MOE 2016",
+        "id": "2017-01-01-h04-t1",
+        "tags": ["img"],
+        "tid": [1],
+        "config": {
+          "type": "simple-image",
+          "layer": {
+            "src": "assets/2017/01/2017-01-01-h04-t1/35a85ab9b5da78432d993e20c83c5c3e3f92ff4f.jpg"
+          },
+          "link": "http://bangumi.bilibili.com/moe/2016/jp/index",
+          "logo": {
+            "src": "assets/2017/01/2017-01-01-h04-t1/0e10850b85ecbf4712a0c7031c403a4bfa52da6a.png"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "date": "2017-01-02",
+    "refs": [
+      {
+        "name": "地球已经装不下BILIBILI的新年派对了！",
+        "id": "2017-01-02-h04-t0",
+        "tags": ["img"],
+        "tid": [0],
+        "config": {
+          "type": "simple-image",
+          "layer": {
+            "src": "assets/2017/01/2017-01-02-h04-t0/9d52bdcfcce80dfdf615a35f05f75cd2299f74de.jpg"
+          },
+          "link": "http://planet2017.bilibili.com",
+          "logo": {
+            "src": "assets/2017/01/2017-01-02-h04-t0/5fa57f4bfc47fbb67882a90787b0052020c6ba40.png"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "date": "2017-01-02",
+    "refs": [
+      {
+        "name": "1月追番走起！",
+        "id": "2017-01-02-h04-t13",
+        "tags": ["img"],
+        "tid": [13],
+        "config": {
+          "type": "simple-image",
+          "layer": {
+            "src": "assets/2017/01/2017-01-02-h04-t13/29dc4f3bc9142dfe2200258524e7fe7d4667752a.jpg"
+          },
+          "link": "http://www.bilibili.com/blackboard/activity-BJybAz8Eg.html",
+          "logo": {
+            "src": "assets/2017/01/2017-01-02-h04-t13/73d7739b92c218f585289bc12609265bd02f1091.png"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "date": "2017-01-05",
+    "refs": [
+      {
+        "name": "「追凶者也」",
+        "id": "2017-01-05-h04-t0",
+        "tags": ["img"],
+        "tid": [11],
+        "config": {
+          "type": "simple-image",
+          "layer": {
+            "src": "assets/2017/01/2017-01-05-h04-t0/364c2fabef3eb0dc7cdc008543a984fb2d0aa87b.jpg"
+          },
+          "link": "http://bangumi.bilibili.com/movie/11929",
+          "logo": {
+            "src": "assets/2017/01/2017-01-05-h04-t0/f1af2d0aa47d990fa7ade46e0b86baad4258c690.png"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "date": "2017-01-07",
+    "refs": [
+      {
+        "name": "BILIBILI 2017国产动漫导视",
+        "id": "2017-01-07-h04-t0",
+        "tags": ["img"],
+        "tid": [0],
+        "config": {
+          "type": "simple-image",
+          "layer": {
+            "src": "assets/2017/01/2017-01-07-h04-t0/f3201b520073900ebf60e493e39586fac4cf1ad3.jpg"
+          },
+          "link": "http://www.bilibili.com/blackboard/activity-SJ0az_srl.html",
+          "logo": {
+            "src": "assets/2017/01/2017-01-07-h04-t0/0fc5f0fef34d1e7639d10fb942e589caccff2637.png"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "date": "2017-01-19",
+    "refs": [
+      {
+        "name": "「我在故宫修文物」",
+        "id": "2017-01-19-h04-t0",
+        "tags": ["img"],
+        "tid": [0],
+        "config": {
+          "type": "simple-image",
+          "layer": {
+            "src": "assets/2017/01/2017-01-19-h04-t0/fee36bd316574e964ba36ff7a2be83a5d67ef885.jpg"
+          },
+          "link": "http://bangumi.bilibili.com/movie/11936",
+          "logo": {
+            "src": "assets/2017/01/2017-01-19-h04-t0/e5892a095557622baa7a30f48f4a5c9a5efe26b4.png"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "date": "2017-01-23",
+    "refs": [
+      {
+        "name": "2233拜年祭限定手办",
+        "id": "2017-01-23-h04-t1",
+        "tags": ["img"],
+        "tid": [1],
+        "config": {
+          "type": "simple-image",
+          "layer": {
+            "src": "assets/2017/01/2017-01-23-h04-t1/1e58c47e46f8bed317cd8edf01be7294fb00ca09.jpg"
+          },
+          "link": "http://www.bilibili.com/blackboard/activity-S1A22rLXg.html",
+          "logo": {
+            "src": "assets/2017/01/2017-01-23-h04-t1/ce560004238a995bbe9103f35b134f6cf18d3d76.png"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "date": "2017-01-27",
+    "refs": [
+      {
+        "name": "迎新年，看拜年祭（´∀｀*)",
+        "id": "2017-01-27-h04-t1",
+        "tags": ["img"],
+        "tid": [1],
+        "config": {
+          "type": "simple-image",
+          "layer": {
+            "src": "assets/2017/01/2017-01-27-h04-t1/d018a3742c508cc379472735bf7d124cc7ae9f13.jpg"
+          },
+          "link": "http://www.bilibili.com/blackboard/bnj2017.html",
+          "logo": {
+            "src": "assets/2017/01/2017-01-27-h04-t1/ab1c51161404343df6feaed0a18352f7474c2430.png"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "date": "2017-02-11",
+    "refs": [
+      {
+        "name": "一起来闹元宵吧！",
+        "id": "2017-02-11-h04-t0",
+        "tags": ["img"],
+        "tid": [0],
+        "config": {
+          "type": "simple-image",
+          "layer": {
+            "src": "assets/2017/02/2017-02-11-h04-t0/4b9c7031618e743f3ed3e13f74ebc0130c55d981.jpg"
+          },
+          "link": "http://www.bilibili.com/blackboard/activity-2017lantern.html",
+          "logo": {
+            "src": "assets/2017/02/2017-02-11-h04-t0/51b931c6f1908d36a6094078118403544ae8e8c2.png"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "date": "2017-02-12",
+    "refs": [
+      {
+        "name": "哔哩哔哩 (゜-゜)つロ 干杯~",
+        "id": "2017-02-12-h04-t1",
+        "tags": ["img"],
+        "tid": [1],
+        "config": {
+          "type": "simple-image",
+          "layer": {
+            "src": "assets/2017/02/2017-02-12-h04-t1/4f59bf959d51592016e07efe62969c411288826a.png"
+          },
+          "link": "http://www.bilibili.com",
+          "logo": {
+            "src": "assets/2017/02/2017-02-12-h04-t1/bb2aa0d954bf59d4ee555a8a603fe83888463b6b.png"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "date": "2017-03-02",
+    "refs": [
+      {
+        "name": "“啊~~~饿了~~~~~”",
+        "id": "2017-03-02-h20-t0",
+        "tags": ["img"],
+        "tid": [11],
+        "config": {
+          "type": "simple-image",
+          "layer": {
+            "src": "assets/2017/03/2017-03-02-h20-t0/c7602941f98f4ce10bca4f792aae1d920c243d01.jpg"
+          },
+          "link": "http://www.bilibili.com/video/av8075425/",
+          "logo": {
+            "src": "assets/2017/03/2017-03-02-h20-t0/4fa6b0f0492a992fbd00c48ac12d24e00fbdb179.png"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "date": "2017-04-01",
+    "refs": [
+      {
+        "name": "鹅妹子嘤！",
+        "id": "2017-04-01-h04-t1",
+        "tags": ["img"],
+        "tid": [1],
+        "config": {
+          "type": "simple-image",
+          "layer": {
+            "src": "assets/2017/04/2017-04-01-h04-t1/d2165850130474d579bdfb9146a7ec308be26446.png"
+          },
+          "link": "http://www.bilibili.com/blackboard/activity-foolsday2017.html",
+          "logo": {
+            "src": "assets/2017/04/2017-04-01-h04-t1/41fcdc674a7f10e76af2a3da5a6e2f90154bbd4a.png"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "date": "2017-04-02",
+    "refs": [
+      {
+        "name": "2017春季新番导视",
+        "id": "2017-04-02-h04-t0",
+        "tags": ["img"],
+        "tid": [0],
+        "config": {
+          "type": "simple-image",
+          "layer": {
+            "src": "assets/2017/04/2017-04-02-h04-t0/38e61b3131e090e3aeead3ffe2a0e43bee67c51a.jpg"
+          },
+          "link": "http://www.bilibili.com/blackboard/activity-Hkyqb6nol.html",
+          "logo": {
+            "src": "assets/2017/04/2017-04-02-h04-t0/da8cab79f8b27d341e3ad3b88a48f904a32c8976.png"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "date": "2017-04-08",
+    "refs": [
+      {
+        "name": "BILIBILI 2017国产动画春夏导视",
+        "id": "2017-04-08-h04-t3",
+        "tags": ["img"],
+        "tid": [3],
+        "config": {
+          "type": "simple-image",
+          "layer": {
+            "src": "assets/2017/04/2017-04-08-h04-t3/a9f06d33687afc79449fc2f2197a3cbcaa20c247.png"
+          },
+          "link": "http://www.bilibili.com/blackboard/activity-S1fnF3s3e.html",
+          "logo": {
+            "src": "assets/2017/04/2017-04-08-h04-t3/46aa97060d18fe02da1a93881a649cce919bfc49.png"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "date": "2017-05-01",
+    "refs": [
+      {
+        "name": "没事脑洞一下！",
+        "id": "2017-05-01-h04-t0",
+        "tags": ["img"],
+        "tid": [0],
+        "config": {
+          "type": "simple-image",
+          "layer": {
+            "src": "assets/2017/05/2017-05-01-h04-t0/92647b115ee9e11c26fcaad65c6f8dfd801eecd5.png"
+          },
+          "link": "http://www.bilibili.com/blackboard/activity-Mindblowing2017.html",
+          "logo": {
+            "src": "assets/2017/05/2017-05-01-h04-t0/cb3897620bce43e9afe11484050e782065f53eef.png"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "date": "2017-05-05",
+    "refs": [
+      {
+        "name": "哔哩哔哩 (゜-゜)つロ 干杯",
+        "id": "2017-05-05-h04-t0",
+        "tags": ["img"],
+        "tid": [0],
+        "config": {
+          "type": "simple-image",
+          "layer": {
+            "src": "assets/2017/05/2017-05-05-h04-t0/57c5ced363be9f08b4cacf1745e221d3bb99d7c5.png"
+          },
+          "link": "http://www.bilibili.com",
+          "logo": {
+            "src": "assets/2017/05/2017-05-05-h04-t0/58d322146cb4b1685a5775478b9753f96a0c2ff6.png"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "date": "2017-05-10",
+    "refs": [
+      {
+        "name": "BDF",
+        "id": "2017-05-10-h04-t0",
+        "tags": ["img"],
+        "tid": [129],
+        "config": {
+          "type": "simple-image",
+          "layer": {
+            "src": "assets/2017/05/2017-05-10-h04-t0/cd6bb3f30d075b03e8f1f14c4d82c263ab8f8278.png"
+          },
+          "link": "http://www.bilibili.com/blackboard/activity-BDF2017.html",
+          "logo": {
+            "src": "assets/2017/05/2017-05-10-h04-t0/64a571de1c9f86dac3a3b700d62129468ab4dcf2.png"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "date": "2017-05-20",
+    "refs": [
+      {
+        "name": "「FGO」X「FZ」联动活动！",
+        "id": "2017-05-20-h04-t0",
+        "tags": ["img"],
+        "tid": [0],
+        "config": {
+          "type": "simple-image",
+          "layer": {
+            "src": "assets/2017/05/2017-05-20-h04-t0/776fefd7f59fa85094f69bb57091058908f5b73a.png"
+          },
+          "link": "http://acg.tv/u1So",
+          "logo": {
+            "src": "assets/2017/05/2017-05-20-h04-t0/4e9696da942aebf01370eaffd74fd632944b76f4.png"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "date": "2017-05-25",
+    "refs": [
+      {
+        "name": "「碧蓝航线」iOS版本上线！",
+        "id": "2017-05-25-h04-t0",
+        "tags": ["img"],
+        "tid": [0],
+        "config": {
+          "type": "simple-image",
+          "layer": {
+            "src": "assets/2017/05/2017-05-25-h04-t0/0996bc013e8237d36fe51f9226ee5f2ae7219c36.png"
+          },
+          "link": "http://acg.tv/u1SD",
+          "logo": {
+            "src": "assets/2017/05/2017-05-25-h04-t0/e2243c950fa7d8fd191385d496b4c9b0e245096d.png"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "date": "2017-05-26",
+    "refs": [
+      {
+        "name": "一起来接吻吧~",
+        "id": "2017-05-26-h04-t0",
+        "tags": ["img"],
+        "tid": [13],
+        "config": {
+          "type": "simple-image",
+          "layer": {
+            "src": "assets/2017/05/2017-05-26-h04-t0/9936223f5eba58f7c008ccbc064559d40f0f16a1.png"
+          },
+          "link": "http://bangumi.bilibili.com/anime/5996",
+          "logo": {
+            "src": "assets/2017/05/2017-05-26-h04-t0/5de91bade177d39c60cdd6a30b2c7185d1472083.png"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "date": "2017-06-01",
+    "refs": [
+      {
+        "name": "谁还没个童年阴影什么的¯\\(ツ)/¯",
+        "id": "2017-06-01-h04-t0",
+        "tags": ["img"],
+        "tid": [0],
+        "config": {
+          "type": "simple-image",
+          "layer": {
+            "src": "assets/2017/06/2017-06-01-h04-t0/583e5db0ffa0c4de4fc88de35e802767a9c93b63.png"
+          },
+          "link": "http://www.bilibili.com/blackboard/topic/activity-SJSXoaJbZ.html",
+          "logo": {
+            "src": "assets/2017/06/2017-06-01-h04-t0/5d49497b6b7f30950f37c4aff205e7dd1494f3b9.png"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "date": "2017-06-02",
+    "refs": [
+      {
+        "name": "「碧蓝航线」公测",
+        "id": "2017-06-02-h04-t0",
+        "tags": ["img"],
+        "tid": [0],
+        "config": {
+          "type": "simple-image",
+          "layer": {
+            "src": "assets/2017/06/2017-06-02-h04-t0/d1f784b2c86690cde9e82d0a6805c4828580a6a1.png"
+          },
+          "link": "https://ad.api.biligame.net/api/v1/ad/plan/detail?id=1237",
+          "logo": {
+            "src": "assets/2017/06/2017-06-02-h04-t0/e2243c950fa7d8fd191385d496b4c9b0e245096d.png"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "date": "2017-06-03",
+    "refs": [
+      {
+        "name": "哔哩哔哩 (゜-゜)つロ 干杯",
+        "id": "2017-06-03-h04-t0",
+        "tags": ["img"],
+        "tid": [0],
+        "config": {
+          "type": "simple-image",
+          "layer": {
+            "src": "assets/2017/06/2017-06-03-h04-t0/17759bd2d61eb97e992642f79a15ddabd015d0dc.png"
+          },
+          "logo": {
+            "src": "assets/2017/06/2017-06-03-h04-t0/58d322146cb4b1685a5775478b9753f96a0c2ff6.png"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "date": "2017-06-07",
+    "refs": [
+      {
+        "name": "再次感受朵蜜的力量吧！",
+        "id": "2017-06-07-h16-t0",
+        "tags": ["img"],
+        "tid": [11],
+        "config": {
+          "type": "simple-image",
+          "layer": {
+            "src": "assets/2017/06/2017-06-07-h16-t0/e4889b927c4b7bdaa2876d37530cfd53260119e4.png"
+          },
+          "link": "http://www.bilibili.com/blackboard/topic/activity-SJsQy3XzZ.html",
+          "logo": {
+            "src": "assets/2017/06/2017-06-07-h16-t0/c6a43081cd1ed031848d81fcc38c3d56ca88c038.png"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "date": "2017-06-10",
+    "refs": [
+      {
+        "name": "BML",
+        "id": "2017-06-10-h00-t0",
+        "tags": ["img"],
+        "tid": [0],
+        "config": {
+          "type": "simple-image",
+          "layer": {
+            "src": "assets/2017/06/2017-06-10-h00-t0/4b867b407a643e5265e30e783fe2a77e0f269c91.png"
+          },
+          "link": "http://bml.bilibili.com/2017/index.html",
+          "logo": {
+            "src": "assets/2017/06/2017-06-10-h00-t0/2a25a4d2a0b941c02fc825ec10fda31d237548c4.png"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "date": "2017-06-10",
+    "refs": [
+      {
+        "name": "BILIBILI MOE 2017",
+        "id": "2017-06-10-h04-t0",
+        "tags": ["img"],
+        "tid": [0],
+        "config": {
+          "type": "simple-image",
+          "layer": {
+            "src": "assets/2017/06/2017-06-10-h04-t0/229d3c2d3f4e23e508674409ee5c89057818a1b1.png"
+          },
+          "link": "http://bangumi.bilibili.com/moe/2017/cn/index/",
+          "logo": {
+            "src": "assets/2017/06/2017-06-10-h04-t0/4b021054088ef4e31e0b45594d07a11957f8cddc.png"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "date": "2017-06-12",
+    "refs": [
+      {
+        "name": "BDF",
+        "id": "2017-06-12-h20-t0",
+        "tags": ["img"],
+        "tid": [129],
+        "config": {
+          "type": "simple-image",
+          "layer": {
+            "src": "assets/2017/06/2017-06-12-h20-t0/298abf99ca6cc1fef3d91fe5681f52988e928027.png"
+          },
+          "link": "http://www.bilibili.com/blackboard/activity-BDF2017.html",
+          "logo": {
+            "src": "assets/2017/06/2017-06-12-h20-t0/64a571de1c9f86dac3a3b700d62129468ab4dcf2.png"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "date": "2017-06-26",
+    "refs": [
+      {
+        "name": "你我的B站，BILIBILI 8周年",
+        "id": "2017-06-26-h04-t0",
+        "tags": ["img"],
+        "tid": [0],
+        "config": {
+          "type": "simple-image",
+          "layer": {
+            "src": "assets/2017/06/2017-06-26-h04-t0/a421773e566a623fca26e12ae3921bda4a3fd856.png"
+          },
+          "link": "http://www.bilibili.com/blackboard/anniversary/bilibilibirthday2017.html",
+          "logo": {
+            "src": "assets/2017/06/2017-06-26-h04-t0/3d30de7942ed74d2515f28ae04eb1444e8d57f40.png"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "date": "2017-06-26",
+    "refs": [
+      {
+        "name": "你我的B站，BILIBILI 8周年",
+        "id": "2017-06-26-h20-t0",
+        "tags": ["img"],
+        "tid": [0],
+        "config": {
+          "type": "simple-image",
+          "layer": {
+            "src": "assets/2017/06/2017-06-26-h20-t0/80d066b94a02fc72cf855e022517872c1dbef895.png"
+          },
+          "link": "http://www.bilibili.com/blackboard/anniversary/bilibilibirthday2017.html",
+          "logo": {
+            "src": "assets/2017/06/2017-06-26-h20-t0/e6736f4a7a2e9240bce2ee194691ef9a4616df05.png"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "date": "2017-06-28",
+    "refs": [
+      {
+        "name": "前方一大波优质动画来袭~",
+        "id": "2017-06-28-h20-t0",
+        "tags": ["img"],
+        "tid": [0],
+        "config": {
+          "type": "simple-image",
+          "layer": {
+            "src": "assets/2017/06/2017-06-28-h20-t0/00669f9c9a312204b6221e94892c5c268f6d8225.png"
+          },
+          "link": "http://www.bilibili.com/blackboard/topic/activity-HkBRflO7Z.html",
+          "logo": {
+            "src": "assets/2017/06/2017-06-28-h20-t0/c49ab1cf6c139a1189d638afc07f49ad41ee66ec.png"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "date": "2017-07-01",
+    "refs": [
+      {
+        "name": "2017 夏日国产动画导视",
+        "id": "2017-07-01-h04-t0",
+        "tags": ["img"],
+        "tid": [0],
+        "config": {
+          "type": "simple-image",
+          "layer": {
+            "src": "assets/2017/07/2017-07-01-h04-t0/91f48aa285d511bc68ac314d35fc2a3134137a32.png"
+          },
+          "link": "http://www.bilibili.com/blackboard/topic/activity-r1RoWrQEZ.html",
+          "logo": {
+            "src": "assets/2017/07/2017-07-01-h04-t0/a258fb4e6a0c5d7305f4e5f75be56b681d88c022.png"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "date": "2017-07-02",
+    "refs": [
+      {
+        "name": "BILIBILI MOE 2017",
+        "id": "2017-07-02-h04-t0",
+        "tags": ["img"],
+        "tid": [0],
+        "config": {
+          "type": "simple-image",
+          "layer": {
+            "src": "assets/2017/07/2017-07-02-h04-t0/6c02f7031c1274aefbc96619a71b30f0253f38be.png"
+          },
+          "link": "http://bangumi.bilibili.com/moe/2017/cn/index",
+          "logo": {
+            "src": "assets/2017/07/2017-07-02-h04-t0/4b021054088ef4e31e0b45594d07a11957f8cddc.png"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "date": "2017-07-05",
+    "refs": [
+      {
+        "name": "BWORLD",
+        "id": "2017-07-05-h20-t0",
+        "tags": ["img"],
+        "tid": [129],
+        "config": {
+          "type": "simple-image",
+          "layer": {
+            "src": "assets/2017/07/2017-07-05-h20-t0/d6954524a6006807fdf3ff19f4e60abb5dade04a.png"
+          },
+          "link": "https://bml.bilibili.com/2017/world.html?mng_ts=1499245690432",
+          "logo": {
+            "src": "assets/2017/07/2017-07-05-h20-t0/e7587600bd10b846bdc55c7233f00ddd35d2f6ec.png"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "date": "2017-07-06",
+    "refs": [
+      {
+        "name": "上海哔哩哔哩篮球队应援团招募开启！",
+        "id": "2017-07-06-h16-t0",
+        "tags": ["img"],
+        "tid": [129],
+        "config": {
+          "type": "simple-image",
+          "layer": {
+            "src": "assets/2017/07/2017-07-06-h16-t0/7d1fc8407d390b607d8c601610783c481e1757c2.png"
+          },
+          "link": "http://www.bilibili.com/blackboard/activity-sharksyyt.html?mng_ts=1499313569065",
+          "logo": {
+            "src": "assets/2017/07/2017-07-06-h16-t0/8a3d6e6d592b6278e4ae761256aad59c6c687d48.png"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "date": "2017-07-08",
+    "refs": [
+      {
+        "name": "这个舞台需要你的灵光一闪！",
+        "id": "2017-07-08-h04-t0",
+        "tags": ["img"],
+        "tid": [1],
+        "config": {
+          "type": "simple-image",
+          "layer": {
+            "src": "assets/2017/07/2017-07-08-h04-t0/b903a75225ca12d8406e79c6a8a1af007fe02ce6.png"
+          },
+          "link": "http://www.bilibili.com/blackboard/activity-Original1st.html",
+          "logo": {
+            "src": "assets/2017/07/2017-07-08-h04-t0/f610ee9f91f8779de9d5e0e100d882dc40c4585e.png"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "date": "2017-07-11",
+    "refs": [
+      {
+        "name": "BILIBILI MOE 2017",
+        "id": "2017-07-11-h04-t0",
+        "tags": ["img"],
+        "tid": [0],
+        "config": {
+          "type": "simple-image",
+          "layer": {
+            "src": "assets/2017/07/2017-07-11-h04-t0/48d17d93da3fcc7905895f154eb36554f2e487e9.png"
+          },
+          "link": "http://bangumi.bilibili.com/moe/2017/cn/index/",
+          "logo": {
+            "src": "assets/2017/07/2017-07-11-h04-t0/5158483f7ef5c8d155be6fd0cfe402c0e3253be0.png"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "date": "2017-07-17",
+    "refs": [
+      {
+        "name": "你喜欢的，就在你身边",
+        "id": "2017-07-17-h00-t0",
+        "tags": ["img"],
+        "tid": [0],
+        "config": {
+          "type": "simple-image",
+          "layer": {
+            "src": "assets/2017/07/2017-07-17-h00-t0/08a152cc7059686cb8a1b805d1e5c341b1f95540.png"
+          },
+          "link": "http://www.bilibili.com/blackboard/activity-17bml-bw716.html",
+          "logo": {
+            "src": "assets/2017/07/2017-07-17-h00-t0/ce2b6d94070c8507e2748e2f27cdd6e6f3129e1f.png"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "date": "2017-07-18",
+    "refs": [
+      {
+        "name": "八强对决！来为真爱投票！",
+        "id": "2017-07-18-h04-t0",
+        "tags": ["img"],
+        "tid": [0],
+        "config": {
+          "type": "simple-image",
+          "layer": {
+            "src": "assets/2017/07/2017-07-18-h04-t0/18830801329cb4a2b3541ae0a8d69aa462cd3089.png"
+          },
+          "link": "http://bangumi.bilibili.com/moe/2017/cn/index/",
+          "logo": {
+            "src": "assets/2017/07/2017-07-18-h04-t0/400306856f299837a9960d5f4bc639d575d6ca7a.png"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "date": "2017-07-20",
+    "refs": [
+      {
+        "name": "来为真爱投票！",
+        "id": "2017-07-20-h04-t0",
+        "tags": ["img"],
+        "tid": [0],
+        "config": {
+          "type": "simple-image",
+          "layer": {
+            "src": "assets/2017/07/2017-07-20-h04-t0/f7a43a6b985071d8a4bdcb60ef9a179f07269622.png"
+          },
+          "link": "http://bangumi.bilibili.com/moe/2017/cn/index/",
+          "logo": {
+            "src": "assets/2017/07/2017-07-20-h04-t0/6ee72153ca2aa25927603265308d9ee76d929858.png"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "date": "2017-07-21",
+    "refs": [
+      {
+        "name": "BWORLD",
+        "id": "2017-07-21-h08-t0",
+        "tags": ["img"],
+        "tid": [0],
+        "config": {
+          "type": "simple-image",
+          "layer": {
+            "src": "assets/2017/07/2017-07-21-h08-t0/1a081aa7ee24d9fd9c089f3f1d00e9e4ab595bc9.png"
+          },
+          "link": "http://www.bilibili.com/blackboard/activity-17bml-live.html",
+          "logo": {
+            "src": "assets/2017/07/2017-07-21-h08-t0/f8a6d03233c161c294b6479cadff83540dfd5075.png"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "date": "2017-07-22",
+    "refs": [
+      {
+        "name": "一起来为真爱应援打call！",
+        "id": "2017-07-22-h04-t0",
+        "tags": ["img"],
+        "tid": [0],
+        "config": {
+          "type": "simple-image",
+          "layer": {
+            "src": "assets/2017/07/2017-07-22-h04-t0/dec9d884ed320d83dce6f2ad09be76b100d497e6.png"
+          },
+          "link": "http://bangumi.bilibili.com/moe/2017/jp/index/",
+          "logo": {
+            "src": "assets/2017/07/2017-07-22-h04-t0/4455720eb19630dc315c8a0f8d9bd9814aa39df9.png"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "date": "2017-07-23",
+    "refs": [
+      {
+        "name": "狂欢的舞台，最好的演出！",
+        "id": "2017-07-23-h20-t0",
+        "tags": ["img"],
+        "tid": [0],
+        "config": {
+          "type": "simple-image",
+          "layer": {
+            "src": "assets/2017/07/2017-07-23-h20-t0/0c27def121cf8e6fbfa85cb2ade489ae4cce591e.png"
+          },
+          "link": "http://www.bilibili.com/blackboard/activity-17bml-live.html",
+          "logo": {
+            "src": "assets/2017/07/2017-07-23-h20-t0/ce2b6d94070c8507e2748e2f27cdd6e6f3129e1f.png"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "date": "2017-07-26",
+    "refs": [
+      {
+        "name": "篮球队应援团小姐姐们闪亮登场！",
+        "id": "2017-07-26-h04-t0",
+        "tags": ["img"],
+        "tid": [129],
+        "config": {
+          "type": "simple-image",
+          "layer": {
+            "src": "assets/2017/07/2017-07-26-h04-t0/706230ef57b802348c09c2db3aced0566ee2ae19.png"
+          },
+          "link": "http://www.bilibili.com/blackboard/activity-yytdc.html",
+          "logo": {
+            "src": "assets/2017/07/2017-07-26-h04-t0/ce10ffcb4e9d874f888acbe55087fd55aee3be29.png"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "date": "2017-07-30",
+    "refs": [
+      {
+        "name": "BILIBILI夏日挑战季",
+        "id": "2017-07-30-h04-t0",
+        "tags": ["img"],
+        "tid": [0],
+        "config": {
+          "type": "simple-image",
+          "layer": {
+            "src": "assets/2017/07/2017-07-30-h04-t0/6526fb03e266348dfa98e9a323413b04b77e561f.png"
+          },
+          "link": "http://live.bilibili.com/pages/1702/summer-challenges",
+          "logo": {
+            "src": "assets/2017/07/2017-07-30-h04-t0/a762fa6a6a1d9484803f7425682f7db0a614ec32.png"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "date": "2017-08-08",
+    "refs": [
+      {
+        "name": "一起来为真爱应援打call！",
+        "id": "2017-08-08-h04-t0",
+        "tags": ["img"],
+        "tid": [0],
+        "config": {
+          "type": "simple-image",
+          "layer": {
+            "src": "assets/2017/08/2017-08-08-h04-t0/70e73593e5a9c469016ee28cb1f5660d5fa45c34.png"
+          },
+          "link": "http://bangumi.bilibili.com/moe/2017/jp/index/",
+          "logo": {
+            "src": "assets/2017/08/2017-08-08-h04-t0/191130e87065909fcff49c7d5c4fcac113b8d498.png"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "date": "2017-08-17",
+    "refs": [
+      {
+        "name": "赌上神明性命的战争！",
+        "id": "2017-08-17-h04-t0",
+        "tags": ["img"],
+        "tid": [0],
+        "config": {
+          "type": "simple-image",
+          "layer": {
+            "src": "assets/2017/08/2017-08-17-h04-t0/db5a6ae02662b753df58982737fadd4ff7a74779.png"
+          },
+          "link": "http://acg.tv/u1TY",
+          "logo": {
+            "src": "assets/2017/08/2017-08-17-h04-t0/73e1700082432c301a505124eccd1182a2b0cee6.png"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "date": "2017-08-23",
+    "refs": [
+      {
+        "name": "一起来为真爱应援打call！",
+        "id": "2017-08-23-h04-t0",
+        "tags": ["img"],
+        "tid": [0],
+        "config": {
+          "type": "simple-image",
+          "layer": {
+            "src": "assets/2017/08/2017-08-23-h04-t0/3dcb6fc19e3f4f898625f5f9a8cf860dacac67b6.png"
+          },
+          "link": "http://bangumi.bilibili.com/moe/2017/jp/index/",
+          "logo": {
+            "src": "assets/2017/08/2017-08-23-h04-t0/5f6ca946718469b3a2918e3065ec81d63bb477c4.png"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "date": "2017-08-25",
+    "refs": [
+      {
+        "name": "表达心意 就在此刻",
+        "id": "2017-08-25-h04-t0",
+        "tags": ["img"],
+        "tid": [3],
+        "config": {
+          "type": "simple-image",
+          "layer": {
+            "src": "assets/2017/08/2017-08-25-h04-t0/eac0b146bb5fd780c608fa62eb665919d104eb18.png"
+          },
+          "link": "http://www.bilibili.com/blackboard/topic/activity-yourname1708.html",
+          "logo": {
+            "src": "assets/2017/08/2017-08-25-h04-t0/e10e8b42ca74998d821553683916a9717b2b1f31.png"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "date": "2017-08-26",
+    "refs": [
+      {
+        "name": "一起来为真爱应援打call！",
+        "id": "2017-08-26-h04-t0",
+        "tags": ["img"],
+        "tid": [0],
+        "config": {
+          "type": "simple-image",
+          "layer": {
+            "src": "assets/2017/08/2017-08-26-h04-t0/a37923b33e27a31e9ba33d5e8e5cac02e6536216.png"
+          },
+          "link": "http://bangumi.bilibili.com/moe/2017/jp/index/",
+          "logo": {
+            "src": "assets/2017/08/2017-08-26-h04-t0/46a0ca01ca8757479125c0dfd5f34db0756ede6f.png"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "date": "2017-08-27",
+    "refs": [
+      {
+        "name": "「你的名字」",
+        "id": "2017-08-27-h04-t0",
+        "tags": ["img"],
+        "tid": [1],
+        "config": {
+          "type": "simple-image",
+          "layer": {
+            "src": "assets/2017/08/2017-08-27-h04-t0/6ec7ae7855d662738cc3dc9ceff94110f858a91a.png"
+          },
+          "link": "http://bangumi.bilibili.com/movie/12044",
+          "logo": {
+            "src": "assets/2017/08/2017-08-27-h04-t0/e10e8b42ca74998d821553683916a9717b2b1f31.png"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "date": "2017-09-12",
+    "refs": [
+      {
+        "name": "世界仅为两人存在",
+        "id": "2017-09-12-h04-t0",
+        "tags": ["img"],
+        "tid": [13],
+        "config": {
+          "type": "simple-image",
+          "layer": {
+            "src": "assets/2017/09/2017-09-12-h04-t0/54d562bb9cc102da3d7b8906cf7ae0e68a080ddc.png"
+          },
+          "link": "http://bangumi.bilibili.com/anime/5998",
+          "logo": {
+            "src": "assets/2017/09/2017-09-12-h04-t0/354b511fb503caeb3066f2145736d12f46222580.png"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "date": "2017-09-14",
+    "refs": [
+      {
+        "name": "路哥他不低头",
+        "id": "2017-09-14-h12-t0",
+        "tags": ["img"],
+        "tid": [13],
+        "config": {
+          "type": "simple-image",
+          "layer": {
+            "src": "assets/2017/09/2017-09-14-h12-t0/1f0a557fba6e7535acab3056fdbe0599f40ad345.png"
+          },
+          "link": "http://bangumi.bilibili.com/anime/6339",
+          "logo": {
+            "src": "assets/2017/09/2017-09-14-h12-t0/89e8ea826a76564cc91d48821504cef5fdb12bdc.png"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "date": "2017-09-17",
+    "refs": [
+      {
+        "name": "RE: CREATORS",
+        "id": "2017-09-17-h04-t0",
+        "tags": ["img"],
+        "tid": [13],
+        "config": {
+          "type": "simple-image",
+          "layer": {
+            "src": "assets/2017/09/2017-09-17-h04-t0/d0c7a66f6bc19a64996d3816beaa6818f3d619b7.png"
+          },
+          "logo": {
+            "src": "assets/2017/09/2017-09-17-h04-t0/f8cf00aa92bf6a8bc7706f8e4df669ad57d59f7c.png"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "date": "2017-09-19",
+    "refs": [
+      {
+        "name": "命运食之门的选择，猫屋食堂，值得你的光临！",
+        "id": "2017-09-19-h12-t0",
+        "tags": ["img"],
+        "tid": [13],
+        "config": {
+          "type": "simple-image",
+          "layer": {
+            "src": "assets/2017/09/2017-09-19-h12-t0/ace6de50353d6d8fdd7a8d6a2c48373667530ee6.png"
+          },
+          "link": "http://bangumi.bilibili.com/anime/6310",
+          "logo": {
+            "src": "assets/2017/09/2017-09-19-h12-t0/147ea5eeb68367e686ead453ebfe5d123e7ccbf1.png"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "date": "2017-09-23",
+    "refs": [
+      {
+        "name": "2017年秋季新番导视",
+        "id": "2017-09-23-h04-t0",
+        "tags": ["img"],
+        "tid": [0],
+        "config": {
+          "type": "simple-image",
+          "layer": {
+            "src": "assets/2017/09/2017-09-23-h04-t0/294c025aeb253d5bf3dd90a17dd97e0b1d5d73f4.png"
+          },
+          "link": "http://www.bilibili.com/blackboard/topic/activity-Bk0gJ--iZ.html",
+          "logo": {
+            "src": "assets/2017/09/2017-09-23-h04-t0/18bd6c1fd6b81e674bc83c71fd8bb9530c8bf7cc.png"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "date": "2017-09-24",
+    "refs": [
+      {
+        "name": "2017年秋季新番导视",
+        "id": "2017-09-24-h04-t0",
+        "tags": ["img"],
+        "tid": [0],
+        "config": {
+          "type": "simple-image",
+          "layer": {
+            "src": "assets/2017/09/2017-09-24-h04-t0/ebf2000008ee7e101153e7323222c23caa1de8ea.png"
+          },
+          "link": "http://www.bilibili.com/blackboard/topic/activity-Bk0gJ--iZ.html",
+          "logo": {
+            "src": "assets/2017/09/2017-09-24-h04-t0/13e4ce5ec1342d6f2108a58cd791fc7aeb320212.png"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "date": "2017-09-25",
+    "refs": [
+      {
+        "name": "秋",
+        "id": "2017-09-25-h00-t0-n1",
+        "tags": ["img"],
+        "tid": [0],
+        "config": {
+          "type": "simple-image",
+          "layer": {
+            "src": "assets/2017/09/2017-09-25-h00-t0-n1/5d54c71eddc9f5229414369bba59eb7e552ef588.png"
+          },
+          "logo": {
+            "src": "assets/2017/09/2017-09-25-h00-t0-n1/08bf65e3db505390d08c703ba15991441c24c581.png"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "date": "2017-09-25",
+    "refs": [
+      {
+        "name": "秋",
+        "id": "2017-09-25-h00-t0-n2",
+        "tags": ["img"],
+        "tid": [0],
+        "config": {
+          "type": "simple-image",
+          "layer": {
+            "src": "assets/2017/09/2017-09-25-h00-t0-n2/1406e10ab2aef2c6858d59cb71dc291434013106.png"
+          },
+          "logo": {
+            "src": "assets/2017/09/2017-09-25-h00-t0-n2/08bf65e3db505390d08c703ba15991441c24c581.png"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "date": "2017-09-25",
+    "refs": [
+      {
+        "name": "秋",
+        "id": "2017-09-25-h00-t0-n3",
+        "tags": ["img"],
+        "tid": [0],
+        "config": {
+          "type": "simple-image",
+          "layer": {
+            "src": "assets/2017/09/2017-09-25-h00-t0-n3/8be1b0a28fd4eaa57b7f37e10b10a24af204ed7a.png"
+          },
+          "logo": {
+            "src": "assets/2017/09/2017-09-25-h00-t0-n3/08bf65e3db505390d08c703ba15991441c24c581.png"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "date": "2017-09-28",
+    "refs": [
+      {
+        "name": "欢迎来到实力至上主义的教室",
+        "id": "2017-09-28-h04-t0",
+        "tags": ["img"],
+        "tid": [13],
+        "config": {
+          "type": "simple-image",
+          "layer": {
+            "src": "assets/2017/09/2017-09-28-h04-t0/a28b4df42234346ced790dcc0d721dedcb37f3e3.png"
+          },
+          "link": "http://bangumi.bilibili.com/anime/6339",
+          "logo": {
+            "src": "assets/2017/09/2017-09-28-h04-t0/a6512ad74ee414a8a234069ac5a4b84f824db4fb.png"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "date": "2017-09-29",
+    "refs": [
+      {
+        "name": "2017年十月新番导视",
+        "id": "2017-09-29-h04-t0",
+        "tags": ["img"],
+        "tid": [13],
+        "config": {
+          "type": "simple-image",
+          "layer": {
+            "src": "assets/2017/09/2017-09-29-h04-t0/0625ab02b001e26eab5fcbd74db980910256a1aa.png"
+          },
+          "link": "http://www.bilibili.com/blackboard/topic/activity-Bk0gJ--iZ.html",
+          "logo": {
+            "src": "assets/2017/09/2017-09-29-h04-t0/2c361be9ce23efc1d87099906e7cb7f3b79e9e01.png"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "date": "2017-10-01",
+    "refs": [
+      {
+        "name": "长假追番清单！",
+        "id": "2017-10-01-h04-t0",
+        "tags": ["img"],
+        "tid": [0],
+        "config": {
+          "type": "simple-image",
+          "layer": {
+            "src": "assets/2017/10/2017-10-01-h04-t0/7194f83fcb011b609f354e27d7188c29586df444.png"
+          },
+          "link": "http://www.bilibili.com/blackboard/activity-rynPtGUsb.html",
+          "logo": {
+            "src": "assets/2017/10/2017-10-01-h04-t0/337c57bf55a5fa3fdad48a69ff3481d3dafaed99.png"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "date": "2017-10-03",
+    "refs": [
+      {
+        "name": "「阿松」",
+        "id": "2017-10-03-h04-t0",
+        "tags": ["img"],
+        "tid": [1],
+        "config": {
+          "type": "simple-image",
+          "layer": {
+            "src": "assets/2017/10/2017-10-03-h04-t0/cbafeebf3b479f6d0c3384d1a9a5ddbbd1cf42f0.png"
+          },
+          "link": "http://bangumi.bilibili.com/anime/6421",
+          "logo": {
+            "src": "assets/2017/10/2017-10-03-h04-t0/62be4a2a2ea70883112b4b73b2cc20f8f60b2a44.png"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "date": "2017-10-04",
+    "refs": [
+      {
+        "name": "BML",
+        "id": "2017-10-04-h04-t0",
+        "tags": ["img"],
+        "tid": [0],
+        "config": {
+          "type": "simple-image",
+          "layer": {
+            "src": "assets/2017/10/2017-10-04-h04-t0/ec3978e62636f8c8c75c66f33b3dba408b85c6b3.png"
+          },
+          "link": "http://www.bilibili.com/blackboard/activity-17bml-review.html",
+          "logo": {
+            "src": "assets/2017/10/2017-10-04-h04-t0/e8bb781af60f318a520efadd9412d356f780c046.png"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "date": "2017-10-23",
+    "refs": [
+      {
+        "name": "「宝石之国」",
+        "id": "2017-10-23-h00-t0",
+        "tags": ["img"],
+        "tid": [1],
+        "config": {
+          "type": "simple-image",
+          "layer": {
+            "src": "assets/2017/10/2017-10-23-h00-t0/e364cf8a26a1c207a7661029d25286a8119419d3.png"
+          },
+          "link": "http://bangumi.bilibili.com/anime/6434",
+          "logo": {
+            "src": "assets/2017/10/2017-10-23-h00-t0/9f50aae25a60860dfb38f675835a1256dbd50a88.png"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "date": "2017-10-24",
+    "refs": [
+      {
+        "name": "一起感受星之律动！",
+        "id": "2017-10-24-h04-t0",
+        "tags": ["img"],
+        "tid": [13],
+        "config": {
+          "type": "simple-image",
+          "layer": {
+            "src": "assets/2017/10/2017-10-24-h04-t0/eed32828b45d92c13c4338c7b7987fedd077a70b.png"
+          },
+          "link": "http://www.bilibili.com/bangdream/",
+          "logo": {
+            "src": "assets/2017/10/2017-10-24-h04-t0/68060080f8aba6d8b649e8825644d926b93b75a4.png"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "date": "2017-10-27",
+    "refs": [
+      {
+        "name": "「Just Because」",
+        "id": "2017-10-27-h16-t0",
+        "tags": ["img"],
+        "tid": [1],
+        "config": {
+          "type": "simple-image",
+          "layer": {
+            "src": "assets/2017/10/2017-10-27-h16-t0/04f82f8da2ea80c7ef09a22e181740ddf1fdaa29.png"
+          },
+          "link": "http://bangumi.bilibili.com/anime/6427",
+          "logo": {
+            "src": "assets/2017/10/2017-10-27-h16-t0/f1c918152ffd4192366bc51fc9c41dd133b86854.png"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "date": "2017-11-01",
+    "refs": [
+      {
+        "name": "黑发少女与前辈的奇妙恋爱",
+        "id": "2017-11-01-h04-t1",
+        "tags": ["img"],
+        "tid": [1],
+        "config": {
+          "type": "simple-image",
+          "layer": {
+            "src": "assets/2017/11/2017-11-01-h04-t1/ccc1a65b5dffaaeb6222b0cf466aa139ed6a757f.png"
+          },
+          "link": "http://bangumi.bilibili.com/anime/6518",
+          "logo": {
+            "src": "assets/2017/11/2017-11-01-h04-t1/053b67e2df3ba15800d3f1eb36f67c0e89eef9be.png"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "date": "2017-11-01",
+    "refs": [
+      {
+        "name": "一起来跳小埋体操吧~",
+        "id": "2017-11-01-h04-t129",
+        "tags": ["img"],
+        "tid": [129],
+        "config": {
+          "type": "simple-image",
+          "layer": {
+            "src": "assets/2017/11/2017-11-01-h04-t129/9c4d95a0a44329793f1038a10d9041f2b3a56628.png"
+          },
+          "link": "http://www.bilibili.com/blackboard/activity-H1bQjmVR-.html",
+          "logo": {
+            "src": "assets/2017/11/2017-11-01-h04-t129/96c3bc4f8c08c4847e02ef5601dbed34f7025e16.png"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "date": "2017-11-15",
+    "refs": [
+      {
+        "name": "染上少女的颜色",
+        "id": "2017-11-15-h04-t0",
+        "tags": ["img"],
+        "tid": [13],
+        "config": {
+          "type": "simple-image",
+          "layer": {
+            "src": "assets/2017/11/2017-11-15-h04-t0/c84bf8ec1613144f2b560f796d49c30c36607cd1.png"
+          },
+          "link": "http://bangumi.bilibili.com/anime/6474/",
+          "logo": {
+            "src": "assets/2017/11/2017-11-15-h04-t0/54eb40cf5dd500d3a3d7c395bd8b5001646f6cc5.png"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "date": "2017-11-21",
+    "refs": [
+      {
+        "name": "「Infini-T Force」",
+        "id": "2017-11-21-h04-t0",
+        "tags": ["img"],
+        "tid": [13],
+        "config": {
+          "type": "simple-image",
+          "layer": {
+            "src": "assets/2017/11/2017-11-21-h04-t0/f1d6235c0dd75369b8836fe44bfde8490617c9e4.png"
+          },
+          "link": "http://bangumi.bilibili.com/anime/6452",
+          "logo": {
+            "src": "assets/2017/11/2017-11-21-h04-t0/06ea04384b28bca4a9e28f3b16e0650874f40dfc.png"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "date": "2017-11-22",
+    "refs": [
+      {
+        "name": "冬",
+        "id": "2017-11-22-h04-t0",
+        "tags": ["img"],
+        "tid": [0],
+        "config": {
+          "type": "simple-image",
+          "layer": {
+            "src": "assets/2017/11/2017-11-22-h04-t0/8a7745bf492ba4565c139909be8d7e9529c07e4a.png"
+          },
+          "logo": {
+            "src": "assets/2017/11/2017-11-22-h04-t0/eb023708f151543e83afb808294edd5bc5b9fab0.png"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "date": "2017-11-22",
+    "refs": [
+      {
+        "name": "一起来跳小埋体操吧~",
+        "id": "2017-11-22-h04-t129",
+        "tags": ["img"],
+        "tid": [129],
+        "config": {
+          "type": "simple-image",
+          "layer": {
+            "src": "assets/2017/11/2017-11-22-h04-t129/9f46e65a404f3941e2857b25f2381069ff44662c.png"
+          },
+          "link": "http://www.bilibili.com/blackboard/activity-H1bQjmVR-.html",
+          "logo": {
+            "src": "assets/2017/11/2017-11-22-h04-t129/9450d8fad3458aed22b3b66ea52447a0b48c10a2.png"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "date": "2017-11-24",
+    "refs": [
+      {
+        "name": "「狐妖小红娘」",
+        "id": "2017-11-24-h04-t0",
+        "tags": ["img"],
+        "tid": [1],
+        "config": {
+          "type": "simple-image",
+          "layer": {
+            "src": "assets/2017/11/2017-11-24-h04-t0/f33b6a80d94c7c1a0d5b89cbd26c9eb3bd738560.png"
+          },
+          "link": "http://bangumi.bilibili.com/anime/2543",
+          "logo": {
+            "src": "assets/2017/11/2017-11-24-h04-t0/6750d856d4537b96aaf22231b02630bebdb00a18.png"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "date": "2017-11-25",
+    "refs": [
+      {
+        "name": "「告白实行委员会」",
+        "id": "2017-11-25-h04-t0",
+        "tags": ["img"],
+        "tid": [1],
+        "config": {
+          "type": "simple-image",
+          "layer": {
+            "src": "assets/2017/11/2017-11-25-h04-t0/64d884265e9ace9975aedb505e4bc26a1383ec86.png"
+          },
+          "link": "http://bangumi.bilibili.com/anime/6470",
+          "logo": {
+            "src": "assets/2017/11/2017-11-25-h04-t0/f5bcd135246fe43ec4eb1b50624536a38ac9cdb3.png"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "date": "2017-11-28",
+    "refs": [
+      {
+        "name": "染上少女的颜色",
+        "id": "2017-11-28-h04-t0",
+        "tags": ["img"],
+        "tid": [13],
+        "config": {
+          "type": "simple-image",
+          "layer": {
+            "src": "assets/2017/11/2017-11-28-h04-t0/6c27dbf0a0c78f454168553163615dcc5760ebd0.png"
+          },
+          "link": "http://bangumi.bilibili.com/anime/6474",
+          "logo": {
+            "src": "assets/2017/11/2017-11-28-h04-t0/15a6378d0f974f7ca5bc0049a95997f3515a5f0d.png"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "date": "2017-12-03",
+    "refs": [
+      {
+        "name": "磷叶石的新生",
+        "id": "2017-12-03-h04-t0",
+        "tags": ["img"],
+        "tid": [1],
+        "config": {
+          "type": "simple-image",
+          "layer": {
+            "src": "assets/2017/12/2017-12-03-h04-t0/b0b2ad803b90e3d6ff2e0309b0e0f23827be03e5.png"
+          },
+          "link": "http://bangumi.bilibili.com/anime/6434",
+          "logo": {
+            "src": "assets/2017/12/2017-12-03-h04-t0/7668e7536623d39f36eeeaadbb25512b5a989396.png"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "date": "2017-12-20",
+    "refs": [
+      {
+        "name": "2017年度弹幕居然是TA",
+        "id": "2017-12-20-h04-t0",
+        "tags": ["img"],
+        "tid": [0],
+        "config": {
+          "type": "simple-image",
+          "layer": {
+            "src": "assets/2017/12/2017-12-20-h04-t0/bdc0f60981dc5c1ac91d4af8627a7a5d24879613.png"
+          },
+          "link": "http://www.bilibili.com/blackboard/dannmaku2017.html",
+          "logo": {
+            "src": "assets/2017/12/2017-12-20-h04-t0/5095e9af25062db4cc22e9c47d02806b0654ccfb.png"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "date": "2017-12-20",
+    "refs": [
+      {
+        "name": "「刀剑神域」剧场版",
+        "id": "2017-12-20-h20-t0",
+        "tags": ["img"],
+        "tid": [1],
+        "config": {
+          "type": "simple-image",
+          "layer": {
+            "src": "assets/2017/12/2017-12-20-h20-t0/50da511b33c14105794fded7749d9cd1d7d1333e.png"
+          },
+          "link": "http://bangumi.bilibili.com/movie/12364",
+          "logo": {
+            "src": "assets/2017/12/2017-12-20-h20-t0/78d99a10f2ad53f943646b26331f00563267528e.png"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "date": "2017-12-23",
+    "refs": [
+      {
+        "name": "你想看的都在这里~",
+        "id": "2017-12-23-h04-t0",
+        "tags": ["img"],
+        "tid": [0],
+        "config": {
+          "type": "simple-image",
+          "layer": {
+            "src": "assets/2017/12/2017-12-23-h04-t0/0489b204c5f4f77d4527b5d6b1028e6bd479ef5b.png"
+          },
+          "link": "http://www.bilibili.com/blackboard/activity-HkLExEcMG.html",
+          "logo": {
+            "src": "assets/2017/12/2017-12-23-h04-t0/e4c82ff80af21a1b588629235eda6bdf84142e64.png"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "date": "2017-12-26",
+    "refs": [
+      {
+        "name": "圣诞快乐",
+        "id": "2017-12-26-h12-t0",
+        "tags": ["img"],
+        "tid": [0],
+        "config": {
+          "type": "simple-image",
+          "layer": {
+            "src": "assets/2017/12/2017-12-26-h12-t0/cefea37f46fcc2032d6c12fd11df3f6b5b4ec341.png"
+          },
+          "logo": {
+            "src": "assets/2017/12/2017-12-26-h12-t0/eb023708f151543e83afb808294edd5bc5b9fab0.png"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "date": "2017-12-28",
+    "refs": [
+      {
+        "name": "哔哩哔哩直播总选大会活动",
+        "id": "2017-12-28-h20-t0",
+        "tags": ["img"],
+        "tid": [0],
+        "config": {
+          "type": "simple-image",
+          "layer": {
+            "src": "assets/2017/12/2017-12-28-h20-t0/62f20f64b0a95abdbf9b2fc9168ed5c70e6f0f3b.png"
+          },
+          "link": "http://live.bilibili.com/pages/1703/BLS-2017.html#/top10",
+          "logo": {
+            "src": "assets/2017/12/2017-12-28-h20-t0/043ce94a70db3670a812669f8f7d4a9e9c8ef0d1.png"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "date": "2017-12-31",
+    "refs": [
+      {
+        "name": "剑网3重制版",
+        "id": "2017-12-31-h04-t0",
+        "tags": ["img"],
+        "tid": [0],
+        "config": {
+          "type": "simple-image",
+          "layer": {
+            "src": "assets/2017/12/2017-12-31-h04-t0/e634bc40a7b425cda98650a8a61b7b6962e52ae7.png"
+          },
+          "link": "http://www.bilibili.com/video/av17693554/",
+          "logo": {
+            "src": "assets/2017/12/2017-12-31-h04-t0/32f63b5b8ab14cfbc2ced36387844b1c51bd2455.png"
+          }
+        }
+      }
+    ]
+  }
+]

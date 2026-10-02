@@ -1,0 +1,3995 @@
+[
+  {
+    "date": "2026-01-09",
+    "refs": [
+      {
+        "name": "雪林候车 (预览)",
+        "id": "2026-01-09-h00-t0-preview",
+        "tags": ["img"],
+        "tid": [0],
+        "config": {
+          "type": "simple-image",
+          "layer": {
+            "src": "assets/2026/01/2026-01-09-h00-t0-preview/a8dcb9d05c22e7e5cfb1bbd0d97092f4edd357ef.png"
+          },
+          "logo": {
+            "src": "assets/2026/01/2026-01-09-h00-t0-preview/af6c03332d5fabf7a306e21d3f4aac7d7c18f12e.png"
+          }
+        }
+      },
+      {
+        "name": "雪林候车",
+        "id": "2026-01-09-h00-t0",
+        "tags": ["split-layer"],
+        "tid": [0],
+        "config": {
+          "type": "official_2021",
+          "layers": [
+            {
+              "resources": [
+                {
+                  "src": "assets/2026/01/2026-01-09-h00-t0/48bee957f95b7bc5f0e1b7fc14b25a4cca26901a.png",
+                  "id": 0
+                }
+              ],
+              "scale": {
+                "initial": 0.45
+              },
+              "rotate": {},
+              "translate": {
+                "offset": [3, 0]
+              },
+              "blur": {},
+              "opacity": {
+                "wrap": "clamp"
+              },
+              "id": 1,
+              "name": "030背景光"
+            },
+            {
+              "resources": [
+                {
+                  "src": "assets/2026/01/2026-01-09-h00-t0/eca4ed09885bef57072526002c8900467a07dc3f.png",
+                  "id": 0
+                }
+              ],
+              "scale": {
+                "initial": 0.45
+              },
+              "rotate": {},
+              "translate": {
+                "initial": [-20, 0],
+                "offset": [10, 10]
+              },
+              "blur": {},
+              "opacity": {
+                "wrap": "clamp"
+              },
+              "id": 2,
+              "name": "029背景山坡"
+            },
+            {
+              "resources": [
+                {
+                  "src": "assets/2026/01/2026-01-09-h00-t0/e52d6aecd75db0e310c73185304fd927834ac716.png",
+                  "id": 0
+                }
+              ],
+              "scale": {
+                "initial": 0.45,
+                "offset": 0.02
+              },
+              "rotate": {},
+              "translate": {
+                "initial": [200, 0],
+                "offset": [50, 10]
+              },
+              "blur": {},
+              "opacity": {
+                "wrap": "clamp"
+              },
+              "id": 3,
+              "name": "028远景白树"
+            },
+            {
+              "resources": [
+                {
+                  "src": "assets/2026/01/2026-01-09-h00-t0/62aee277e1d935580f66d296f349bd358cd956a0.png",
+                  "id": 0
+                }
+              ],
+              "scale": {
+                "initial": 0.45,
+                "offset": 0.02
+              },
+              "rotate": {},
+              "translate": {
+                "offset": [-20, 10]
+              },
+              "blur": {},
+              "opacity": {
+                "wrap": "clamp"
+              },
+              "id": 4,
+              "name": "027远景粉树"
+            },
+            {
+              "resources": [
+                {
+                  "src": "assets/2026/01/2026-01-09-h00-t0/b3ee9e71fbcc0520a1ac32e2b3a2d0dc6086bb9b.png",
+                  "id": 0
+                }
+              ],
+              "scale": {
+                "initial": 0.45,
+                "offset": 0.02
+              },
+              "rotate": {},
+              "translate": {
+                "initial": [1200, 0],
+                "offset": [-50, 10]
+              },
+              "blur": {},
+              "opacity": {
+                "wrap": "clamp"
+              },
+              "id": 5,
+              "name": "026夹层白树"
+            },
+            {
+              "resources": [
+                {
+                  "src": "assets/2026/01/2026-01-09-h00-t0/85e5279a1d53d4cb46033e1619d78628415f98c4.png",
+                  "id": 0
+                }
+              ],
+              "scale": {
+                "initial": 0.45,
+                "offset": 0.02
+              },
+              "rotate": {},
+              "translate": {
+                "offset": [50, 10]
+              },
+              "blur": {},
+              "opacity": {
+                "wrap": "clamp"
+              },
+              "id": 6,
+              "name": "025更远的树"
+            },
+            {
+              "resources": [
+                {
+                  "src": "assets/2026/01/2026-01-09-h00-t0/0095303b06f64e05ba354655c0a6c83fb618f8e7.png",
+                  "id": 0
+                }
+              ],
+              "scale": {
+                "initial": 0.45,
+                "offset": 0.02
+              },
+              "rotate": {},
+              "translate": {
+                "offset": [70, 10]
+              },
+              "blur": {},
+              "opacity": {
+                "wrap": "clamp"
+              },
+              "id": 7,
+              "name": "024远景紫树"
+            },
+            {
+              "resources": [
+                {
+                  "src": "assets/2026/01/2026-01-09-h00-t0/0415c092aa2c61c1ca25ba69b8c77130f1ab37c3.png",
+                  "id": 0
+                }
+              ],
+              "scale": {
+                "initial": 0.45
+              },
+              "rotate": {},
+              "translate": {
+                "offset": [0, 5]
+              },
+              "blur": {},
+              "opacity": {
+                "wrap": "clamp"
+              },
+              "id": 8,
+              "name": "023大树"
+            },
+            {
+              "resources": [
+                {
+                  "src": "assets/2026/01/2026-01-09-h00-t0/752ba46c080dca88401aac470f134ac0e6444705.png",
+                  "id": 0
+                }
+              ],
+              "scale": {
+                "initial": 0.4,
+                "offset": 0.02
+              },
+              "rotate": {},
+              "translate": {
+                "initial": [-20, 5],
+                "offset": [30, 0]
+              },
+              "blur": {},
+              "opacity": {
+                "wrap": "clamp"
+              },
+              "id": 9,
+              "name": "022鹿"
+            },
+            {
+              "resources": [
+                {
+                  "src": "assets/2026/01/2026-01-09-h00-t0/1fb1501cd66d326f296e78a4561f7cc89c48d719.png",
+                  "id": 0
+                }
+              ],
+              "scale": {
+                "initial": 0.45,
+                "offset": 0.05
+              },
+              "rotate": {},
+              "translate": {},
+              "blur": {},
+              "opacity": {
+                "wrap": "clamp"
+              },
+              "id": 10,
+              "name": "021雪地"
+            },
+            {
+              "resources": [
+                {
+                  "src": "assets/2026/01/2026-01-09-h00-t0/34c3621fc6fed4e16eab30d0448b35554711bfeb.png",
+                  "id": 0
+                }
+              ],
+              "scale": {
+                "initial": 0.45,
+                "offset": 0.05
+              },
+              "rotate": {},
+              "translate": {
+                "offset": [40, 0]
+              },
+              "blur": {},
+              "opacity": {
+                "wrap": "clamp"
+              },
+              "id": 11,
+              "name": "020脚印+碎影子"
+            },
+            {
+              "resources": [
+                {
+                  "src": "assets/2026/01/2026-01-09-h00-t0/0546ed600f8dcfcf4c2eb3212ed1e12178abdb86.png",
+                  "id": 0
+                }
+              ],
+              "scale": {
+                "initial": 0.45,
+                "offset": 0.05
+              },
+              "rotate": {},
+              "translate": {
+                "offset": [40, 0]
+              },
+              "blur": {},
+              "opacity": {
+                "wrap": "clamp"
+              },
+              "id": 12,
+              "name": "019远处混乱影子"
+            },
+            {
+              "resources": [
+                {
+                  "src": "assets/2026/01/2026-01-09-h00-t0/d81527e08e5031badd870819fa801f6fd41fc021.png",
+                  "id": 0
+                }
+              ],
+              "scale": {
+                "initial": 0.45,
+                "offset": 0.01
+              },
+              "rotate": {},
+              "translate": {
+                "offset": [30, 0]
+              },
+              "blur": {},
+              "opacity": {
+                "wrap": "clamp"
+              },
+              "id": 21,
+              "name": "010-33+设施"
+            },
+            {
+              "resources": [
+                {
+                  "src": "assets/2026/01/2026-01-09-h00-t0/fa622f4b21c7fb66f84ebf87d36faaaa993363f0.png",
+                  "id": 0
+                }
+              ],
+              "scale": {
+                "initial": 0.45,
+                "offset": 0.01
+              },
+              "rotate": {},
+              "translate": {
+                "initial": [20, 0],
+                "offset": [30, 0]
+              },
+              "blur": {},
+              "opacity": {
+                "wrap": "clamp"
+              },
+              "id": 35,
+              "name": "栅栏"
+            },
+            {
+              "resources": [
+                {
+                  "src": "assets/2026/01/2026-01-09-h00-t0/0cfe34374720653a8f67d68af761d239eca15da7.png",
+                  "id": 0
+                }
+              ],
+              "scale": {
+                "initial": 0.45,
+                "offset": 0.01
+              },
+              "rotate": {},
+              "translate": {
+                "offset": [35, 0]
+              },
+              "blur": {},
+              "opacity": {
+                "wrap": "clamp"
+              },
+              "id": 13,
+              "name": "018杆子"
+            },
+            {
+              "resources": [
+                {
+                  "src": "assets/2026/01/2026-01-09-h00-t0/9afdb972babc0fed529e241176bad847a8094774.png",
+                  "id": 0
+                }
+              ],
+              "scale": {
+                "initial": 0.45,
+                "offset": 0.05
+              },
+              "rotate": {},
+              "translate": {
+                "offset": [50, 0]
+              },
+              "blur": {},
+              "opacity": {
+                "wrap": "clamp"
+              },
+              "id": 14,
+              "name": "017远处碎草"
+            },
+            {
+              "resources": [
+                {
+                  "src": "assets/2026/01/2026-01-09-h00-t0/0b9b00f62fd5760dc64fa16c564591957c3ace05.png",
+                  "id": 0
+                }
+              ],
+              "scale": {
+                "initial": 0.45,
+                "offset": 0.01
+              },
+              "rotate": {},
+              "translate": {
+                "offset": [50, 0]
+              },
+              "blur": {},
+              "opacity": {
+                "wrap": "clamp"
+              },
+              "id": 15,
+              "name": "016-22+影子"
+            },
+            {
+              "resources": [
+                {
+                  "src": "assets/2026/01/2026-01-09-h00-t0/de5cbdcbf90a2eb32225d6b32923e76c00f48ce3.webm",
+                  "id": 0
+                }
+              ],
+              "scale": {
+                "initial": 0.43
+              },
+              "rotate": {},
+              "translate": {
+                "initial": [310, 25],
+                "offset": [50, 0]
+              },
+              "blur": {},
+              "opacity": {
+                "wrap": "clamp"
+              },
+              "id": 36,
+              "name": "雪动画"
+            },
+            {
+              "resources": [
+                {
+                  "src": "assets/2026/01/2026-01-09-h00-t0/9316d140598d5dc7e86d72e4a99ed903953d2e76.png",
+                  "id": 0
+                }
+              ],
+              "scale": {
+                "initial": 0.45,
+                "offset": 0.05
+              },
+              "rotate": {},
+              "translate": {
+                "offset": [130, 0]
+              },
+              "blur": {},
+              "opacity": {
+                "wrap": "clamp"
+              },
+              "id": 16,
+              "name": "015中景树2-右侧"
+            },
+            {
+              "resources": [
+                {
+                  "src": "assets/2026/01/2026-01-09-h00-t0/82a15b3fda5ce240bac44b8d0b793b13c3bafc4e.png",
+                  "id": 0
+                }
+              ],
+              "scale": {
+                "initial": 0.45,
+                "offset": 0.01
+              },
+              "rotate": {},
+              "translate": {
+                "offset": [125, 0]
+              },
+              "blur": {},
+              "opacity": {
+                "wrap": "clamp"
+              },
+              "id": 17,
+              "name": "014中景树1"
+            },
+            {
+              "resources": [
+                {
+                  "src": "assets/2026/01/2026-01-09-h00-t0/83e19c7274daec8f0e7d97cd6ad888e3e43b8083.png",
+                  "id": 0
+                }
+              ],
+              "scale": {
+                "initial": 0.45,
+                "offset": 0.01
+              },
+              "rotate": {},
+              "translate": {
+                "offset": [-75, 0]
+              },
+              "blur": {},
+              "opacity": {
+                "wrap": "clamp"
+              },
+              "id": 34,
+              "name": "014中景树左侧"
+            },
+            {
+              "resources": [
+                {
+                  "src": "assets/2026/01/2026-01-09-h00-t0/4e2110157727360d88357840903ed05b6b94c453.png",
+                  "id": 0
+                }
+              ],
+              "scale": {
+                "initial": 0.45,
+                "offset": 0.05
+              },
+              "rotate": {},
+              "translate": {
+                "offset": [75, 0]
+              },
+              "blur": {},
+              "opacity": {
+                "wrap": "clamp"
+              },
+              "id": 18,
+              "name": "013右侧中远树"
+            },
+            {
+              "resources": [
+                {
+                  "src": "assets/2026/01/2026-01-09-h00-t0/3505e4538c81fce91fa5e6dacd4703d8277df021.png",
+                  "id": 0
+                }
+              ],
+              "scale": {
+                "initial": 0.45,
+                "offset": 0.05
+              },
+              "rotate": {},
+              "translate": {
+                "initial": [50, 0],
+                "offset": [200, 0]
+              },
+              "blur": {},
+              "opacity": {
+                "wrap": "clamp"
+              },
+              "id": 19,
+              "name": "012左侧边缘中景树"
+            },
+            {
+              "resources": [
+                {
+                  "src": "assets/2026/01/2026-01-09-h00-t0/8f51a0828e322ca0576f449ceb45cca453735506.png",
+                  "id": 0
+                }
+              ],
+              "scale": {
+                "initial": 0.45,
+                "offset": 0.01
+              },
+              "rotate": {},
+              "translate": {
+                "offset": [50, 0]
+              },
+              "blur": {},
+              "opacity": {
+                "wrap": "clamp"
+              },
+              "id": 20,
+              "name": "011右侧中景"
+            },
+            {
+              "resources": [
+                {
+                  "src": "assets/2026/01/2026-01-09-h00-t0/3d4a9667931a9a20011a384b7d699c3b286b82ab.png",
+                  "id": 0
+                }
+              ],
+              "scale": {
+                "initial": 0.5,
+                "offset": 0.1
+              },
+              "rotate": {},
+              "translate": {
+                "offset": [-40, 40]
+              },
+              "blur": {},
+              "opacity": {
+                "wrap": "clamp"
+              },
+              "id": 22,
+              "name": "009中层遮挡雪"
+            },
+            {
+              "resources": [
+                {
+                  "src": "assets/2026/01/2026-01-09-h00-t0/3c711c23ae57db96468a23e2beca49ce66f12c73.png",
+                  "id": 0
+                }
+              ],
+              "scale": {
+                "initial": 0.45,
+                "offset": 0.05
+              },
+              "rotate": {},
+              "translate": {
+                "offset": [80, 0]
+              },
+              "blur": {},
+              "opacity": {
+                "wrap": "clamp"
+              },
+              "id": 23,
+              "name": "008地上碎草"
+            },
+            {
+              "resources": [
+                {
+                  "src": "assets/2026/01/2026-01-09-h00-t0/e3607ba671317e2b1e4990a9225cbf9981a7a414.png",
+                  "id": 0
+                }
+              ],
+              "scale": {
+                "initial": 0.45,
+                "offset": 0.05
+              },
+              "rotate": {},
+              "translate": {
+                "offset": [300, 0]
+              },
+              "blur": {},
+              "opacity": {
+                "wrap": "clamp"
+              },
+              "id": 24,
+              "name": "007近处左树"
+            },
+            {
+              "resources": [
+                {
+                  "src": "assets/2026/01/2026-01-09-h00-t0/2a4e5f40421d467e841b24eed228910bf965d4a1.png",
+                  "id": 0
+                }
+              ],
+              "scale": {
+                "initial": 0.45,
+                "offset": 0.05
+              },
+              "rotate": {},
+              "translate": {
+                "initial": [360, 0],
+                "offset": [-300, 0]
+              },
+              "blur": {},
+              "opacity": {
+                "wrap": "clamp"
+              },
+              "id": 25,
+              "name": "006近处右树"
+            },
+            {
+              "resources": [
+                {
+                  "src": "assets/2026/01/2026-01-09-h00-t0/446466499bd9615bc950ec4d8ec63647defc05b6.png",
+                  "id": 0
+                }
+              ],
+              "scale": {
+                "initial": 0.49,
+                "offset": 0.05
+              },
+              "rotate": {},
+              "translate": {
+                "initial": [0, 20],
+                "offset": [120, 5]
+              },
+              "blur": {},
+              "opacity": {
+                "wrap": "clamp"
+              },
+              "id": 33,
+              "name": "005"
+            },
+            {
+              "resources": [
+                {
+                  "src": "assets/2026/01/2026-01-09-h00-t0/f8720df769d23c497096f57b73528265fd6b554a.png",
+                  "id": 0
+                }
+              ],
+              "scale": {
+                "initial": 0.48,
+                "offset": 0.05
+              },
+              "rotate": {},
+              "translate": {
+                "initial": [-30, 20],
+                "offset": [0, 5]
+              },
+              "blur": {},
+              "opacity": {
+                "wrap": "clamp"
+              },
+              "id": 32,
+              "name": "004"
+            },
+            {
+              "resources": [
+                {
+                  "src": "assets/2026/01/2026-01-09-h00-t0/6970b12a96d85dd28a0aeb803eb3428dfec771bb.png",
+                  "id": 0
+                }
+              ],
+              "scale": {
+                "initial": 0.48,
+                "offset": 0.05
+              },
+              "rotate": {},
+              "translate": {
+                "initial": [-30, 20],
+                "offset": [250, 0]
+              },
+              "blur": {},
+              "opacity": {
+                "wrap": "clamp"
+              },
+              "id": 31,
+              "name": "003左侧边缘草丛"
+            },
+            {
+              "resources": [
+                {
+                  "src": "assets/2026/01/2026-01-09-h00-t0/83615a69b1ecab29163a54912260fd624a886906.png",
+                  "id": 0
+                }
+              ],
+              "scale": {
+                "initial": 0.5,
+                "offset": -0.05
+              },
+              "rotate": {},
+              "translate": {
+                "initial": [50, 20],
+                "offset": [50, 5]
+              },
+              "blur": {},
+              "opacity": {
+                "wrap": "clamp"
+              },
+              "id": 29,
+              "name": "002左前中间草丛"
+            },
+            {
+              "resources": [
+                {
+                  "src": "assets/2026/01/2026-01-09-h00-t0/f14b431627327dda93f34b13392a3a773be5e788.png",
+                  "id": 0
+                }
+              ],
+              "scale": {
+                "initial": 0.55,
+                "offset": 0.02
+              },
+              "rotate": {},
+              "translate": {
+                "initial": [0, -20],
+                "offset": [50, 100]
+              },
+              "blur": {},
+              "opacity": {
+                "wrap": "clamp"
+              },
+              "id": 0,
+              "name": "001顶层雪"
+            }
+          ],
+          "logo": {
+            "src": "assets/2026/01/2026-01-09-h00-t0-preview/af6c03332d5fabf7a306e21d3f4aac7d7c18f12e.png"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "date": "2026-02-10",
+    "refs": [
+      {
+        "name": "一起看春晚",
+        "id": "2026-02-10-h00-t0",
+        "tags": ["img"],
+        "tid": [0],
+        "config": {
+          "type": "simple-image",
+          "layer": {
+            "src": "assets/2026/02/2026-02-10-h00-t0/16ab74c58a4911b995029227ca2dcdfc2b7ca2bf.png"
+          },
+          "logo": {
+            "src": "assets/2026/02/2026-02-10-h00-t0/eb295dffc5a6bc4fc448c219a2029a95279b0f77.png"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "date": "2026-02-17",
+    "refs": [
+      {
+        "name": "一起看春晚",
+        "id": "2026-02-17-h00-t0",
+        "tags": ["img"],
+        "tid": [0],
+        "config": {
+          "type": "simple-image",
+          "layer": {
+            "src": "assets/2026/02/2026-02-17-h00-t0/5a927ddcc01c7adc4061b3965a66b668484068af.png"
+          },
+          "logo": {
+            "src": "assets/2026/02/2026-02-17-h00-t0/eb295dffc5a6bc4fc448c219a2029a95279b0f77.png"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "date": "2026-03-03",
+    "refs": [
+      {
+        "name": "两会",
+        "id": "2026-03-03-h00-t0",
+        "tags": ["img"],
+        "tid": [0],
+        "config": {
+          "type": "simple-image",
+          "layer": {
+            "src": "assets/2026/03/2026-03-03-h00-t0/0ea18d6f52e9a5f4f481a5e108b1107c786606a5.png"
+          },
+          "logo": {
+            "src": "assets/2026/03/2026-03-03-h00-t0/735bb5157e919a1c33cc19da62d131d58f217b1d.png"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "date": "2026-04-25",
+    "refs": [
+      {
+        "name": "春原驰踪 (预览)",
+        "id": "2026-04-25-h00-t0-preview",
+        "tags": ["img"],
+        "tid": [0],
+        "config": {
+          "type": "simple-image",
+          "logo": {
+            "src": "assets/2026/04/2026-04-25-h00-t0-preview/87a5d03581e326f4f818cab3212ce471d1f6a064.png"
+          },
+          "layer": {
+            "src": "assets/2026/04/2026-04-25-h00-t0-preview/cc634ec77d2755641d5ed3f392c9b7e065a88aae.png"
+          }
+        }
+      },
+      {
+        "name": "春原驰踪",
+        "id": "2026-04-25-h00-t0",
+        "tags": ["split-layer"],
+        "tid": [0],
+        "config": {
+          "type": "official_2021",
+          "logo": {
+            "src": "assets/2026/04/2026-04-25-h00-t0-preview/87a5d03581e326f4f818cab3212ce471d1f6a064.png"
+          },
+          "layers": [
+            {
+              "resources": [
+                {
+                  "src": "assets/2026/04/2026-04-25-h00-t0/7ba90052bb0a7d52ff2e2651c58325176823dab7.png",
+                  "id": 0
+                }
+              ],
+              "scale": {
+                "initial": 0.45
+              },
+              "rotate": {},
+              "translate": {},
+              "blur": {},
+              "opacity": {
+                "wrap": "clamp"
+              },
+              "id": 0,
+              "name": "033bg"
+            },
+            {
+              "resources": [
+                {
+                  "src": "assets/2026/04/2026-04-25-h00-t0/345b6e0fe3bcce70b4dda85984e6bd2e989ed383.png",
+                  "id": 0
+                }
+              ],
+              "scale": {
+                "initial": 0.45
+              },
+              "rotate": {},
+              "translate": {
+                "offset": [10, 0]
+              },
+              "blur": {},
+              "opacity": {
+                "wrap": "clamp"
+              },
+              "id": 1,
+              "name": "032云层"
+            },
+            {
+              "resources": [
+                {
+                  "src": "assets/2026/04/2026-04-25-h00-t0/86b62f4fb731a12e50450fe3e42db9b156c868fb.png",
+                  "id": 0
+                }
+              ],
+              "scale": {
+                "initial": 0.45
+              },
+              "rotate": {},
+              "translate": {
+                "offset": [15, 0]
+              },
+              "blur": {},
+              "opacity": {
+                "wrap": "clamp"
+              },
+              "id": 2,
+              "name": "031鸟群"
+            },
+            {
+              "resources": [
+                {
+                  "src": "assets/2026/04/2026-04-25-h00-t0/943d6df51d9698d2bbccfd1420a91e42c0bdb8ce.png",
+                  "id": 0
+                }
+              ],
+              "scale": {
+                "initial": 0.45
+              },
+              "rotate": {},
+              "translate": {
+                "offset": [12, 0]
+              },
+              "blur": {},
+              "opacity": {
+                "wrap": "clamp"
+              },
+              "id": 3,
+              "name": "030右边电线"
+            },
+            {
+              "resources": [
+                {
+                  "src": "assets/2026/04/2026-04-25-h00-t0/7df8b2e7038b224ce684694d05e55ac537534f97.png",
+                  "id": 0
+                }
+              ],
+              "scale": {
+                "initial": 0.45
+              },
+              "rotate": {},
+              "translate": {
+                "offset": [10, 5]
+              },
+              "blur": {},
+              "opacity": {
+                "wrap": "clamp"
+              },
+              "id": 4,
+              "name": "029山"
+            },
+            {
+              "resources": [
+                {
+                  "src": "assets/2026/04/2026-04-25-h00-t0/d3a3efde2411a0a79421ca9e7a7fa5ffa6a377e8.png",
+                  "id": 0
+                }
+              ],
+              "scale": {
+                "initial": 0.45
+              },
+              "rotate": {},
+              "translate": {
+                "offset": [14, 0]
+              },
+              "blur": {},
+              "opacity": {
+                "wrap": "clamp"
+              },
+              "id": 6,
+              "name": "027右边树丛"
+            },
+            {
+              "resources": [
+                {
+                  "src": "assets/2026/04/2026-04-25-h00-t0/d6f0810cff9d297fb5de5dcd474b1303cc8efc56.png",
+                  "id": 0
+                }
+              ],
+              "scale": {
+                "initial": 0.45
+              },
+              "rotate": {},
+              "translate": {
+                "offset": [16, 0]
+              },
+              "blur": {},
+              "opacity": {
+                "wrap": "clamp"
+              },
+              "id": 7,
+              "name": "026水塘"
+            },
+            {
+              "resources": [
+                {
+                  "src": "assets/2026/04/2026-04-25-h00-t0/e3442b0c6d5b098a0577ae9a52fe3f862e253457.png",
+                  "id": 0
+                }
+              ],
+              "scale": {
+                "initial": 0.45
+              },
+              "rotate": {},
+              "translate": {
+                "offset": [12, 2]
+              },
+              "blur": {},
+              "opacity": {
+                "wrap": "clamp"
+              },
+              "id": 8,
+              "name": "025尾巴"
+            },
+            {
+              "resources": [
+                {
+                  "src": "assets/2026/04/2026-04-25-h00-t0/b45d1213022a666a43a8a826a05ba449ca14f5ae.png",
+                  "id": 0
+                }
+              ],
+              "scale": {
+                "initial": 0.45
+              },
+              "rotate": {},
+              "translate": {
+                "offset": [13, 2]
+              },
+              "blur": {},
+              "opacity": {
+                "wrap": "clamp"
+              },
+              "id": 9,
+              "name": "024二节"
+            },
+            {
+              "resources": [
+                {
+                  "src": "assets/2026/04/2026-04-25-h00-t0/fe1d49a21d9715906fd580a09f5dab5a4d8762b9.png",
+                  "id": 0
+                }
+              ],
+              "scale": {
+                "initial": 0.45
+              },
+              "rotate": {},
+              "translate": {
+                "offset": [10, 2]
+              },
+              "blur": {},
+              "opacity": {
+                "wrap": "clamp"
+              },
+              "id": 10,
+              "name": "023一节"
+            },
+            {
+              "resources": [
+                {
+                  "src": "assets/2026/04/2026-04-25-h00-t0/aaed1e390b9cd7a7cf04da45cae135856b66df8f.png",
+                  "id": 0
+                }
+              ],
+              "scale": {
+                "initial": 0.45
+              },
+              "rotate": {},
+              "translate": {
+                "offset": [10, 0]
+              },
+              "blur": {},
+              "opacity": {
+                "wrap": "clamp"
+              },
+              "id": 11,
+              "name": "022石头"
+            },
+            {
+              "resources": [
+                {
+                  "src": "assets/2026/04/2026-04-25-h00-t0/2b343db84d1754f9ad69a761d1a0043be367b134.png",
+                  "id": 0
+                }
+              ],
+              "scale": {
+                "initial": 0.45
+              },
+              "rotate": {},
+              "translate": {
+                "offset": [8, 2]
+              },
+              "blur": {},
+              "opacity": {
+                "wrap": "clamp"
+              },
+              "id": 12,
+              "name": "021尾巴"
+            },
+            {
+              "resources": [
+                {
+                  "src": "assets/2026/04/2026-04-25-h00-t0/3a951ea0bd0b2d1c7972f06fd087efdeef037094.png",
+                  "id": 0
+                }
+              ],
+              "scale": {
+                "initial": 0.45
+              },
+              "rotate": {},
+              "translate": {
+                "offset": [10, 2]
+              },
+              "blur": {},
+              "opacity": {
+                "wrap": "clamp"
+              },
+              "id": 13,
+              "name": "020轨道"
+            },
+            {
+              "resources": [
+                {
+                  "src": "assets/2026/04/2026-04-25-h00-t0/ba7e7f012036d1249eca78ae542733e577e4f967.png",
+                  "id": 0
+                }
+              ],
+              "scale": {
+                "initial": 0.45,
+                "offset": -0.003
+              },
+              "rotate": {},
+              "translate": {
+                "offset": [10, 2]
+              },
+              "blur": {},
+              "opacity": {
+                "wrap": "clamp"
+              },
+              "id": 14,
+              "name": "019第四段"
+            },
+            {
+              "resources": [
+                {
+                  "src": "assets/2026/04/2026-04-25-h00-t0/9e3cce6670857a16e82e9d8ec4ce5fdf42eee0c7.png",
+                  "id": 0
+                }
+              ],
+              "scale": {
+                "initial": 0.45,
+                "offset": -0.003
+              },
+              "rotate": {},
+              "translate": {
+                "initial": [0, 5],
+                "offset": [10, -3]
+              },
+              "blur": {},
+              "opacity": {
+                "wrap": "clamp"
+              },
+              "id": 15,
+              "name": "018第三段"
+            },
+            {
+              "resources": [
+                {
+                  "src": "assets/2026/04/2026-04-25-h00-t0/e37c55a1af51dd92494a45beecce6ef2a9b53376.png",
+                  "id": 0
+                }
+              ],
+              "scale": {
+                "initial": 0.45,
+                "offset": 0.006
+              },
+              "rotate": {},
+              "translate": {
+                "offset": [0, -5]
+              },
+              "blur": {},
+              "opacity": {
+                "wrap": "clamp"
+              },
+              "id": 16,
+              "name": "017第二段"
+            },
+            {
+              "resources": [
+                {
+                  "src": "assets/2026/04/2026-04-25-h00-t0/047dbf50c727274d4ce3c661da05817849bf9ed5.png",
+                  "id": 0
+                }
+              ],
+              "scale": {
+                "initial": 0.45,
+                "offset": 0.01
+              },
+              "rotate": {},
+              "translate": {
+                "offset": [10, 0]
+              },
+              "blur": {},
+              "opacity": {
+                "wrap": "clamp"
+              },
+              "id": 17,
+              "name": "016最右模糊车厢"
+            },
+            {
+              "resources": [
+                {
+                  "src": "assets/2026/04/2026-04-25-h00-t0/16a4c20e2961a5b44ef84d93ddc52c99f7010098.png",
+                  "id": 0
+                }
+              ],
+              "scale": {
+                "initial": 0.45,
+                "offset": 0.02
+              },
+              "rotate": {},
+              "translate": {
+                "offset": [0, -5]
+              },
+              "blur": {},
+              "opacity": {
+                "wrap": "clamp"
+              },
+              "id": 18,
+              "name": "=015左侧风车"
+            },
+            {
+              "resources": [
+                {
+                  "src": "assets/2026/04/2026-04-25-h00-t0/e1854d407c84a2d3945c9a3be469088ad609f419.png",
+                  "id": 0
+                }
+              ],
+              "scale": {
+                "initial": 0.45,
+                "offset": 0.025
+              },
+              "rotate": {},
+              "translate": {
+                "offset": [3, 0]
+              },
+              "blur": {},
+              "opacity": {
+                "wrap": "clamp"
+              },
+              "id": 19,
+              "name": "014左侧远景"
+            },
+            {
+              "resources": [
+                {
+                  "src": "assets/2026/04/2026-04-25-h00-t0/297bf9dcb49425d3a82ace6344ee6e5c9ea5f024.png",
+                  "id": 0
+                }
+              ],
+              "scale": {},
+              "rotate": {},
+              "translate": {
+                "offset": [5, 5]
+              },
+              "blur": {},
+              "opacity": {
+                "wrap": "clamp"
+              },
+              "id": 20,
+              "name": "013左侧地皮"
+            },
+            {
+              "resources": [
+                {
+                  "src": "assets/2026/04/2026-04-25-h00-t0/7d88d35026b2ea610161b96140e5be87c9ccbcad.png",
+                  "id": 0
+                }
+              ],
+              "scale": {
+                "initial": 0.45
+              },
+              "rotate": {},
+              "translate": {
+                "offset": [-20, -20]
+              },
+              "blur": {},
+              "opacity": {
+                "wrap": "clamp"
+              },
+              "id": 21,
+              "name": "012左侧标志牌"
+            },
+            {
+              "resources": [
+                {
+                  "src": "assets/2026/04/2026-04-25-h00-t0/ff94ad93d5408a0c69d5193857233c42b1b10b41.png",
+                  "id": 0
+                }
+              ],
+              "scale": {
+                "initial": 0.45
+              },
+              "rotate": {},
+              "translate": {
+                "initial": [0, 10],
+                "offset": [5, 0]
+              },
+              "blur": {},
+              "opacity": {
+                "wrap": "clamp"
+              },
+              "id": 22,
+              "name": "011中景远树丛"
+            },
+            {
+              "resources": [
+                {
+                  "src": "assets/2026/04/2026-04-25-h00-t0/ad9c11a699e68a8359dff42510f50068ae044245.png",
+                  "id": 0
+                }
+              ],
+              "scale": {
+                "initial": 0.4306,
+                "offset": 0.03
+              },
+              "rotate": {},
+              "translate": {
+                "initial": [0, 15],
+                "offset": [-10, 0]
+              },
+              "blur": {},
+              "opacity": {
+                "wrap": "clamp"
+              },
+              "id": 23,
+              "name": "010左侧中景树丛"
+            },
+            {
+              "resources": [
+                {
+                  "src": "assets/2026/04/2026-04-25-h00-t0/039d4f612147dbc315d4d75f0662c2bd0747559c.png",
+                  "id": 0
+                }
+              ],
+              "scale": {
+                "initial": 0.45
+              },
+              "rotate": {},
+              "translate": {
+                "offset": [-15, 5]
+              },
+              "blur": {},
+              "opacity": {
+                "wrap": "clamp"
+              },
+              "id": 24,
+              "name": "009左侧中景地皮"
+            },
+            {
+              "resources": [
+                {
+                  "src": "assets/2026/04/2026-04-25-h00-t0/ebdf8eb6f2bbcf8f45e77e1b481ef955274451d5.png",
+                  "id": 0
+                }
+              ],
+              "scale": {
+                "initial": 0.45
+              },
+              "rotate": {},
+              "translate": {
+                "initial": [0, 5],
+                "offset": [-15, 8]
+              },
+              "blur": {},
+              "opacity": {
+                "wrap": "clamp"
+              },
+              "id": 25,
+              "name": "=008右侧中景地皮"
+            },
+            {
+              "resources": [
+                {
+                  "src": "assets/2026/04/2026-04-25-h00-t0/ef3ff7abf1330d4cfb4897390a08ca718c37dc76.png",
+                  "id": 0
+                }
+              ],
+              "scale": {
+                "initial": 0.45,
+                "offset": 0.03
+              },
+              "rotate": {},
+              "translate": {
+                "initial": [0, 25],
+                "offset": [20, 0]
+              },
+              "blur": {},
+              "opacity": {
+                "wrap": "clamp"
+              },
+              "id": 26,
+              "name": "007右边中景树"
+            },
+            {
+              "resources": [
+                {
+                  "src": "assets/2026/04/2026-04-25-h00-t0/457ee6eb3e494f6151342e13ff21f4241312f770.png",
+                  "id": 0
+                }
+              ],
+              "scale": {
+                "initial": 0.45
+              },
+              "rotate": {},
+              "translate": {
+                "initial": [0, 20],
+                "offset": [25, 8]
+              },
+              "blur": {},
+              "opacity": {
+                "wrap": "clamp"
+              },
+              "id": 27,
+              "name": "006右边高台"
+            },
+            {
+              "resources": [
+                {
+                  "src": "assets/2026/04/2026-04-25-h00-t0/b3a1001bc64e2a14f35fbb47d791993732f67367.png",
+                  "id": 0
+                }
+              ],
+              "scale": {
+                "initial": 0.45
+              },
+              "rotate": {},
+              "translate": {
+                "offset": [50, -6]
+              },
+              "blur": {},
+              "opacity": {
+                "wrap": "clamp"
+              },
+              "id": 28,
+              "name": "005右边桩子"
+            },
+            {
+              "resources": [
+                {
+                  "src": "assets/2026/04/2026-04-25-h00-t0/0099698cfeea68b59a323f7c1248df6a7485a045.png",
+                  "id": 0
+                }
+              ],
+              "scale": {
+                "initial": 0.45,
+                "offset": 0.2
+              },
+              "rotate": {
+                "offset": 10
+              },
+              "translate": {
+                "offset": [-150, 0]
+              },
+              "blur": {},
+              "opacity": {
+                "wrap": "clamp"
+              },
+              "id": 29,
+              "name": "004_33"
+            },
+            {
+              "resources": [
+                {
+                  "src": "assets/2026/04/2026-04-25-h00-t0/625a4870c6da681bcecddaeae52f7ce912a38ebd.png",
+                  "id": 0
+                }
+              ],
+              "scale": {
+                "initial": 0.45,
+                "offset": -0.1
+              },
+              "rotate": {
+                "offset": -10,
+                "offsetCurve": [
+                  0.6815000000000001, 0.02049999999999985, 0.995, 0.818
+                ]
+              },
+              "translate": {
+                "initial": [-600, 0],
+                "offset": [220, 0]
+              },
+              "blur": {},
+              "opacity": {
+                "wrap": "clamp"
+              },
+              "id": 30,
+              "name": "003_22"
+            },
+            {
+              "resources": [
+                {
+                  "src": "assets/2026/04/2026-04-25-h00-t0/cf47e267578fd0dc1bce63e5f8e204f02537bf25.png",
+                  "id": 0
+                }
+              ],
+              "scale": {
+                "initial": 0.45,
+                "offset": -0.05
+              },
+              "rotate": {},
+              "translate": {},
+              "blur": {},
+              "opacity": {
+                "wrap": "clamp"
+              },
+              "id": 31,
+              "name": "002左边前景树"
+            },
+            {
+              "resources": [
+                {
+                  "src": "assets/2026/04/2026-04-25-h00-t0/9e02ff62f84d5e53f416620caa18aa3f63a48a4c.png",
+                  "id": 0
+                }
+              ],
+              "scale": {
+                "initial": 0.5,
+                "offset": 0.06
+              },
+              "rotate": {},
+              "translate": {
+                "initial": [200, 0],
+                "offset": [120, 0]
+              },
+              "blur": {},
+              "opacity": {
+                "wrap": "clamp"
+              },
+              "id": 32,
+              "name": "001右边前景树"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "date": "2026-05-07",
+    "refs": [
+      {
+        "name": "「闪耀！优俊少女」二周年",
+        "id": "2026-05-07-h00-t0",
+        "tags": ["img"],
+        "tid": [0],
+        "config": {
+          "type": "simple-image",
+          "layer": {
+            "src": "assets/2026/05/2026-05-07-h00-t0/df8a6ce59ac78c16acf932abf1ec7f9b86fb34ba.png"
+          },
+          "logo": {
+            "src": "assets/2026/05/2026-05-07-h00-t0/3c4bae45f60b37ac1ec653818f35044a53cf045c.png"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "date": "2026-05-26",
+    "refs": [
+      {
+        "name": "「BanG Dream！」7周年 (预览)",
+        "id": "2026-05-26-h00-t0-preview",
+        "tags": ["img"],
+        "tid": [0],
+        "config": {
+          "type": "simple-image",
+          "layer": {
+            "src": "assets/2026/05/2026-05-26-h00-t0-preview/da28c221a5aab795802010dcc35f9fc3c5169134.png"
+          },
+          "logo": {
+            "src": "assets/2026/05/2026-05-26-h00-t0-preview/33f500ae12103a2841ba2e8cc3c2205830b70149.png"
+          }
+        }
+      },
+      {
+        "name": "「BanG Dream！」7周年",
+        "id": "2026-05-26-h00-t0",
+        "tags": ["video"],
+        "tid": [0],
+        "config": {
+          "type": "official_2021",
+          "layers": [
+            {
+              "id": 0,
+              "name": "图层0",
+              "resources": [
+                {
+                  "src": "assets/2026/05/2026-05-26-h00-t0/b271c357a55de0336c679dd4c4ebf28c52e39e44.webm",
+                  "id": 0
+                }
+              ]
+            }
+          ],
+          "logo": {
+            "src": "assets/2026/05/2026-05-26-h00-t0-preview/33f500ae12103a2841ba2e8cc3c2205830b70149.png"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "date": "2026-06-02",
+    "refs": [
+      {
+        "name": "「碧蓝航线」9周年生日快乐 (预览)",
+        "id": "2026-06-02-h00-t0-preview",
+        "tags": ["img"],
+        "tid": [0],
+        "config": {
+          "type": "simple-image",
+          "layer": {
+            "src": "assets/2026/06/2026-06-02-h00-t0-preview/dbda6fb4f3b1ca20540b9c079455ad18f37d9a70.png"
+          },
+          "logo": {
+            "src": "assets/2026/06/2026-06-02-h00-t0-preview/0caecadf1aaac0a89cda831922915dd959374614.png"
+          }
+        }
+      },
+      {
+        "name": "「碧蓝航线」9周年生日快乐",
+        "id": "2026-06-02-h00-t0",
+        "tags": ["video"],
+        "tid": [0],
+        "config": {
+          "type": "official_2021",
+          "layers": [
+            {
+              "id": 0,
+              "name": "图层0",
+              "resources": [
+                {
+                  "src": "assets/2026/06/2026-06-02-h00-t0/32e1f5dc9c80be45df34523df5e3f0d6d5434857.webm",
+                  "id": 0
+                }
+              ]
+            }
+          ],
+          "logo": {
+            "src": "assets/2026/06/2026-06-02-h00-t0-preview/0caecadf1aaac0a89cda831922915dd959374614.png"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "date": "2026-06-13",
+    "refs": [
+      {
+        "name": "「三谋」二周年 SLG世界杯开打",
+        "id": "2026-06-13-h00-t0",
+        "tags": ["img"],
+        "tid": [0],
+        "config": {
+          "type": "simple-image",
+          "layer": {
+            "src": "assets/2026/06/2026-06-13-h00-t0/bb535649e0d0212ba2e8c1d8b66e509e9d35f0a2.png"
+          },
+          "logo": {
+            "src": "assets/2026/06/2026-06-13-h00-t0/507000931c9933813946925d60a2480b9c7ef15f.png"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "date": "2026-06-22",
+    "refs": [
+      {
+        "name": "B站17周年庆，共赴B站生日会",
+        "id": "2026-06-22-h22-t0",
+        "tags": ["img"],
+        "tid": [0],
+        "config": {
+          "type": "simple-image",
+          "layer": {
+            "src": "assets/2026/06/2026-06-22-h22-t0/04abbf986dfde6e6b26c43457e96fd04b905c1ab.png"
+          },
+          "logo": {
+            "src": "assets/2026/06/2026-06-22-h22-t0/f7f80ffd6c7d96c6c8bb9ad7f2e6ea71cf16622c.png"
+          },
+          "link": "https://www.bilibili.com/anniversary-17"
+        }
+      }
+    ]
+  },
+  {
+    "date": "2026-06-22",
+    "refs": [
+      {
+        "name": "人生漫游电台",
+        "id": "2026-06-22-h22-t1003",
+        "tags": ["img"],
+        "tid": [1003],
+        "config": {
+          "type": "simple-image",
+          "layer": {
+            "src": "assets/2026/06/2026-06-22-h22-t1003/c63a1d42c322dba1f033a9b5187b6fb71cabb9da.jpg"
+          },
+          "logo": {
+            "src": "assets/2026/06/2026-06-22-h22-t1003/0daf3e6e5588590acf175cb4df1b0dbfeb31dd0d.png"
+          },
+          "link": "https://www.bilibili.com/blackboard/era/Pgmg7DJPcQLlHGek.html"
+        }
+      }
+    ]
+  },
+  {
+    "date": "2026-06-22",
+    "refs": [
+      {
+        "name": "一起来跳BDF2026主题曲！",
+        "id": "2026-06-22-h22-t1004",
+        "tags": ["img"],
+        "tid": [1004],
+        "config": {
+          "type": "simple-image",
+          "layer": {
+            "src": "assets/2026/06/2026-06-22-h22-t1004/71bc65152ea86240b697306601cae67641592d43.jpg"
+          },
+          "logo": {
+            "src": "assets/2026/06/2026-06-22-h22-t1004/c873dafb5aefc7c59b3a28fea4d3f2c790bd20d6.png"
+          },
+          "link": "https://www.bilibili.com/blackboard/era/jmh0LulcNCUOUyxi.html"
+        }
+      }
+    ]
+  },
+  {
+    "date": "2026-06-22",
+    "refs": [
+      {
+        "name": "谁是下一个鬼畜新星？",
+        "id": "2026-06-22-h22-t1007",
+        "tags": ["img"],
+        "tid": [1007],
+        "config": {
+          "type": "simple-image",
+          "layer": {
+            "src": "assets/2026/06/2026-06-22-h22-t1007/4e6f5b5ae9659a72fe91d490d424a65cbe25baee.png"
+          },
+          "logo": {
+            "src": "assets/2026/06/2026-06-22-h22-t1007/ccd1cfeb074ead7d9ba70a0d37e44474f8784e9e.png"
+          },
+          "link": "https://www.bilibili.com/blackboard/era/4JPpRDJEOpf4JPog.html"
+        }
+      }
+    ]
+  },
+  {
+    "date": "2026-06-22",
+    "refs": [
+      {
+        "name": "高考季",
+        "id": "2026-06-22-h22-t1010",
+        "tags": ["img"],
+        "tid": [1010],
+        "config": {
+          "type": "simple-image",
+          "layer": {
+            "src": "assets/2026/06/2026-06-22-h22-t1010/562bfd1a58c4613748d3a304c87234f04bdb870d.png"
+          },
+          "logo": {
+            "src": "assets/2026/06/2026-06-22-h22-t1010/6fa5143cf811d02f0e84c65b538a360fdf98ba12.png"
+          },
+          "link": "https://www.bilibili.com/blackboard/era/bkW0rNd9znQuejB0.html"
+        }
+      }
+    ]
+  },
+  {
+    "date": "2026-06-22",
+    "refs": [
+      {
+        "name": "公开做产品，观众即用户！",
+        "id": "2026-06-22-h22-t1011",
+        "tags": ["img"],
+        "tid": [1011],
+        "config": {
+          "type": "simple-image",
+          "layer": {
+            "src": "assets/2026/06/2026-06-22-h22-t1011/e969e2ad8b7585c75212cf91f956faeaf3c232b5.png"
+          },
+          "logo": {
+            "src": "assets/2026/06/2026-06-22-h22-t1011/4da39d02f0b87df6ec98dbd0a036e718371fc4eb.png"
+          },
+          "link": "https://www.bilibili.com/blackboard/era/Vf5kaXL0HnJyfqIG.html"
+        }
+      }
+    ]
+  },
+  {
+    "date": "2026-06-22",
+    "refs": [
+      {
+        "name": "世界杯",
+        "id": "2026-06-22-h22-t1018",
+        "tags": ["img"],
+        "tid": [1018],
+        "config": {
+          "type": "simple-image",
+          "layer": {
+            "src": "assets/2026/06/2026-06-22-h22-t1018/27f0bfdfca27cf64c543be18ee6bcb823d821596.png"
+          },
+          "logo": {
+            "src": "assets/2026/06/2026-06-22-h22-t1018/e01259a60a14e18d66f5cbfd91e32a87597e5fc2.png"
+          },
+          "link": "https://b23.tv/dnNL9Lz"
+        }
+      }
+    ]
+  },
+  {
+    "date": "2026-06-22",
+    "refs": [
+      {
+        "name": "风味美食图鉴",
+        "id": "2026-06-22-h22-t1020",
+        "tags": ["img"],
+        "tid": [1020],
+        "config": {
+          "type": "simple-image",
+          "layer": {
+            "src": "assets/2026/06/2026-06-22-h22-t1020/b2f7fa3d09367143a44e83e5b39ff8854dc3ad39.png"
+          },
+          "logo": {
+            "src": "assets/2026/06/2026-06-22-h22-t1020/151daffacebe2d5a41a98dea119bbfd7ba4c9b36.png"
+          },
+          "link": "https://www.bilibili.com/blackboard/era/sxMy9KTwKu34B3Jz.html"
+        }
+      }
+    ]
+  },
+  {
+    "date": "2026-06-22",
+    "refs": [
+      {
+        "name": "毛茸茸的聚会",
+        "id": "2026-06-22-h22-t1024",
+        "tags": ["img"],
+        "tid": [1024],
+        "config": {
+          "type": "simple-image",
+          "layer": {
+            "src": "assets/2026/06/2026-06-22-h22-t1024/4f499fe8ad770fb8b05808d9e96387c35fd91269.png"
+          },
+          "logo": {
+            "src": "assets/2026/06/2026-06-22-h22-t1024/d549fa66e91ef1ca01086f6f92fdd254ea940480.png"
+          },
+          "link": "https://www.bilibili.com/blackboard/era/0iMNrNjqKHfWPCZ4.html"
+        }
+      }
+    ]
+  },
+  {
+    "date": "2026-06-22",
+    "refs": [
+      {
+        "name": "健康新知计划",
+        "id": "2026-06-22-h22-t1026",
+        "tags": ["img"],
+        "tid": [1026],
+        "config": {
+          "type": "simple-image",
+          "layer": {
+            "src": "assets/2026/06/2026-06-22-h22-t1026/0c9634bd53e9b223c97c04fe8b7b18be50b6ccac.png"
+          },
+          "logo": {
+            "src": "assets/2026/06/2026-06-22-h22-t1026/fb2cb3aa86ff240ba2de6d646d803a42370c7877.png"
+          },
+          "link": "https://www.bilibili.com/blackboard/era/2026yixueshengH5.html?auto_media_playback=1"
+        }
+      }
+    ]
+  },
+  {
+    "date": "2026-06-23",
+    "refs": [
+      {
+        "name": "HOPICOx萧敬腾 对谈50分",
+        "id": "2026-06-23-h18-t1003",
+        "tags": ["img"],
+        "tid": [1003],
+        "config": {
+          "type": "simple-image",
+          "layer": {
+            "src": "assets/2026/06/2026-06-23-h18-t1003/15c0c99c7292395db7fc03c3fd15ccff0d019ed2.jpg"
+          },
+          "logo": {
+            "src": "assets/2026/06/2026-06-23-h18-t1003/0daf3e6e5588590acf175cb4df1b0dbfeb31dd0d.png"
+          },
+          "link": "https://www.bilibili.com/video/BV1kGjt6dECk"
+        }
+      }
+    ]
+  },
+  {
+    "date": "2026-06-24",
+    "refs": [
+      {
+        "name": "我的创作由此生长！",
+        "id": "2026-06-24-h22-t1003",
+        "tags": ["img"],
+        "tid": [1003],
+        "config": {
+          "type": "simple-image",
+          "layer": {
+            "src": "assets/2026/06/2026-06-24-h22-t1003/13ffa886c9c3a6a860088f212906962a7792ebf6.jpg"
+          },
+          "logo": {
+            "src": "assets/2026/06/2026-06-24-h22-t1003/0daf3e6e5588590acf175cb4df1b0dbfeb31dd0d.png"
+          },
+          "link": "https://www.bilibili.com/blackboard/era/vVUqPCxQdC8wag7t.html"
+        }
+      }
+    ]
+  },
+  {
+    "date": "2026-06-26",
+    "refs": [
+      {
+        "name": "一键直达17周年庆全程回顾！",
+        "id": "2026-06-26-h21-t0",
+        "tags": ["img"],
+        "tid": [0],
+        "config": {
+          "type": "simple-image",
+          "layer": {
+            "src": "assets/2026/06/2026-06-26-h21-t0/714163819de42a61aa6abaa2b51a4ff7848e07de.png"
+          },
+          "logo": {
+            "src": "assets/2026/06/2026-06-26-h21-t0/f7f80ffd6c7d96c6c8bb9ad7f2e6ea71cf16622c.png"
+          },
+          "link": "https://www.bilibili.com/anniversary-17"
+        }
+      }
+    ]
+  },
+  {
+    "date": "2026-07-04",
+    "refs": [
+      {
+        "name": "BDF2026总决赛情报来袭！",
+        "id": "2026-07-04-h17-t1004",
+        "tags": ["img"],
+        "tid": [1004],
+        "config": {
+          "type": "simple-image",
+          "layer": {
+            "src": "assets/2026/07/2026-07-04-h17-t1004/fcfd29a3a63187b767313b731c03f808db07640e.jpg"
+          },
+          "logo": {
+            "src": "assets/2026/07/2026-07-04-h17-t1004/72ab2e5a1fda19c4ac1109f4b3a99e814c87b573.png"
+          },
+          "link": "https://www.bilibili.com/blackboard/era/kmcsPAKhxYdrbNRX.html?spm_id_from=333.40138.0.0"
+        }
+      }
+    ]
+  },
+  {
+    "date": "2026-07-04",
+    "refs": [
+      {
+        "name": "7月新番安利",
+        "id": "2026-07-04-h17-t1005",
+        "tags": ["img"],
+        "tid": [1005],
+        "config": {
+          "type": "simple-image",
+          "layer": {
+            "src": "assets/2026/07/2026-07-04-h17-t1005/a6c7aabbecc49c51d1a25e04a901cc8555300b1d.png"
+          },
+          "logo": {
+            "src": "assets/2026/07/2026-07-04-h17-t1005/72ab2e5a1fda19c4ac1109f4b3a99e814c87b573.png"
+          },
+          "link": "https://www.bilibili.com/blackboard/era/XqgZwqLXmQXtn4UZ.html"
+        }
+      }
+    ]
+  },
+  {
+    "date": "2026-07-04",
+    "refs": [
+      {
+        "name": "守望先锋xYOASOBI联动MV",
+        "id": "2026-07-04-h17-t1008",
+        "tags": ["img"],
+        "tid": [1008],
+        "config": {
+          "type": "simple-image",
+          "layer": {
+            "src": "assets/2026/07/2026-07-04-h17-t1008/8efb97ba55e18f3b3109288e155728f815b54500.png"
+          },
+          "logo": {
+            "src": "assets/2026/07/2026-07-04-h17-t1008/71bb581f81d108ac34077dafc745a0c20de6df6b.png"
+          },
+          "link": "https://www.bilibili.com/video/BV1QBT76REt1/"
+        }
+      }
+    ]
+  },
+  {
+    "date": "2026-07-04",
+    "refs": [
+      {
+        "name": "毛茸茸的夏天",
+        "id": "2026-07-04-h17-t1024",
+        "tags": ["img"],
+        "tid": [1024],
+        "config": {
+          "type": "simple-image",
+          "layer": {
+            "src": "assets/2026/07/2026-07-04-h17-t1024/6325ed3207bcc6ba864ddc3e93098bacbf6e84a7.png"
+          },
+          "logo": {
+            "src": "assets/2026/07/2026-07-04-h17-t1024/028a816c04c800bc6e8ac18006c9ba49b36b3846.png"
+          },
+          "link": "https://www.bilibili.com/blackboard/era/TZYCqkgoF9zIlrNs.html"
+        }
+      }
+    ]
+  },
+  {
+    "date": "2026-07-06",
+    "refs": [
+      {
+        "name": "原创动画短片大赛征稿",
+        "id": "2026-07-06-h16-t1005",
+        "tags": ["img"],
+        "tid": [1005],
+        "config": {
+          "type": "simple-image",
+          "layer": {
+            "src": "assets/2026/07/2026-07-06-h16-t1005/6feb356315744ff7a4c1673bc4a5143b71803f00.png"
+          },
+          "logo": {
+            "src": "assets/2026/07/2026-07-06-h16-t1005/f7f80ffd6c7d96c6c8bb9ad7f2e6ea71cf16622c.png"
+          },
+          "link": "https://www.bilibili.com/blackboard/era/wa56glhYw86zKrSr.html"
+        }
+      }
+    ]
+  },
+  {
+    "date": "2026-07-06",
+    "refs": [
+      {
+        "name": "最爆的IGL大会来了！",
+        "id": "2026-07-06-h16-t1008",
+        "tags": ["img"],
+        "tid": [1008],
+        "config": {
+          "type": "simple-image",
+          "layer": {
+            "src": "assets/2026/07/2026-07-06-h16-t1008/dfb0cf2bd9747304d07ecb2bc5d40df896bd9b24.png"
+          },
+          "logo": {
+            "src": "assets/2026/07/2026-07-06-h16-t1008/6820a20d2033f786aaf3d4a069cda5c74f8b9922.png"
+          },
+          "link": "https://www.bilibili.com/video/BV111Tm6aERp"
+        }
+      }
+    ]
+  },
+  {
+    "date": "2026-07-09",
+    "refs": [
+      {
+        "name": "小黄人B站大闯关！",
+        "id": "2026-07-09-h17-t1001",
+        "tags": ["img"],
+        "tid": [1001, 1002],
+        "config": {
+          "type": "simple-image",
+          "layer": {
+            "src": "assets/2026/07/2026-07-09-h17-t1001/c289eb9f0da6377c8e5b4c56155871f9ef5ac581.png"
+          },
+          "logo": {
+            "src": "assets/2026/07/2026-07-09-h17-t1001/f7f80ffd6c7d96c6c8bb9ad7f2e6ea71cf16622c.png"
+          },
+          "link": "https://www.bilibili.com/video/BV1NQMG6vEPB"
+        }
+      }
+    ]
+  },
+  {
+    "date": "2026-07-09",
+    "refs": [
+      {
+        "name": "「遗忘之海」公测",
+        "id": "2026-07-09-h17-t1008",
+        "tags": ["img"],
+        "tid": [1008],
+        "config": {
+          "type": "simple-image",
+          "layer": {
+            "src": "assets/2026/07/2026-07-09-h17-t1008/7d6e4af42c98d5c2318dea5ba5bd086225aef0a0.png"
+          },
+          "logo": {
+            "src": "assets/2026/07/2026-07-09-h17-t1008/6820a20d2033f786aaf3d4a069cda5c74f8b9922.png"
+          },
+          "link": "https://www.bilibili.com/blackboard/era/y3MSoNbC1PxzvZ5p.html"
+        }
+      }
+    ]
+  },
+  {
+    "date": "2026-07-11",
+    "refs": [
+      {
+        "name": "第五人格坠入盛夏",
+        "id": "2026-07-11-h18-t1008",
+        "tags": ["img"],
+        "tid": [1008],
+        "config": {
+          "type": "simple-image",
+          "layer": {
+            "src": "assets/2026/07/2026-07-11-h18-t1008/8d40a75a7c7f0683e8fdbc0f49a861d5dd457503.jpg"
+          },
+          "logo": {
+            "src": "assets/2026/07/2026-07-11-h18-t1008/6820a20d2033f786aaf3d4a069cda5c74f8b9922.png"
+          },
+          "link": "https://live.bilibili.com/blackboard/era/ns4UlqpsHTFbDFSw.html"
+        }
+      }
+    ]
+  },
+  {
+    "date": "2026-07-12",
+    "refs": [
+      {
+        "name": "领火影手游新称号！",
+        "id": "2026-07-12-h18-t1008",
+        "tags": ["img"],
+        "tid": [1008],
+        "config": {
+          "type": "simple-image",
+          "layer": {
+            "src": "assets/2026/07/2026-07-12-h18-t1008/f3ef4767d7aa6154bc9b134968c1a1a5be826a60.jpg"
+          },
+          "logo": {
+            "src": "assets/2026/07/2026-07-12-h18-t1008/6820a20d2033f786aaf3d4a069cda5c74f8b9922.png"
+          },
+          "link": "https://www.bilibili.com/blackboard/era/liC1QI0JAoR54The.html"
+        }
+      }
+    ]
+  },
+  {
+    "date": "2026-07-16",
+    "refs": [
+      {
+        "name": "「明日方舟」应援",
+        "id": "2026-07-16-h19-t1008",
+        "tags": ["img"],
+        "tid": [1008],
+        "config": {
+          "type": "simple-image",
+          "layer": {
+            "src": "assets/2026/07/2026-07-16-h19-t1008/61d863702f3640d72cd9f4ab6a88eb0a20cc5120.png"
+          },
+          "logo": {
+            "src": "assets/2026/07/2026-07-16-h19-t1008/6820a20d2033f786aaf3d4a069cda5c74f8b9922.png"
+          },
+          "link": "https://www.bilibili.com/blackboard/era/yuePLWFvPNzmgyOv.html"
+        }
+      }
+    ]
+  },
+  {
+    "date": "2026-07-17",
+    "refs": [
+      {
+        "name": "带着音乐，跨越山海",
+        "id": "2026-07-17-h19-t1003",
+        "tags": ["img"],
+        "tid": [1003],
+        "config": {
+          "type": "simple-image",
+          "layer": {
+            "src": "assets/2026/07/2026-07-17-h19-t1003/9b8e1a4f4e11ff08c2e1db1ddee17755e87207ca.png"
+          },
+          "logo": {
+            "src": "assets/2026/07/2026-07-17-h19-t1003/0daf3e6e5588590acf175cb4df1b0dbfeb31dd0d.png"
+          },
+          "link": "https://www.bilibili.com/blackboard/era/ahsb9oVa3CzD2dr3.html"
+        }
+      }
+    ]
+  },
+  {
+    "date": "2026-07-17",
+    "refs": [
+      {
+        "name": "无畏契约三周年嘉年华！",
+        "id": "2026-07-17-h19-t1008",
+        "tags": ["img"],
+        "tid": [1008],
+        "config": {
+          "type": "simple-image",
+          "layer": {
+            "src": "assets/2026/07/2026-07-17-h19-t1008/7bb89461ffe4c6ae2df30f0682f11be73b96924c.jpg"
+          },
+          "logo": {
+            "src": "assets/2026/07/2026-07-17-h19-t1008/6820a20d2033f786aaf3d4a069cda5c74f8b9922.png"
+          },
+          "link": "https://www.bilibili.com/blackboard/era/05K9E4cx9r5XSmcr.html"
+        }
+      }
+    ]
+  },
+  {
+    "date": "2026-07-20",
+    "refs": [
+      {
+        "name": "次元论战S3",
+        "id": "2026-07-20-h01-t1005",
+        "tags": ["img"],
+        "tid": [1005],
+        "config": {
+          "type": "simple-image",
+          "layer": {
+            "src": "assets/2026/07/2026-07-20-h01-t1005/7d3013f7a3829ab915105d9ff6139c9783b0c609.jpg"
+          },
+          "logo": {
+            "src": "assets/2026/07/2026-07-20-h01-t1005/ccd1cfeb074ead7d9ba70a0d37e44474f8784e9e.png"
+          },
+          "link": "https://www.bilibili.com/blackboard/era/ACGRoundtableS3.html"
+        }
+      }
+    ]
+  },
+  {
+    "date": "2026-07-20",
+    "refs": [
+      {
+        "name": "「明日方舟」音律联觉",
+        "id": "2026-07-20-h01-t1008",
+        "tags": ["img"],
+        "tid": [1008],
+        "config": {
+          "type": "simple-image",
+          "layer": {
+            "src": "assets/2026/07/2026-07-20-h01-t1008/12a3e781051a5bf71030db34555adf65037425b9.png"
+          },
+          "logo": {
+            "src": "assets/2026/07/2026-07-20-h01-t1008/6820a20d2033f786aaf3d4a069cda5c74f8b9922.png"
+          },
+          "link": "https://www.bilibili.com/blackboard/era/Y6fOh6a87xwYJZ0K.html"
+        }
+      }
+    ]
+  },
+  {
+    "date": "2026-07-22",
+    "refs": [
+      {
+        "name": "「蜘蛛侠」系列上线",
+        "id": "2026-07-22-h23-t1001",
+        "tags": ["img"],
+        "tid": [1001, 1002],
+        "config": {
+          "type": "simple-image",
+          "layer": {
+            "src": "assets/2026/07/2026-07-22-h23-t1001/858f2e19d72b71c9edb0ca370184495f959c100f.png"
+          },
+          "logo": {
+            "src": "assets/2026/07/2026-07-22-h23-t1001/c0752128be712552012f3b69509b2c116f8758d2.png"
+          },
+          "link": "https://www.bilibili.com/video/BV11ZKm68ENY"
+        }
+      }
+    ]
+  },
+  {
+    "date": "2026-07-23",
+    "refs": [
+      {
+        "name": "BILIBILI MOE",
+        "id": "2026-07-23-h23-t0",
+        "tags": ["img"],
+        "tid": [0],
+        "config": {
+          "type": "simple-image",
+          "layer": {
+            "src": "assets/2026/07/2026-07-23-h23-t0/1530052585e030294e42593ea5dd04239ce5dbd4.png"
+          },
+          "logo": {
+            "src": "assets/2026/07/2026-07-23-h23-t0/eb295dffc5a6bc4fc448c219a2029a95279b0f77.png"
+          },
+          "link": "https://www.bilibili.com/blackboard/era/DlHMVdW6zibHXrrl.html?spm_id_from=333.337.0.0"
+        }
+      }
+    ]
+  },
+  {
+    "date": "2026-07-25",
+    "refs": [
+      {
+        "name": "洛神杯S2",
+        "id": "2026-07-25-h18-t1008",
+        "tags": ["img"],
+        "tid": [1008],
+        "config": {
+          "type": "simple-image",
+          "layer": {
+            "src": "assets/2026/07/2026-07-25-h18-t1008/f93ec1963cc092884222a06247061704e259daf7.png"
+          },
+          "logo": {
+            "src": "assets/2026/07/2026-07-25-h18-t1008/6820a20d2033f786aaf3d4a069cda5c74f8b9922.png"
+          },
+          "link": "https://live.bilibili.com/blackboard/era/W21cCB6KFrvXyJJc.html"
+        }
+      }
+    ]
+  },
+  {
+    "date": "2026-07-29",
+    "refs": [
+      {
+        "name": "「FGO」10周年 (预览)",
+        "id": "2026-07-29-h09-t0-preview",
+        "tags": ["img"],
+        "tid": [0],
+        "config": {
+          "type": "simple-image",
+          "layer": {
+            "src": "assets/2026/07/2026-07-29-h09-t0-preview/7ce824f3f86dc415ca90b80ecefadb6b29f35be3.png"
+          },
+          "logo": {
+            "src": "assets/2026/07/2026-07-29-h09-t0-preview/0caecadf1aaac0a89cda831922915dd959374614.png"
+          },
+          "link": "https://b23.tv/mcgfdK1"
+        }
+      },
+      {
+        "name": "「FGO」10周年",
+        "id": "2026-07-29-h09-t0",
+        "tags": ["video"],
+        "tid": [0],
+        "config": {
+          "type": "official_2021",
+          "layers": [
+            {
+              "id": 0,
+              "name": "图层0",
+              "resources": [
+                {
+                  "src": "assets/2026/07/2026-07-29-h09-t0/3b7ccefac05e079e622a498586dcd232b2c1a537.mp4",
+                  "id": 0
+                }
+              ]
+            }
+          ],
+          "logo": {
+            "src": "assets/2026/07/2026-07-29-h09-t0-preview/0caecadf1aaac0a89cda831922915dd959374614.png"
+          },
+          "link": "https://b23.tv/mcgfdK1"
+        }
+      }
+    ]
+  },
+  {
+    "date": "2026-07-30",
+    "refs": [
+      {
+        "name": "蛛联B合！蜘蛛侠B站独家企划",
+        "id": "2026-07-30-h12-t1001",
+        "tags": ["img"],
+        "tid": [1001, 1002],
+        "config": {
+          "type": "simple-image",
+          "layer": {
+            "src": "assets/2026/07/2026-07-30-h12-t1001/03b913ee20845dd1397ec3a2280cf9c15226f7fd.jpg"
+          },
+          "logo": {
+            "src": "assets/2026/07/2026-07-30-h12-t1001/8eb87643ebce81ee0ac0e6ddbb1f7a8c0d0b08a4.png"
+          },
+          "link": "https://www.bilibili.com/blackboard/era/j0SH6auhiHvQnTGG.html"
+        }
+      }
+    ]
+  },
+  {
+    "date": "2026-07-30",
+    "refs": [
+      {
+        "name": "「绝区零」生日会",
+        "id": "2026-07-30-h21-t1008",
+        "tags": ["img"],
+        "tid": [1008],
+        "config": {
+          "type": "simple-image",
+          "layer": {
+            "src": "assets/2026/07/2026-07-30-h21-t1008/bb846859d58b9f4b173969453f2c8f087dc54f71.png"
+          },
+          "logo": {
+            "src": "assets/2026/07/2026-07-30-h21-t1008/6820a20d2033f786aaf3d4a069cda5c74f8b9922.png"
+          },
+          "link": "https://www.bilibili.com/festival/zzz2026birthday"
+        }
+      }
+    ]
+  },
+  {
+    "date": "2026-07-30",
+    "refs": [
+      {
+        "name": "BILIBILI深潜计划",
+        "id": "2026-07-30-h10-t1010",
+        "tags": ["img"],
+        "tid": [1010],
+        "config": {
+          "type": "simple-image",
+          "layer": {
+            "src": "assets/2026/07/2026-07-30-h10-t1010/3fd41522963bb61fb680638aae9722a2b3c0f833.png"
+          },
+          "logo": {
+            "src": "assets/2026/07/2026-07-30-h10-t1010/3400be774a8901b0704627c9bcd8d5caf838e512.png"
+          },
+          "link": "https://www.bilibili.com/blackboard/era/fRZPozg92eCKVc8c.html?spm_id_from=333.337.0.0&spm_id_from=333.1368.0.0"
+        }
+      }
+    ]
+  },
+  {
+    "date": "2026-08-01",
+    "refs": [
+      {
+        "name": "8月动画种草激励",
+        "id": "2026-08-01-h00-t1005",
+        "tags": ["img"],
+        "tid": [1005],
+        "config": {
+          "type": "simple-image",
+          "layer": {
+            "src": "assets/2026/08/2026-08-01-h00-t1005/f66cfcc6b5925c6d24be5721e8797216736e8163.png"
+          },
+          "logo": {
+            "src": "assets/2026/08/2026-08-01-h00-t1005/ca7c963c836c91df01d3f41ef170d6e5e934eafe.png"
+          },
+          "link": "https://www.bilibili.com/blackboard/era/Tv6iIrNaoPLs0lVi.html"
+        }
+      }
+    ]
+  },
+  {
+    "date": "2026-08-03",
+    "refs": [
+      {
+        "name": "联盟回档计划",
+        "id": "2026-08-03-h11-t1008",
+        "tags": ["img"],
+        "tid": [1008],
+        "config": {
+          "type": "simple-image",
+          "layer": {
+            "src": "assets/2026/08/2026-08-03-h11-t1008/e6ed1c0922ce0554b78c6efe8b90eca06209cc62.jpg"
+          },
+          "logo": {
+            "src": "assets/2026/08/2026-08-03-h11-t1008/6820a20d2033f786aaf3d4a069cda5c74f8b9922.png"
+          },
+          "link": "https://www.bilibili.com/blackboard/era/cRBDDkziJXnL52LR.html?spm_id_from=333.40138.0.0"
+        }
+      }
+    ]
+  },
+  {
+    "date": "2026-08-03",
+    "refs": [
+      {
+        "name": "2026 KPL夏季赛",
+        "id": "2026-08-03-h16-t1008",
+        "tags": ["img"],
+        "tid": [1008],
+        "config": {
+          "type": "simple-image",
+          "layer": {
+            "src": "assets/2026/08/2026-08-03-h16-t1008/cbb21def8586c048d5c1174b0db9f3aa54f244cd.png"
+          },
+          "logo": {
+            "src": "assets/2026/08/2026-08-03-h16-t1008/6820a20d2033f786aaf3d4a069cda5c74f8b9922.png"
+          },
+          "link": "https://live.bilibili.com/21144080"
+        }
+      }
+    ]
+  },
+  {
+    "date": "2026-08-04",
+    "refs": [
+      {
+        "name": "法律人的夏天！",
+        "id": "2026-08-04-h17-t1010",
+        "tags": ["img"],
+        "tid": [1010],
+        "config": {
+          "type": "simple-image",
+          "layer": {
+            "src": "assets/2026/08/2026-08-04-h17-t1010/917fdd038cd6d665b124b224c81a67ace8e2c3ea.png"
+          },
+          "logo": {
+            "src": "assets/2026/08/2026-08-04-h17-t1010/6fa5143cf811d02f0e84c65b538a360fdf98ba12.png"
+          },
+          "link": "https://www.bilibili.com/blackboard/era/zWsD3ZK5wLg9bJxm.html"
+        }
+      }
+    ]
+  },
+  {
+    "date": "2026-08-05",
+    "refs": [
+      {
+        "name": "三角洲行动烽火职业联赛",
+        "id": "2026-08-05-h16-t1008",
+        "tags": ["img"],
+        "tid": [1008],
+        "config": {
+          "type": "simple-image",
+          "layer": {
+            "src": "assets/2026/08/2026-08-05-h16-t1008/5c75afecdcade6661cd820f350be600c56351aa7.jpg"
+          },
+          "logo": {
+            "src": "assets/2026/08/2026-08-05-h16-t1008/71bb581f81d108ac34077dafc745a0c20de6df6b.png"
+          },
+          "link": "https://live.bilibili.com/1921272912"
+        }
+      }
+    ]
+  },
+  {
+    "date": "2026-08-05",
+    "refs": [
+      {
+        "name": "医万种可能",
+        "id": "2026-08-05-h14-t1026",
+        "tags": ["img"],
+        "tid": [1026],
+        "config": {
+          "type": "simple-image",
+          "layer": {
+            "src": "assets/2026/08/2026-08-05-h14-t1026/7a31254392a984043326bcad25c50a0e5e06b8ff.png"
+          },
+          "logo": {
+            "src": "assets/2026/08/2026-08-05-h14-t1026/88978bde7b50f9acfd71f78c554ad8a1dc98e0a5.png"
+          },
+          "link": "https://www.bilibili.com/blackboard/era/2026yishijie819H5.html?auto_media_playback=1"
+        }
+      }
+    ]
+  },
+  {
+    "date": "2026-08-07",
+    "refs": [
+      {
+        "name": "「绷得住挑战」",
+        "id": "2026-08-07-h15-t1008",
+        "tags": ["img"],
+        "tid": [1008],
+        "config": {
+          "type": "simple-image",
+          "layer": {
+            "src": "assets/2026/08/2026-08-07-h15-t1008/768f52e4bb2f8d06eb5c44024854ad05ea510a64.jpg"
+          },
+          "logo": {
+            "src": "assets/2026/08/2026-08-07-h15-t1008/6820a20d2033f786aaf3d4a069cda5c74f8b9922.png"
+          },
+          "link": "https://www.bilibili.com/video/BV1yCuW6YEJy"
+        }
+      }
+    ]
+  },
+  {
+    "date": "2026-08-08",
+    "refs": [
+      {
+        "name": "鬼畜星探企划",
+        "id": "2026-08-08-h13-t1007",
+        "tags": ["img"],
+        "tid": [1007],
+        "config": {
+          "type": "simple-image",
+          "layer": {
+            "src": "assets/2026/08/2026-08-08-h13-t1007/4b3232c45427f321ab4d2d5babcfcb7abff6ae56.jpg"
+          },
+          "logo": {
+            "src": "assets/2026/08/2026-08-08-h13-t1007/ca7c963c836c91df01d3f41ef170d6e5e934eafe.png"
+          },
+          "link": "https://www.bilibili.com/blackboard/era/QfvReNKc06PXTwL4.html"
+        }
+      }
+    ]
+  },
+  {
+    "date": "2026-08-14",
+    "refs": [
+      {
+        "name": "UP主对话《去你的岛》导演",
+        "id": "2026-08-14-h22-t1001",
+        "tags": ["img"],
+        "tid": [1001],
+        "config": {
+          "type": "simple-image",
+          "layer": {
+            "src": "assets/2026/08/2026-08-14-h22-t1001/942f907dc6fb330d65bb97c868f5da152151c61f.png"
+          },
+          "logo": {
+            "src": "assets/2026/08/2026-08-14-h22-t1001/cc7076d2639f877181621311ded1d425d29a89bd.png"
+          },
+          "link": "https://www.bilibili.com/video/BV12MgP6SE2T"
+        }
+      }
+    ]
+  },
+  {
+    "date": "2026-08-15",
+    "refs": [
+      {
+        "name": "管泽元×“华纳总裁”BA",
+        "id": "2026-08-15-h18-t1001",
+        "tags": ["img"],
+        "tid": [1001],
+        "config": {
+          "type": "simple-image",
+          "layer": {
+            "src": "assets/2026/08/2026-08-15-h18-t1001/2eaf93ad4d0a1124bb3a7026815c944d8644ef13.jpg"
+          },
+          "logo": {
+            "src": "assets/2026/08/2026-08-15-h18-t1001/95aaa05e22b579d315f340e1e6570c91fe9f3fe6.png"
+          },
+          "link": "https://www.bilibili.com/video/BV14SgP6QEs1"
+        }
+      }
+    ]
+  },
+  {
+    "date": "2026-08-19",
+    "refs": [
+      {
+        "name": "荷风静钓 (预览)",
+        "id": "2026-08-19-h11-t0-preview",
+        "tags": ["img"],
+        "tid": [
+          0, 1001, 1002, 1003, 1004, 1005, 1006, 1008, 1009, 1010, 1012, 1013,
+          1014, 1015, 1016, 1017, 1018, 1019, 1020, 1021, 1022, 1023, 1024,
+          1025, 1027, 1029, 1030, 1031
+        ],
+        "config": {
+          "type": "simple-image",
+          "layer": {
+            "src": "assets/2026/08/2026-08-19-h11-t0-preview/27cc73b1eb44368966ceca7583d41ec04c43375e.png"
+          },
+          "logo": {
+            "src": "assets/2026/08/2026-08-19-h11-t0-preview/87a5d03581e326f4f818cab3212ce471d1f6a064.png"
+          }
+        }
+      },
+      {
+        "name": "荷风静钓",
+        "id": "2026-08-19-h11-t0",
+        "tags": ["split-layer"],
+        "tid": [
+          0, 1001, 1002, 1003, 1004, 1005, 1006, 1008, 1009, 1010, 1012, 1013,
+          1014, 1015, 1016, 1017, 1018, 1019, 1020, 1021, 1022, 1023, 1024,
+          1025, 1027, 1029, 1030, 1031
+        ],
+        "config": {
+          "type": "official_2021",
+          "layers": [
+            {
+              "resources": [
+                {
+                  "src": "assets/2026/08/2026-08-19-h11-t0/daa0341c3bbb8b342a3c9982f93c2a24c3a8ad82.png",
+                  "id": 0
+                }
+              ],
+              "scale": {
+                "initial": 0.44
+              },
+              "rotate": {},
+              "translate": {},
+              "blur": {},
+              "opacity": {
+                "wrap": "clamp"
+              },
+              "id": 0,
+              "name": "26天空"
+            },
+            {
+              "resources": [
+                {
+                  "src": "assets/2026/08/2026-08-19-h11-t0/50312b568b8c9e77420fafd77f279ccd2aec7d7d.png",
+                  "id": 0
+                }
+              ],
+              "scale": {
+                "initial": 0.44,
+                "offset": 0.02
+              },
+              "rotate": {},
+              "translate": {},
+              "blur": {},
+              "opacity": {
+                "wrap": "clamp"
+              },
+              "id": 1,
+              "name": "25背景"
+            },
+            {
+              "resources": [
+                {
+                  "src": "assets/2026/08/2026-08-19-h11-t0/060aabb9f1510f85d35291bb325cef439c515c7a.png",
+                  "id": 0
+                }
+              ],
+              "scale": {
+                "initial": 0.44,
+                "offset": 0.01
+              },
+              "rotate": {},
+              "translate": {},
+              "blur": {},
+              "opacity": {
+                "wrap": "clamp"
+              },
+              "id": 2,
+              "name": "24草丛"
+            },
+            {
+              "resources": [
+                {
+                  "src": "assets/2026/08/2026-08-19-h11-t0/587d666b2e242d3c8bac6a3132401f48949c0623.png",
+                  "id": 0
+                }
+              ],
+              "scale": {
+                "initial": 0.44,
+                "offset": -0.03
+              },
+              "rotate": {},
+              "translate": {
+                "initial": [0, 5],
+                "offset": [5, 0]
+              },
+              "blur": {},
+              "opacity": {
+                "wrap": "clamp"
+              },
+              "id": 3,
+              "name": "23蛤蟆"
+            },
+            {
+              "resources": [
+                {
+                  "src": "assets/2026/08/2026-08-19-h11-t0/d37a459df931a19029766a401696bf2049eb68b3.png",
+                  "id": 0
+                }
+              ],
+              "scale": {
+                "initial": 0.44
+              },
+              "rotate": {},
+              "translate": {
+                "initial": [0, 3],
+                "offset": [0, -1]
+              },
+              "blur": {},
+              "opacity": {
+                "wrap": "clamp"
+              },
+              "id": 4,
+              "name": "22水面"
+            },
+            {
+              "resources": [
+                {
+                  "src": "assets/2026/08/2026-08-19-h11-t0/b437c98006d42b8bba029c155db2c8b669a8af4f.png",
+                  "id": 0
+                }
+              ],
+              "scale": {
+                "initial": 0.44
+              },
+              "rotate": {},
+              "translate": {
+                "offset": [10, 0]
+              },
+              "blur": {},
+              "opacity": {
+                "wrap": "clamp"
+              },
+              "id": 5,
+              "name": "21水面垃圾波纹"
+            },
+            {
+              "resources": [
+                {
+                  "src": "assets/2026/08/2026-08-19-h11-t0/ba58a4f9cf1db762956c6eb0bb0e5b2d3aa59940.png",
+                  "id": 0
+                }
+              ],
+              "scale": {
+                "initial": 0.44,
+                "offset": -0.02
+              },
+              "rotate": {},
+              "translate": {
+                "offset": [-3, 0]
+              },
+              "blur": {},
+              "opacity": {
+                "wrap": "clamp"
+              },
+              "id": 6,
+              "name": "20中部叶片组"
+            },
+            {
+              "resources": [
+                {
+                  "src": "assets/2026/08/2026-08-19-h11-t0/caf1c3b096a61a230d7a783bd7e08f42745b6706.png",
+                  "id": 0
+                }
+              ],
+              "scale": {
+                "initial": 0.44
+              },
+              "rotate": {},
+              "translate": {
+                "offset": [0, 2]
+              },
+              "blur": {},
+              "opacity": {
+                "wrap": "clamp"
+              },
+              "id": 7,
+              "name": "19两侧远处叶片碎"
+            },
+            {
+              "resources": [
+                {
+                  "src": "assets/2026/08/2026-08-19-h11-t0/5dd8253e7780d8c4c3e79a702c36bc1b7c8ab575.png",
+                  "id": 0
+                }
+              ],
+              "scale": {
+                "initial": 0.44,
+                "offset": -0.032
+              },
+              "rotate": {},
+              "translate": {
+                "offset": [-20, 0]
+              },
+              "blur": {},
+              "opacity": {
+                "wrap": "clamp"
+              },
+              "id": 8,
+              "name": "18右侧中大叶片"
+            },
+            {
+              "resources": [
+                {
+                  "src": "assets/2026/08/2026-08-19-h11-t0/b487ee14524c59cb805b9a954d226f36e7e9c803.png",
+                  "id": 0
+                }
+              ],
+              "scale": {
+                "initial": 0.44,
+                "offset": -0.02
+              },
+              "rotate": {},
+              "translate": {
+                "offset": [-30, 0]
+              },
+              "blur": {},
+              "opacity": {
+                "wrap": "clamp"
+              },
+              "id": 9,
+              "name": "17右侧支棱叶片组"
+            },
+            {
+              "resources": [
+                {
+                  "src": "assets/2026/08/2026-08-19-h11-t0/3d117b7a7276fcc9f337e1df5ea7265696d338d5.png",
+                  "id": 0
+                }
+              ],
+              "scale": {
+                "initial": 0.44,
+                "offset": -0.01
+              },
+              "rotate": {},
+              "translate": {
+                "initial": [0, 5],
+                "offset": [10, 1]
+              },
+              "blur": {},
+              "opacity": {
+                "wrap": "clamp"
+              },
+              "id": 10,
+              "name": "16中远荷叶碎"
+            },
+            {
+              "resources": [
+                {
+                  "src": "assets/2026/08/2026-08-19-h11-t0/757614ea36fb1544cb790c44da51b714451364f0.png",
+                  "id": 0
+                }
+              ],
+              "scale": {
+                "initial": 0.44,
+                "offset": -0.02
+              },
+              "rotate": {},
+              "translate": {
+                "initial": [-100, 0],
+                "offset": [-10, 0]
+              },
+              "blur": {},
+              "opacity": {
+                "wrap": "clamp"
+              },
+              "id": 26,
+              "name": "右边切割小荷叶"
+            },
+            {
+              "resources": [
+                {
+                  "src": "assets/2026/08/2026-08-19-h11-t0/014a91614c869b05abdc6ef062b9f7c4333cd1af.png",
+                  "id": 0
+                }
+              ],
+              "scale": {
+                "initial": 0.44,
+                "offset": -0.02
+              },
+              "rotate": {},
+              "translate": {
+                "initial": [60, 0],
+                "offset": [10, 0]
+              },
+              "blur": {},
+              "opacity": {
+                "wrap": "clamp"
+              },
+              "id": 11,
+              "name": "15两侧中叶片组"
+            },
+            {
+              "resources": [
+                {
+                  "src": "assets/2026/08/2026-08-19-h11-t0/f2c58161e4018a672b2d422bd6e58ee3ce57b964.png",
+                  "id": 0
+                }
+              ],
+              "scale": {
+                "initial": 0.44
+              },
+              "rotate": {},
+              "translate": {},
+              "blur": {},
+              "opacity": {
+                "wrap": "clamp"
+              },
+              "id": 12,
+              "name": "14右侧角落叶片碎"
+            },
+            {
+              "resources": [
+                {
+                  "src": "assets/2026/08/2026-08-19-h11-t0/c418010c5a5851be61609f126f4d15e96fa63776.png",
+                  "id": 0
+                }
+              ],
+              "scale": {
+                "initial": 0.44,
+                "offset": -0.01
+              },
+              "rotate": {},
+              "translate": {
+                "offset": [0, 1]
+              },
+              "blur": {},
+              "opacity": {
+                "wrap": "clamp"
+              },
+              "id": 13,
+              "name": "13栈桥标志"
+            },
+            {
+              "resources": [
+                {
+                  "src": "assets/2026/08/2026-08-19-h11-t0/ff959cd5fc147e07fc49804e3b10031c0bc07df9.png",
+                  "id": 0
+                }
+              ],
+              "scale": {
+                "initial": 0.41,
+                "offset": -0.01
+              },
+              "rotate": {},
+              "translate": {
+                "initial": [0, 20],
+                "offset": [-20, 0]
+              },
+              "blur": {},
+              "opacity": {
+                "wrap": "clamp"
+              },
+              "id": 14,
+              "name": "12中部花叶组"
+            },
+            {
+              "resources": [
+                {
+                  "src": "assets/2026/08/2026-08-19-h11-t0/24aa834d42d13922b066c20c140bac8ceb33dc3f.png",
+                  "id": 0
+                }
+              ],
+              "scale": {
+                "initial": 0.44,
+                "offset": -0.005
+              },
+              "rotate": {},
+              "translate": {
+                "initial": [10, 5],
+                "offset": [8, -0.5]
+              },
+              "blur": {},
+              "opacity": {
+                "wrap": "clamp"
+              },
+              "id": 15,
+              "name": "1133组"
+            },
+            {
+              "resources": [
+                {
+                  "src": "assets/2026/08/2026-08-19-h11-t0/3414ed509e8054ad3cefa7a7b1fa90c6a4e1a3dc.png",
+                  "id": 0
+                }
+              ],
+              "scale": {
+                "initial": 0.44,
+                "offset": 0.01
+              },
+              "rotate": {},
+              "translate": {
+                "offset": [-20, 0]
+              },
+              "blur": {},
+              "opacity": {
+                "wrap": "clamp"
+              },
+              "id": 27,
+              "name": "22背后花叶组"
+            },
+            {
+              "resources": [
+                {
+                  "src": "assets/2026/08/2026-08-19-h11-t0/f02ff85f6a3d7d1850e1545f1c8f79f9f8988ab4.png",
+                  "id": 0
+                }
+              ],
+              "scale": {
+                "initial": 0.44,
+                "offset": 0.02
+              },
+              "rotate": {},
+              "translate": {
+                "offset": [-45, 0]
+              },
+              "blur": {},
+              "opacity": {
+                "wrap": "clamp"
+              },
+              "id": 16,
+              "name": "1022组"
+            },
+            {
+              "resources": [
+                {
+                  "src": "assets/2026/08/2026-08-19-h11-t0/a7cf8d3e80932d6341e0338f60d3ecb93b44f209.png",
+                  "id": 0
+                }
+              ],
+              "scale": {
+                "initial": 0.44
+              },
+              "rotate": {},
+              "translate": {},
+              "blur": {},
+              "opacity": {
+                "wrap": "clamp"
+              },
+              "id": 18,
+              "name": "08左侧标志"
+            },
+            {
+              "resources": [
+                {
+                  "src": "assets/2026/08/2026-08-19-h11-t0/6e73660a07b754d5437e68e01195dee6a04cf4a8.png",
+                  "id": 0
+                }
+              ],
+              "scale": {
+                "initial": 0.44
+              },
+              "rotate": {},
+              "translate": {
+                "offset": [10, 0]
+              },
+              "blur": {},
+              "opacity": {
+                "wrap": "clamp"
+              },
+              "id": 19,
+              "name": "07左侧中远叶片组"
+            },
+            {
+              "resources": [
+                {
+                  "src": "assets/2026/08/2026-08-19-h11-t0/70eac5d924a14405fe0e8ca11e3b81b8238f6eeb.png",
+                  "id": 0
+                }
+              ],
+              "scale": {
+                "initial": 0.44
+              },
+              "rotate": {},
+              "translate": {},
+              "blur": {},
+              "opacity": {
+                "wrap": "clamp"
+              },
+              "id": 20,
+              "name": "06左侧中部白花"
+            },
+            {
+              "resources": [
+                {
+                  "src": "assets/2026/08/2026-08-19-h11-t0/e2b7230f6dac62da2e61fcb3443e435d69be9b3f.png",
+                  "id": 0
+                }
+              ],
+              "scale": {
+                "initial": 0.44
+              },
+              "rotate": {},
+              "translate": {
+                "offset": [15, 0]
+              },
+              "blur": {},
+              "opacity": {
+                "wrap": "clamp"
+              },
+              "id": 21,
+              "name": "05左侧边缘叶片组"
+            },
+            {
+              "resources": [
+                {
+                  "src": "assets/2026/08/2026-08-19-h11-t0/e2172b4e09446930eba81328a220a62ad00ab307.png",
+                  "id": 0
+                }
+              ],
+              "scale": {
+                "initial": 0.44
+              },
+              "rotate": {},
+              "translate": {},
+              "blur": {},
+              "opacity": {
+                "wrap": "clamp"
+              },
+              "id": 22,
+              "name": "04左侧恶心小蝌蚪"
+            },
+            {
+              "resources": [
+                {
+                  "src": "assets/2026/08/2026-08-19-h11-t0/19091569ac9b766687fca327d1d2f7312518edc1.png",
+                  "id": 0
+                }
+              ],
+              "scale": {
+                "initial": 0.44
+              },
+              "rotate": {},
+              "translate": {
+                "offset": [-15, 0]
+              },
+              "blur": {},
+              "opacity": {
+                "wrap": "clamp"
+              },
+              "id": 23,
+              "name": "03左侧支棱叶片"
+            },
+            {
+              "resources": [
+                {
+                  "src": "assets/2026/08/2026-08-19-h11-t0/c30fb43d34984c4e0eaaccd0cb729126e5b9fc92.png",
+                  "id": 0
+                }
+              ],
+              "scale": {
+                "initial": 0.44
+              },
+              "rotate": {},
+              "translate": {
+                "offset": [-15, 0]
+              },
+              "blur": {},
+              "opacity": {
+                "wrap": "clamp"
+              },
+              "id": 24,
+              "name": "02底部近处荷叶"
+            },
+            {
+              "resources": [
+                {
+                  "src": "assets/2026/08/2026-08-19-h11-t0/e57c56053b84eac7822b14791e6a569f5837f17a.png",
+                  "id": 0
+                }
+              ],
+              "scale": {
+                "initial": 0.44
+              },
+              "rotate": {},
+              "translate": {
+                "offset": [60, 0]
+              },
+              "blur": {},
+              "opacity": {
+                "wrap": "clamp"
+              },
+              "id": 25,
+              "name": "01顶层前景遮挡荷叶"
+            },
+            {
+              "resources": [
+                {
+                  "src": "assets/2026/08/2026-08-19-h11-t0/dcf1a2e6ebdbdf882ba1a6825061b43ace3d7a91.png",
+                  "id": 0
+                }
+              ],
+              "scale": {
+                "initial": 0.44
+              },
+              "rotate": {},
+              "translate": {
+                "offset": [-100, 0]
+              },
+              "blur": {},
+              "opacity": {
+                "wrap": "clamp"
+              },
+              "id": 28,
+              "name": "上方遮挡荷叶"
+            }
+          ],
+          "logo": {
+            "src": "assets/2026/08/2026-08-19-h11-t0-preview/87a5d03581e326f4f818cab3212ce471d1f6a064.png"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "date": "2026-08-25",
+    "refs": [
+      {
+        "name": "霍格沃茨欢迎你回家！",
+        "id": "2026-08-25-h12-t1001",
+        "tags": ["img"],
+        "tid": [1001],
+        "config": {
+          "type": "simple-image",
+          "layer": {
+            "src": "assets/2026/08/2026-08-25-h12-t1001/1fb392b07b0129dfb7be908ff8ca9b541ad89908.png"
+          },
+          "logo": {
+            "src": "assets/2026/08/2026-08-25-h12-t1001/8eb87643ebce81ee0ac0e6ddbb1f7a8c0d0b08a4.png"
+          },
+          "link": "https://www.bilibili.com/video/BV1oP8i63EQF"
+        }
+      }
+    ]
+  },
+  {
+    "date": "2026-08-25",
+    "refs": [
+      {
+        "name": "宅舞现场",
+        "id": "2026-08-25-h23-t1004",
+        "tags": ["img"],
+        "tid": [1004],
+        "config": {
+          "type": "simple-image",
+          "layer": {
+            "src": "assets/2026/08/2026-08-25-h23-t1004/0a49918700d8201f1dd748bc3dbb264d199cc1c0.png"
+          },
+          "logo": {
+            "src": "assets/2026/08/2026-08-25-h23-t1004/5a46e276f2dad2b220b634922188642d3542787a.png"
+          },
+          "link": "https://www.bilibili.com/blackboard/era/RFeaSSDZ9gmADGti.html?spm_id_from=333.40138.0.0"
+        }
+      }
+    ]
+  },
+  {
+    "date": "2026-08-28",
+    "refs": [
+      {
+        "name": "山野听风",
+        "id": "2026-08-28-h18-t1003",
+        "tags": ["img"],
+        "tid": [1003],
+        "config": {
+          "type": "simple-image",
+          "layer": {
+            "src": "assets/2026/08/2026-08-28-h18-t1003/c7b62a8089e8411c3c7a0a96e9bd89e7023d1284.jpg"
+          },
+          "logo": {
+            "src": "assets/2026/08/2026-08-28-h18-t1003/0daf3e6e5588590acf175cb4df1b0dbfeb31dd0d.png"
+          },
+          "link": "https://www.bilibili.com/video/BV1TTtw6sECN"
+        }
+      }
+    ]
+  },
+  {
+    "date": "2026-08-28",
+    "refs": [
+      {
+        "name": "VCTCN最伟大的转会",
+        "id": "2026-08-28-h16-t1008",
+        "tags": ["img"],
+        "tid": [1008],
+        "config": {
+          "type": "simple-image",
+          "layer": {
+            "src": "assets/2026/08/2026-08-28-h16-t1008/4c62f9dcfee8ade235e7390b09f9140eb1ecf179.png"
+          },
+          "logo": {
+            "src": "assets/2026/08/2026-08-28-h16-t1008/6820a20d2033f786aaf3d4a069cda5c74f8b9922.png"
+          },
+          "link": "https://www.bilibili.com/video/BV1Wt4f63EeD"
+        }
+      }
+    ]
+  },
+  {
+    "date": "2026-08-31",
+    "refs": [
+      {
+        "name": "「闪耀！优俊少女」2.5周年",
+        "id": "2026-08-31-h00-t0",
+        "tags": ["img"],
+        "tid": [0],
+        "config": {
+          "type": "simple-image",
+          "layer": {
+            "src": "assets/2026/08/2026-08-31-h00-t0/632eff7a415a833fb94196b0e135fe1a1b65a505.png"
+          },
+          "logo": {
+            "src": "assets/2026/08/2026-08-31-h00-t0/5e8063f76e6c44a3b862e729589f6dd848f947fa.png"
+          },
+          "link": "https://b23.tv/pqDQtFX"
+        }
+      }
+    ]
+  },
+  {
+    "date": "2026-09-01",
+    "refs": [
+      {
+        "name": "安利好动画",
+        "id": "2026-09-01-h00-t1005",
+        "tags": ["img"],
+        "tid": [1005],
+        "config": {
+          "type": "simple-image",
+          "layer": {
+            "src": "assets/2026/09/2026-09-01-h00-t1005/de21ffdf48eb3d717b68e57e68fbffd5314f2da5.png"
+          },
+          "logo": {
+            "src": "assets/2026/09/2026-09-01-h00-t1005/ca7c963c836c91df01d3f41ef170d6e5e934eafe.png"
+          },
+          "link": "https://www.bilibili.com/blackboard/era/6cLOy57UlsZHS49I.html"
+        }
+      }
+    ]
+  },
+  {
+    "date": "2026-09-01",
+    "refs": [
+      {
+        "name": "开学季征稿活动",
+        "id": "2026-09-01-h00-t1010",
+        "tags": ["img"],
+        "tid": [1010],
+        "config": {
+          "type": "simple-image",
+          "layer": {
+            "src": "assets/2026/09/2026-09-01-h00-t1010/a0c5a0dec77d98dca5682d46f2a5cdfab39f7e21.png"
+          },
+          "logo": {
+            "src": "assets/2026/09/2026-09-01-h00-t1010/a0c2f25f25e25b484bb27149f77e67f66197974d.png"
+          },
+          "link": "https://www.bilibili.com/blackboard/era/lqbeTBiRunMLBCyX.html"
+        }
+      }
+    ]
+  },
+  {
+    "date": "2026-09-02",
+    "refs": [
+      {
+        "name": "「明日方舟：终末地」创作应援",
+        "id": "2026-09-02-h12-t1008",
+        "tags": ["img"],
+        "tid": [1008],
+        "config": {
+          "type": "simple-image",
+          "layer": {
+            "src": "assets/2026/09/2026-09-02-h12-t1008/11b30a78e074371665653d14ba3475dc33f7585d.png"
+          },
+          "logo": {
+            "src": "assets/2026/09/2026-09-02-h12-t1008/6820a20d2033f786aaf3d4a069cda5c74f8b9922.png"
+          },
+          "link": "https://www.bilibili.com/blackboard/era/yjELQrvKlfA9Bz14.html"
+        }
+      }
+    ]
+  },
+  {
+    "date": "2026-09-04",
+    "refs": [
+      {
+        "name": "山野听风",
+        "id": "2026-09-04-h18-t1003",
+        "tags": ["img"],
+        "tid": [1003],
+        "config": {
+          "type": "simple-image",
+          "layer": {
+            "src": "assets/2026/09/2026-09-04-h18-t1003/642f120ab21a2c37c7ee700f5c4203954854d4fa.jpg"
+          },
+          "logo": {
+            "src": "assets/2026/09/2026-09-04-h18-t1003/0daf3e6e5588590acf175cb4df1b0dbfeb31dd0d.png"
+          },
+          "link": "https://www.bilibili.com/video/BV1xBtD64EB7"
+        }
+      }
+    ]
+  },
+  {
+    "date": "2026-09-05",
+    "refs": [
+      {
+        "name": "2026十大洲梗打投",
+        "id": "2026-09-05-h12-t1008",
+        "tags": ["img"],
+        "tid": [1008],
+        "config": {
+          "type": "simple-image",
+          "layer": {
+            "src": "assets/2026/09/2026-09-05-h12-t1008/995bb58069e86410a6046552d739d7e11712f281.jpg"
+          },
+          "logo": {
+            "src": "assets/2026/09/2026-09-05-h12-t1008/6820a20d2033f786aaf3d4a069cda5c74f8b9922.png"
+          },
+          "link": "https://live.bilibili.com/blackboard/era/DqXHdANIhFrcBoY9.html"
+        }
+      }
+    ]
+  },
+  {
+    "date": "2026-09-07",
+    "refs": [
+      {
+        "name": "2026哔需奏乐",
+        "id": "2026-09-07-h12-t1003",
+        "tags": ["img"],
+        "tid": [1003],
+        "config": {
+          "type": "simple-image",
+          "layer": {
+            "src": "assets/2026/09/2026-09-07-h12-t1003/ffbd326a528294407eecbe9b2b1b9eb1761c8971.png"
+          },
+          "logo": {
+            "src": "assets/2026/09/2026-09-07-h12-t1003/33522952cf05f63982883be7d3f79a7bca2fef6e.png"
+          },
+          "link": "https://www.bilibili.com/blackboard/era/b8mMiqoQcx4cXSPz.html"
+        }
+      }
+    ]
+  },
+  {
+    "date": "2026-09-07",
+    "refs": [
+      {
+        "name": "开学季征稿活动",
+        "id": "2026-09-07-h00-t1010",
+        "tags": ["img"],
+        "tid": [1010],
+        "config": {
+          "type": "simple-image",
+          "layer": {
+            "src": "assets/2026/09/2026-09-07-h00-t1010/08d080bd1af2d3c8bf6d17f1ed402493b35b38ae.png"
+          },
+          "logo": {
+            "src": "assets/2026/09/2026-09-07-h00-t1010/a0c2f25f25e25b484bb27149f77e67f66197974d.png"
+          },
+          "link": "https://www.bilibili.com/blackboard/era/lqbeTBiRunMLBCyX.html?spm_id_from=333.1365.rich-"
+        }
+      }
+    ]
+  },
+  {
+    "date": "2026-09-10",
+    "refs": [
+      {
+        "name": "CAPS名人堂纪录片",
+        "id": "2026-09-10-h23-t1008",
+        "tags": ["img"],
+        "tid": [1008],
+        "config": {
+          "type": "simple-image",
+          "layer": {
+            "src": "assets/2026/09/2026-09-10-h23-t1008/450325d38f0c075acbb4d7b0e8e6a462d091ccd1.jpg"
+          },
+          "logo": {
+            "src": "assets/2026/09/2026-09-10-h23-t1008/6820a20d2033f786aaf3d4a069cda5c74f8b9922.png"
+          },
+          "link": "https://www.bilibili.com/video/BV1uuYt62EwY"
+        }
+      }
+    ]
+  },
+  {
+    "date": "2026-09-10",
+    "refs": [
+      {
+        "name": "2026苹果秋季发布会",
+        "id": "2026-09-10-h00-t1012",
+        "tags": ["img"],
+        "tid": [1012],
+        "config": {
+          "type": "simple-image",
+          "layer": {
+            "src": "assets/2026/09/2026-09-10-h00-t1012/6d4530b096df14148fb3b318ef46a408b6642f19.png"
+          },
+          "logo": {
+            "src": "assets/2026/09/2026-09-10-h00-t1012/7d4a473d032a668daf543fa833f6cf743e35e588.png"
+          },
+          "link": "https://www.bilibili.com/blackboard/era/sEUlB5cmkNeH3izK.html"
+        }
+      }
+    ]
+  },
+  {
+    "date": "2026-09-11",
+    "refs": [
+      {
+        "name": "彩虹六号超6杯投票",
+        "id": "2026-09-11-h15-t1008",
+        "tags": ["img"],
+        "tid": [1008],
+        "config": {
+          "type": "simple-image",
+          "layer": {
+            "src": "assets/2026/09/2026-09-11-h15-t1008/1493b216b6862dd281a8be5215c32d78c4be9078.png"
+          },
+          "logo": {
+            "src": "assets/2026/09/2026-09-11-h15-t1008/6820a20d2033f786aaf3d4a069cda5c74f8b9922.png"
+          },
+          "link": "https://www.bilibili.com/blackboard/era/pHbEKmaedCMfTx3p.html"
+        }
+      }
+    ]
+  },
+  {
+    "date": "2026-09-11",
+    "refs": [
+      {
+        "name": "开学季",
+        "id": "2026-09-11-h00-t1010",
+        "tags": ["img"],
+        "tid": [1010],
+        "config": {
+          "type": "simple-image",
+          "layer": {
+            "src": "assets/2026/09/2026-09-11-h00-t1010/c7a83c8c6939c7ad1fe50d1ced91344cf265b142.jpg"
+          },
+          "logo": {
+            "src": "assets/2026/09/2026-09-11-h00-t1010/cded4feb7d90ceee9a6b663ddba50fe4dd6924c9.png"
+          },
+          "link": "https://www.bilibili.com/blackboard/era/CkpexWz1YXF0xLzR.html"
+        }
+      }
+    ]
+  },
+  {
+    "date": "2026-09-14",
+    "refs": [
+      {
+        "name": "上海·Wonder Festival 2026",
+        "id": "2026-09-14-h12-t1008",
+        "tags": ["img"],
+        "tid": [1008],
+        "config": {
+          "type": "simple-image",
+          "layer": {
+            "src": "assets/2026/09/2026-09-14-h12-t1008/d3e09c118b58f8125d6cc49e277b881baf8ad6a3.png"
+          },
+          "logo": {
+            "src": "assets/2026/09/2026-09-14-h12-t1008/2d3d634776a0f9639540cdb35783ba679388a186.png"
+          },
+          "link": "https://mall.bilibili.com/neul-next/ticket-renovation/detail.html?id=1004973&noTitleBar=1&msource=yxnr&from=pwyx"
+        }
+      }
+    ]
+  },
+  {
+    "date": "2026-09-15",
+    "refs": [
+      {
+        "name": "彩六国服二测启动",
+        "id": "2026-09-15-h12-t1008",
+        "tags": ["img"],
+        "tid": [1008],
+        "config": {
+          "type": "simple-image",
+          "layer": {
+            "src": "assets/2026/09/2026-09-15-h12-t1008/1068641d147909bc0acc830e8acd132b5c4af597.jpg"
+          },
+          "logo": {
+            "src": "assets/2026/09/2026-09-15-h12-t1008/6820a20d2033f786aaf3d4a069cda5c74f8b9922.png"
+          },
+          "link": "https://live.bilibili.com/blackboard/era/H5EzGWO2ONlVT9NH.html"
+        }
+      }
+    ]
+  },
+  {
+    "date": "2026-09-16",
+    "refs": [
+      {
+        "name": "「伊莫」预热",
+        "id": "2026-09-16-h12-t1008",
+        "tags": ["img"],
+        "tid": [1008],
+        "config": {
+          "type": "simple-image",
+          "layer": {
+            "src": "assets/2026/09/2026-09-16-h12-t1008/0b79e425f16607ad57d7b8793649af3576aa1aa3.jpg"
+          },
+          "logo": {
+            "src": "assets/2026/09/2026-09-16-h12-t1008/6820a20d2033f786aaf3d4a069cda5c74f8b9922.png"
+          },
+          "link": "https://www.bilibili.com/blackboard/era/qQYGVYcGPI3np5l0.html"
+        }
+      }
+    ]
+  },
+  {
+    "date": "2026-09-17",
+    "refs": [
+      {
+        "name": "「闪耀吧！噜咪」x 老番茄 (预览)",
+        "id": "2026-09-17-h00-t0-preview",
+        "tags": ["img"],
+        "tid": [0],
+        "config": {
+          "type": "simple-image",
+          "layer": {
+            "src": "assets/2026/09/2026-09-17-h00-t0-preview/d971933db659049af52d21014909c97c925abbb6.png"
+          },
+          "logo": {
+            "src": "assets/2026/09/2026-09-17-h00-t0-preview/78cc1c2a51bafdcc714e829dd8fc92235fe3f80c.png"
+          },
+          "link": "https://b23.tv/JnWh8yh"
+        }
+      },
+      {
+        "name": "「闪耀吧！噜咪」x 老番茄",
+        "id": "2026-09-17-h00-t0",
+        "tags": ["video"],
+        "tid": [0],
+        "config": {
+          "type": "official_2021",
+          "layers": [
+            {
+              "id": 0,
+              "name": "图层0",
+              "resources": [
+                {
+                  "src": "assets/2026/09/2026-09-17-h00-t0/51e771a704617bfc13e32f45ec2b58b428a2f010.mp4",
+                  "id": 0
+                }
+              ]
+            }
+          ],
+          "logo": {
+            "src": "assets/2026/09/2026-09-17-h00-t0-preview/78cc1c2a51bafdcc714e829dd8fc92235fe3f80c.png"
+          },
+          "link": "https://b23.tv/JnWh8yh"
+        }
+      }
+    ]
+  },
+  {
+    "date": "2026-09-19",
+    "refs": [
+      {
+        "name": "DC中国官方来B站啦！",
+        "id": "2026-09-19-h12-t1001",
+        "tags": ["img"],
+        "tid": [1001],
+        "config": {
+          "type": "simple-image",
+          "layer": {
+            "src": "assets/2026/09/2026-09-19-h12-t1001/8d124cd34597ea623f1398b576986946f70bd4aa.png"
+          },
+          "logo": {
+            "src": "assets/2026/09/2026-09-19-h12-t1001/97910d913ccc500fac4707ea3e3f91cd046ad0ae.png"
+          },
+          "link": "https://www.bilibili.com/video/BV1Moe16hE7y"
+        }
+      }
+    ]
+  },
+  {
+    "date": "2026-09-22",
+    "refs": [
+      {
+        "name": "「无畏契约」上海冠军赛独家赛前节目",
+        "id": "2026-09-22-h15-t1008",
+        "tags": ["img"],
+        "tid": [1008],
+        "config": {
+          "type": "simple-image",
+          "layer": {
+            "src": "assets/2026/09/2026-09-22-h15-t1008/c531debfd79c96c2f35da534eb46644807ebb1ba.png"
+          },
+          "logo": {
+            "src": "assets/2026/09/2026-09-22-h15-t1008/6820a20d2033f786aaf3d4a069cda5c74f8b9922.png"
+          },
+          "link": "https://www.bilibili.com/video/BV1RXhk6REwc"
+        }
+      }
+    ]
+  },
+  {
+    "date": "2026-09-23",
+    "refs": [
+      {
+        "name": "【百威】Live现场同频共振",
+        "id": "2026-09-23-h12-t1003",
+        "tags": ["img"],
+        "tid": [1003, 1004],
+        "config": {
+          "type": "simple-image",
+          "layer": {
+            "src": "assets/2026/09/2026-09-23-h12-t1003/b0d3d38ca7afa82a0224d2b2b070112cde3bc486.jpg"
+          },
+          "logo": {
+            "src": "assets/2026/09/2026-09-23-h12-t1003/f63c4994692433edb958b3a60eff003c9163fbdd.png"
+          },
+          "link": "https://www.bilibili.com/blackboard/era/8JrGYyQFYFM0Khcg.html"
+        }
+      }
+    ]
+  },
+  {
+    "date": "2026-09-24",
+    "refs": [
+      {
+        "name": "黄绿合战~(｡ゝ∀・)b (预览)",
+        "id": "2026-09-24-h00-t0-preview",
+        "tags": ["img"],
+        "tid": [0],
+        "config": {
+          "type": "simple-image",
+          "layer": {
+            "src": "assets/2026/09/2026-09-24-h00-t0-preview/9f87af054aba62a3698fa59667b222f031088225.png"
+          },
+          "logo": {
+            "src": "assets/2026/09/2026-09-24-h00-t0-preview/a6fc20e8360913e8c796df1def661bf1d7f1b9c8.png"
+          },
+          "link": "https://www.bilibili.com/blackboard/era/yellowVSgreen11th.html"
+        }
+      },
+      {
+        "name": "黄绿合战~(｡ゝ∀・)b",
+        "id": "2026-09-24-h00-t0",
+        "tags": ["video"],
+        "tid": [0],
+        "config": {
+          "type": "official_2021",
+          "layers": [
+            {
+              "id": 0,
+              "name": "图层0",
+              "resources": [
+                {
+                  "src": "assets/2026/09/2026-09-24-h00-t0/b8c545e61091a949fa75e53b32a306da3566556a.webm",
+                  "id": 0
+                }
+              ],
+              "scale": {
+                "initial": 0.6459
+              }
+            }
+          ],
+          "logo": {
+            "src": "assets/2026/09/2026-09-24-h00-t0-preview/a6fc20e8360913e8c796df1def661bf1d7f1b9c8.png"
+          },
+          "link": "https://www.bilibili.com/blackboard/era/yellowVSgreen11th.html"
+        }
+      }
+    ]
+  },
+  {
+    "date": "2026-09-24",
+    "refs": [
+      {
+        "name": "2026无畏契约上海冠军赛",
+        "id": "2026-09-24-h14-t1008",
+        "tags": ["img"],
+        "tid": [1008],
+        "config": {
+          "type": "simple-image",
+          "layer": {
+            "src": "assets/2026/09/2026-09-24-h14-t1008/f2b8c468a17aab478ce54e9aa0da49d5c12db709.png"
+          },
+          "logo": {
+            "src": "assets/2026/09/2026-09-24-h14-t1008/3f7798d1f210a6ce2c99a4bdaf5093723e5c9bb0.png"
+          },
+          "link": "https://www.bilibili.com/blackboard/era/X1Wcn7ARKZFdpnoV.html"
+        }
+      }
+    ]
+  },
+  {
+    "date": "2026-09-24",
+    "refs": [
+      {
+        "name": "2026无畏契约上海冠军赛",
+        "id": "2026-09-24-h22-t1008",
+        "tags": ["img"],
+        "tid": [1008],
+        "config": {
+          "type": "simple-image",
+          "layer": {
+            "src": "assets/2026/09/2026-09-24-h22-t1008/393b3e14ddd4db03b508bd5f0e04f81c5bd19bc2.png"
+          },
+          "logo": {
+            "src": "assets/2026/09/2026-09-24-h22-t1008/3f7798d1f210a6ce2c99a4bdaf5093723e5c9bb0.png"
+          },
+          "link": "https://www.bilibili.com/blackboard/era/X1Wcn7ARKZFdpnoV.html"
+        }
+      }
+    ]
+  },
+  {
+    "date": "2026-09-25",
+    "refs": [
+      {
+        "name": "“初代大魔王”邓亚萍直击亚运会",
+        "id": "2026-09-25-h17-t1018",
+        "tags": ["img"],
+        "tid": [1018],
+        "config": {
+          "type": "simple-image",
+          "layer": {
+            "src": "assets/2026/09/2026-09-25-h17-t1018/94404e71a046ac7d008cccadca41421db153d7b5.jpg"
+          },
+          "logo": {
+            "src": "assets/2026/09/2026-09-25-h17-t1018/db125c1336f66d47a92a002dd5e79db2a13e65cd.png"
+          },
+          "link": "https://www.bilibili.com/video/BV15Cac6yEKW/"
+        }
+      }
+    ]
+  },
+  {
+    "date": "2026-09-26",
+    "refs": [
+      {
+        "name": "三角洲活动",
+        "id": "2026-09-26-h12-t1008",
+        "tags": ["img"],
+        "tid": [1008],
+        "config": {
+          "type": "simple-image",
+          "layer": {
+            "src": "assets/2026/09/2026-09-26-h12-t1008/7877b143b28542b3fbc94737a59451487c1e4eea.jpg"
+          },
+          "logo": {
+            "src": "assets/2026/09/2026-09-26-h12-t1008/6820a20d2033f786aaf3d4a069cda5c74f8b9922.png"
+          },
+          "link": "https://www.bilibili.com/blackboard/era/159oGsMJUVZWpxzK.html"
+        }
+      }
+    ]
+  },
+  {
+    "date": "2026-09-28",
+    "refs": [
+      {
+        "name": "直击2026诺奖",
+        "id": "2026-09-28-h00-t1010",
+        "tags": ["img"],
+        "tid": [1010, 1026],
+        "config": {
+          "type": "simple-image",
+          "layer": {
+            "src": "assets/2026/09/2026-09-28-h00-t1010/ad3b0a054de5925f73ed3aa440978c276b60f479.png"
+          },
+          "logo": {
+            "src": "assets/2026/09/2026-09-28-h00-t1010/cded4feb7d90ceee9a6b663ddba50fe4dd6924c9.png"
+          },
+          "link": "https://live.bilibili.com/blackboard/era/2026NobelprizePC.html"
+        }
+      }
+    ]
+  },
+  {
+    "date": "2026-09-29",
+    "refs": [
+      {
+        "name": "对话闫妮叶童倪虹洁，如何让人生继续活色生香",
+        "id": "2026-09-29-h18-t1001",
+        "tags": ["img"],
+        "tid": [1001],
+        "config": {
+          "type": "simple-image",
+          "layer": {
+            "src": "assets/2026/09/2026-09-29-h18-t1001/53eac4ee85dde7120517fdb4927ca3011f8c0d26.png"
+          },
+          "logo": {
+            "src": "assets/2026/09/2026-09-29-h18-t1001/211a55c1a69bd77c4a8636b0efcce930b92fa402.png"
+          },
+          "link": "https://www.bilibili.com/video/BV1vbaL6nETf/"
+        }
+      }
+    ]
+  },
+  {
+    "date": "2026-10-01",
+    "refs": [
+      {
+        "name": "投稿安利动画，赢现金大奖！",
+        "id": "2026-10-01-h00-t1005",
+        "tags": ["img"],
+        "tid": [1005],
+        "config": {
+          "type": "simple-image",
+          "layer": {
+            "src": "assets/2026/10/2026-10-01-h00-t1005/2aa2652495a9906cf40a1c61ac22620fa0a4171a.png"
+          },
+          "logo": {
+            "src": "assets/2026/10/2026-10-01-h00-t1005/ccd1cfeb074ead7d9ba70a0d37e44474f8784e9e.png"
+          },
+          "link": "https://www.bilibili.com/blackboard/era/u40Vfs4dWoSB0grP.html"
+        }
+      }
+    ]
+  }
+]

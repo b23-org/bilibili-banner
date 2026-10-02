@@ -1,0 +1,71 @@
+/* ==========================================================================
+   FilterBar 筛选栏卡片样式规范 (80% 宽度，16px 圆角，B站胶囊与 Popover)
+   ========================================================================== */
+
+.filter-bar {
+  box-sizing: border-box;
+  width: 80%;
+  max-width: 1200px;
+  min-width: 320px;
+  margin: 0 auto;
+  padding: 12px 20px;
+  background-color: #ffffff;
+  border-radius: 16px;
+  border: 1px solid #f1f2f3;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.filter-bar__capsules,
+.channel-items__left,
+.filter-bar__left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.filter-bar__right {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-left: auto;
+}
+
+/* ──────────────── 排序与重置按钮样式 ──────────────── */
+.filter-bar__action-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.filter-bar__icon {
+  flex-shrink: 0;
+  width: 14px;
+  height: 14px;
+}
+
+/* 重置按钮：使用 .b-capsule-action / .channel-link__right 规范，无背景框，hover 字体与图标变蓝 #00AEEC */
+.filter-bar__reset-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  background: transparent;
+  background-color: transparent;
+  border: none;
+  color: #61666d;
+  cursor: pointer;
+  padding: 0 4px;
+  outline: none;
+  transition: color 0.3s cubic-bezier(0.2, 0, 0, 1);
+}
+
+.filter-bar__reset-btn:hover {
+  color: #00aeec;
+  background: transparent;
+  background-color: transparent;
+}
