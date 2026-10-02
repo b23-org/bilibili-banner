@@ -1,5 +1,5 @@
 /**
- * cloudflare/build.ts
+ * cloudflare/setup.ts
  *
  * CI pre-deploy preparation script. Runs before `pnpm build`, before the
  * Cloudflare Pages deploy step.

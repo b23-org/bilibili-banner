@@ -26,8 +26,8 @@ jobs:
         run: |
           pnpm check-data
 
-      - name: Cloudflare pre-deploy
-        run: pnpm exec tsx cloudflare/build.ts
+      - name: Cloudflare setup
+        run: pnpm exec tsx cloudflare/setup.ts
 
       - name: Build
         run: pnpm build
