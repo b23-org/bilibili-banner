@@ -1,16 +1,12 @@
-import { REGIONS } from "./regions";
+import { REGIONS } from "./core/regions";
+import type { GrabOptions } from "./support/types";
 
-export interface CliArgs {
-  tids: number[];
-  force: boolean;
-}
+export type CliParseResult =
+  | { readonly status: "success"; readonly options: GrabOptions }
+  | { readonly status: "help" }
+  | { readonly status: "error"; readonly errorMessage: string };
 
-export type ParseResult =
-  | { status: "success"; args: CliArgs }
-  | { status: "help" }
-  | { status: "error"; errorMsg?: string };
-
-function getVisualWidth(str: string): number {
+function computeStringVisualWidth(str: string): number {
   let width = 0;
   for (let i = 0; i < str.length; i++) {
     const code = str.charCodeAt(i);
@@ -23,53 +19,60 @@ function getVisualWidth(str: string): number {
   return width;
 }
 
-function padEndVisual(str: string, targetWidth: number): string {
-  const width = getVisualWidth(str);
-  const padLen = Math.max(0, targetWidth - width);
-  return str + " ".repeat(padLen);
+function padEndWithVisualWidth(str: string, targetWidth: number): string {
+  const currentWidth = computeStringVisualWidth(str);
+  const paddingLength = Math.max(0, targetWidth - currentWidth);
+  return str + " ".repeat(paddingLength);
 }
 
-export function printHelp(): void {
-  const items = [{ id: 0, name: "主站" }, ...REGIONS];
+/**
+ * 打印 CLI 使用帮助与分区对照表
+ */
+export function printUsageHelp(): void {
+  const allRegions = [{ id: 0, name: "主站" }, ...REGIONS];
   const columns = 4;
   const colWidth = 22;
-  let gridStr = "";
+  let gridOutput = "";
 
-  for (let i = 0; i < items.length; i += columns) {
-    const row = items.slice(i, i + columns);
-    const rowStr = row
+  for (let i = 0; i < allRegions.length; i += columns) {
+    const row = allRegions.slice(i, i + columns);
+    const rowText = row
       .map((item) => {
         const text = `${item.id} - ${item.name}`;
-        return padEndVisual(text, colWidth);
+        return padEndWithVisualWidth(text, colWidth);
       })
       .join("");
-    gridStr += `  ${rowStr}\n`;
+    gridOutput += `  ${rowText}\n`;
   }
 
   console.log(`
 Usage: pnpm grab [options]
 
 Options:
-  -t, --tid <id>      指定要抓取的分区ID，多个分区用逗号分隔（例如 -t 0,1005）。
+  -t, --tid <id,...>  指定要抓取的分区ID，多个分区用英文逗号分隔（例如 -t 0,1005）。
                       0 代表主站首页。
-                      未指定该参数时，默认抓取主站和所有分区。
-  --force             跳过Banner去重步骤，无论是否存在都会下载。
-                      未指定时默认开启去重。
-  -h, --help          显示此帮助文档。
+                      未指定该参数时，默认抓取主站及所有分区。
+  --force             跳过去重检查，强制下载并覆盖 Banner。
+  --rescan            强制全量重新扫描 public/assets 目录以重建去重索引缓存。
+  -h, --help          显示此帮助信息。
 
   ------------------------------------------------------------------------
 
   支持的分区ID列表：
   
-${gridStr}`);
+${gridOutput}`);
 }
 
-export function parseCliArgs(argv: string[]): ParseResult {
+/**
+ * 解析命令行参数数组
+ */
+export function parseCommandLineArguments(
+  argv: readonly string[],
+): CliParseResult {
   const args = argv.slice(2);
-  const options: CliArgs = {
-    tids: [],
-    force: false,
-  };
+  const tids: number[] = [];
+  let force = false;
+  let rescan = false;
 
   let i = 0;
   while (i < args.length) {
@@ -80,46 +83,66 @@ export function parseCliArgs(argv: string[]): ParseResult {
     }
 
     if (arg === "--force") {
-      options.force = true;
+      force = true;
+      i++;
+      continue;
+    }
+
+    if (arg === "--rescan") {
+      rescan = true;
       i++;
       continue;
     }
 
     if (arg === "-t" || arg === "--tid") {
-      const value = args[i + 1];
-      if (!value || value.startsWith("-")) {
-        console.error(`❌ 参数错误: ${arg} 需要提供一个值`);
-        return { status: "error" };
+      const rawValue = args[i + 1];
+      if (!rawValue || rawValue.startsWith("-")) {
+        return {
+          status: "error",
+          errorMessage: `参数错误: ${arg} 需要提供一个或多个分区ID（逗号分隔）`,
+        };
       }
 
-      const tidStrs = value
+      const tidSegments = rawValue
         .split(",")
         .map((s) => s.trim())
         .filter(Boolean);
-      for (const tidStr of tidStrs) {
-        const tid = Number.parseInt(tidStr, 10);
+
+      for (const segment of tidSegments) {
+        const tid = Number.parseInt(segment, 10);
         if (Number.isNaN(tid)) {
-          console.error(`❌ 无效的 tid 参数: "${tidStr}" 不是数字`);
-          return { status: "error" };
+          return {
+            status: "error",
+            errorMessage: `无效的分区ID: "${segment}" 不是数字`,
+          };
         }
 
         const isValid = tid === 0 || REGIONS.some((r) => r.id === tid);
         if (!isValid) {
-          console.error(`❌ 无效的 tid 参数: "${tid}"`);
-          console.log("请使用 -h 查看支持的分区列表");
-          return { status: "error" };
+          return {
+            status: "error",
+            errorMessage: `无效的分区ID: "${tid}"，请使用 -h 查看支持的分区列表`,
+          };
         }
 
-        if (!options.tids.includes(tid)) {
-          options.tids.push(tid);
+        if (!tids.includes(tid)) {
+          tids.push(tid);
         }
       }
+
       i += 2;
       continue;
     }
 
-    i++; // 忽略其他未知参数
+    i++;
   }
 
-  return { status: "success", args: options };
+  return {
+    status: "success",
+    options: {
+      tids,
+      force,
+      rescan,
+    },
+  };
 }

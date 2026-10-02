@@ -36,3 +36,19 @@ export const REGIONS: RegionInfo[] = [
   { name: "生活兴趣", id: 1030 },
   { name: "生活经验", id: 1031 },
 ];
+
+/**
+ * 根据分区 tid 检索分区元数据
+ */
+export function findRegionById(tid: number): RegionInfo | undefined {
+  return REGIONS.find((region) => region.id === tid);
+}
+
+/**
+ * 获取指定 tid 的可读展示名称（0 为首页主站）
+ */
+export function getRegionDisplayName(tid: number): string {
+  if (tid === 0) return "主站";
+  const found = findRegionById(tid);
+  return found ? found.name : `分区#${tid}`;
+}

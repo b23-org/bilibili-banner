@@ -1,7 +1,7 @@
 import fs from "node:fs";
 import path from "node:path";
-import { PROJECT_ROOT } from "./helpers";
-import { REGIONS, type RegionInfo } from "./regions";
+import { REGIONS, type RegionInfo } from "./core/regions";
+import { PROJECT_ROOT } from "./support/config";
 
 const KV_API_URL =
   "https://api.bilibili.com/x/kv-frontend/namespace/data?appKey=333.1339&nscode=10&unlimit=true";
@@ -193,7 +193,7 @@ function printDiffReport(diff: DiffResult): void {
 }
 
 /**
- * 生成 regions.ts 文件代码
+ * 生成 core/regions.ts 文件代码
  */
 function generateRegionsCode(regions: RegionInfo[]): string {
   const itemsStr = regions
@@ -208,6 +208,22 @@ function generateRegionsCode(regions: RegionInfo[]): string {
 export const REGIONS: RegionInfo[] = [
 ${itemsStr}
 ];
+
+/**
+ * 根据分区 tid 检索分区元数据
+ */
+export function findRegionById(tid: number): RegionInfo | undefined {
+  return REGIONS.find((region) => region.id === tid);
+}
+
+/**
+ * 获取指定 tid 的可读展示名称（0 为首页主站）
+ */
+export function getRegionDisplayName(tid: number): string {
+  if (tid === 0) return "主站";
+  const found = findRegionById(tid);
+  return found ? found.name : \`分区#\${tid}\`;
+}
 `;
 }
 
@@ -283,10 +299,13 @@ function updateReadme(regions: RegionInfo[]): boolean {
 }
 
 /**
- * 写入更新到 regions.ts
+ * 写入更新到 core/regions.ts
  */
 function updateRegionsFile(regions: RegionInfo[]): void {
-  const regionsPath = path.resolve(PROJECT_ROOT, "scripts/grab/regions.ts");
+  const regionsPath = path.resolve(
+    PROJECT_ROOT,
+    "scripts/grab/core/regions.ts",
+  );
   const code = generateRegionsCode(regions);
   fs.writeFileSync(regionsPath, code, "utf8");
 }
@@ -300,7 +319,7 @@ async function main(): Promise<void> {
     console.log(`
 Usage: pnpm grab-sync-tid [options]
 
-从 B站官方接口拉取最新分区与 tid 映射，并自动更新 scripts/grab/regions.ts 与 README.md。
+从 B站官方接口拉取最新分区与 tid 映射，并自动更新 scripts/grab/core/regions.ts 与 README.md。
 
 Options:
   --dry-run, --check  仅比对并输出差异，不执行写盘操作（若有差异退出码为 1）
@@ -334,7 +353,7 @@ Options:
     return;
   }
 
-  console.log("正在更新 scripts/grab/regions.ts ...");
+  console.log("正在更新 scripts/grab/core/regions.ts ...");
   updateRegionsFile(latestRegions);
 
   console.log("正在更新 README.md 分区对照表...");

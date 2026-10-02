@@ -1,19 +1,27 @@
-import { parseCliArgs, printHelp } from "./cli";
-import { runGrab } from "./run";
+import { parseCommandLineArguments, printUsageHelp } from "./cli";
+import { executeGrabPipeline } from "./pipeline";
 
-async function main(): Promise<void> {
-  const result = parseCliArgs(process.argv);
+async function runMain(): Promise<void> {
+  const parseResult = parseCommandLineArguments(process.argv);
 
-  switch (result.status) {
-    case "help":
-      printHelp();
+  switch (parseResult.status) {
+    case "help": {
+      printUsageHelp();
       return;
-    case "error":
+    }
+    case "error": {
+      console.error(`❌ ${parseResult.errorMessage}`);
       process.exitCode = 1;
       return;
+    }
     case "success": {
-      const success = await runGrab(result.args);
-      if (!success) {
+      try {
+        await executeGrabPipeline(parseResult.options);
+      } catch (error: unknown) {
+        console.error(
+          "\n❌ 抓取流程异常终止:",
+          error instanceof Error ? error.message : String(error),
+        );
         process.exitCode = 1;
       }
       return;
@@ -21,4 +29,4 @@ async function main(): Promise<void> {
   }
 }
 
-void main();
+void runMain();
