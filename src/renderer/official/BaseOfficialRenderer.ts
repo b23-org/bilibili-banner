@@ -1,5 +1,5 @@
 import type {
-  BannerData,
+  BannerConfig,
   LayersOfficial2021,
   WrappableProperty,
 } from "../../types";
@@ -417,7 +417,7 @@ export abstract class BaseOfficialRenderer implements BaseRenderer {
   }
 
   public async preload(
-    bannerConfig: BannerData,
+    bannerConfig: BannerConfig,
     signal?: AbortSignal,
   ): Promise<void> {
     if (

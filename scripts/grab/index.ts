@@ -1,16 +1,23 @@
-import { getTidArg, validateTidArg } from "./cli";
-import { runGrabSplit2021 } from "./orchestrate";
+import { parseCliArgs, printHelp } from "./cli";
+import { runGrab } from "./run";
 
 async function main(): Promise<void> {
-  const targetTid = getTidArg();
-  if (targetTid !== undefined && !validateTidArg(targetTid)) {
-    process.exitCode = 1;
-    return;
-  }
+  const result = parseCliArgs(process.argv);
 
-  const success = await runGrabSplit2021({ targetTid });
-  if (!success) {
-    process.exitCode = 1;
+  switch (result.status) {
+    case "help":
+      printHelp();
+      return;
+    case "error":
+      process.exitCode = 1;
+      return;
+    case "success": {
+      const success = await runGrab(result.args);
+      if (!success) {
+        process.exitCode = 1;
+      }
+      return;
+    }
   }
 }
 

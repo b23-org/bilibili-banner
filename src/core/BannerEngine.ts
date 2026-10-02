@@ -1,4 +1,3 @@
-import { BannerLoader } from "../data/DataLoader";
 import type { BaseRenderer } from "../renderer";
 import {
   LogoRenderer,
@@ -6,26 +5,25 @@ import {
   OfficialRenderer2021,
   SimpleImageRenderer,
 } from "../renderer";
-import type { BannerData, BannerRef } from "../types";
+import type { BannerConfig, BannerRef } from "../types";
 
 type BannerViewState = "loading" | "success" | "failed";
 
-export default class BannerEngine {
-  private bannerContainer: HTMLElement | null;
-  private readonly loader: BannerLoader = new BannerLoader();
+export class BannerEngine {
+  private bannerContainer: HTMLElement | null = null;
   private bannerRenderer: BaseRenderer | null = null;
   private logoRenderer: LogoRenderer | null = null;
 
   private failedBanners: Set<string> = new Set();
-  private currentPath = "";
-  private currentRef: BannerRef | null = null;
+  private currentId = "";
+  private currentBanner: BannerRef | null = null;
   private requestId = 0;
   private _preloadController: AbortController | null = null;
 
   private static readonly PRELOAD_TIMEOUT_MS = 20000;
 
   constructor() {
-    this.bannerContainer = document.getElementById("banner-container");
+    this.bannerContainer = null;
   }
 
   // ── 状态工具 ──
@@ -44,8 +42,8 @@ export default class BannerEngine {
     return requestId !== this.requestId;
   }
 
-  private _markFailed(ref: BannerRef): void {
-    this.failedBanners.add(ref.path);
+  private _markFailed(banner: BannerRef): void {
+    this.failedBanners.add(banner.id);
     this._setViewState("failed");
   }
 
@@ -59,10 +57,10 @@ export default class BannerEngine {
     logoRenderer?.dispose();
   }
 
-  private _createRenderer(banner: BannerData | null): BaseRenderer | null {
-    if (!banner) return null;
+  private _createRenderer(config: BannerConfig | null): BaseRenderer | null {
+    if (!config) return null;
 
-    const banner_type = banner.type;
+    const banner_type = config.type;
     switch (banner_type) {
       case "simple-image":
         return new SimpleImageRenderer();
@@ -71,7 +69,9 @@ export default class BannerEngine {
       case "official_2021":
         return new OfficialRenderer2021();
       default:
-        throw new Error(`未知的 Banner 类型: ${banner_type}`);
+        throw new Error(
+          `未知的 Banner 类型: ${(config as { type?: string }).type}`,
+        );
     }
   }
 
@@ -101,18 +101,21 @@ export default class BannerEngine {
 
   private async _preloadAll(
     renderer: BaseRenderer,
-    banner: BannerData,
+    banner: BannerRef,
     logoRenderer: LogoRenderer | null,
     signal: AbortSignal,
   ): Promise<void> {
     const preloadTasks: Promise<void>[] = [
-      this._runWithTimeout(renderer.preload(banner, signal), "preload timeout"),
+      this._runWithTimeout(
+        renderer.preload(banner.config, signal),
+        "preload timeout",
+      ),
     ];
 
-    if (logoRenderer && banner.logo?.src) {
+    if (logoRenderer && banner.config.logo?.src) {
       preloadTasks.push(
         this._runWithTimeout(
-          logoRenderer.preload(banner.logo, signal),
+          logoRenderer.preload(banner.config.logo, signal),
           "logo preload timeout",
         ),
       );
@@ -124,14 +127,14 @@ export default class BannerEngine {
   // ── 切换阶段 ──
 
   /** 阶段1: 中止旧请求、清理渲染器、检查黑名单。返回 requestId，已失败则返回 null。 */
-  private _beginSwitch(ref: BannerRef): number | null {
+  private _beginSwitch(banner: BannerRef): number | null {
     this._preloadController?.abort();
     this._preloadController = null;
     this._disposeRenderers(this.bannerRenderer, this.logoRenderer);
     this.bannerRenderer = null;
     this.logoRenderer = null;
 
-    if (this.failedBanners.has(ref.path)) {
+    if (this.failedBanners.has(banner.id)) {
       this._setViewState("failed");
       return null;
     }
@@ -139,27 +142,10 @@ export default class BannerEngine {
     return ++this.requestId;
   }
 
-  /** 阶段2: 加载 BannerData。成功返回数据，失败/过期返回 null。 */
-  private async _loadBannerData(
-    ref: BannerRef,
-    requestId: number,
-  ): Promise<BannerData | null> {
-    try {
-      return this.loader.getCached(ref.path) ?? (await this.loader.load(ref));
-    } catch (e) {
-      if (!this._isStale(requestId)) {
-        console.error(`[BannerEngine] 无法加载 Banner 配置: ${ref.path}`, e);
-        this._markFailed(ref);
-      }
-      return null;
-    }
-  }
-
-  /** 阶段3: 预加载所有资源。成功返回 true，失败/过期返回 false。 */
+  /** 阶段2: 预加载所有资源。成功返回 true，失败/过期返回 false。 */
   private async _preloadResource(
-    ref: BannerRef,
+    banner: BannerRef,
     renderer: BaseRenderer,
-    banner: BannerData,
     logo: LogoRenderer | null,
     requestId: number,
   ): Promise<boolean> {
@@ -171,9 +157,9 @@ export default class BannerEngine {
     } catch (e) {
       this._disposeRenderers(renderer, logo);
       if (!this._isStale(requestId)) {
-        console.error(`[BannerEngine] 资源预加载失败: ${ref.path}`, e);
+        console.error(`[BannerEngine] 资源预加载失败: ${banner.id}`, e);
         this._preloadController?.abort();
-        this._markFailed(ref);
+        this._markFailed(banner);
       }
       return false;
     }
@@ -187,47 +173,47 @@ export default class BannerEngine {
 
   // ── 公共接口 ──
 
-  public async rerenderCurrent(): Promise<void> {
-    if (!this.currentRef) return;
-    this.currentPath = "";
-    await this.switch(this.currentRef);
+  public setContainer(el: HTMLElement): void {
+    this.bannerContainer = el;
   }
 
-  public async switch(ref: BannerRef): Promise<void> {
-    this.currentRef = ref;
-    if (this.currentPath === ref.path) return;
-    console.info(`[BannerEngine] 正在切换至: ${ref.path} [${ref.name}]`);
-    this.currentPath = ref.path;
+  public async rerenderCurrent(): Promise<void> {
+    if (!this.currentBanner) return;
+    this.currentId = "";
+    await this.switch(this.currentBanner);
+  }
 
-    const requestId = this._beginSwitch(ref);
+  public async switch(banner: BannerRef): Promise<void> {
+    this.currentBanner = banner;
+    if (this.currentId === banner.id) return;
+    console.info(`[BannerEngine] 正在切换至: ${banner.id} [${banner.name}]`);
+    this.currentId = banner.id;
+
+    const requestId = this._beginSwitch(banner);
     if (requestId === null) return;
 
-    const data = await this._loadBannerData(ref, requestId);
-    if (!data || this._isStale(requestId)) return;
-
-    const bannerRenderer = this._createRenderer(data);
+    const bannerRenderer = this._createRenderer(banner.config);
     if (!bannerRenderer) return;
 
-    const logoRenderer = data.logo?.src ? new LogoRenderer() : null;
+    const logoRenderer = banner.config.logo?.src ? new LogoRenderer() : null;
 
     const ok = await this._preloadResource(
-      ref,
+      banner,
       bannerRenderer,
-      data,
       logoRenderer,
       requestId,
     );
     if (!ok) return;
 
-    console.info(`[BannerEngine] 资源预加载完成: ${ref.path}`);
+    console.info(`[BannerEngine] 资源预加载完成: ${banner.id}`);
     this._preloadController = null;
-    this._applyBanner(bannerRenderer, data, logoRenderer);
-    console.info(`[BannerEngine] Banner 渲染成功: ${ref.path}`);
+    this._applyBanner(bannerRenderer, banner, logoRenderer);
+    console.info(`[BannerEngine] Banner 渲染成功: ${banner.id}`);
   }
 
   private _applyBanner(
     renderer: BaseRenderer,
-    bannerData: BannerData,
+    banner: BannerRef,
     logoRenderer: LogoRenderer | null,
   ) {
     this.bannerRenderer = renderer;
@@ -238,12 +224,14 @@ export default class BannerEngine {
       renderer.render(this.bannerContainer);
     }
 
-    if (this.logoRenderer && bannerData.logo?.src) {
+    if (this.logoRenderer && banner.config.logo?.src) {
       this.logoRenderer.render(
-        bannerData.logo,
-        bannerData.link,
-        bannerData.name,
+        banner.config.logo,
+        banner.config.link,
+        banner.name,
       );
     }
   }
 }
+
+export default BannerEngine;

@@ -1,13 +1,13 @@
 import type {
-  BannerData,
-  BannerDataOfficial2021,
+  BannerConfig,
   LayersOfficial2021,
+  Official2021BannerConfig,
 } from "../../types";
 import { ExtensionHost } from "../extensions/core";
 import { BaseOfficialRenderer } from "./BaseOfficialRenderer";
 
 export class OfficialRenderer2021 extends BaseOfficialRenderer {
-  private bannerConfig: BannerDataOfficial2021 | null = null;
+  private bannerConfig: Official2021BannerConfig | null = null;
   private extensionHost: ExtensionHost | null = null;
   private _extensionAbortController = new AbortController();
 
@@ -16,22 +16,22 @@ export class OfficialRenderer2021 extends BaseOfficialRenderer {
   }
 
   public async preload(
-    bannerConfig: BannerData,
+    bannerConfig: BannerConfig,
     signal?: AbortSignal,
   ): Promise<void> {
-    if (!bannerConfig || bannerConfig.type !== "official_2021") {
+    if (bannerConfig?.type !== "official_2021") {
       return;
     }
-    this.bannerConfig = bannerConfig as BannerDataOfficial2021;
+    this.bannerConfig = bannerConfig as Official2021BannerConfig;
     return super.preload(bannerConfig, signal);
   }
 
   protected _onAfterSetup(): void {
     if (!this.container || !this.bannerConfig) return;
 
-    const extensionHost = ExtensionHost.fromBannerData({
+    const extensionHost = ExtensionHost.fromConfig({
       bannerEl: this.container,
-      bannerData: this.bannerConfig,
+      config: this.bannerConfig,
       signal: this._extensionAbortController.signal,
     });
 

@@ -1,0 +1,191 @@
+/* HelpModal 弹窗样式 (Task 5.2) */
+.help-modal-backdrop {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2000;
+  animation: helpModalFadeIn 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  padding: 24px;
+  box-sizing: border-box;
+}
+
+@keyframes helpModalFadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.help-modal-card {
+  background: #ffffff;
+  border-radius: 16px;
+  width: 100%;
+  max-width: 600px;
+  max-height: 80vh;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 16px 48px rgba(0, 0, 0, 0.18);
+  border: 1px solid #e3e5e7;
+  overflow: hidden;
+  box-sizing: border-box;
+  animation: helpModalPopIn 0.25s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+@keyframes helpModalPopIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px) scale(0.96);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* 头部 */
+.help-modal-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 24px;
+  border-bottom: 1px solid #f1f2f3;
+  flex-shrink: 0;
+  background: #ffffff;
+}
+
+.help-modal-title {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 600;
+  color: #18191c;
+  line-height: 1.4;
+}
+
+/* 内容区 */
+.help-modal-body {
+  flex: 1;
+  overflow-y: auto;
+  padding: 20px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  box-sizing: border-box;
+}
+
+.help-modal-body::-webkit-scrollbar {
+  width: 6px;
+}
+.help-modal-body::-webkit-scrollbar-track {
+  background: transparent;
+}
+.help-modal-body::-webkit-scrollbar-thumb {
+  background: #e3e5e7;
+  border-radius: 99px;
+}
+.help-modal-body::-webkit-scrollbar-thumb:hover {
+  background: #c9ccd0;
+}
+
+/* 帮助区块 */
+.help-section {
+  background-color: #f6f7f8;
+  border-radius: 12px;
+  padding: 16px 20px;
+  border: 1px solid #f1f2f3;
+  text-align: left;
+}
+
+.section-title {
+  font-size: 15px;
+  font-weight: 600;
+  color: #18191c;
+  margin: 0 0 10px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  line-height: 1.3;
+}
+
+.section-text {
+  font-size: 13.5px;
+  color: #61666d;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.help-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.help-item {
+  display: flex;
+  align-items: flex-start;
+}
+
+.help-text {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  width: 100%;
+}
+
+.help-label {
+  font-size: 14px;
+  font-weight: 600;
+  color: #18191c;
+}
+
+.help-desc {
+  font-size: 13px;
+  color: #61666d;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* 底部操作区 */
+.help-modal-footer {
+  padding: 16px 24px;
+  border-top: 1px solid #f1f2f3;
+  display: flex;
+  justify-content: flex-end;
+  flex-shrink: 0;
+  background: #ffffff;
+}
+
+.help-modal-primary-btn {
+  height: 36px;
+  padding: 0 24px;
+  background-color: #00aeec;
+  color: #ffffff;
+  border: none;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  outline: none;
+  transition:
+    background-color 0.2s ease,
+    transform 0.1s ease;
+}
+
+.help-modal-primary-btn:hover {
+  background-color: #40c5f1;
+}
+
+.help-modal-primary-btn:active {
+  background-color: #009cd3;
+  transform: scale(0.98);
+}

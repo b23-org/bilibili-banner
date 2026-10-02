@@ -1,0 +1,322 @@
+[
+  {
+    "date": "2015-02-14",
+    "refs": [
+      {
+        "name": "新年快乐",
+        "id": "2015-02-14-h00-t0",
+        "tags": ["img"],
+        "tid": [0],
+        "config": {
+          "type": "simple-image",
+          "logo": {
+            "src": "assets/2015/02/2015-02-14-h00-t0/2015_newyear_logo.png",
+            "width": "220px",
+            "height": "110px"
+          },
+          "layer": {
+            "src": "assets/2015/02/2015-02-14-h00-t0/2015_newyear.jpg"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "date": "2015-03-09",
+    "refs": [
+      {
+        "name": "3月桃花",
+        "id": "2015-03-09-h00-t0",
+        "tags": ["img"],
+        "tid": [0],
+        "config": {
+          "type": "simple-image",
+          "logo": {
+            "src": "assets/2015/03/2015-03-09-h00-t0/2015_spring_logo.png",
+            "width": "220px",
+            "height": "110px"
+          },
+          "layer": {
+            "src": "assets/2015/03/2015-03-09-h00-t0/2015_spring.jpg"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "date": "2015-03-30",
+    "refs": [
+      {
+        "name": "清明时节",
+        "id": "2015-03-30-h00-t0",
+        "tags": ["img"],
+        "tid": [0],
+        "config": {
+          "type": "simple-image",
+          "logo": {
+            "src": "assets/2015/03/2015-03-30-h00-t0/2015_spring2_logo.png",
+            "width": "220px",
+            "height": "110px"
+          },
+          "layer": {
+            "src": "assets/2015/03/2015-03-30-h00-t0/2015_spring2.jpg"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "date": "2015-04-28",
+    "refs": [
+      {
+        "name": "2233",
+        "id": "2015-04-28-h00-t0",
+        "tags": ["img"],
+        "tid": [0],
+        "config": {
+          "type": "simple-image",
+          "logo": {
+            "src": "assets/2015/04/2015-04-28-h00-t0/20150501_logo.png",
+            "width": "220px",
+            "height": "110px"
+          },
+          "layer": {
+            "src": "assets/2015/04/2015-04-28-h00-t0/20150501_banner.jpg"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "date": "2015-05-04",
+    "refs": [
+      {
+        "name": "晴日花海",
+        "id": "2015-05-04-h00-t0",
+        "tags": ["img"],
+        "tid": [0],
+        "config": {
+          "type": "simple-image",
+          "logo": {
+            "src": "assets/2015/05/2015-05-04-h00-t0/2015_summer1_logo.png",
+            "width": "220px",
+            "height": "110px"
+          },
+          "layer": {
+            "src": "assets/2015/05/2015-05-04-h00-t0/2015_summer1.jpg"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "date": "2015-06-05",
+    "refs": [
+      {
+        "name": "决胜高考",
+        "id": "2015-06-05-h00-t0",
+        "tags": ["img"],
+        "tid": [0],
+        "config": {
+          "type": "simple-image",
+          "logo": {
+            "src": "assets/2015/06/2015-06-05-h00-t0/banner20150604_logo.png",
+            "width": "220px",
+            "height": "110px"
+          },
+          "layer": {
+            "src": "assets/2015/06/2015-06-05-h00-t0/banner20150604.jpg"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "date": "2015-06-27",
+    "refs": [
+      {
+        "name": "BILIBILI 六周年 ( ゜- ゜)つロ 干杯~",
+        "id": "2015-06-27-h00-t0",
+        "tags": ["img"],
+        "tid": [0],
+        "config": {
+          "type": "simple-image",
+          "logo": {
+            "src": "assets/2015/06/2015-06-27-h00-t0/bilibili6th_logo.png",
+            "width": "220px",
+            "height": "110px"
+          },
+          "layer": {
+            "src": "assets/2015/06/2015-06-27-h00-t0/bili6th_3xixi.jpg"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "date": "2015-07-09",
+    "refs": [
+      {
+        "name": "驰骋碧海",
+        "id": "2015-07-09-h00-t0",
+        "tags": ["img"],
+        "tid": [0],
+        "config": {
+          "type": "simple-image",
+          "logo": {
+            "src": "assets/2015/07/2015-07-09-h00-t0/2015_summer2_logo.png"
+          },
+          "layer": {
+            "src": "assets/2015/07/2015-07-09-h00-t0/2015_summer2.jpg"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "date": "2015-09-06",
+    "refs": [
+      {
+        "name": "开学啦",
+        "id": "2015-09-06-h00-t0",
+        "tags": ["img"],
+        "tid": [0],
+        "config": {
+          "type": "simple-image",
+          "logo": {
+            "src": "assets/2015/09/2015-09-06-h00-t0/20150901_logo.png",
+            "width": "220px",
+            "height": "110px"
+          },
+          "layer": {
+            "src": "assets/2015/09/2015-09-06-h00-t0/20150901.jpg"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "date": "2015-09-15",
+    "refs": [
+      {
+        "name": "秋日野营",
+        "id": "2015-09-15-h00-t0",
+        "tags": ["img"],
+        "tid": [0],
+        "config": {
+          "type": "simple-image",
+          "logo": {
+            "src": "assets/2015/09/2015-09-15-h00-t0/2015_autumn_logo.png",
+            "width": "220px",
+            "height": "110px"
+          },
+          "layer": {
+            "src": "assets/2015/09/2015-09-15-h00-t0/2015_autumn.jpg"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "date": "2015-10-02",
+    "refs": [
+      {
+        "name": "欢度国庆",
+        "id": "2015-10-02-h00-t0",
+        "tags": ["img"],
+        "tid": [0],
+        "config": {
+          "type": "simple-image",
+          "logo": {
+            "src": "assets/2015/10/2015-10-02-h00-t0/20151010-logo.png",
+            "width": "220px",
+            "height": "110px"
+          },
+          "layer": {
+            "src": "assets/2015/10/2015-10-02-h00-t0/20151010.png"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "date": "2015-11-02",
+    "refs": [
+      {
+        "name": "萌站",
+        "id": "2015-11-02-h00-t0",
+        "tags": ["img"],
+        "tid": [0],
+        "config": {
+          "type": "simple-image",
+          "logo": {
+            "src": "assets/2015/11/2015-11-02-h00-t0/37deb62510f6e1ac7b171b7b11ab2919.png"
+          },
+          "layer": {
+            "src": "assets/2015/11/2015-11-02-h00-t0/fe4171545841a486ab33ed2775af9783.jpg"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "date": "2015-11-17",
+    "refs": [
+      {
+        "name": "「大圣归来」",
+        "id": "2015-11-17-h00-t0",
+        "tags": ["img"],
+        "tid": [0],
+        "config": {
+          "type": "simple-image",
+          "logo": {
+            "src": "assets/2015/11/2015-11-17-h00-t0/94e4664811d5adef41c5783a21b19f25.png"
+          },
+          "layer": {
+            "src": "assets/2015/11/2015-11-17-h00-t0/aed557c90e8735d7f1462797813e193b.png"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "date": "2015-12-02",
+    "refs": [
+      {
+        "name": "2233",
+        "id": "2015-12-02-h00-t0",
+        "tags": ["img"],
+        "tid": [0],
+        "config": {
+          "type": "simple-image",
+          "logo": {
+            "src": "assets/2015/12/2015-12-02-h00-t0/9bc2d7224de194728c0ec8a51a7cffad.png"
+          },
+          "layer": {
+            "src": "assets/2015/12/2015-12-02-h00-t0/95651f41390fa7a1a7d8c0eff4d3bc69.jpg"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "date": "2015-12-05",
+    "refs": [
+      {
+        "name": "BILIBILI MOE 海选赛绝赞进行中！",
+        "id": "2015-12-05-h00-t0",
+        "tags": ["img"],
+        "tid": [0],
+        "config": {
+          "type": "simple-image",
+          "logo": {
+            "src": "assets/2015/12/2015-12-05-h00-t0/37deb62510f6e1ac7b171b7b11ab2919.png"
+          },
+          "layer": {
+            "src": "assets/2015/12/2015-12-05-h00-t0/a127a59dbfa4831710275391970d80f1.jpg"
+          }
+        }
+      }
+    ]
+  }
+]

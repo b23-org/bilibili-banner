@@ -1,0 +1,68 @@
+[
+  {
+    "date": "2013-09-07",
+    "refs": [
+      {
+        "name": "秋",
+        "id": "2013-09-07-h00-t0",
+        "tags": ["img"],
+        "tid": [0],
+        "config": {
+          "type": "simple-image",
+          "logo": {
+            "src": "assets/2013/09/2013-09-07-h00-t0/2013-qiulogo.png",
+            "width": "290px",
+            "height": "110px"
+          },
+          "layer": {
+            "src": "assets/2013/09/2013-09-07-h00-t0/qiu2013_3.jpg"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "date": "2013-11-07",
+    "refs": [
+      {
+        "name": "冬",
+        "id": "2013-11-07-h00-t0",
+        "tags": ["img"],
+        "tid": [0],
+        "config": {
+          "type": "simple-image",
+          "logo": {
+            "src": "assets/2013/11/2013-11-07-h00-t0/d2013_logo.png",
+            "width": "290px",
+            "height": "110px"
+          },
+          "layer": {
+            "src": "assets/2013/11/2013-11-07-h00-t0/d2013_1170.jpg"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "date": "2013-12-25",
+    "refs": [
+      {
+        "name": "圣诞快乐",
+        "id": "2013-12-25-h00-t0",
+        "tags": ["img"],
+        "tid": [0],
+        "config": {
+          "type": "simple-image",
+          "logo": {
+            "src": "assets/2013/12/2013-12-25-h00-t0/20131225_logo.png",
+            "width": "290px",
+            "height": "110px"
+          },
+          "layer": {
+            "src": "assets/2013/12/2013-12-25-h00-t0/20131225_1170.jpg"
+          }
+        }
+      }
+    ]
+  }
+]

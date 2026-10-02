@@ -1,0 +1,235 @@
+/* ==========================================================================
+   通用浮层组件样式 (VPopover 基础基座与动画)
+   ========================================================================== */
+
+.v-popover-trigger-wrap {
+  display: inline-flex;
+  vertical-align: middle;
+}
+
+/* 统一驱动触发器展开态与箭头翻转 */
+.v-popover-trigger-wrap.is-open .b-capsule,
+.v-popover-trigger-wrap.is-open .channel-link {
+  color: #00aeec;
+}
+
+.v-popover-trigger-wrap.is-open .b-capsule:hover,
+.v-popover-trigger-wrap.is-open .channel-link:hover {
+  color: #00aeec;
+  border-color: #00aeec;
+  background-color: #dff6fd;
+}
+
+.v-popover-trigger-wrap.is-open .b-capsule__arrow,
+.v-popover-trigger-wrap.is-open .channel-link__more__arrow {
+  transform: rotate(180deg);
+}
+
+.v-popover-wrap {
+  position: absolute;
+  pointer-events: none;
+  z-index: 1000;
+}
+
+.v-popover {
+  position: absolute;
+  pointer-events: auto;
+  will-change: opacity, transform;
+  transition:
+    opacity 0.3s cubic-bezier(0.2, 0, 0, 1),
+    transform 0.3s cubic-bezier(0.2, 0, 0, 1);
+  z-index: 1000;
+}
+
+.v-popover-content {
+  position: relative;
+  background-color: #ffffff;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  border: 1px solid #e3e5e7;
+  color: #18191c;
+  box-sizing: border-box;
+}
+
+/* 隐形桥接层：覆盖 5px 间隙，防止鼠标跨越时因移动路径出现空隙 */
+.v-popover.is-bottom::before,
+.v-popover.is-bottom-start::before,
+.v-popover.is-bottom-end::before {
+  content: "";
+  position: absolute;
+  top: -6px;
+  left: 0;
+  right: 0;
+  height: 6px;
+}
+
+.v-popover.is-top::before,
+.v-popover.is-top-start::before,
+.v-popover.is-top-end::before {
+  content: "";
+  position: absolute;
+  bottom: -6px;
+  left: 0;
+  right: 0;
+  height: 6px;
+}
+
+/* ──────────────── 方向定位与过渡动画 ──────────────── */
+
+/* 1. is-bottom (居中向下) */
+.v-popover.is-bottom {
+  top: calc(100% + 5px);
+  left: 50%;
+}
+.v-popover.is-bottom.is-hidden {
+  opacity: 0;
+  transform: translate3d(-50%, -5px, 0);
+  pointer-events: none;
+}
+.v-popover.is-bottom.is-visible {
+  opacity: 1;
+  transform: translate3d(-50%, 0, 0);
+}
+
+/* 2. is-bottom-start (左对齐向下) */
+.v-popover.is-bottom-start {
+  top: calc(100% + 5px);
+  left: 0;
+}
+.v-popover.is-bottom-start.is-hidden {
+  opacity: 0;
+  transform: translate3d(0, -5px, 0);
+  pointer-events: none;
+}
+.v-popover.is-bottom-start.is-visible {
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
+}
+
+/* 3. is-bottom-end (右对齐向下) */
+.v-popover.is-bottom-end {
+  top: calc(100% + 5px);
+  right: 0;
+}
+.v-popover.is-bottom-end.is-hidden {
+  opacity: 0;
+  transform: translate3d(0, -5px, 0);
+  pointer-events: none;
+}
+.v-popover.is-bottom-end.is-visible {
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
+}
+
+/* 4. is-top (居中向上) */
+.v-popover.is-top {
+  bottom: calc(100% + 5px);
+  left: 50%;
+}
+.v-popover.is-top.is-hidden {
+  opacity: 0;
+  transform: translate3d(-50%, 5px, 0);
+  pointer-events: none;
+}
+.v-popover.is-top.is-visible {
+  opacity: 1;
+  transform: translate3d(-50%, 0, 0);
+}
+
+/* 5. is-top-start (左对齐向上) */
+.v-popover.is-top-start {
+  bottom: calc(100% + 5px);
+  left: 0;
+}
+.v-popover.is-top-start.is-hidden {
+  opacity: 0;
+  transform: translate3d(0, 5px, 0);
+  pointer-events: none;
+}
+.v-popover.is-top-start.is-visible {
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
+}
+
+/* 6. is-top-end (右对齐向上) */
+.v-popover.is-top-end {
+  bottom: calc(100% + 5px);
+  right: 0;
+}
+.v-popover.is-top-end.is-hidden {
+  opacity: 0;
+  transform: translate3d(0, 5px, 0);
+  pointer-events: none;
+}
+.v-popover.is-top-end.is-visible {
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
+}
+
+/* ==========================================================================
+   通用 Popover 浮层菜单与选项规范 (自适应内容排布)
+   统一供 FilterBar (年份/类型) 与 BannerInfoBar (版本) 复用
+   ========================================================================== */
+
+.v-popover-menu {
+  box-sizing: border-box;
+  width: max-content;
+  padding: 6px;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+/* 网格排布模式（用于年份等项较多的场景） */
+.v-popover-menu--grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 4px;
+  max-height: 280px;
+  overflow-y: auto;
+}
+
+/* 通用菜单选项（对齐官方 .name 规范） */
+.v-popover-menu__item {
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 32px;
+  padding: 0 12px;
+  border-radius: 4px;
+  border: none;
+  background: transparent;
+  color: #18191c;
+  font-family: inherit;
+  font-size: 13px;
+  white-space: nowrap;
+  cursor: pointer;
+  user-select: none;
+  outline: none;
+  text-decoration: none;
+  transition:
+    background-color 0.2s cubic-bezier(0.2, 0, 0, 1),
+    color 0.2s cubic-bezier(0.2, 0, 0, 1);
+}
+
+.v-popover-menu__item:hover,
+.v-popover-menu__item:focus-visible {
+  background-color: #e3e5e7;
+  color: #18191c;
+}
+
+/* 激活项高亮 */
+.v-popover-menu__item.is-active {
+  color: #00aeec;
+  font-weight: 500;
+  background-color: #dff6fd;
+}
+
+/* 版本专属选项布局：左侧版本名，右侧 Tag 徽章 */
+.v-popover-menu__item--version {
+  justify-content: space-between;
+  gap: 16px;
+  min-width: 140px;
+  padding: 0 10px;
+}

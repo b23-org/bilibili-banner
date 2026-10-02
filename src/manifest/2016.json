@@ -1,0 +1,1031 @@
+[
+  {
+    "date": "2016-01-02",
+    "refs": [
+      {
+        "name": "BILIBILI MOE 决赛进行中！！",
+        "id": "2016-01-02-h00-t0",
+        "tags": ["img"],
+        "tid": [0],
+        "config": {
+          "type": "simple-image",
+          "logo": {
+            "src": "assets/2016/01/2016-01-02-h00-t0/1fefc4fc2fc0f2263dbf8a39770fe9e9.png",
+            "width": "220px",
+            "height": "110px"
+          },
+          "layer": {
+            "src": "assets/2016/01/2016-01-02-h00-t0/ba57e0a7561ff1a2faca55405fe06d79.png"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "date": "2016-01-04",
+    "refs": [
+      {
+        "name": "看卷福",
+        "id": "2016-01-04-h00-t0",
+        "tags": ["img"],
+        "tid": [0],
+        "config": {
+          "type": "simple-image",
+          "logo": {
+            "src": "assets/2016/01/2016-01-04-h00-t0/8bc8c8e900022f87b0a536875d4655ed.png"
+          },
+          "layer": {
+            "src": "assets/2016/01/2016-01-04-h00-t0/7b203ffdff77c5ec3659ca7648abdafc.png"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "date": "2016-01-11",
+    "refs": [
+      {
+        "name": "扭出你的2016关键字！",
+        "id": "2016-01-11-h00-t0",
+        "tags": ["img"],
+        "tid": [0],
+        "config": {
+          "type": "simple-image",
+          "logo": {
+            "src": "assets/2016/01/2016-01-11-h00-t0/f532a414419ce0977d76c44f4356f69b.png",
+            "width": "220px",
+            "height": "110px"
+          },
+          "layer": {
+            "src": "assets/2016/01/2016-01-11-h00-t0/f330bac7fb551ac44cc34ac5df9d1667.jpg"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "date": "2016-01-23",
+    "refs": [
+      {
+        "name": "【BILIBILI爱相随】一起来捕捉 BILIBILI 号",
+        "id": "2016-01-23-h00-t0",
+        "tags": ["img"],
+        "tid": [0],
+        "config": {
+          "type": "simple-image",
+          "logo": {
+            "src": "assets/2016/01/2016-01-23-h00-t0/a029c3907a326ef0f4223c53503b6f29.png",
+            "width": "220px",
+            "height": "110px"
+          },
+          "layer": {
+            "src": "assets/2016/01/2016-01-23-h00-t0/84ff08c8d2e8ee82dc23e05cd3444f30.jpg"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "date": "2016-02-08",
+    "refs": [
+      {
+        "name": "拜年祭",
+        "id": "2016-02-08-h00-t0",
+        "tags": ["img"],
+        "tid": [0],
+        "config": {
+          "type": "simple-image",
+          "logo": {
+            "src": "assets/2016/02/2016-02-08-h00-t0/0d7e9b75fe5cb3df42a26ba83eb75236.PNG",
+            "width": "220px",
+            "height": "110px"
+          },
+          "layer": {
+            "src": "assets/2016/02/2016-02-08-h00-t0/ac23bfc2b0c586777e74812d91e6a30b.png"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "date": "2016-02-13",
+    "refs": [
+      {
+        "name": "冬天快乐！",
+        "id": "2016-02-13-h00-t0",
+        "tags": ["img"],
+        "tid": [0],
+        "config": {
+          "type": "simple-image",
+          "logo": {
+            "src": "assets/2016/02/2016-02-13-h00-t0/12fa1cfbe3bd37367018f705987f843b.png",
+            "width": "220px",
+            "height": "110px"
+          },
+          "layer": {
+            "src": "assets/2016/02/2016-02-13-h00-t0/f119744427b69c79260eddb42068e751.jpg"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "date": "2016-02-26",
+    "refs": [
+      {
+        "name": "2233与你闹元宵",
+        "id": "2016-02-26-h00-t0",
+        "tags": ["img"],
+        "tid": [0],
+        "config": {
+          "type": "simple-image",
+          "logo": {
+            "src": "assets/2016/02/2016-02-26-h00-t0/5a8a305e4533de2e75131e634d40938c.png",
+            "width": "220px",
+            "height": "110px"
+          },
+          "layer": {
+            "src": "assets/2016/02/2016-02-26-h00-t0/51be215e56030dbbd806169385e6562b.jpg"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "date": "2016-03-05",
+    "refs": [
+      {
+        "name": "雪化后是什么呢？是春天吧…",
+        "id": "2016-03-05-h00-t0",
+        "tags": ["img"],
+        "tid": [0],
+        "config": {
+          "type": "simple-image",
+          "logo": {
+            "src": "assets/2016/03/2016-03-05-h00-t0/971d9c66d10c6c6396b36416568525db.png",
+            "width": "220px",
+            "height": "110px"
+          },
+          "layer": {
+            "src": "assets/2016/03/2016-03-05-h00-t0/b314d69ec7ba625d89a343366c045026.PNG"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "date": "2016-03-19",
+    "refs": [
+      {
+        "name": "西洋乐器大赛",
+        "id": "2016-03-19-h00-t0",
+        "tags": ["img"],
+        "tid": [0],
+        "config": {
+          "type": "simple-image",
+          "logo": {
+            "src": "assets/2016/03/2016-03-19-h00-t0/bdddec22494b50d792487028c17ece76.png",
+            "width": "220px",
+            "height": "110px"
+          },
+          "layer": {
+            "src": "assets/2016/03/2016-03-19-h00-t0/a4b4353cf95aeb8788c3d98c01e055d3.png"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "date": "2016-04-02",
+    "refs": [
+      {
+        "name": "号外号外~哔哩哔哩重大新闻！",
+        "id": "2016-04-02-h00-t0",
+        "tags": ["img"],
+        "tid": [0],
+        "config": {
+          "type": "simple-image",
+          "logo": {
+            "src": "assets/2016/04/2016-04-02-h00-t0/8f554c70de57d2942a27808999e4d757.png",
+            "width": "220px",
+            "height": "110px"
+          },
+          "layer": {
+            "src": "assets/2016/04/2016-04-02-h00-t0/1bcf8cb2a585f02890e46e6606d0780a.jpg"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "date": "2016-04-07",
+    "refs": [
+      {
+        "name": "BML",
+        "id": "2016-04-07-h00-t0",
+        "tags": ["img"],
+        "tid": [0],
+        "config": {
+          "type": "simple-image",
+          "logo": {
+            "src": "assets/2016/04/2016-04-07-h00-t0/097979745cb366fb95072af11352e480.png",
+            "width": "220px",
+            "height": "110px"
+          },
+          "layer": {
+            "src": "assets/2016/04/2016-04-07-h00-t0/82df683ce9d524d11517df03413bb17e.png"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "date": "2016-04-13",
+    "refs": [
+      {
+        "name": "一起来开心地跳舞吧！",
+        "id": "2016-04-13-h00-t0",
+        "tags": ["img"],
+        "tid": [0],
+        "config": {
+          "type": "simple-image",
+          "logo": {
+            "src": "assets/2016/04/2016-04-13-h00-t0/dd4053d635b32234e84ce58fb59206f3.png",
+            "width": "220px",
+            "height": "110px"
+          },
+          "layer": {
+            "src": "assets/2016/04/2016-04-13-h00-t0/6b78e67c4dd37472948a8a6aa811a18e.png"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "date": "2016-04-21",
+    "refs": [
+      {
+        "name": "「绝园的暴风雨」",
+        "id": "2016-04-21-h00-t0",
+        "tags": ["img"],
+        "tid": [0],
+        "config": {
+          "type": "simple-image",
+          "logo": {
+            "src": "assets/2016/04/2016-04-21-h00-t0/8a067fd633ea5c6e1705d0b44a7b5c26.png",
+            "width": "220px",
+            "height": "110px"
+          },
+          "layer": {
+            "src": "assets/2016/04/2016-04-21-h00-t0/256bf7bd4fbb7c00b921fc50b3d6f32f.png"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "date": "2016-04-29",
+    "refs": [
+      {
+        "name": "BML",
+        "id": "2016-04-29-h00-t0",
+        "tags": ["img"],
+        "tid": [0],
+        "config": {
+          "type": "simple-image",
+          "logo": {
+            "src": "assets/2016/04/2016-04-29-h00-t0/oYYBAFcjKTqAKFHKAAAu4x0ujg0983.png",
+            "width": "220px",
+            "height": "110px"
+          },
+          "layer": {
+            "src": "assets/2016/04/2016-04-29-h00-t0/oYYBAFcjKTGANfoVAAGAcG7aL64682.jpg"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "date": "2016-05-19",
+    "refs": [
+      {
+        "name": "圆环之理 即将开启",
+        "id": "2016-05-19-h00-t0",
+        "tags": ["img"],
+        "tid": [0],
+        "config": {
+          "type": "simple-image",
+          "logo": {
+            "src": "assets/2016/05/2016-05-19-h00-t0/oYYBAFdOV_uADYoDAAAVD1yukbs626.png"
+          },
+          "layer": {
+            "src": "assets/2016/05/2016-05-19-h00-t0/u1ed"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "date": "2016-06-06",
+    "refs": [
+      {
+        "name": "端午节龙舟粽子合战",
+        "id": "2016-06-06-h00-t0",
+        "tags": ["img"],
+        "tid": [0],
+        "config": {
+          "type": "simple-image",
+          "logo": {
+            "src": "assets/2016/06/2016-06-06-h00-t0/oYYBAFdVbJyAAHQGAACtCh_BVaM988.png",
+            "width": "220px",
+            "height": "110px"
+          },
+          "layer": {
+            "src": "assets/2016/06/2016-06-06-h00-t0/oYYBAFdVbAOAUuMAAAMCaVBvk5M861.jpg"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "date": "2016-06-11",
+    "refs": [
+      {
+        "name": "BDF",
+        "id": "2016-06-11-h00-t0",
+        "tags": ["img"],
+        "tid": [0],
+        "config": {
+          "type": "simple-image",
+          "logo": {
+            "src": "assets/2016/06/2016-06-11-h00-t0/oYYBAFdYBmKAWvzPAACeXF9UFV0735.png",
+            "width": "220px",
+            "height": "110px"
+          },
+          "layer": {
+            "src": "assets/2016/06/2016-06-11-h00-t0/oYYBAFdYBUaAIkCvAANY8l3Nul4173.jpg"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "date": "2016-06-16",
+    "refs": [
+      {
+        "name": "番剧承包回馈活动",
+        "id": "2016-06-16-h00-t0",
+        "tags": ["img"],
+        "tid": [0],
+        "config": {
+          "type": "simple-image",
+          "logo": {
+            "src": "assets/2016/06/2016-06-16-h00-t0/oYYBAFdhG0uAALvZAAAnThWblEc294.png",
+            "width": "220px",
+            "height": "110px"
+          },
+          "layer": {
+            "src": "assets/2016/06/2016-06-16-h00-t0/oYYBAFdhHHOAZGijAAO0O3Sc2Mc117.jpg"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "date": "2016-06-25",
+    "refs": [
+      {
+        "name": "以鬼畜之名，为梦想干杯！",
+        "id": "2016-06-25-h00-t0",
+        "tags": ["img"],
+        "tid": [0],
+        "config": {
+          "type": "simple-image",
+          "logo": {
+            "src": "assets/2016/06/2016-06-25-h00-t0/oYYBAFdroyqAFD9qAAAx-UaSFgk131.png",
+            "width": "220px",
+            "height": "110px"
+          },
+          "layer": {
+            "src": "assets/2016/06/2016-06-25-h00-t0/oYYBAFdroomABpZyAARcIWH-YIA979.jpg"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "date": "2016-07-07",
+    "refs": [
+      {
+        "name": "BDF 宅舞大赛总决赛",
+        "id": "2016-07-07-h00-t0",
+        "tags": ["img"],
+        "tid": [0],
+        "config": {
+          "type": "simple-image",
+          "logo": {
+            "src": "assets/2016/07/2016-07-07-h00-t0/oYYBAFdYBmKAWvzPAACeXF9UFV0735.png",
+            "width": "220px",
+            "height": "110px"
+          },
+          "layer": {
+            "src": "assets/2016/07/2016-07-07-h00-t0/oYYBAFd87HGANL-NAAD16AJYmfM260.jpg"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "date": "2016-07-17",
+    "refs": [
+      {
+        "name": "BML-SP",
+        "id": "2016-07-17-h00-t0",
+        "tags": ["img"],
+        "tid": [0],
+        "config": {
+          "type": "simple-image",
+          "logo": {
+            "src": "assets/2016/07/2016-07-17-h00-t0/5c86339f78c7cf44b58a6f20227015be.png",
+            "width": "220px",
+            "height": "110px"
+          },
+          "layer": {
+            "src": "assets/2016/07/2016-07-17-h00-t0/5c6b1b79813ceae9cb4bcf133b0a981f.jpg"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "date": "2016-07-31",
+    "refs": [
+      {
+        "name": "BILIBILI 夏夜鬼畜大赏结果公示",
+        "id": "2016-07-31-h00-t0",
+        "tags": ["img"],
+        "tid": [0],
+        "config": {
+          "type": "simple-image",
+          "logo": {
+            "src": "assets/2016/07/2016-07-31-h00-t0/e6c2bc0472c2414def46130d68945bd9.png",
+            "width": "220px",
+            "height": "110px"
+          },
+          "layer": {
+            "src": "assets/2016/07/2016-07-31-h00-t0/beb582caff4aa01439128a28c9c09b55.jpg"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "date": "2016-08-08",
+    "refs": [
+      {
+        "name": "Fate 系列首款正版手游",
+        "id": "2016-08-08-h00-t0",
+        "tags": ["img"],
+        "tid": [0],
+        "config": {
+          "type": "simple-image",
+          "logo": {
+            "src": "assets/2016/08/2016-08-08-h00-t0/323b9af8dc1737981d5529465e911385.png",
+            "width": "220px",
+            "height": "110px"
+          },
+          "layer": {
+            "src": "assets/2016/08/2016-08-08-h00-t0/51c4734889745f7fd838640971caef9d.jpg"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "date": "2016-08-15",
+    "refs": [
+      {
+        "name": "BDF",
+        "id": "2016-08-15-h00-t0",
+        "tags": ["img"],
+        "tid": [0],
+        "config": {
+          "type": "simple-image",
+          "logo": {
+            "src": "assets/2016/08/2016-08-15-h00-t0/0621531c535a015e300b3ec58d246186.png",
+            "width": "220px",
+            "height": "110px"
+          },
+          "layer": {
+            "src": "assets/2016/08/2016-08-15-h00-t0/75eb0bc1f70eccc3c2d22f0b9d006d5c.jpg"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "date": "2016-08-26",
+    "refs": [
+      {
+        "name": "夏天是美好的季节…",
+        "id": "2016-08-26-h00-t0",
+        "tags": ["img"],
+        "tid": [0],
+        "config": {
+          "type": "simple-image",
+          "logo": {
+            "src": "assets/2016/08/2016-08-26-h00-t0/oYYBAFd156SAYMHlAACVIi6LP7o075.png",
+            "width": "220px",
+            "height": "110px"
+          },
+          "layer": {
+            "src": "assets/2016/08/2016-08-26-h00-t0/oYYBAFd16ASAFbS4AAcNql6NOb8768.png"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "date": "2016-10-17",
+    "refs": [
+      {
+        "name": "「超唯美动画 海洋之歌」",
+        "id": "2016-10-17-h14-t0",
+        "tags": ["img"],
+        "tid": [0],
+        "config": {
+          "type": "simple-image",
+          "layer": {
+            "src": "assets/2016/10/2016-10-17-h14-t0/60ca4acb1b16e4c8ce2b13096c9df7248cb251ac.png"
+          },
+          "link": "http://bangumi.bilibili.com/movie/11904",
+          "logo": {
+            "src": "assets/2016/10/2016-10-17-h14-t0/281c14460443a111a8c6c238c8306570b4ded1ba.png"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "date": "2016-10-17",
+    "refs": [
+      {
+        "name": "音乐区本家争霸赛",
+        "id": "2016-10-17-h14-t3",
+        "tags": ["img"],
+        "tid": [3],
+        "config": {
+          "type": "simple-image",
+          "layer": {
+            "src": "assets/2016/10/2016-10-17-h14-t3/b620aa95caa8782016ded146075cca02af64feb6.jpg"
+          },
+          "link": "http://www.bilibili.com/html/activity-VocaloidCover.html",
+          "logo": {
+            "src": "assets/2016/10/2016-10-17-h14-t3/075604c83614daec0c4129a41ec11b85c9214497.png"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "date": "2016-10-17",
+    "refs": [
+      {
+        "name": "和我签订契约，成为魔法少女吧！",
+        "id": "2016-10-17-h14-t13",
+        "tags": ["img"],
+        "tid": [13],
+        "config": {
+          "type": "simple-image",
+          "layer": {
+            "src": "assets/2016/10/2016-10-17-h14-t13/f5a87a36a2ea8026887ba887ba4a306a677dd53d.jpg"
+          },
+          "link": "http://www.bilibili.com/blackboard/activity-madoka.html",
+          "logo": {
+            "src": "assets/2016/10/2016-10-17-h14-t13/e07cbe482a00fef231688ece24ab459e8ff44b3f.png"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "date": "2016-11-05",
+    "refs": [
+      {
+        "name": "MMD大赛",
+        "id": "2016-11-05-h21-t1",
+        "tags": ["img"],
+        "tid": [1],
+        "config": {
+          "type": "simple-image",
+          "layer": {
+            "src": "assets/2016/11/2016-11-05-h21-t1/a3074121e1de0d0871960addceb2e1b2299eed5a.jpg"
+          },
+          "link": "http://www.bilibili.com/blackboard/activity-2016MMD.html",
+          "logo": {
+            "src": "assets/2016/11/2016-11-05-h21-t1/b2c07af52bc896d9aadfd9ac318262d2e3d56ea1.png"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "date": "2016-11-08",
+    "refs": [
+      {
+        "name": "「我在故宫修文物」",
+        "id": "2016-11-08-h04-t0",
+        "tags": ["img"],
+        "tid": [0],
+        "config": {
+          "type": "simple-image",
+          "layer": {
+            "src": "assets/2016/11/2016-11-08-h04-t0/02ba7f03a32b04c10e2e9dfda395b90e5fb925fa.jpg"
+          },
+          "link": "http://www.bilibili.com/blackboard/activity-mifc.html",
+          "logo": {
+            "src": "assets/2016/11/2016-11-08-h04-t0/e02a4adda2f904be2902e46cd19c17d6ebb4b214.png"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "date": "2016-11-13",
+    "refs": [
+      {
+        "name": "深空远征，永无止境！",
+        "id": "2016-11-13-h20-t0",
+        "tags": ["img"],
+        "tid": [1],
+        "config": {
+          "type": "simple-image",
+          "layer": {
+            "src": "assets/2016/11/2016-11-13-h20-t0/28c5ed397f817f649fb1e132360209378de38752.jpg"
+          },
+          "link": "http://live.bilibili.com/hd/deepspace",
+          "logo": {
+            "src": "assets/2016/11/2016-11-13-h20-t0/db3dca996b62c03b97f8a88d48a306dbf8762c2d.png"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "date": "2016-11-19",
+    "refs": [
+      {
+        "name": "BILIBILI MOE 2016",
+        "id": "2016-11-19-h04-t0",
+        "tags": ["img"],
+        "tid": [0],
+        "config": {
+          "type": "simple-image",
+          "layer": {
+            "src": "assets/2016/11/2016-11-19-h04-t0/37822855a3f9569d3382f11e9a4496280b148801.jpg"
+          },
+          "link": "http://bangumi.bilibili.com/moe/2016/cn/index",
+          "logo": {
+            "src": "assets/2016/11/2016-11-19-h04-t0/da978f9ebab798b31e84098df1a3b56bf32be13c.png"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "date": "2016-11-26",
+    "refs": [
+      {
+        "name": "MMD大赛",
+        "id": "2016-11-26-h04-t0",
+        "tags": ["img"],
+        "tid": [1],
+        "config": {
+          "type": "simple-image",
+          "layer": {
+            "src": "assets/2016/11/2016-11-26-h04-t0/4cee363cbecc5ea367631a992de7d2f0ee82214f.jpg"
+          },
+          "link": "http://www.bilibili.com/blackboard/activity-2016MMD.html",
+          "logo": {
+            "src": "assets/2016/11/2016-11-26-h04-t0/d5b5403f2d0567198902abc2b0a09865012c6b6a.png"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "date": "2016-12-01",
+    "refs": [
+      {
+        "name": "「你的名字」",
+        "id": "2016-12-01-h00-t0",
+        "tags": ["img"],
+        "tid": [0],
+        "config": {
+          "type": "simple-image",
+          "layer": {
+            "src": "assets/2016/12/2016-12-01-h00-t0/2c4b089471659c81f58058d4ca8c7716eb04989d.jpg"
+          },
+          "link": "http://www.bilibili.com/blackboard/activity-yourname.html",
+          "logo": {
+            "src": "assets/2016/12/2016-12-01-h00-t0/44ec7a7a8f75f133db5c326fe5a00e56b789468d.png"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "date": "2016-12-03",
+    "refs": [
+      {
+        "name": "她与它的故事",
+        "id": "2016-12-03-h04-t0",
+        "tags": ["img"],
+        "tid": [0],
+        "config": {
+          "type": "simple-image",
+          "layer": {
+            "src": "assets/2016/12/2016-12-03-h04-t0/8d67a703546b137fd55b5a8da74599f59b4dfcea.jpg"
+          },
+          "link": "http://bangumi.bilibili.com/anime/3375",
+          "logo": {
+            "src": "assets/2016/12/2016-12-03-h04-t0/ef4de8ea3ea59262c2dbc3f8ff0fe5f08f736f37.png"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "date": "2016-12-04",
+    "refs": [
+      {
+        "name": "两颗心需要多久才能靠近",
+        "id": "2016-12-04-h04-t0",
+        "tags": ["img"],
+        "tid": [0],
+        "config": {
+          "type": "simple-image",
+          "layer": {
+            "src": "assets/2016/12/2016-12-04-h04-t0/63984c385736ae1bc0c406d5f3f0d2676b676456.jpg"
+          },
+          "link": "http://bangumi.bilibili.com/anime/2688",
+          "logo": {
+            "src": "assets/2016/12/2016-12-04-h04-t0/3efb792230a8de65afdbc14f80391af5f9de4271.png"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "date": "2016-12-10",
+    "refs": [
+      {
+        "name": "十场声优直播，满足你的耳朵~",
+        "id": "2016-12-10-h04-t0",
+        "tags": ["img"],
+        "tid": [0],
+        "config": {
+          "type": "simple-image",
+          "layer": {
+            "src": "assets/2016/12/2016-12-10-h04-t0/06640d1be651040d58320a35f39d3346dd8e469a.jpg"
+          },
+          "link": "http://www.bilibili.com/blackboard/shengyou.html",
+          "logo": {
+            "src": "assets/2016/12/2016-12-10-h04-t0/707a94bd60aca912593875c1f8d0720dc6d1da0c.png"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "date": "2016-12-15",
+    "refs": [
+      {
+        "name": "「我在故宫修文物」",
+        "id": "2016-12-15-h04-t0",
+        "tags": ["img"],
+        "tid": [0],
+        "config": {
+          "type": "simple-image",
+          "layer": {
+            "src": "assets/2016/12/2016-12-15-h04-t0/ae02dbd9ea528fb85539c9a560736e344f3a9c7b.jpg"
+          },
+          "link": "http://www.bilibili.com/blackboard/activity-mifc.html",
+          "logo": {
+            "src": "assets/2016/12/2016-12-15-h04-t0/e5892a095557622baa7a30f48f4a5c9a5efe26b4.png"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "date": "2016-12-15",
+    "refs": [
+      {
+        "name": "「蜡笔小新·梦境世界大突击」",
+        "id": "2016-12-15-h04-t11",
+        "tags": ["img"],
+        "tid": [11],
+        "config": {
+          "type": "simple-image",
+          "layer": {
+            "src": "assets/2016/12/2016-12-15-h04-t11/f25b6298f3745107735d7c7a7c68dc45af0e46a8.jpg"
+          },
+          "link": "http://bangumi.bilibili.com/movie/11910",
+          "logo": {
+            "src": "assets/2016/12/2016-12-15-h04-t11/8b270a80b0c8dae04556d165ebd3ffdfc926dc4d.png"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "date": "2016-12-18",
+    "refs": [
+      {
+        "name": "动画角色人气大赏本战阶段进行中！",
+        "id": "2016-12-18-h04-t0",
+        "tags": ["img"],
+        "tid": [0],
+        "config": {
+          "type": "simple-image",
+          "layer": {
+            "src": "assets/2016/12/2016-12-18-h04-t0/b3a71ba441e210dd145a6490e262f2bacb20cff7.jpg"
+          },
+          "link": "http://bangumi.bilibili.com/moe/2016/jp/index",
+          "logo": {
+            "src": "assets/2016/12/2016-12-18-h04-t0/b951ea21645ec27d64bfca195abb1f2c33fe17fd.png"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "date": "2016-12-21",
+    "refs": [
+      {
+        "name": "教练，我要打篮球！",
+        "id": "2016-12-21-h04-t0",
+        "tags": ["img"],
+        "tid": [0],
+        "config": {
+          "type": "simple-image",
+          "layer": {
+            "src": "assets/2016/12/2016-12-21-h04-t0/49ff095d10eea70420215216198efc5f00bb5d08.jpg"
+          },
+          "link": "http://www.bilibili.com/blackboard/activity-sharks.html",
+          "logo": {
+            "src": "assets/2016/12/2016-12-21-h04-t0/62fe19d529f66e117551394317ce57d365e56cc4.png"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "date": "2016-12-22",
+    "refs": [
+      {
+        "name": "奇迹与魔法的约定",
+        "id": "2016-12-22-h04-t0",
+        "tags": ["img"],
+        "tid": [0],
+        "config": {
+          "type": "simple-image",
+          "layer": {
+            "src": "assets/2016/12/2016-12-22-h04-t0/a64cad79c9cf7840109c3e9f3814a74a6315e172.jpg"
+          },
+          "link": "http://acg.tv/u1Qm",
+          "logo": {
+            "src": "assets/2016/12/2016-12-22-h04-t0/e666bb5cc1ba522956bff40bfe902f8efdfbc3d6.png"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "date": "2016-12-24",
+    "refs": [
+      {
+        "name": "免费领圣诞星！",
+        "id": "2016-12-24-h04-t0",
+        "tags": ["img"],
+        "tid": [0],
+        "config": {
+          "type": "simple-image",
+          "layer": {
+            "src": "assets/2016/12/2016-12-24-h04-t0/ab6b34468bcc179b601541193eda668f2aa6106b.jpg"
+          },
+          "link": "http://live.bilibili.com/hd/lastorder",
+          "logo": {
+            "src": "assets/2016/12/2016-12-24-h04-t0/bd90aa68aaaaddb1b5421b84298c51f5b90210e0.png"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "date": "2016-12-25",
+    "refs": [
+      {
+        "name": "BILIBILI MOE 2016",
+        "id": "2016-12-25-h00-t0",
+        "tags": ["img"],
+        "tid": [0],
+        "config": {
+          "type": "simple-image",
+          "layer": {
+            "src": "assets/2016/12/2016-12-25-h00-t0/da32eabbc8e4b0bb288b92857440023b8df07931.jpg"
+          },
+          "link": "http://bangumi.bilibili.com/moe/2016/jp/index",
+          "logo": {
+            "src": "assets/2016/12/2016-12-25-h00-t0/0b1faaa2ad530251176702bfc4bade8d51d598a4.png"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "date": "2016-12-26",
+    "refs": [
+      {
+        "name": "地球已经装不下bilibili的新年派对了！",
+        "id": "2016-12-26-h16-t0",
+        "tags": ["img"],
+        "tid": [0],
+        "config": {
+          "type": "simple-image",
+          "layer": {
+            "src": "assets/2016/12/2016-12-26-h16-t0/9d52bdcfcce80dfdf615a35f05f75cd2299f74de.jpg"
+          },
+          "link": "http://planet2017.bilibili.com",
+          "logo": {
+            "src": "assets/2016/12/2016-12-26-h16-t0/b2911ad5e9b3b1a5301bc3a80f9aa92c292e8326.png"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "date": "2016-12-27",
+    "refs": [
+      {
+        "name": "游园访迹 穿越古今",
+        "id": "2016-12-27-h04-t0",
+        "tags": ["img"],
+        "tid": [0],
+        "config": {
+          "type": "simple-image",
+          "layer": {
+            "src": "assets/2016/12/2016-12-27-h04-t0/d9bc89f28951c1d7d8d17fd395cf31a6eaa2d35a.jpg"
+          },
+          "link": "http://www.bilibili.com/blackboard/culture.html",
+          "logo": {
+            "src": "assets/2016/12/2016-12-27-h04-t0/2fc95e205a40652ddc04ca7ed8ead57324fc68cd.png"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "date": "2016-12-28",
+    "refs": [
+      {
+        "name": "奇迹与魔法的约定",
+        "id": "2016-12-28-h04-t0",
+        "tags": ["img"],
+        "tid": [0],
+        "config": {
+          "type": "simple-image",
+          "layer": {
+            "src": "assets/2016/12/2016-12-28-h04-t0/d3faa2a7ef11b609aefa9a05e422010d585218c4.jpg"
+          },
+          "link": "http://acg.tv/u1QQ",
+          "logo": {
+            "src": "assets/2016/12/2016-12-28-h04-t0/e666bb5cc1ba522956bff40bfe902f8efdfbc3d6.png"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "date": "2016-12-30",
+    "refs": [
+      {
+        "name": "新年快乐！",
+        "id": "2016-12-30-h04-t0",
+        "tags": ["img"],
+        "tid": [0],
+        "config": {
+          "type": "simple-image",
+          "layer": {
+            "src": "assets/2016/12/2016-12-30-h04-t0/051a2d70a78bdfab111789423cc450313c55bf7f.jpg"
+          },
+          "link": "http://live.bilibili.com/hd/lastorder",
+          "logo": {
+            "src": "assets/2016/12/2016-12-30-h04-t0/44a6c7979dfd332542c549513acabf907af06d2b.png"
+          }
+        }
+      }
+    ]
+  }
+]
