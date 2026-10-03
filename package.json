@@ -11,7 +11,7 @@
     "lint": "biome check --write src/ scripts/ public/ index.html 404.html",
     "grab": "tsx scripts/grab/index.ts",
     "grab-sync-tid": "tsx scripts/grab/sync-tid.ts",
-    "check-data": "tsx scripts/data/index.ts"
+    "check-data": "tsx scripts/check-data/index.ts"
   },
   "dependencies": {
     "@preact/signals": "^2.11.2",
