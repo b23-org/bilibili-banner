@@ -5,6 +5,7 @@ import {
   OfficialRenderer2021,
   SimpleImageRenderer,
 } from "../renderer";
+import { store } from "../state/store";
 import type { BannerConfig, BannerRef } from "../types";
 
 type BannerViewState = "loading" | "success" | "failed";
@@ -14,7 +15,6 @@ export class BannerEngine {
   private bannerRenderer: BaseRenderer | null = null;
   private logoRenderer: LogoRenderer | null = null;
 
-  private failedBanners: Set<string> = new Set();
   private currentId = "";
   private currentBanner: BannerRef | null = null;
   private requestId = 0;
@@ -43,7 +43,7 @@ export class BannerEngine {
   }
 
   private _markFailed(banner: BannerRef): void {
-    this.failedBanners.add(banner.id);
+    store.markRefFailed(banner.id);
     this._setViewState("failed");
   }
 
@@ -126,29 +126,32 @@ export class BannerEngine {
 
   // ── 切换阶段 ──
 
-  /** 阶段1: 中止旧请求、清理渲染器、检查黑名单。返回 requestId，已失败则返回 null。 */
-  private _beginSwitch(banner: BannerRef): number | null {
+  /** 阶段1: 中止旧请求、清理渲染器、重置加载中视图。返回当前 requestId。 */
+  private _beginSwitch(): number {
     this._preloadController?.abort();
     this._preloadController = null;
     this._disposeRenderers(this.bannerRenderer, this.logoRenderer);
     this.bannerRenderer = null;
     this.logoRenderer = null;
 
-    if (this.failedBanners.has(banner.id)) {
-      this._setViewState("failed");
-      return null;
-    }
     this._setViewState("loading");
     return ++this.requestId;
   }
 
-  /** 阶段2: 预加载所有资源。成功返回 true，失败/过期返回 false。 */
+  /** 阶段2: 预加载所有资源。成功返回 true，失败/过期返回 false。统一在此阶段前置拦截失效 Banner。 */
   private async _preloadResource(
     banner: BannerRef,
     renderer: BaseRenderer,
     logo: LogoRenderer | null,
     requestId: number,
   ): Promise<boolean> {
+    // 统一在 preload 阶段前置守卫拦截已失效的 Banner
+    if (store.isRefFailed(banner.id)) {
+      this._disposeRenderers(renderer, logo);
+      this._setViewState("failed");
+      return false;
+    }
+
     this._preloadController = new AbortController();
     const { signal } = this._preloadController;
 
@@ -189,8 +192,7 @@ export class BannerEngine {
     console.info(`[BannerEngine] 正在切换至: ${banner.id} [${banner.name}]`);
     this.currentId = banner.id;
 
-    const requestId = this._beginSwitch(banner);
-    if (requestId === null) return;
+    const requestId = this._beginSwitch();
 
     const bannerRenderer = this._createRenderer(banner.config);
     if (!bannerRenderer) return;

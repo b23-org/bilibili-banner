@@ -50,7 +50,7 @@ export function BannerCard({ entry, className = "" }: BannerCardProps) {
 
   // 待预加载的资源列表
   const srcs = [bgSrc, logoSrc].filter((s): s is string => Boolean(s));
-  const preloadState = usePreload(srcs);
+  const preloadState = usePreload(srcs, ref?.id);
 
   // 判断是否当前激活的 Banner
   const isActive = entry.refs.some((r) => r.id === store.activeBannerId.value);

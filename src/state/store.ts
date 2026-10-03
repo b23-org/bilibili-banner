@@ -12,6 +12,9 @@ const order = signal<"asc" | "desc">("desc");
 const highlightedBannerId = signal<string | null>(null);
 const toastMessage = signal<string | null>(null);
 
+// ── 会话级失败黑名单 Signals ──
+const failedRefIds = signal<ReadonlySet<string>>(new Set());
+
 let highlightTimer: number | null = null;
 let toastTimer: number | null = null;
 
@@ -113,5 +116,23 @@ export const store = {
       toastMessage.value = null;
       toastTimer = null;
     }, 2500);
+  },
+
+  // ── 会话级失败缓存 ──
+
+  /** 当前会话中加载失败的 BannerRef.id 集合 */
+  failedRefIds,
+
+  /** 判断指定 BannerRef.id 是否已被标记为失败 */
+  isRefFailed(id: string): boolean {
+    return failedRefIds.value.has(id);
+  },
+
+  /** 将指定 BannerRef.id 标记为失败（生成新 Set 触发响应式更新） */
+  markRefFailed(id: string) {
+    if (!id || failedRefIds.value.has(id)) return;
+    const next = new Set(failedRefIds.value);
+    next.add(id);
+    failedRefIds.value = next;
   },
 };
