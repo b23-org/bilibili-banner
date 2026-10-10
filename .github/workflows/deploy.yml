@@ -1,0 +1,70 @@
+name: Deploy to Cloudflare Pages
+
+on:
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      pull-requests: write
+
+    steps:
+      - uses: actions/checkout@v6
+
+      - uses: pnpm/action-setup@v6
+
+      - uses: actions/setup-node@v6
+        with:
+          node-version: 24
+
+      - name: Install dependencies
+        run: pnpm install
+
+      - name: Data validation
+        run: |
+          pnpm check-data
+
+      - name: Cloudflare setup
+        run: pnpm exec tsx cloudflare/setup.ts
+
+      - name: Build
+        run: pnpm build
+
+      - name: Deploy to Cloudflare Pages
+        uses: cloudflare/wrangler-action@v4
+        id: wrangler_deploy
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          command: pages deploy dist --project-name=${{ secrets.CLOUDFLARE_PROJECT_NAME }} --branch=${{ github.ref_name }} --commit-dirty=true
+
+      - name: Find current PR
+        id: findPr
+        uses: jwalton/gh-find-current-pr@v1
+
+      - name: Comment PR with Preview Link
+        if: steps.findPr.outputs.number != ''
+        uses: actions/github-script@v9
+        with:
+          script: |
+            const shortSha = context.sha.substring(0, 7);
+            const repoName = context.repo.repo;
+            const repoOwner = context.repo.owner;
+            const runId = context.runId;
+            const aliasUrl = '${{ steps.wrangler_deploy.outputs.deployment-alias-url }}';
+            const body = `### ✅ Deploy Preview Ready !
+
+            | Name | Link |
+            | :--- | :--- |
+            | 🌿 **Latest Commit** | [${shortSha}](https://github.com/${repoOwner}/${repoName}/commit/${context.sha}) |
+            | ⚙️ **Deploy log** | [GitHub Actions Log](https://github.com/${repoOwner}/${repoName}/actions/runs/${runId}) |
+            | 🚀 **Preview** | [${aliasUrl}](${aliasUrl}) |`;
+
+            await github.rest.issues.createComment({
+              owner: repoOwner,
+              repo: repoName,
+              issue_number: Number('${{ steps.findPr.outputs.number }}'),
+              body
+            });

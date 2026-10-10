@@ -1,0 +1,42 @@
+/* ==========================================================================
+   Scrollport 双区布局规范 (Task 6.2)
+   严格对齐架构设计 §10.3、§3.1 App
+   ========================================================================== */
+
+html,
+body,
+#app {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+#app {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--bg-page);
+}
+
+/* 舞台区：固定在视口顶部，不参与内容区滚动 */
+.banner-stage {
+  flex-shrink: 0;
+  position: relative;
+  z-index: 100;
+  width: 100%;
+}
+
+#banner-container {
+  width: 100%;
+  min-height: 155px;
+  height: 9.375vw;
+  max-height: 240px;
+  overflow: hidden;
+}
+
+/* 内容区：独立 Scrollport，唯一滚动区域 */
+.archive-pane {
+  flex: 1;
+  overflow-y: auto;
+  overflow-x: hidden;
+}

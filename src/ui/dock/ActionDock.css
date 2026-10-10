@@ -1,0 +1,154 @@
+.action-dock {
+  position: fixed;
+  right: 28px;
+  bottom: 32px;
+  z-index: 900;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  user-select: none;
+}
+
+.action-dock__btn {
+  position: relative;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #ffffff;
+  border: 1px solid #e3e5e7;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  color: #61666d;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  text-decoration: none;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  outline: none;
+  transition:
+    border-color 0.25s cubic-bezier(0.4, 0, 0.2, 1),
+    color 0.25s cubic-bezier(0.4, 0, 0.2, 1),
+    box-shadow 0.25s cubic-bezier(0.4, 0, 0.2, 1),
+    transform 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.action-dock__btn:hover {
+  border-color: #00aeec;
+  color: #00aeec;
+  box-shadow: 0 4px 14px rgba(0, 174, 236, 0.25);
+  transform: translateY(-2px);
+}
+
+.action-dock__btn:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 6px rgba(0, 174, 236, 0.2);
+}
+
+/* ──────────────── 白色圆角微气泡 Tooltip ──────────────── */
+.action-dock__btn[data-tooltip]::before,
+.action-dock__btn[data-tooltip]::after {
+  position: absolute;
+  pointer-events: none;
+  opacity: 0;
+  visibility: hidden;
+  transition:
+    opacity 0.2s cubic-bezier(0.2, 0, 0, 1),
+    transform 0.2s cubic-bezier(0.2, 0, 0, 1),
+    visibility 0.2s cubic-bezier(0.2, 0, 0, 1);
+  transition-delay: 0s;
+  z-index: 1000;
+}
+
+/* 气泡本体（居于按钮左侧，白底黑字微圆角微阴影） */
+.action-dock__btn[data-tooltip]::after {
+  content: attr(data-tooltip);
+  right: calc(100% + 9px);
+  top: 50%;
+  transform: translate3d(6px, -50%, 0);
+  background-color: #ffffff;
+  color: #18191c;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 1.4;
+  white-space: nowrap;
+  padding: 5px 9px;
+  border-radius: 6px;
+  border: 1px solid #e3e5e7;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+}
+
+/* 气泡右侧微型小尖角（指向按钮中心） */
+.action-dock__btn[data-tooltip]::before {
+  content: "";
+  right: calc(100% + 5px);
+  top: 50%;
+  transform: translate3d(6px, -50%, 0) rotate(45deg);
+  width: 6px;
+  height: 6px;
+  background-color: #ffffff;
+  border-right: 1px solid #e3e5e7;
+  border-top: 1px solid #e3e5e7;
+}
+
+/* 悬停激活：防误触 120ms 延时，向左微滑入淡出 */
+.action-dock__btn[data-tooltip]:hover::after {
+  opacity: 1;
+  visibility: visible;
+  transform: translate3d(0, -50%, 0);
+  transition-delay: 0.12s;
+}
+
+.action-dock__btn[data-tooltip]:hover::before {
+  opacity: 1;
+  visibility: visible;
+  transform: translate3d(0, -50%, 0) rotate(45deg);
+  transition-delay: 0.12s;
+}
+
+/* 回到顶部按钮在未激活隐藏时，绝不展示气泡 */
+.action-dock__btn--top:not(.is-visible)::before,
+.action-dock__btn--top:not(.is-visible)::after {
+  display: none;
+}
+
+/* 回到顶部特殊动画样式 */
+.action-dock__btn--top {
+  opacity: 0;
+  visibility: hidden;
+  transform: scale(0.8);
+  pointer-events: none;
+  transition:
+    opacity 0.25s cubic-bezier(0.4, 0, 0.2, 1),
+    visibility 0.25s cubic-bezier(0.4, 0, 0.2, 1),
+    border-color 0.25s cubic-bezier(0.4, 0, 0.2, 1),
+    color 0.25s cubic-bezier(0.4, 0, 0.2, 1),
+    box-shadow 0.25s cubic-bezier(0.4, 0, 0.2, 1),
+    transform 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.action-dock__btn--top.is-visible {
+  opacity: 1;
+  visibility: visible;
+  transform: scale(1);
+  pointer-events: auto;
+}
+
+.action-dock__btn--top.is-visible:hover {
+  transform: scale(1) translateY(-2px);
+}
+
+.action-dock__btn--top.is-visible:active {
+  transform: scale(1) translateY(0);
+}
+
+/* 图标样式：禁用指针穿透，确保事件目标稳定 */
+.action-dock__icon {
+  width: 20px;
+  height: 20px;
+  display: block;
+  flex-shrink: 0;
+  pointer-events: none;
+}

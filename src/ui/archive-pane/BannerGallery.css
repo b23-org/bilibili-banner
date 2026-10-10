@@ -1,0 +1,46 @@
+/* ==========================================================================
+   BannerGallery 卡片流容器样式规范 (80% 宽度，虚拟列表与空状态)
+   ========================================================================== */
+
+.banner-gallery {
+  box-sizing: border-box;
+  width: 80%;
+  max-width: 1200px;
+  min-width: 320px;
+  margin: 0 auto;
+  position: relative;
+}
+
+/* ──────────────── 空状态展示 ──────────────── */
+.banner-gallery__empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 60px 20px;
+  background-color: #ffffff;
+  border-radius: 16px;
+  border: 1px solid #f1f2f3;
+  color: #61666d;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.02);
+}
+
+.banner-gallery__empty-icon {
+  width: 48px;
+  height: 48px;
+  color: #c9ccd0;
+  margin-bottom: 16px;
+}
+
+.banner-gallery__empty-title {
+  font-size: 16px;
+  font-weight: 500;
+  color: #18191c;
+  margin: 0 0 8px;
+}
+
+.banner-gallery__empty-desc {
+  font-size: 13px;
+  color: #9499a0;
+  margin: 0 0 20px;
+}

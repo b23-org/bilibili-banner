@@ -1,0 +1,13 @@
+.virtual-list {
+  position: relative;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.virtual-list-item {
+  position: absolute;
+  left: 0;
+  right: 0;
+  width: 100%;
+  box-sizing: border-box;
+}
