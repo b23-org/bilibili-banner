@@ -15,7 +15,7 @@
 | 2020 - 2021 | 动态多图层 + Canvas、视频  | 通过 js 内嵌或 `x/web-show/res/frontpage` 接口下发                  |
 | 2022 - 至今 | 静态单图、视频、动态多图层 | 内嵌在 HTML 中或 `/x/web-show/page/header?resource_id=142` 接口下发 |
 
-## 二、静态单图的资源加载方式
+## 二、Banner 资源加载方式
 
 B站早期只有单张背景图和 Logo 的简单 Banner，其资源 url 大多硬编码在不同文件中。这里简要介绍不同时期资源加载方式。
 
@@ -220,7 +220,7 @@ B站早期只有单张背景图和 Logo 的简单 Banner，其资源 url 大多�
     }
   ```
 
-## 三、官方渲染逻辑
+## 三、动态 Banner 官方渲染逻辑
 
 通过逆向分析 JS 代码，B 站动态 Banner 实际上使用了一套复杂的渲染引擎，它通过资源预加载、统一布局计算、高精度贝塞尔曲线插值、自适应参数模型等方式，实现了流畅的动态交互效果。本项目参考该流程实现了 [`officialRenderer`](../src/renderer/official/OfficialRenderer.ts) 渲染引擎，实现了与官方几乎完全一致的交互效果。
 
