@@ -1,3 +1,13 @@
+/**
+ * @file asset-index.ts
+ * 负责本地资产索引（scripts/grab/data/asset-index.json）的加载、扫盘重建与持久化。
+ *
+ * 核心架构约束：
+ * asset-index.json 是历史上所有已知静态资源的“全集白名单记忆库”（受 Git 跟踪），
+ * 遵循严格的 Append-Only（只增不减）原则，永久保留所有变种文件名，绝不允许因物理文件移走而反向剔除记录。
+ * 详细设计推导请参阅 docs/architecture/grab-design.md
+ */
+
 import fs from "node:fs";
 import path from "node:path";
 import type { GrabConfig, PublishedEntry, Reporter } from "../support/types";
@@ -101,7 +111,9 @@ export async function loadAssetIndex(
 }
 
 /**
- * 强制扫描磁盘目录并重新生成 .cache 索引文件
+ * 扫描磁盘目录并增量合并到已知索引文件中
+ * 注意：asset-index.json 是历史上所有已知资产的永久白名单（包括已被合并/归档至 temp/ 的变种 Logo），
+ * 扫盘结果必须与现有索引取并集（Union）追加，绝不能反向剔除已有文件名！
  */
 export async function scanAndRebuildIndex(
   config: GrabConfig,
@@ -109,12 +121,31 @@ export async function scanAndRebuildIndex(
 ): Promise<Set<string>> {
   report({
     type: "index:fallback-scan",
-    reason: "正在异步扫描 public/assets 目录以重建索引",
+    reason: "正在异步扫描 public/assets 目录以更新索引",
   });
 
   try {
     const scannedSet = await scanAssetsDirectory(config.assetsDir);
-    // 异步回写缓存，异常不阻塞主流程
+
+    // 读取现有 asset-index.json（若存在），合并现有白名单，确保历史变种记录绝不丢失
+    if (fs.existsSync(config.indexFilePath)) {
+      try {
+        const content = await fs.promises.readFile(
+          config.indexFilePath,
+          "utf8",
+        );
+        const parsed = JSON.parse(content) as Partial<IndexCachePayload>;
+        if (parsed.version === 1 && Array.isArray(parsed.files)) {
+          for (const file of parsed.files) {
+            scannedSet.add(file);
+          }
+        }
+      } catch {
+        // 读取失败则直接使用扫盘结果
+      }
+    }
+
+    // 异步回写合并后的缓存，异常不阻塞主流程
     persistIndexToFile(config.indexFilePath, scannedSet).catch(() => {});
     return scannedSet;
   } catch (err: unknown) {
@@ -134,19 +165,10 @@ export async function recordNewAssets(
   published: readonly PublishedEntry[],
   config: GrabConfig,
 ): Promise<void> {
-  if (published.length === 0) return;
-
-  const previousSize = currentIndex.size;
-
   for (const item of published) {
     for (const fileName of item.fileNames) {
       currentIndex.add(fileName);
     }
-  }
-
-  // 若无新增文件名（如 --force 重新下载已有 Banner），则跳过写盘以避免无意义的磁盘 I/O
-  if (currentIndex.size === previousSize) {
-    return;
   }
 
   try {

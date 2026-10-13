@@ -81,6 +81,7 @@ export function mergeIdenticalSnapshots(
 
 /**
  * 判断指定条目是否已经被本地库完全捕获（即所有引用资源文件名均已存在于已有文件集合中）
+ * 规则：将 entry 的图层/预览资源列表与 Logo 视作一个整体。所有文件均已存在才算已捕获；任一文件缺失即为新条目。
  */
 export function isEntryAlreadyCaptured(
   entry: GrabEntry,
@@ -90,8 +91,13 @@ export function isEntryAlreadyCaptured(
     return false;
   }
 
-  return entry.resourceUrls.every((url) => {
-    const fileName = extractFileNameFromUrl(stripCdnSuffix(url));
+  const allItems: string[] = [...entry.resourceUrls];
+  if (entry.logoInfo?.fileName) {
+    allItems.push(entry.logoInfo.fileName);
+  }
+
+  return allItems.every((item) => {
+    const fileName = extractFileNameFromUrl(stripCdnSuffix(item));
     return fileName ? existingFileNames.has(fileName) : false;
   });
 }

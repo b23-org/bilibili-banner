@@ -59,7 +59,8 @@ export interface GrabConfig {
   readonly cacheDir: string; // .cache
   readonly stagingDir: string; // .cache/staging
   readonly extensionsDir: string; // .cache/extensions
-  readonly indexFilePath: string; // .cache/grab-asset-index.json
+  readonly indexFilePath: string; // scripts/grab/data/asset-index.json
+  readonly standardLogoFilePath: string; // scripts/grab/data/standard-white-logo.json
   readonly fetchTimeoutMs: number;
   readonly downloadTimeoutMs: number;
   readonly downloadConcurrency: number;

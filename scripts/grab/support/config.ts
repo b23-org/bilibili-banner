@@ -34,7 +34,10 @@ export function buildGrabConfig(overrides?: Partial<GrabConfig>): GrabConfig {
       overrides?.extensionsDir ?? path.resolve(cacheDir, "extensions"),
     indexFilePath:
       overrides?.indexFilePath ??
-      path.resolve(cacheDir, "grab-asset-index.json"),
+      path.resolve(root, "scripts/grab/data/asset-index.json"),
+    standardLogoFilePath:
+      overrides?.standardLogoFilePath ??
+      path.resolve(root, "scripts/grab/data/standard-white-logo.json"),
     fetchTimeoutMs:
       overrides?.fetchTimeoutMs ?? DEFAULT_CONFIG_VALUES.FETCH_TIMEOUT_MS,
     downloadTimeoutMs:
