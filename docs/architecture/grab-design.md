@@ -1,6 +1,6 @@
 # Grab 抓取流水线架构设计与去重闭环推导
 
-本文档详细记录 `scripts/grab` 抓取流水线的架构设计推导、关键决策背景，以及不可妥协的工程设计原则。总体设计与 Banner ID 规范请参考 [总体设计文档](./README.md)。
+本文档详细记录 `scripts/grab` 抓取流水线的架构设计推导、关键决策背景，以及工程设计原则。
 
 ---
 
@@ -36,64 +36,52 @@ sequenceDiagram
 
 ---
 
-## 二、架构决策一：为什么在 Staging 暂存阶段下载并在落地前进行比对？
+## 二、架构决策一：基于 Staging 暂存区的 Logo 落地前像素比对与准入控制
 
-### 1. 痛点背景
+### 1. 决策背景与痛点问题
 B 站 Web 端在不同时期、不同活动下发的官方白色 Logo 切图存在大量“肉眼几乎无法分辨”的微小变种：
 - 有效内容完全一致，仅四周透明留白（Padding）不同（如偏右 1~3px）；
 - 导出时抗锯齿微调造成的边缘像素轻微差异；
 - 画布尺寸相同但内部有效轮廓缩放微调。
 
-如果直接按照 CDN 文件名哈希写入 `public/assets/logo/{YYYY}/`，会导致每个年份膨胀出上百个重复的白色 Logo 切图。
+若直接按照 CDN 文件名哈希写入 `public/assets/logo/{YYYY}/`，会导致每个年份膨胀出上百个重复的白色 Logo 切图，造成资产冗余与存储膨胀。
 
-### 2. 为什么不在下载前仅凭 URL 比对？
-- B 站 CDN 图片文件名基于哈希生成，不同微变种具有完全不同的 URL Basename；
-- 必须拿到完整本地图像二进制 Buffer，才能解码 PNG 数据并进行 Alpha 像素矩阵轮廓分析。
-
-### 3. 为什么选择在 Staging 阶段介入，而非直接落入正式库后再做清理？
-1. **网络并发与计算密集型解耦**：
+### 2. 设计原因：二进制分析依赖与网络吞吐解耦
+1. **纯凭 URL 判别的盲区**：
+   - B 站 CDN 图片文件名基于哈希生成，不同微变种具有完全不同的 URL Basename；
+   - 无法仅在请求前通过 URL 识别其视觉实质，必须拉取到本地完整的图像二进制 Buffer，解码 PNG 数据后进行 Alpha 像素矩阵轮廓分析。
+2. **解耦网络高并发与计算密集型操作**：
    - 抓取阶段通过 `concurrency.ts` 维持高并发网络下载通道；
-   - 若在下载流中串行进行 PNG 像素级解析，会严重阻塞网络吞吐；先统一快速暂存到 `.cache/staging/`，保持网络层纯粹高效。
-2. **阻断变种切图污染正式库（Zero-Pollution Principle）**：
-   - 一旦变种切图落入 `public/assets/logo/`，就会产生悬空文件或被其他并发逻辑引用；
-   - 在暂存区完成比对与交互决策：
-     - 若人工确认替换（输入 `y`）：直接将当前 Banner 的 Manifest `logo.src` 指向预设的标杆 Logo（`scripts/grab/data/standard-white-logo.json`），同时**丢弃暂存的变种文件**，变种文件终生不进入正式库；
-     - 若确认保留（输入 `n`）或为定制彩色 Logo：正常提升发布至 `public/assets/logo/`。
+   - 若在网络下载数据流中串行插入高算力的 PNG 像素级解析，会严重阻塞网络通道吞吐；因此先统一快速下载暂存到 `.cache/staging/`，保持网络层纯粹高效。
+
+### 3. 落地方案：暂存拦截与正式库零污染（Zero-Pollution Principle）
+流水线选择在资产正式入库前进行准入控制与拦截处理：
+1. **隔离暂存**：新下载的切图统一暂存至 `.cache/staging/`，与正式资产库物理隔离；
+2. **落地前比对与交互决策**：
+   - 比对器（Matcher）提取暂存 Logo 的 PNG Buffer，计算与标杆 Logo（`scripts/grab/data/standard-white-logo.json`）的轮廓相似度；
+   - 若人工确认替换（输入 `y`）：直接将当前 Banner 的 Manifest `logo.src` 指向预设的标杆 Logo，同时**销毁暂存的变种文件**，确保变种切图终生不污染正式库；
+   - 若确认保留（输入 `n`）或识别为彩色定制 Logo：执行原子提升（Promote）发布至正式目录 `public/assets/logo/`。
 
 ---
 
-## 三、架构决策二：为什么去重索引（asset-index.json）必须永久保留并只增不减？
+## 三、架构决策二：去重索引（asset-index.json）的只增不减（Append-Only）持久化机制
 
-### 1. 角色定位：全集白名单记忆库
-[scripts/grab/data/asset-index.json](file:///home/shatty/project/b23-org/bilibili-banner/scripts/grab/data/asset-index.json) 是受 Git 跟踪的核心数据文件：
-- 它**不是**仅仅反映当前物理磁盘目录现状的文件列表；
-- 它是历史上所有已知资源的**“全集白名单记忆库”**。
+### 1. 决策背景：全集记忆库定位与联合判重规则
+[scripts/grab/data/asset-index.json](../../scripts/grab/data/asset-index.json) 是受 Git 跟踪的核心数据文件：
+- **记忆库定位**：它并非仅仅反映当前物理磁盘目录现状的文件镜像，而是历史上所有已知资源的**“全集白名单记忆库”**。
+- **联合判重机制**：抓取流水线的判重核心（`scripts/grab/core/dedup.ts`）将每个 Banner 的全部切图（图层 + Logo）视作一个不可分割的整体，只有全部资源文件均已存在于索引时才视为已抓取
 
-### 2. 联合判重机制与回流漏洞（The Dedup Loophole）
-抓取流水线的判重核心（`scripts/grab/core/dedup.ts`）是将每个 Banner 的全部切图（图层 + Logo）视作一个不可分割的整体：
+### 2. 设计原因：防范反向修剪引发的“判重回流漏洞”（The Dedup Loophole）
+当对历史库中的冗余变种 Logo 进行物理清理（例如移动至 `temp/logo/` 或丢弃暂存文件）时，若同步反向剔除 `asset-index.json` 中的对应记录，会导致严重的判重失效：
+- **回流故障机理**：定时任务再次扫描 B 站历史分区或已有 Banner 时，官方 API 下发的条目中仍引用着该变种 Logo 的原始 URL；
+- **误判与穿透**：流水线计算发现该文件名缺失于 `asset-index.json`，判定其为“新资源”，进而针对该 Banner 的全部图层再次触发全量网络下载；
+- **破坏幂等性**：清理操作直接引发已抓取资源的重复回流拉取。
 
-```typescript
-export function isEntryAlreadyCaptured(
-  entry: GrabEntry,
-  existingFileNames: ReadonlySet<string>,
-): boolean {
-  return entry.resourceUrls.every((url) => {
-    const fileName = extractFileNameFromUrl(stripCdnSuffix(url));
-    return fileName ? existingFileNames.has(fileName) : false;
-  });
-}
-```
-
-假设我们对历史库中的冗余变种 Logo 进行了清理，将物理文件从 `public/assets/logo/` 移动或删除：
-- **致命陷阱**：若此时同步从 `asset-index.json` 中删除了该变种 Logo 的文件名；
-- **回流故障**：未来定时抓取任务再次扫描 B 站历史分区或已有 Banner 时，API 下发的条目中依然引用着那个变种 Logo 的 URL；
-- **后果**：流水线计算发现该变种文件名不在 `asset-index.json` 中，从而**误判该条目为“新资源”**，进而对该 Banner 的所有切图重新发起全量网络下载，彻底破坏抓取幂等性。
-
-### 3. Append-Only（只增不减）原则
-为了确保判重闭环永远有效：
-1. **永久保留**：即使某个变种 Logo 的物理切图已被合并归档移至 `temp/logo/`，其原始文件名也**必须永久留在 `asset-index.json`** 中。
-2. **重定向即记录**：在 Grab 交互过程中，即使人工确认将变种重定向到了标杆 Logo 并丢弃了暂存文件，该变种 Logo 的文件名同样必须被追加到内存 `assetIndex` 中，并在流水线末尾（步骤 10）统一原子持久化。
-3. **禁止反向修剪**：即使触发扫盘恢复（`scanAndRebuildIndex`），也必须先加载已有 `asset-index.json` 进行并集（Union）合并，绝对不允许以当前磁盘物理文件缺失为由反向剔除记录。
+### 3. 落地方案：Append-Only 闭环保障与防反向修剪
+流水线确立了只增不减（Append-Only）的持久化原则：
+1. **永久保留历史条目**：即使变种切图物理文件已归档迁移，其文件名也必须永久驻留于 `asset-index.json` 中。
+2. **重定向即记录**：交互过程中被重定向并销毁物理文件的变种 Logo，其原始文件名必须同步追加至内存索引，并在流水线末尾统一持久化写盘。
+3. **禁止反向修剪（Union-Only）**：即使触发全盘扫描恢复逻辑（`scanAndRebuildIndex`），也必须先加载已有索引并求并集（Union），严禁以“当前物理磁盘缺失该文件”为由反向剔除记录。
 
 ---
 

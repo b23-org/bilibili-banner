@@ -1,6 +1,6 @@
 # Bilibili Banner 项目架构总体设计
 
-本文档阐述 Bilibili Banner 项目的整体架构设计、数据组织模型以及核心标识符规范。关于资产抓取流水的详细设计推导，请参阅 [Grab 流水线架构设计文档](./grab-design.md)。
+本文档阐述 Bilibili Banner 项目的整体架构设计、数据组织模型以及核心标识符规范。
 
 ---
 
@@ -33,7 +33,7 @@ graph TD
 
 ## 二、Banner ID 命名与生成规则
 
-`BannerID` 是整个系统中最基础的唯一标识符（Unique Identifier），不仅作为 Manifest 中每个条目的 `id`，而且直接映射为本地磁盘与静态服务器上的物理资源目录名称（`${WORKSPACE_ROOT}/public/assets/${BannerID}/`）。
+`BannerID` 是整个系统中最基础的唯一标识符（Unique Identifier），不仅作为 Manifest 中每个条目的 `id`，而且直接映射为本地磁盘与静态服务器上的物理资源目录名称（`public/assets/${BannerID}/`）。
 
 ### 1. 命名规范格式
 
@@ -102,5 +102,5 @@ public/assets/
 ## 三、相关设计文档索引
 
 - [Grab 抓取流水线架构设计与去重闭环推导](./grab-design.md)
-- [B站历史 Banner 演进图鉴](../bilibili-banner-evolution.md)
-- [B站分区与 Banner 技术指南](../bilibili-partition-and-banner-guide.md)
+- [B站历史 Banner 演进图鉴](../reference/bilibili-banner-evolution.md)
+- [B站分区与 Banner 技术指南](../reference/bilibili-partition-and-banner-guide.md)

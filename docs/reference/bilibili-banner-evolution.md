@@ -222,7 +222,7 @@ B站早期只有单张背景图和 Logo 的简单 Banner，其资源 url 大多�
 
 ## 三、动态 Banner 官方渲染逻辑
 
-通过逆向分析 JS 代码，B 站动态 Banner 实际上使用了一套复杂的渲染引擎，它通过资源预加载、统一布局计算、高精度贝塞尔曲线插值、自适应参数模型等方式，实现了流畅的动态交互效果。本项目参考该流程实现了 [`officialRenderer`](../src/renderer/official/OfficialRenderer.ts) 渲染引擎，实现了与官方几乎完全一致的交互效果。
+通过逆向分析 JS 代码，B 站动态 Banner 实际上使用了一套复杂的渲染引擎，它通过资源预加载、统一布局计算、高精度贝塞尔曲线插值、自适应参数模型等方式，实现了流畅的动态交互效果。本项目参考该流程实现了 [`officialRenderer`](../../src/renderer/official/OfficialRenderer.ts) 渲染引擎，实现了与官方几乎完全一致的交互效果。
 
 ### 资源预加载
 
