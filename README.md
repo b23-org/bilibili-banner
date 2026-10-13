@@ -98,6 +98,15 @@ pnpm grab
 
 数据抓取完成后，可以使用 `pnpm check-data --clean` 命令对数据进行规范校验和清理
 
+## 🤝 参与贡献
+
+感谢您对本项目的关注！
+
+- **提交流程须知**：**仅限 Bug 修复与纯文档修正可以直接提交 PR**；其余贡献（包括新功能、流程优化等）请先发起 [Issue](https://github.com/b23-org/bilibili-banner/issues) 讨论
+- **提交规范**：Git Commit 请遵循英文祈使句格式（例如 `Fix layer parallax translation calculation`）。
+
+更详尽的开发环境配置、规范要求与完整协作流程，请参阅完整的 [贡献指南](.github/CONTRIBUTING.md)。
+
 ## ❤️ 鸣谢
 
 - 感谢 [Bilibili][bilibili] 设计师们带来的精美艺术作品

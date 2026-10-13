@@ -1,0 +1,74 @@
+name: 🐛 Bug 反馈与动效异常 (Bug Report)
+description: 报告页面渲染异常、交互动效问题或数据抓取/校验脚本故障
+title: "[Bug]: "
+labels: ["bug"]
+body:
+  - type: checkboxes
+    id: checklist
+    attributes:
+      label: 前置检查
+      options:
+        - label: 我已在 Issues 列表中检索过，确认未有相同或相似的问题报告
+          required: true
+        - label: 我确认该问题可以在当前主分支或线上预览环境中复现
+          required: true
+
+  - type: dropdown
+    id: category
+    attributes:
+      label: 问题分类
+      description: 请选择问题发生的模块或类别
+      options:
+        - Banner 动效与交互还原异常 (视差、3D、粒子、物理等)
+        - 页面 UI 布局与移动端适配问题
+        - 数据抓取或校验工具故障 (pnpm grab、pnpm check-data)
+        - 本地开发与构建环境问题
+        - 其他
+    validations:
+      required: true
+
+  - type: textarea
+    id: environment
+    attributes:
+      label: 运行环境
+      description: 请提供您的设备与浏览器环境信息
+      value: |
+        - OS: [例如 Windows 11 / macOS 14 / Android 14 / iOS 17]
+        - Browser: [例如 Chrome 124 / Safari 17 / Firefox 125]
+        - Device: [例如 PC / 手机 / 平板]
+    validations:
+      required: true
+
+  - type: textarea
+    id: description
+    attributes:
+      label: 问题详情与复现 (Problem Details & Reproduction)
+      description: 请根据下方模板填写涉及的页面地址、复现步骤、实际与期望表现，并附上效果截图或录屏
+      value: |
+        ### 涉及的 Banner 或页面地址
+        <!-- 例如：https://{host}/?id=2026-10-12-h12-t1008 -->
+
+
+        ### 复现步骤
+        1. 打开页面 ...
+        2. 鼠标悬停 / 滚动至 ...
+        3. 观察到异常现象 ...
+
+        ### 实际表现 vs 期望行为
+        - **实际表现**：
+        - **期望行为**：
+
+        ### 效果截图 / 动图录屏
+        <!-- 强烈建议附带录屏、GIF 或前后对比截图，可直接拖拽至此处上传 -->
+
+    validations:
+      required: true
+
+  - type: textarea
+    id: console-logs
+    attributes:
+      label: 控制台日志 (Console Logs)
+      description: 请打开浏览器开发者工具 (F12 -> Console / 控制台)，复制并粘贴相关报错日志或警告信息（无需手动添加反引号，系统会自动格式化）
+      render: shell
+      placeholder: |
+        Uncaught TypeError: Cannot read properties of undefined ...

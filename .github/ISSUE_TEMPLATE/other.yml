@@ -1,0 +1,22 @@
+name: ❓ 其他疑问或想法交流 (Other / Question)
+description: 提出关于本项目使用、开发或历史 Banner 考据的一般性疑问与讨论
+title: "[Question]: "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        如果您的疑问不属于 Bug 或新功能建议，可以在此发起讨论。
+
+  - type: textarea
+    id: description
+    attributes:
+      label: 描述您的疑问或想法
+      description: 请详细说明您的问题背景及想要探讨的内容
+    validations:
+      required: true
+
+  - type: textarea
+    id: additional
+    attributes:
+      label: 附加信息
+      description: 如有相关参考链接、截图或其他辅助材料，请在此附上

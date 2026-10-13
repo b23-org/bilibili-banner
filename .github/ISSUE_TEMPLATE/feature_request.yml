@@ -1,0 +1,39 @@
+name: 💡 功能建议与动效改进 (Feature Request)
+description: 提出新功能构想、动效算法优化或工具链改进建议
+title: "[Feature]: "
+labels: ["enhancement"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        感谢提出改进建议！请尽量详细地描述您的想法，以便社区和维护者理解与评估。
+
+  - type: checkboxes
+    id: checklist
+    attributes:
+      label: 前置检查
+      options:
+        - label: 我已在 Issues 列表中检索过，确认未有相同或相似的建议
+          required: true
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: 需求背景与目标
+      description: 请描述这个建议旨在解决什么问题，或者能带来什么体验提升
+    validations:
+      required: true
+
+  - type: textarea
+    id: solution
+    attributes:
+      label: 建议的具体方案或设想
+      description: 请详细描述您期望的实现方案、交互逻辑或效果表现
+    validations:
+      required: true
+
+  - type: textarea
+    id: references
+    attributes:
+      label: 参考资料或效果示例
+      description: 如有官方原版动效录屏、参考开源项目、设计截图或技术文档，请在此提供
