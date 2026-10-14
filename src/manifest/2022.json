@@ -2374,7 +2374,7 @@
             "src": "2022-07-05-h00-t0/028865506b04425297f213eb09d7e2436fcdd9a5.png"
           },
           "logo": {
-            "src": "logo/2022/69280cf5d1865f6b8cd95b15fcd7e0657b942cb7.png"
+            "src": "logo/2022/87d385e373ca6a453597e836888f0b2845a1ffa3.png"
           }
         }
       }
@@ -3516,6 +3516,9 @@
           "type": "simple-image",
           "layer": {
             "src": "2022-10-09-h00-t0/7f4af209d0e2017e0eafac417808a82b2b907730.png"
+          },
+          "logo": {
+            "src": "logo/2022/69280cf5d1865f6b8cd95b15fcd7e0657b942cb7.png"
           }
         }
       }
@@ -3535,7 +3538,7 @@
             "src": "2022-10-16-h00-t0/22e1119b0efcefd26fb4b8cc9dafabdb395f31a4.png"
           },
           "logo": {
-            "src": "logo/2022/86848c76a76fe46d84d6ef1ab735d9398ed3ee8e.png"
+            "src": "logo/2022/69280cf5d1865f6b8cd95b15fcd7e0657b942cb7.png"
           }
         }
       }
@@ -3553,6 +3556,9 @@
           "type": "simple-image",
           "layer": {
             "src": "2022-10-23-h00-t0/f468cd5bbd946af335badec23c7b58d6ad39bd7b.png"
+          },
+          "logo": {
+            "src": "logo/2022/69280cf5d1865f6b8cd95b15fcd7e0657b942cb7.png"
           }
         }
       }
@@ -3959,7 +3965,7 @@
             "src": "2022-12-01-h00-t0/cb6a1d050e324a8b6ec7996b0a398f7376e9e2bd.png"
           },
           "logo": {
-            "src": "logo/2022/86848c76a76fe46d84d6ef1ab735d9398ed3ee8e.png"
+            "src": "logo/2022/69280cf5d1865f6b8cd95b15fcd7e0657b942cb7.png"
           }
         }
       }

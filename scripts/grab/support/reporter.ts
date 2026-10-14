@@ -65,16 +65,6 @@ export function createTerminalReporter(): Reporter {
         console.log("=====================");
         break;
       }
-      case "index:cache-hit": {
-        console.log(
-          `\x1b[32m✔ 已从缓存加载去重索引，共包含 ${event.fileCount} 个历史资源文件名\x1b[0m`,
-        );
-        break;
-      }
-      case "index:fallback-scan": {
-        console.log(`\x1b[33mℹ 触发全盘扫描生成索引: ${event.reason}\x1b[0m`);
-        break;
-      }
       case "extensions:detected": {
         console.log(
           `\x07\x1b[33m\n================================\n⚠️ 检测到扩展字段 extensions: [${event.keys.join(", ")}]\n已保存到 .cache/extensions/ 目录\n请手动检查是否需要特殊代码适配\n================================\x1b[0m`,

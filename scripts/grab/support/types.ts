@@ -52,6 +52,12 @@ export interface PublishedEntry {
 
 // ─── 配置与选项 ───
 
+export interface LogoRules {
+  readonly standards: Record<string, string>;
+  readonly preserve: readonly string[];
+  readonly variants: readonly string[];
+}
+
 export interface GrabConfig {
   readonly projectRoot: string;
   readonly assetsDir: string; // public/assets
@@ -59,8 +65,7 @@ export interface GrabConfig {
   readonly cacheDir: string; // .cache
   readonly stagingDir: string; // .cache/staging
   readonly extensionsDir: string; // .cache/extensions
-  readonly indexFilePath: string; // scripts/grab/data/asset-index.json
-  readonly standardLogoFilePath: string; // scripts/grab/data/standard-white-logo.json
+  readonly logoRulesFilePath: string; // scripts/grab/data/logo-rules.json
   readonly fetchTimeoutMs: number;
   readonly downloadTimeoutMs: number;
   readonly downloadConcurrency: number;
@@ -70,7 +75,6 @@ export interface GrabConfig {
 export interface GrabOptions {
   readonly tids: readonly number[];
   readonly force: boolean;
-  readonly rescan: boolean;
   readonly config?: Partial<GrabConfig>;
   readonly report?: Reporter;
 }
@@ -118,8 +122,6 @@ export type GrabEvent =
   | { readonly type: "publish:start"; readonly displayName: string }
   | { readonly type: "publish:done"; readonly displayName: string }
   | { readonly type: "pipeline:stage-separator" }
-  | { readonly type: "index:cache-hit"; readonly fileCount: number }
-  | { readonly type: "index:fallback-scan"; readonly reason: string }
   | { readonly type: "extensions:detected"; readonly keys: readonly string[] }
   | { readonly type: "pipeline:summary"; readonly result: GrabResult };
 

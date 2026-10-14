@@ -59,7 +59,6 @@ pnpm grab
 | 不传                     | 抓取首页和所有分区，并去重跳过已存在的 Banner                            |
 | `--tid <id>` / `-t <id>` | 只抓取指定分区，多个分区用逗号分隔（例如 `-t 0,1005`）。0 代表主站首页。 |
 | `--force`                | 强制重新抓取对应来源（忽略去重步骤）                                     |
-|  `--rescan`| 强制全量重新扫描 public/assets 目录以重建去重索引缓存 |
 | `-h, --help`             | 显示帮助信息和支持的 tid 列表                                            |
 
 当前支持的分区 id：
@@ -93,10 +92,32 @@ pnpm grab
 >   }
 > ```
 
+### 2. 数据治理与辅助校验
 
-### 2. 数据管理与辅助校验
+#### A. Logo 变种审查与归一化治理 (`pnpm clean-logo`)
+抓取流水线已完全实现无交互自动化入库。若需对库中的微小变种白色 Logo 进行审查治理，可使用独立的两阶段清洗工具：
 
-数据抓取完成后，可以使用 `pnpm check-data --clean` 命令对数据进行规范校验和清理
+```bash
+# 阶段一：扫描并生成视觉审查对比报告（支持 -y <YYYY> 指定年份）
+pnpm clean-logo
+
+# 阶段二：在编辑器中审阅 .cache/logo-review.md，核对首列标记状态 (0:标杆 / 1:忽略保护 / 2:待替换) 后批量应用
+pnpm clean-logo --apply
+```
+
+- **状态说明**：
+  - `0`：标准标杆 Logo（写入 `logo-rules.json.standards[year]`）；
+  - `1`：忽略保护名单（独立节日或定制款，写入 `logo-rules.json.preserve`）；
+  - `2`：待替换变种（改写 Manifest 指向该年标杆，追加写入 `variants`，并将冗余切片安全归档至 `.cache/variants-logo/`）。
+
+#### B. 数据完整性与 Schema 校验 (`pnpm check-data`)
+```bash
+# 执行元数据 JSON Schema 规范性校验
+pnpm check-data --manifest-only
+
+# 校验并自动清理冗余字段
+pnpm check-data --clean
+```
 
 ## 🤝 参与贡献
 

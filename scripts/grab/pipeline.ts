@@ -1,17 +1,12 @@
 import fs from "node:fs";
 import path from "node:path";
-import { filterNewEntries, mergeIdenticalSnapshots } from "./core/dedup";
 import {
-  downloadLogosToStaging,
-  processAndPromoteLogos,
-} from "./core/logo-workflow";
+  filterNewEntries,
+  loadKnownAssetIndex,
+  mergeIdenticalSnapshots,
+} from "./core/dedup";
 import { convertSnapshotToGrabEntries } from "./core/transform";
-import {
-  loadAssetIndex,
-  recordNewAssets,
-  scanAndRebuildIndex,
-} from "./infra/asset-index";
-import { downloadAllEntries } from "./infra/downloader";
+import { downloadAllEntries, downloadLogos } from "./infra/downloader";
 import { fetchAllSnapshots } from "./infra/fetcher";
 import { syncManifestWithRefs } from "./infra/manifest";
 import { promoteAllToAssets } from "./infra/publisher";
@@ -101,10 +96,8 @@ export async function executeGrabPipeline(
   const report = options.report ?? createTerminalReporter();
   const { date, hour } = getCurrentDateAndHour();
 
-  // 1. 加载或重建去重索引（Cache-Aside）
-  const assetIndex = options.rescan
-    ? await scanAndRebuildIndex(config, report)
-    : await loadAssetIndex(config, report);
+  // 1. 基于全量 Manifest 与 logo-rules.json 实时投影构建纯内存去重索引
+  const assetIndex = loadKnownAssetIndex(config);
 
   // 2. 网络抓取所有指定分区的 Banner 快照
   const rawSnapshots = await fetchAllSnapshots(options.tids, config, report);
@@ -151,21 +144,8 @@ export async function executeGrabPipeline(
     report,
   );
 
-  // 7.1 将 Logo 资源预先下载至 .cache/staging/ 暂存区（避免网络并发被图像解码阻塞，防止变种切图直接入库）
-  // 详细设计推导请参阅 docs/architecture/grab-design.md
-  const stagedLogos = await downloadLogosToStaging(
-    entriesToProcess,
-    config,
-    report,
-  );
-
-  // 7.2 落地前比对与交互式决策（输入 y/n）：确认替换则改写 Manifest 指向标杆并丢弃暂存文件，从源头阻断重复切图入库
-  await processAndPromoteLogos(
-    entriesToProcess,
-    stagedLogos,
-    config,
-    assetIndex,
-  );
+  // 7.1 下载并保存条目关联的 Logo 资源至对应年份目录（无交互纯自动化）
+  await downloadLogos(entriesToProcess, config, report);
 
   // 在下载完成与发布之间打印分隔线
   if (stagedEntries.length > 0) {
@@ -182,10 +162,6 @@ export async function executeGrabPipeline(
   // 9. 将新发布的条目批量写入并排序 Manifest
   const publishedRefs = publishedEntries.map((p) => p.entry.ref);
   await syncManifestWithRefs(date, publishedRefs, config);
-
-  // 10. 增量更新去重索引缓存（统一持久化写回 asset-index.json）
-  // 注意：遵循 Append-Only 全量记忆库机制，永久保留包括归档变种在内的所有文件名，严禁反向剔除（详见 docs/architecture/grab-design.md）
-  await recordNewAssets(assetIndex, publishedEntries, config);
 
   const finalResult: GrabResult = {
     fetchedCount: uniqueSnapshots.length,

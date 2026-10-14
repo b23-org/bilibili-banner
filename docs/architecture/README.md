@@ -101,6 +101,6 @@ public/assets/
 
 ## 三、相关设计文档索引
 
-- [Grab 抓取流水线架构设计与去重闭环推导](./grab-design.md)
+- [Scripts 自动化工具链架构设计与数据治理手册](./scripts-architecture.md)
 - [B站历史 Banner 演进图鉴](../reference/bilibili-banner-evolution.md)
 - [B站分区与 Banner 技术指南](../reference/bilibili-partition-and-banner-guide.md)

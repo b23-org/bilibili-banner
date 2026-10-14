@@ -52,7 +52,6 @@ Options:
                       0 代表主站首页。
                       未指定该参数时，默认抓取主站及所有分区。
   --force             跳过去重检查，强制下载并覆盖 Banner。
-  --rescan            强制全量重新扫描 public/assets 目录以重建去重索引缓存。
   -h, --help          显示此帮助信息。
 
   ------------------------------------------------------------------------
@@ -71,7 +70,6 @@ export function parseCommandLineArguments(
   const args = argv.slice(2);
   const tids: number[] = [];
   let force = false;
-  let rescan = false;
 
   let i = 0;
   while (i < args.length) {
@@ -83,12 +81,6 @@ export function parseCommandLineArguments(
 
     if (arg === "--force") {
       force = true;
-      i++;
-      continue;
-    }
-
-    if (arg === "--rescan") {
-      rescan = true;
       i++;
       continue;
     }
@@ -141,7 +133,6 @@ export function parseCommandLineArguments(
     options: {
       tids,
       force,
-      rescan,
     },
   };
 }
