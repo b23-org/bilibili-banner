@@ -40,7 +40,7 @@ export class LogoView {
       (el as HTMLElement).tagName === "IMG"
     ) {
       el.className = "logo-img";
-      (el as HTMLImageElement).alt = banner.name || "";
+      (el as HTMLImageElement).alt = "logo";
       this.imgEl = el as HTMLImageElement;
       this.logoContainer.appendChild(el);
     }
