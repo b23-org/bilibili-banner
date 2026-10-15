@@ -13,7 +13,7 @@ graph TD
     A["Bilibili Web 端 API"] -->|scripts/grab 自动化抓取| B["抓取流水线 (Pipeline)"]
     B -->|结构化元数据| C["src/manifest/{YYYY}.json"]
     B -->|通用 Logo 切图| D["public/assets/logo/{YYYY}/"]
-    B -->|Banner 专属图层资源| E["public/assets/{BannerID}/"]
+    B -->|Banner 专属图层资源| E["public/assets/{YYYY}/{MM}/{BannerID}/"]
     C & D & E -->|静态服务与运行时引擎| F["BannerEngine (Preact / Canvas / WebGL)"]
 ```
 
@@ -22,32 +22,32 @@ graph TD
   - 按年份划分为时间序的 JSON 清单文件。
   - 记录每个日期的 Banner 条目列表（包含名称、标签、TID 分区列表、配置模式及静态资源相对引用）。
 - **静态资源目录 (`public/assets/`)**：
-  - **专属图层目录 (`{BannerID}/`)**：存放每个 Banner 特有的图层切图、视频或背景。
+  - **专属图层目录 (`{YYYY}/{MM}/{BannerID}/`)**：按年份和月份归档存放每个 Banner 特有的图层切图、视频或背景。
   - **公共 Logo 目录 (`logo/{YYYY}/`)**：按年份归档公共白色或定制 Logo，支持跨 Banner 复用与去重。
 
 ### 2. 运行环境与兼容性要求
-- **设备支持**：本项目**不做手机端支持**，专注于桌面端展示与高保真动效还原。
-- **浏览器版本**：仅支持 **2020 年及以后**发布的 **Firefox** 与 **Chromium 系**（如 Chrome、Edge 等）浏览器版本，依赖现代 Web 标准与图形渲染特性。
+- **设备支持**：受限于横向画布的视觉与层级动效特性，本项目仅针对宽屏/桌面端进行设计与优化，窄屏及移动端视口不在本项目的适配支持范围内。
+- **浏览器版本**：推荐使用 **Chromium 系**（如 Chrome、Edge 等）及 **Firefox** 现代浏览器（2020 年及以后版本）；Safari 受部分图形渲染与动效特性限制，复杂 Banner 性能表现可能受影响。
 
 ---
 
 ## 二、Banner ID 命名与生成规则
 
-`BannerID` 是整个系统中最基础的唯一标识符（Unique Identifier），不仅作为 Manifest 中每个条目的 `id`，而且直接映射为本地磁盘与静态服务器上的物理资源目录名称（`public/assets/${BannerID}/`）。
+`BannerID` 是整个系统中最基础的唯一标识符（Unique Identifier），不仅作为 Manifest 中每个条目的 `id`，而且直接映射为本地磁盘与静态服务器上的物理资源目录相对路径（`public/assets/${YYYY}/${MM}/${BannerID}/`）。
 
 ### 1. 命名规范格式
 
 Banner ID 严格采用全小写、中划线分隔的命名规范：
 
 ```text
-${date}-h${hour}-t${primaryTid}[-${suffix}]
+${date}-h${hour}-t${bilibili-tid}[-${suffix}]
 ```
 
 | 字段组成 | 格式与示例 | 设计语义与生成规则 |
 | :--- | :--- | :--- |
 | **`date`** | `YYYY-MM-DD`<br/>*(例如 `2026-10-02`)* | 抓取时的本地标准日期（按年-月-日两位补零），提供最高层级的时间序检索维度。 |
 | **`h${hour}`** | `h` + 两位小时数 `00~23`<br/>*(例如 `h00`, `h23`)* | 抓取时的本地整点小时数。由于 B 站可能在同一天内的不同时段更换活动 Banner，小时标识保证了天内的时段细分与版本区分。 |
-| **`t${primaryTid}`** | `t` + 整数 TID<br/>*(例如 `t0`, `t1004`)* | **主分区标识**。当同一款 Banner 同时在多个分区下发时，抓取引擎会自动合并它们的分区列表并按数字升序排列，取其中最小的 TID 作为主标识（`0` 代表主站首页，具有最高代表性）。 |
+| **`t${bilibili-tid}`** | `t` + 整数 TID<br/>*(例如 `t0`, `t1004`)* | **主分区标识**。当同一款 Banner 同时在多个分区下发时，抓取引擎会自动合并它们的分区列表并按数字升序排列，取其中最小的 TID 作为主标识（`0` 代表主站首页，具有最高代表性）。 |
 | **`suffix`**<br/>*(可选)* | `-preview` | **实体派生标识**。当快照包含多图层动画（`layers.length > 0`）时，流水线会同时派生出预览单图实体（追加 `-preview`）与动画主体实体（无后缀）。 |
 
 ---
@@ -63,20 +63,20 @@ flowchart TD
     D -- "是 (多图层动画 Banner)" --> F["派生动画主体实体 (official_2021)"]
     D -- "否 (纯静态单图 Banner)" --> G["仅派生单图实体 (simple-image)"]
 
-    E --> ID1["Banner ID: 2026-10-02-h23-t0-preview<br/>目录: public/assets/2026-10-02-h23-t0-preview/"]
-    F --> ID2["Banner ID: 2026-10-02-h23-t0<br/>目录: public/assets/2026-10-02-h23-t0/"]
-    G --> ID3["Banner ID: 2026-10-02-h23-t0<br/>目录: public/assets/2026-10-02-h23-t0/"]
+    E --> ID1["Banner ID: 2026-10-02-h23-t0-preview<br/>目录: public/assets/2026/10/2026-10-02-h23-t0-preview/"]
+    F --> ID2["Banner ID: 2026-10-02-h23-t0<br/>目录: public/assets/2026/10/2026-10-02-h23-t0/"]
+    G --> ID3["Banner ID: 2026-10-02-h23-t0<br/>目录: public/assets/2026/10/2026-10-02-h23-t0/"]
 ```
 
 - **实体 1：预览单图实体 (`simple-image`)**
-  - **ID 格式**：`${date}-h${hour}-t${primaryTid}-preview`
+  - **ID 格式**：`${date}-h${hour}-t${bilibili-tid}-preview`
   - **名称规则**：`${displayName} (预览)`
-  - **资源目录**：落盘至专属目录 `public/assets/${date}-h${hour}-t${primaryTid}-preview/`
+  - **资源目录**：落盘至专属目录 `public/assets/${YYYY}/${MM}/${date}-h${hour}-t${bilibili-tid}-preview/`
   - **标签**：`["img"]`
 - **实体 2：多图层主体实体 (`official_2021`)**
-  - **ID 格式**：`${date}-h${hour}-t${primaryTid}`（无后缀）
+  - **ID 格式**：`${date}-h${hour}-t${bilibili-tid}`（无后缀）
   - **名称规则**：`${displayName}`
-  - **资源目录**：落盘至专属目录 `public/assets/${date}-h${hour}-t${primaryTid}/`
+  - **资源目录**：落盘至专属目录 `public/assets/${YYYY}/${MM}/${date}-h${hour}-t${bilibili-tid}/`
   - **标签**：根据图层资源类型推导为 `["split-layer"]` 或 `["video"]`
 
 ---
@@ -87,12 +87,14 @@ flowchart TD
 
 ```text
 public/assets/
-├── 2026-10-02-h23-t0-preview/              <-- 预览实体专属目录 (ID: 2026-10-02-h23-t0-preview)
-│   └── 3f8b1c4e...png                      <-- 静态预览单图切图
-├── 2026-10-02-h23-t0/                      <-- 动画主体专属目录 (ID: 2026-10-02-h23-t0)
-│   ├── layer_bg.png
-│   ├── layer_character.png
-│   └── layer_foreground.png
+├── 2026/
+│   └── 10/
+│       ├── 2026-10-02-h23-t0-preview/      <-- 预览实体专属目录 (ID: 2026-10-02-h23-t0-preview)
+│       │   └── 3f8b1c4e...png              <-- 静态预览单图切图
+│       └── 2026-10-02-h23-t0/              <-- 动画主体专属目录 (ID: 2026-10-02-h23-t0)
+│           ├── layer_bg.png
+│           ├── layer_character.png
+│           └── layer_foreground.png
 └── logo/2026/                              <-- 年份公共 Logo 目录 (跨 Banner 共享)
     └── cc7076d2639f877181621311ded1d425d29a89bd.png
 ```
@@ -101,6 +103,6 @@ public/assets/
 
 ## 三、相关设计文档索引
 
-- [Scripts 自动化工具链架构设计与数据治理手册](./scripts-architecture.md)
+- [Scripts 自动化工具链设计](./scripts-architecture.md)
 - [B站历史 Banner 演进图鉴](../reference/bilibili-banner-evolution.md)
 - [B站分区与 Banner 技术指南](../reference/bilibili-partition-and-banner-guide.md)

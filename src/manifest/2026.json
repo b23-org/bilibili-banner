@@ -4095,5 +4095,26 @@
         }
       }
     ]
+  },
+  {
+    "date": "2026-10-15",
+    "refs": [
+      {
+        "name": "「明日方舟」应援",
+        "id": "2026-10-15-h12-t1008",
+        "tags": ["img"],
+        "tid": [1008],
+        "config": {
+          "type": "simple-image",
+          "layer": {
+            "src": "2026-10-15-h12-t1008/3089867930c259fbfe65ffbcdeb14280d390aa62.png"
+          },
+          "logo": {
+            "src": "logo/2026/6820a20d2033f786aaf3d4a069cda5c74f8b9922.png"
+          },
+          "link": "https://www.bilibili.com/blackboard/era/hProYF7NSH5CPvi7.html"
+        }
+      }
+    ]
   }
 ]

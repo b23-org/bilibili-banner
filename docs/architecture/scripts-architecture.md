@@ -1,6 +1,6 @@
-# Scripts 自动化工具链架构设计与数据治理手册
+# Scripts 自动化工具链设计
 
-本文档阐述 `scripts/` 目录下全部自动化工具链的系统架构设计、数据治理流程、核心算法模型以及工程维护红线。
+本文档阐述 `scripts/` 目录下全部自动化工具链的系统架构设计、底层数据流模型、核心图像算法以及工程维护红线。
 
 ---
 
@@ -109,22 +109,6 @@ B 站动态 Banner API 在返回多图层动画的同时，通常包含一张兜
 - **原子提升**：条目所有切片完整落地后，通过目录重命名原子提升至 `public/assets/${YYYY}/${MM}/${BannerID}/`。若目标已存在则先备份，在提升异常时触发事务回滚，确保正式资产库的原子完整性。
 - **Manifest 格式化与严格排序**：写入 `src/manifest/{YYYY}.json` 时，强制预览实体（`-preview`）排在第 1 位（索引 0），其余条目按主分区 TID 升序与小时数升序排列。
 
-### 5. CLI 使用指南
-```bash
-# 默认抓取主站首页及全部 24 个常见频道分区
-pnpm grab
-
-# 指定单个或多个分区抓取 (0 为主站首页)
-pnpm grab -t 0,1005
-
-# 强制跳过去重检查，覆盖抓取
-pnpm grab --force
-
-# 查看支持的分区对照表与帮助
-pnpm grab -h
-```
-
----
 
 ## 三、白色 Logo 视觉审查与离线清洗 (`scripts/clean-logo`)
 
@@ -166,18 +150,6 @@ flowchart LR
    - **零引用安全校验**：全量重新扫描 Manifest，确认待归档切片处于 0 引用状态；
    - **物理切片归档**：将变种切片从 `public/assets/logo/{YYYY}/` 移动至 `.cache/variants-logo/{YYYY}/`（绝不硬删除，未发生移动的年份绝不生成空目录）。
 
-### 3. CLI 使用指南
-```bash
-# 全量扫描所有年份生成审查报告
-pnpm clean-logo
-
-# 仅扫描特定年份
-pnpm clean-logo -y 2026
-
-# 应用 .cache/logo-review.md 中的标记并执行批量治理
-pnpm clean-logo --apply
-```
-
 ---
 
 ## 四、数据一致性校验与目录合规检查 (`scripts/check-data`)
@@ -205,18 +177,6 @@ pnpm clean-logo --apply
 - 扫描 `public/assets/` 目录树，自动排除 `.DS_Store` 干扰；
 - 采用自底向上的深度遍历算法识别所有空目录；
 - 在 `--clean` 参数下执行安全删除，保持资产库整洁。
-
-### 4. CLI 使用指南
-```bash
-# 执行完整数据与资产对齐校验
-pnpm check-data
-
-# 仅执行 Manifest JSON Schema 语法与结构校验 (跳过磁盘扫盘)
-pnpm check-data --manifest-only
-
-# 校验并自动清理所有空资源目录
-pnpm check-data --clean
-```
 
 ---
 

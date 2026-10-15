@@ -203,7 +203,7 @@ B站早期只有单张背景图和 Logo 的简单 Banner，其资源 url 大多�
 
 ### 2022 - 至今
 
-此时期的banner资源下发配置方式比较混杂，多种方式并存，**这里仅介绍 HTML 内嵌方式**，其他方式包括但不限于`/x/web-show/page/header?resource_id=142` 接口下发、内嵌在 HTML 中等。
+这一时期的 Banner 配置分发方式较为多样（包括 HTML 服务端内嵌、`/x/web-show/page/header/v2` 接口下发等）。**此处以最典型的 HTML SSR 内嵌配置格式为例说明**：
 
 - **资源位置**：首页 HTML 源码中 is_split_layer 附近字段
 - **参考链接**：[2024-07-25 快照](https://web.archive.org/web/20240725005105/https://www.bilibili.com/)
@@ -222,7 +222,7 @@ B站早期只有单张背景图和 Logo 的简单 Banner，其资源 url 大多�
 
 ## 三、动态 Banner 官方渲染逻辑
 
-通过逆向分析 JS 代码，B 站动态 Banner 实际上使用了一套复杂的渲染引擎，它通过资源预加载、统一布局计算、高精度贝塞尔曲线插值、自适应参数模型等方式，实现了流畅的动态交互效果。本项目参考该流程实现了 [`officialRenderer`](../../src/renderer/official/OfficialRenderer.ts) 渲染引擎，实现了与官方几乎完全一致的交互效果。
+通过逆向分析 JS 代码，B 站动态 Banner 实际上使用了一套复杂的渲染引擎，它通过资源预加载、统一布局计算、高精度贝塞尔曲线插值、自适应参数模型等方式，实现了流畅的动态交互效果。本项目参考该流程实现了 [`OfficialRenderer`](../../src/renderer/official/OfficialRenderer.ts) 渲染引擎，达到了与官方高度一致的还原度与交互体验。
 
 ### 资源预加载
 
